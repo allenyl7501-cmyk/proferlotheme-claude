@@ -123,25 +123,19 @@
               {%- endif -%}
             {%- endif -%}
           </div>
-          {%- when 'description' -%}
-{%- if product.description != blank -%}
-<div
-  class="product__block product__block--{{ block.type }} rte"
-  {{ block.shopify_attributes }}
->
-  <div class="product__description-preview" data-description-preview>
-    <div class="product__description-inner">
-      {{ product.description }}
-    </div>
-    <button type="button" class="product__description-showless">Show less</button>
+          {% if product.description != blank %}
+<div class="pf-desc-block" {{ block.shopify_attributes }}>
+  <div class="pf-desc-inner" id="pf-desc-{{ block.id }}">
+    {{ product.description }}
   </div>
+  <button type="button" class="pf-desc-less" id="pf-less-{{ block.id }}">Show less</button>
 </div>
 
 <style>
-  .product__description-inner {
+  #pf-desc-{{ block.id }} {
     overflow: hidden;
   }
-  .product__description-readmore {
+  .pf-desc-readmore {
     display: inline;
     cursor: pointer;
     border: none;
@@ -152,80 +146,80 @@
     text-decoration: underline;
     white-space: nowrap;
   }
-  .product__description-showless {
+  .pf-desc-less {
     display: none;
-    margin-top: 8px;
     cursor: pointer;
-    text-decoration: underline;
-    background: none;
     border: none;
+    background: none;
     padding: 0;
+    margin-top: 8px;
     font: inherit;
     color: inherit;
+    text-decoration: underline;
   }
 </style>
 
 <script>
-  (function() {
-    document.querySelectorAll('[data-description-preview]').forEach(function(preview) {
-      var inner = preview.querySelector('.product__description-inner');
-      var showLess = preview.querySelector('.product__description-showless');
-      if (!inner) return;
+(function() {
+  var inner = document.getElementById('pf-desc-{{ block.id }}');
+  var showLess = document.getElementById('pf-less-{{ block.id }}');
+  if (!inner) return;
 
-      var fullHTML = inner.innerHTML;
-      var fullText = inner.textContent.replace(/\s+/g, ' ').trim();
+  // Accurately measure one line height via a test span
+  var span = document.createElement('span');
+  span.textContent = 'X';
+  inner.appendChild(span);
+  var lineH = span.getBoundingClientRect().height;
+  inner.removeChild(span);
 
-      // Measure actual single line height by temporarily setting one word
-      inner.textContent = 'X';
-      var oneLineHeight = inner.getBoundingClientRect().height;
-      inner.innerHTML = fullHTML;
+  var maxH = lineH * 3;
 
-      var maxHeight = oneLineHeight * 3;
+  // No truncation needed
+  if (inner.scrollHeight <= maxH + 4) return;
 
-      if (inner.scrollHeight <= maxHeight + 2) return;
+  var fullHTML = inner.innerHTML;
+  var fullText = inner.textContent.replace(/\s+/g, ' ').trim();
 
-      var readMoreBtn = document.createElement('button');
-      readMoreBtn.type = 'button';
-      readMoreBtn.className = 'product__description-readmore';
-      readMoreBtn.textContent = 'Read more';
+  var btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'pf-desc-readmore';
+  btn.textContent = 'Read more';
 
-      inner.style.maxHeight = maxHeight + 'px';
+  inner.style.maxHeight = maxH + 'px';
 
-      var lo = 0, hi = fullText.length;
-      while (lo < hi) {
-        var mid = Math.floor((lo + hi + 1) / 2);
-        inner.textContent = fullText.substring(0, mid) + '... ';
-        inner.appendChild(readMoreBtn);
-        if (inner.scrollHeight <= maxHeight + 2) {
-          lo = mid;
-        } else {
-          hi = mid - 1;
-        }
-      }
+  // Binary search for exact truncation point
+  var lo = 0, hi = fullText.length;
+  while (lo < hi) {
+    var mid = Math.floor((lo + hi + 1) / 2);
+    inner.textContent = fullText.substring(0, mid) + '... ';
+    inner.appendChild(btn);
+    if (inner.scrollHeight <= maxH + 4) {
+      lo = mid;
+    } else {
+      hi = mid - 1;
+    }
+  }
 
-      inner.textContent = fullText.substring(0, lo).replace(/\s+$/, '') + '... ';
-      inner.appendChild(readMoreBtn);
+  inner.textContent = fullText.substring(0, lo).trimEnd() + '... ';
+  inner.appendChild(btn);
 
-      readMoreBtn.addEventListener('click', function() {
-        inner.innerHTML = fullHTML;
-        inner.style.maxHeight = 'none';
-        inner.style.overflow = 'visible';
-        if (showLess) showLess.style.display = 'inline-block';
-      });
+  btn.addEventListener('click', function() {
+    inner.innerHTML = fullHTML;
+    inner.style.maxHeight = 'none';
+    inner.style.overflow = 'visible';
+    showLess.style.display = 'inline-block';
+  });
 
-      if (showLess) {
-        showLess.addEventListener('click', function() {
-          showLess.style.display = 'none';
-          inner.style.overflow = 'hidden';
-          inner.style.maxHeight = maxHeight + 'px';
-          inner.textContent = fullText.substring(0, lo).replace(/\s+$/, '') + '... ';
-          inner.appendChild(readMoreBtn);
-        });
-      }
-    });
-  })();
+  showLess.addEventListener('click', function() {
+    showLess.style.display = 'none';
+    inner.style.overflow = 'hidden';
+    inner.style.maxHeight = maxH + 'px';
+    inner.textContent = fullText.substring(0, lo).trimEnd() + '... ';
+    inner.appendChild(btn);
+  });
+})();
 </script>
-{%- endif -%}
+{% endif %}
 
         {%- when 'sku' -%}
           <div
