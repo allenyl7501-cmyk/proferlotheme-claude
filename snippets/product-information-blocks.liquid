@@ -180,9 +180,8 @@
       if (inner.scrollHeight <= maxHeight + 2) return;
 
       var fullHTML = inner.innerHTML;
-      var fullText = inner.textContent;
+      var fullText = inner.textContent.replace(/\s+/g, ' ').trim();
 
-      // Create Read more button
       var readMoreBtn = document.createElement('button');
       readMoreBtn.type = 'button';
       readMoreBtn.className = 'product__description-readmore';
@@ -190,7 +189,6 @@
 
       inner.style.maxHeight = maxHeight + 'px';
 
-      // Binary search — include button in measurement
       var lo = 0, hi = fullText.length;
       while (lo < hi) {
         var mid = Math.floor((lo + hi + 1) / 2);
@@ -203,7 +201,6 @@
         }
       }
 
-      // Set final truncated state
       inner.textContent = fullText.substring(0, lo).replace(/\s+$/, '') + '... ';
       inner.appendChild(readMoreBtn);
 
