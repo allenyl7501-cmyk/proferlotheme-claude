@@ -30,20 +30,6 @@
             "heading_size": "h3"
           }
         },
-        "icon_with_text_n9zKXz": {
-          "type": "icon-with-text",
-          "settings": {
-            "layout": "horizontal",
-            "title_font": "heading",
-            "title_size": "h5",
-            "icon_1": "heart",
-            "heading_1": "Heading",
-            "icon_2": "gift",
-            "heading_2": "Heading",
-            "icon_3": "package",
-            "heading_3": "Heading"
-          }
-        },
         "badges": {
           "type": "badges",
           "settings": {
@@ -89,6 +75,20 @@
             "show_gift_card_recipient": false
           }
         },
+        "icon_with_text": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "title_font": "body",
+            "title_size": "text-base",
+            "icon_1": "package",
+            "heading_1": "Fast Nationwide Shipping",
+            "icon_2": "heart",
+            "heading_2": "14 day returns",
+            "icon_3": "seal-check",
+            "heading_3": "900+ five star store reviews from Aussies"
+          }
+        },
         "judge_me_reviews_review_snippet_widget_bp3qRc": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_snippet_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {}
@@ -123,20 +123,6 @@
             "buttons_text_color": "#054e4a",
             "buttons_text_color_hover": "#ffffff",
             "buttons_additional_css_class": ""
-          }
-        },
-        "icon_with_text": {
-          "type": "icon-with-text",
-          "settings": {
-            "layout": "horizontal",
-            "title_font": "body",
-            "title_size": "text-base",
-            "icon_1": "package",
-            "heading_1": "Free Brisbane Metro Shipping",
-            "icon_2": "check-circle",
-            "heading_2": "14 day returns",
-            "icon_3": "seal-check",
-            "heading_3": ""
           }
         },
         "text_8bbD4d": {
@@ -200,17 +186,16 @@
       "block_order": [
         "judge_me_reviews_preview_badge_pFaULB",
         "title",
-        "icon_with_text_n9zKXz",
         "badges",
         "price",
         "custom_liquid_Fb47nb",
         "variant_picker",
         "inventory",
         "buy_buttons",
+        "icon_with_text",
         "judge_me_reviews_review_snippet_widget_bp3qRc",
         "complementary",
         "shipping_rates_calc_calculator_Ndz8qX",
-        "icon_with_text",
         "text_8bbD4d",
         "description",
         "collapsible-row-1",
