@@ -70,7 +70,7 @@
             "buttons_font_size": 12,
             "buttons_text_color": "#121212",
             "buttons_text_color_hover": "#ffffff",
-            "buttons_additional_css_class": ""
+            "buttons_additional_css_class": "proferlo-shipping-calc"
           }
         },
         "icon_with_text": {
