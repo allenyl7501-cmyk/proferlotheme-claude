@@ -105,6 +105,12 @@
             "enable_quick_add": true
           }
         },
+        "custom_liquid_ifW7Pr": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<hr style=\"border: none; border-top: 1px solid currentColor; opacity: 0.2; margin: 0;\">"
+          }
+        },
         "shipping_rates_calc_calculator_Ndz8qX": {
           "type": "shopify://apps/shipping-rates-calc/blocks/calculator/7c9e47cf-8b08-44b7-8b23-4584e9b2a043",
           "settings": {
@@ -137,6 +143,12 @@
             "heading_2": "",
             "icon_3": "package",
             "heading_3": ""
+          }
+        },
+        "custom_liquid_RHAaEw": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<hr style=\"border: none; border-top: 1px solid currentColor; opacity: 0.2; margin: 0;\">"
           }
         },
         "text_8bbD4d": {
@@ -209,8 +221,10 @@
         "icon_with_text",
         "judge_me_reviews_review_snippet_widget_bp3qRc",
         "complementary",
+        "custom_liquid_ifW7Pr",
         "shipping_rates_calc_calculator_Ndz8qX",
         "icon_with_text_HpYnWD",
+        "custom_liquid_RHAaEw",
         "text_8bbD4d",
         "description",
         "collapsible-row-1",
