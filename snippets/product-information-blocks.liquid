@@ -123,104 +123,15 @@
               {%- endif -%}
             {%- endif -%}
           </div>
-          {% if product.description != blank %}
-<div class="pf-desc-block" {{ block.shopify_attributes }}>
-  <div class="pf-desc-inner" id="pf-desc-{{ block.id }}">
-    {{ product.description }}
-  </div>
-  <button type="button" class="pf-desc-less" id="pf-less-{{ block.id }}">Show less</button>
-</div>
-
-<style>
-  #pf-desc-{{ block.id }} {
-    overflow: hidden;
-  }
-  .pf-desc-readmore {
-    display: inline;
-    cursor: pointer;
-    border: none;
-    background: none;
-    padding: 0;
-    font: inherit;
-    color: inherit;
-    text-decoration: underline;
-    white-space: nowrap;
-  }
-  .pf-desc-less {
-    display: none;
-    cursor: pointer;
-    border: none;
-    background: none;
-    padding: 0;
-    margin-top: 8px;
-    font: inherit;
-    color: inherit;
-    text-decoration: underline;
-  }
-</style>
-
-<script>
-(function() {
-  var inner = document.getElementById('pf-desc-{{ block.id }}');
-  var showLess = document.getElementById('pf-less-{{ block.id }}');
-  if (!inner) return;
-
-  // Accurately measure one line height via a test span
-  var span = document.createElement('span');
-  span.textContent = 'X';
-  inner.appendChild(span);
-  var lineH = span.getBoundingClientRect().height;
-  inner.removeChild(span);
-
-  var maxH = lineH * 3;
-
-  // No truncation needed
-  if (inner.scrollHeight <= maxH + 4) return;
-
-  var fullHTML = inner.innerHTML;
-  var fullText = inner.textContent.replace(/\s+/g, ' ').trim();
-
-  var btn = document.createElement('button');
-  btn.type = 'button';
-  btn.className = 'pf-desc-readmore';
-  btn.textContent = 'Read more';
-
-  inner.style.maxHeight = maxH + 'px';
-
-  // Binary search for exact truncation point
-  var lo = 0, hi = fullText.length;
-  while (lo < hi) {
-    var mid = Math.floor((lo + hi + 1) / 2);
-    inner.textContent = fullText.substring(0, mid) + '... ';
-    inner.appendChild(btn);
-    if (inner.scrollHeight <= maxH + 4) {
-      lo = mid;
-    } else {
-      hi = mid - 1;
-    }
-  }
-
-  inner.textContent = fullText.substring(0, lo).trimEnd() + '... ';
-  inner.appendChild(btn);
-
-  btn.addEventListener('click', function() {
-    inner.innerHTML = fullHTML;
-    inner.style.maxHeight = 'none';
-    inner.style.overflow = 'visible';
-    showLess.style.display = 'inline-block';
-  });
-
-  showLess.addEventListener('click', function() {
-    showLess.style.display = 'none';
-    inner.style.overflow = 'hidden';
-    inner.style.maxHeight = maxH + 'px';
-    inner.textContent = fullText.substring(0, lo).trimEnd() + '... ';
-    inner.appendChild(btn);
-  });
-})();
-</script>
-{% endif %}
-
+        {%- when 'description' -%}
+          {%- if product.description != blank -%}
+            <div
+              class="product__block product__block--{{ block.type }} rte"
+              {{ block.shopify_attributes }}
+            >
+              {{ product.description }}
+            </div>
+          {%- endif -%}
         {%- when 'sku' -%}
           <div
             class="product__block product__block--{{ block.type }}{% if product.selected_or_first_available_variant.sku.size == 0 %} hidden{% endif %}"
