@@ -123,41 +123,24 @@
               {%- endif -%}
             {%- endif -%}
           </div>
-          {%- when 'description' -%}
+
+         {%- when 'description' -%}
   {%- if product.description != blank -%}
     <div
       class="product__block product__block--{{ block.type }}"
       {{ block.shopify_attributes }}
     >
-      <div
-        class="rte product__description-text"
-        data-collapsed="true"
-        style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 0;"
-      >
+      <div class="rte pf-desc-content pf-desc-collapsed">
         {{ product.description }}
       </div>
-      <button
-        style="background: none; border: none; padding: 0; margin: 0; cursor: pointer; font-size: inherit; font-family: inherit; color: inherit; text-decoration: underline; display: inline;"
-        onclick="
-          var desc = this.previousElementSibling;
-          if (desc.getAttribute('data-collapsed') === 'true') {
-            desc.style.display = 'block';
-            desc.style.overflow = 'visible';
-            desc.style.webkitLineClamp = 'unset';
-            desc.setAttribute('data-collapsed', 'false');
-            this.textContent = 'Read less';
-          } else {
-            desc.style.display = '-webkit-box';
-            desc.style.overflow = 'hidden';
-            desc.style.webkitLineClamp = '3';
-            desc.setAttribute('data-collapsed', 'true');
-            this.textContent = 'Read more';
-          }
-        "
-      >Read more</button>
+      <p class="pf-desc-readmore">
+        <a href="javascript:void(0)" class="pf-desc-toggle">
+          Read <span class="pf-desc-more">more</span><span class="pf-desc-less" style="display:none;">less</span>
+        </a>
+      </p>
     </div>
   {%- endif -%}
-        
+
         {%- when 'sku' -%}
           <div
             class="product__block product__block--{{ block.type }}{% if product.selected_or_first_available_variant.sku.size == 0 %} hidden{% endif %}"
@@ -742,3 +725,21 @@
     </a>
   {%- endif -%}
 </div>
+<script>
+  document.querySelectorAll('.pf-desc-toggle').forEach(function(toggle) {
+    toggle.addEventListener('click', function() {
+      var content = toggle.closest('.product__block').querySelector('.pf-desc-content');
+      var more = toggle.querySelector('.pf-desc-more');
+      var less = toggle.querySelector('.pf-desc-less');
+      if (content.classList.contains('pf-desc-collapsed')) {
+        content.classList.remove('pf-desc-collapsed');
+        more.style.display = 'none';
+        less.style.display = 'inline';
+      } else {
+        content.classList.add('pf-desc-collapsed');
+        more.style.display = 'inline';
+        less.style.display = 'none';
+      }
+    });
+  });
+</script>

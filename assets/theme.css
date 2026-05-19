@@ -6819,3 +6819,20 @@ shopify-account::part(dialog)::backdrop {
 .product__block--badges {
   display: none;
 }
+.pf-desc-collapsed {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.pf-desc-readmore {
+  margin-top: 0.25rem !important;
+  margin-bottom: 0 !important;
+}
+
+.pf-desc-toggle {
+  text-decoration: underline;
+  cursor: pointer;
+  color: inherit;
+}
