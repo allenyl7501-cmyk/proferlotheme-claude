@@ -83,10 +83,15 @@
             "heading_3": "1 Year warranty"
           }
         },
+        "shiprate_estimator_shipping_estimator_widget_pMxY7W": {
+          "type": "shopify://apps/shiprate-estimator/blocks/shipping-estimator-widget/843d5f06-277b-4f65-985e-e9f039f92b9f",
+          "settings": {}
+        },
         "shipping_rates_calc_calculator_Ndz8qX": {
           "type": "shopify://apps/shipping-rates-calc/blocks/calculator/7c9e47cf-8b08-44b7-8b23-4584e9b2a043",
+          "disabled": true,
           "settings": {
-            "calculator_background_color": "transparent",
+            "calculator_background_color": "rgba(0,0,0,0)",
             "open_link_font_size": 16,
             "open_link_bold": false,
             "open_link_italic": false,
@@ -95,11 +100,11 @@
             "open_link_text_color_hover": "#121212",
             "introduction_text_font_size": 14,
             "introduction_text_color": "#121212",
-            "buttons_background_color": "#FFFFFF",
+            "buttons_background_color": "#ffffff",
             "buttons_background_color_hover": "#121212",
             "buttons_font_size": 15,
             "buttons_text_color": "#121212",
-            "buttons_text_color_hover": "#FFFFFF",
+            "buttons_text_color_hover": "#ffffff",
             "buttons_additional_css_class": ""
           }
         },
@@ -173,6 +178,7 @@
         "inventory",
         "buy_buttons",
         "icon_with_text",
+        "shiprate_estimator_shipping_estimator_widget_pMxY7W",
         "shipping_rates_calc_calculator_Ndz8qX",
         "pickup_availability",
         "complementary",
