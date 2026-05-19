@@ -720,20 +720,3 @@
     </a>
   {%- endif -%}
 </div>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll('.product__description-toggle').forEach(function (btn) {
-      var desc = btn.previousElementSibling;
-      btn.addEventListener('click', function () {
-        var isCollapsed = desc.classList.contains('product__description-collapsed');
-        if (isCollapsed) {
-          desc.classList.remove('product__description-collapsed');
-          btn.textContent = 'Read less';
-        } else {
-          desc.classList.add('product__description-collapsed');
-          btn.textContent = 'Read more';
-        }
-      });
-    });
-  });
-</script>
