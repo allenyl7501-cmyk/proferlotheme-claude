@@ -726,3 +726,30 @@
     </a>
   {%- endif -%}
 </div>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.product__description-toggle').forEach(function (btn) {
+      var descId = btn.getAttribute('aria-controls');
+      var desc = document.getElementById(descId);
+
+      // Hide button if content doesn't actually overflow 3 lines
+      if (desc && desc.scrollHeight <= desc.clientHeight) {
+        btn.style.display = 'none';
+        return;
+      }
+
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        if (expanded) {
+          desc.classList.add('product__description-collapsed');
+          btn.setAttribute('aria-expanded', 'false');
+          btn.textContent = btn.dataset.closedLabel;
+        } else {
+          desc.classList.remove('product__description-collapsed');
+          btn.setAttribute('aria-expanded', 'true');
+          btn.textContent = btn.dataset.openLabel;
+        }
+      });
+    });
+  });
+</script>
