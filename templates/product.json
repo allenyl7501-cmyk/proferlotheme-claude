@@ -42,18 +42,6 @@
           "type": "price",
           "settings": {}
         },
-        "description": {
-          "type": "description",
-          "settings": {}
-        },
-        "inventory": {
-          "type": "inventory",
-          "settings": {
-            "text_style": "body",
-            "inventory_threshold": 10,
-            "show_inventory_quantity": true
-          }
-        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -85,14 +73,6 @@
             "buttons_additional_css_class": ""
           }
         },
-        "buy_buttons": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_quantity_selector": true,
-            "show_dynamic_checkout": false,
-            "show_gift_card_recipient": true
-          }
-        },
         "icon_with_text": {
           "type": "icon-with-text",
           "settings": {
@@ -105,6 +85,22 @@
             "heading_2": "30 day returns",
             "icon_3": "star-four",
             "heading_3": ""
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true
+          }
+        },
+        "inventory": {
+          "type": "inventory",
+          "settings": {
+            "text_style": "body",
+            "inventory_threshold": 10,
+            "show_inventory_quantity": true
           }
         },
         "pickup_availability": {
@@ -122,6 +118,10 @@
             "image_ratio": "adapt",
             "enable_quick_add": true
           }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
         },
         "collapsible-row-1": {
           "type": "collapsible_tab",
@@ -169,14 +169,14 @@
         "judge_me_reviews_preview_badge_pFaULB",
         "badges",
         "price",
-        "description",
-        "inventory",
         "variant_picker",
         "shipping_rates_calc_calculator_Lzpa8r",
-        "buy_buttons",
         "icon_with_text",
+        "buy_buttons",
+        "inventory",
         "pickup_availability",
         "complementary",
+        "description",
         "collapsible-row-1",
         "collapsible-row-2",
         "collapsible-row-3",
