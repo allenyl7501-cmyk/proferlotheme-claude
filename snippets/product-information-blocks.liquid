@@ -172,15 +172,17 @@
       var showLess = preview.querySelector('.product__description-showless');
       if (!inner) return;
 
-      var style = window.getComputedStyle(inner);
-      var lineHeight = parseFloat(style.lineHeight);
-      if (isNaN(lineHeight)) lineHeight = parseFloat(style.fontSize) * 1.5;
-      var maxHeight = lineHeight * 3;
-
-      if (inner.scrollHeight <= maxHeight + 2) return;
-
       var fullHTML = inner.innerHTML;
       var fullText = inner.textContent.replace(/\s+/g, ' ').trim();
+
+      // Measure actual single line height by temporarily setting one word
+      inner.textContent = 'X';
+      var oneLineHeight = inner.getBoundingClientRect().height;
+      inner.innerHTML = fullHTML;
+
+      var maxHeight = oneLineHeight * 3;
+
+      if (inner.scrollHeight <= maxHeight + 2) return;
 
       var readMoreBtn = document.createElement('button');
       readMoreBtn.type = 'button';
