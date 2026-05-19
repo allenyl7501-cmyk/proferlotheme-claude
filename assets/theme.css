@@ -6819,7 +6819,6 @@ shopify-account::part(dialog)::backdrop {
 .product__block--badges {
   display: none;
 }
-/* Description read more / collapse */
 .product__description-collapsed {
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -6827,11 +6826,16 @@ shopify-account::part(dialog)::backdrop {
   overflow: hidden;
 }
 
+/* Remove bottom margin from last element inside the description */
+.product__description-text > *:last-child {
+  margin-bottom: 0;
+}
+
 .product__description-toggle {
   background: none;
   border: none;
   padding: 0;
-  margin-top: 0.5rem;
+  margin-top: 0.25rem;
   cursor: pointer;
   font-size: inherit;
   font-family: inherit;
