@@ -105,20 +105,6 @@
             "enable_quick_add": true
           }
         },
-        "icon_with_text": {
-          "type": "icon-with-text",
-          "settings": {
-            "layout": "horizontal",
-            "title_font": "body",
-            "title_size": "text-base",
-            "icon_1": "package",
-            "heading_1": "Free Brisbane Metro Shipping",
-            "icon_2": "currency-circle-dollar",
-            "heading_2": "14 day returns",
-            "icon_3": "seal-check",
-            "heading_3": "12 month warranty"
-          }
-        },
         "shipping_rates_calc_calculator_Ndz8qX": {
           "type": "shopify://apps/shipping-rates-calc/blocks/calculator/7c9e47cf-8b08-44b7-8b23-4584e9b2a043",
           "settings": {
@@ -137,6 +123,20 @@
             "buttons_text_color": "#054e4a",
             "buttons_text_color_hover": "#ffffff",
             "buttons_additional_css_class": ""
+          }
+        },
+        "icon_with_text": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "title_font": "body",
+            "title_size": "text-base",
+            "icon_1": "package",
+            "heading_1": "Free Brisbane Metro Shipping",
+            "icon_2": "check-circle",
+            "heading_2": "14 day returns",
+            "icon_3": "seal-check",
+            "heading_3": ""
           }
         },
         "text_8bbD4d": {
@@ -209,8 +209,8 @@
         "buy_buttons",
         "judge_me_reviews_review_snippet_widget_bp3qRc",
         "complementary",
-        "icon_with_text",
         "shipping_rates_calc_calculator_Ndz8qX",
+        "icon_with_text",
         "text_8bbD4d",
         "description",
         "collapsible-row-1",
