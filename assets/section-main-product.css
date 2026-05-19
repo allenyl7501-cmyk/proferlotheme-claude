@@ -616,3 +616,6 @@
     color: Window;
   }
 }
+.product__block--\@app + .product__block--title {
+  margin-top: -1.2rem;
+}
