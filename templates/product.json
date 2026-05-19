@@ -20,15 +20,15 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "judge_me_reviews_preview_badge_pFaULB": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
         "title": {
           "type": "title",
           "settings": {
             "heading_size": "h3"
           }
-        },
-        "judge_me_reviews_preview_badge_pFaULB": {
-          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
         },
         "badges": {
           "type": "badges",
@@ -57,7 +57,7 @@
           "type": "inventory",
           "settings": {
             "text_style": "body",
-            "inventory_threshold": 10,
+            "inventory_threshold": 5,
             "show_inventory_quantity": true
           }
         },
@@ -76,11 +76,27 @@
             "title_font": "body",
             "title_size": "text-base",
             "icon_1": "package",
-            "heading_1": "Orders over $50 ship free",
+            "heading_1": "Free Brisbane Metro Shipping",
             "icon_2": "currency-circle-dollar",
-            "heading_2": "30 day returns",
-            "icon_3": "star-four",
-            "heading_3": "1 Year warranty"
+            "heading_2": "14 day returns",
+            "icon_3": "seal-check",
+            "heading_3": "12 month warranty"
+          }
+        },
+        "judge_me_reviews_review_snippet_widget_bp3qRc": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_snippet_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "complementary": {
+          "type": "complementary",
+          "settings": {
+            "block_heading": "Pairs well with",
+            "make_collapsible_row": false,
+            "icon": "tag",
+            "product_list_limit": 5,
+            "products_per_page": 1,
+            "image_ratio": "adapt",
+            "enable_quick_add": true
           }
         },
         "shipping_rates_calc_calculator_Ndz8qX": {
@@ -98,25 +114,16 @@
             "buttons_background_color": "#ffffff",
             "buttons_background_color_hover": "#3f4e4f",
             "buttons_font_size": 15,
-            "buttons_text_color": "#121212",
+            "buttons_text_color": "#054e4a",
             "buttons_text_color_hover": "#ffffff",
             "buttons_additional_css_class": ""
           }
         },
-        "pickup_availability": {
-          "type": "pickup_availability",
-          "settings": {}
-        },
-        "complementary": {
-          "type": "complementary",
+        "text_8bbD4d": {
+          "type": "text",
           "settings": {
-            "block_heading": "Pairs well with",
-            "make_collapsible_row": false,
-            "icon": "tag",
-            "product_list_limit": 4,
-            "products_per_page": 1,
-            "image_ratio": "adapt",
-            "enable_quick_add": true
+            "text": "<strong>Product Description</strong>",
+            "text_style": "body"
           }
         },
         "description": {
@@ -156,6 +163,12 @@
             "default_open": false
           }
         },
+        "sku_ERYeda": {
+          "type": "sku",
+          "settings": {
+            "text_style": "body"
+          }
+        },
         "addons": {
           "type": "addons",
           "settings": {
@@ -165,21 +178,23 @@
         }
       },
       "block_order": [
-        "title",
         "judge_me_reviews_preview_badge_pFaULB",
+        "title",
         "badges",
         "price",
         "variant_picker",
         "inventory",
         "buy_buttons",
         "icon_with_text",
-        "shipping_rates_calc_calculator_Ndz8qX",
-        "pickup_availability",
+        "judge_me_reviews_review_snippet_widget_bp3qRc",
         "complementary",
+        "shipping_rates_calc_calculator_Ndz8qX",
+        "text_8bbD4d",
         "description",
         "collapsible-row-1",
         "collapsible-row-2",
         "collapsible-row-3",
+        "sku_ERYeda",
         "addons"
       ],
       "custom_css": [
@@ -196,110 +211,6 @@
         "enable_video_looping": true,
         "padding_top": 0,
         "padding_bottom": 100
-      }
-    },
-    "feature_list_cW3d9c": {
-      "type": "feature-list",
-      "blocks": {
-        "feature_item_VbCwL3": {
-          "type": "feature_item",
-          "settings": {
-            "color_scheme": "",
-            "icon": "check",
-            "icon_style": "btn--secondary",
-            "text": "Free Shipping"
-          }
-        },
-        "feature_item_NzxQGa": {
-          "type": "feature_item",
-          "settings": {
-            "color_scheme": "",
-            "icon": "check",
-            "icon_style": "btn--secondary",
-            "text": "Money Guarantee"
-          }
-        },
-        "feature_item_yyNV9A": {
-          "type": "feature_item",
-          "settings": {
-            "color_scheme": "",
-            "icon": "check",
-            "icon_style": "btn--secondary",
-            "text": "Flexible Payment"
-          }
-        },
-        "feature_item_gBgLft": {
-          "type": "feature_item",
-          "settings": {
-            "color_scheme": "",
-            "icon": "check",
-            "icon_style": "btn--secondary",
-            "text": "Online Support"
-          }
-        },
-        "feature_item_R8A8eX": {
-          "type": "feature_item",
-          "settings": {
-            "color_scheme": "",
-            "icon": "check",
-            "icon_style": "btn--secondary",
-            "text": "Return within 7 days"
-          }
-        }
-      },
-      "block_order": [
-        "feature_item_VbCwL3",
-        "feature_item_NzxQGa",
-        "feature_item_yyNV9A",
-        "feature_item_gBgLft",
-        "feature_item_R8A8eX"
-      ],
-      "settings": {
-        "color_scheme": "scheme-7",
-        "subheading": "",
-        "heading": "",
-        "heading_size": "h2",
-        "heading_tag": "h2",
-        "heading_highlight_style": "none",
-        "description": "",
-        "text_size": "text-base",
-        "item_alignment": "center",
-        "icon_size": "extra-medium",
-        "swipe_on_mobile": true,
-        "padding_top": 100,
-        "padding_bottom": 0,
-        "show_section_divider": false,
-        "divider_width": "fixed",
-        "custom_class": ""
-      }
-    },
-    "rich_text_7rBwdd": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_cUbnWW": {
-          "type": "heading",
-          "settings": {
-            "heading": "Because you need time for yourself. Blend beauty in you",
-            "heading_size": "h1",
-            "heading_tag": "h2",
-            "heading_highlight_style": "none"
-          }
-        }
-      },
-      "block_order": [
-        "heading_cUbnWW"
-      ],
-      "custom_css": [
-        ".rich-text__heading {max-width: 65rem; margin: 0 auto;}"
-      ],
-      "settings": {
-        "color_scheme": "",
-        "content_alignment": "center",
-        "padding_top": 60,
-        "padding_bottom": 0,
-        "show_section_divider": false,
-        "divider_width": "fixed",
-        "custom_class": ""
       }
     },
     "collapsible_tabs_phAkEE": {
@@ -507,8 +418,6 @@
   "order": [
     "breadcrumbs_EYgx99",
     "main",
-    "feature_list_cW3d9c",
-    "rich_text_7rBwdd",
     "collapsible_tabs_phAkEE",
     "scrolling_promotion_WAekUk",
     "related-products"
