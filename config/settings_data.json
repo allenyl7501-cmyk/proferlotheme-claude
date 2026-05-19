@@ -132,6 +132,37 @@
         "settings": {
           "buttons_additional_css_class": ""
         }
+      },
+      "11299914587687756879": {
+        "type": "shopify://apps/shiprate-estimator/blocks/application/843d5f06-277b-4f65-985e-e9f039f92b9f",
+        "disabled": false,
+        "settings": {
+          "version": 3,
+          "calculation": "Calculation",
+          "wait": "Please wait",
+          "filter": "Filter",
+          "all": "All",
+          "none": "None",
+          "choose_destination": "Choose the destination",
+          "country": "Country",
+          "state_name": "State name",
+          "postal_code": "Postal code",
+          "locality": "Locality",
+          "get_rates": "Get rates",
+          "msg_zip_not_found": "No places found. Please correct and try again.",
+          "free": "Free",
+          "tbd": "Will be offered at checkout",
+          "delivery_to": "Delivery to",
+          "options_available": "Shipping options available",
+          "no_options_found": "Unfortunately, no shipping rates found.",
+          "msg_no_rates_query": "Would you like us to find the possible options, especially for you?",
+          "send_request": "Send request",
+          "country_selector_title": "Choose the destination",
+          "location_ip_detected": "The destination has been detected by IP. Click on the country name to choose another. Your selection will be stored for subsequent estimations.",
+          "location_prev_detected": "The destination has been taken from your previous orders. Click on the country name to choose another. Your selection will be stored for subsequent estimations.",
+          "location_selected": "The destination is your previous choice. Click on the country name to choose a different one.",
+          "options_explanation": "Calculated based on the item's price and weight. We will show you all the available options and ask you to make a choice at checkout."
+        }
       }
     },
     "color_schemes": {
