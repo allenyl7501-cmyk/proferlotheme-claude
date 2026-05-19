@@ -133,7 +133,6 @@
     <div class="product__description-inner">
       {{ product.description }}
     </div>
-    <div class="product__description-gradient" aria-hidden="true"></div>
     <button type="button" class="product__description-readmore">
       Read more
     </button>
@@ -147,51 +146,41 @@
   .product__description-preview {
     position: relative;
   }
-  .product__description-preview .product__description-inner {
-    max-height: 72px;
+  .product__description-inner {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
     overflow: hidden;
-    transition: max-height 0.4s ease;
   }
   .product__description-preview.is-expanded .product__description-inner {
-    max-height: 2000px;
-  }
-  .product__description-gradient {
-    position: absolute;
-    bottom: 28px;
-    left: 0;
-    right: 0;
-    height: 60px;
-    background: linear-gradient(to bottom, transparent, var(--color-background, #fff));
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-  }
-  .product__description-preview.is-expanded .product__description-gradient {
-    opacity: 0;
+    display: block;
+    overflow: visible;
   }
   .product__description-readmore {
-    display: inline-block;
-    margin-top: 4px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-left: 40px;
+    background: linear-gradient(to right, transparent, var(--color-background, #fff) 50%);
     cursor: pointer;
-    text-decoration: underline;
-    background: none;
     border: none;
-    padding: 0;
     font: inherit;
     color: inherit;
-  }
-  .product__description-showless {
-    display: none;
-    margin-top: 4px;
-    cursor: pointer;
     text-decoration: underline;
-    background: none;
-    border: none;
-    padding: 0;
-    font: inherit;
-    color: inherit;
   }
   .product__description-preview.is-expanded .product__description-readmore {
     display: none;
+  }
+  .product__description-showless {
+    display: none;
+    margin-top: 8px;
+    cursor: pointer;
+    text-decoration: underline;
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    color: inherit;
   }
   .product__description-preview.is-expanded .product__description-showless {
     display: inline-block;
@@ -201,13 +190,20 @@
 <script>
   (function() {
     document.querySelectorAll('[data-description-preview]').forEach(function(preview) {
+      var inner = preview.querySelector('.product__description-inner');
       var readMore = preview.querySelector('.product__description-readmore');
       var showLess = preview.querySelector('.product__description-showless');
-      if (!readMore) return;
 
-      readMore.addEventListener('click', function() {
-        preview.classList.add('is-expanded');
-      });
+      // Hide read more if content isn't actually overflowing
+      if (inner.scrollHeight <= inner.clientHeight) {
+        if (readMore) readMore.style.display = 'none';
+      }
+
+      if (readMore) {
+        readMore.addEventListener('click', function() {
+          preview.classList.add('is-expanded');
+        });
+      }
 
       if (showLess) {
         showLess.addEventListener('click', function() {
@@ -218,7 +214,6 @@
   })();
 </script>
 {%- endif -%}
-
         {%- when 'sku' -%}
           <div
             class="product__block product__block--{{ block.type }}{% if product.selected_or_first_available_variant.sku.size == 0 %} hidden{% endif %}"
