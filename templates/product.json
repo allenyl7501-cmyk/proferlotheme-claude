@@ -172,7 +172,7 @@
         "custom_liquid_Fb47nb": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": ""
+            "custom_liquid": "<div class=\"bnpl-badges\">\n  {%- assign bnpl_types = 'afterpay,afterpay_clearpay,paypal,paypal_express,zip,zip_au,zippay,zip_pay' | split: ',' -%}\n  {%- assign shown = 0 -%}\n  {%- for type in shop.enabled_payment_types -%}\n    {%- if bnpl_types contains type -%}\n      {%- if shown > 0 -%}\n        <span class=\"bnpl-sep\" aria-hidden=\"true\">·</span>\n      {%- endif -%}\n      <span class=\"bnpl-logo\">\n        {{ type | payment_type_svg_tag }}\n      </span>\n      {%- assign shown = shown | plus: 1 -%}\n    {%- endif -%}\n  {%- endfor -%}\n</div>\n\n<style>\n  .bnpl-badges {\n    display: flex;\n    align-items: center;\n    gap: 0;\n    flex-wrap: wrap;\n    margin-top: 1.2rem;\n    padding-top: 1.2rem;\n    border-top: 1px solid rgba(0,0,0,0.1);\n    row-gap: 0.8rem;\n  }\n  .bnpl-logo {\n    display: inline-flex;\n    align-items: center;\n  }\n  .bnpl-logo svg,\n  .bnpl-logo img {\n    height: 20px;\n    width: auto;\n    display: block;\n  }\n  .bnpl-sep {\n    color: #bbb;\n    font-size: 1.4rem;\n    line-height: 1;\n    padding: 0 1rem;\n  }\n</style>"
           }
         },
         "addons": {
