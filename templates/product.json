@@ -84,7 +84,7 @@
             "icon_1": "package",
             "heading_1": "Fast Nationwide Shipping",
             "icon_2": "heart",
-            "heading_2": "14 day returns",
+            "heading_2": "14 day returns*",
             "icon_3": "seal-check",
             "heading_3": "900+ five star store reviews from Aussies"
           }
@@ -123,6 +123,20 @@
             "buttons_text_color": "#054e4a",
             "buttons_text_color_hover": "#ffffff",
             "buttons_additional_css_class": ""
+          }
+        },
+        "icon_with_text_HpYnWD": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "title_font": "body",
+            "title_size": "h6",
+            "icon_1": "truck",
+            "heading_1": "Free Express Shipping (Brisbane Metro)",
+            "icon_2": "gift",
+            "heading_2": "",
+            "icon_3": "package",
+            "heading_3": ""
           }
         },
         "text_8bbD4d": {
@@ -196,6 +210,7 @@
         "judge_me_reviews_review_snippet_widget_bp3qRc",
         "complementary",
         "shipping_rates_calc_calculator_Ndz8qX",
+        "icon_with_text_HpYnWD",
         "text_8bbD4d",
         "description",
         "collapsible-row-1",
