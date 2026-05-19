@@ -123,7 +123,7 @@
               {%- endif -%}
             {%- endif -%}
           </div>
-        {%- when 'description' -%}
+          {%- when 'description' -%}
 {%- if product.description != blank -%}
 <div
   class="product__block product__block--{{ block.type }} rte"
@@ -145,13 +145,8 @@
     position: relative;
   }
   .product__description-inner {
-    max-height: 4.8em;
     overflow: hidden;
     transition: max-height 0.4s ease;
-    line-height: 1.6;
-  }
-  .product__description-preview.is-expanded .product__description-inner {
-    max-height: 2000px;
   }
   .product__description-fade {
     position: absolute;
@@ -160,8 +155,8 @@
     right: 0;
     display: flex;
     justify-content: flex-end;
-    align-items: flex-end;
-    padding-left: 40%;
+    align-items: center;
+    padding-left: 30%;
     background: linear-gradient(to right, transparent, var(--color-background, #fff) 50%);
     pointer-events: none;
   }
@@ -203,18 +198,33 @@
       var readMore = preview.querySelector('.product__description-readmore');
       var showLess = preview.querySelector('.product__description-showless');
 
-      if (inner.scrollHeight <= inner.clientHeight + 2) {
+      var computed = window.getComputedStyle(inner);
+      var lineHeight = parseFloat(computed.lineHeight);
+      if (isNaN(lineHeight)) lineHeight = parseFloat(computed.fontSize) * 1.5;
+
+      var clampHeight = lineHeight * 3;
+      inner.style.maxHeight = clampHeight + 'px';
+      if (fade) fade.style.height = lineHeight + 'px';
+
+      if (inner.scrollHeight <= clampHeight + 2) {
         if (fade) fade.style.display = 'none';
       }
 
       if (readMore) {
         readMore.addEventListener('click', function() {
           preview.classList.add('is-expanded');
+          inner.style.maxHeight = inner.scrollHeight + 'px';
+          setTimeout(function() { inner.style.maxHeight = 'none'; }, 400);
         });
       }
+
       if (showLess) {
         showLess.addEventListener('click', function() {
-          preview.classList.remove('is-expanded');
+          inner.style.maxHeight = inner.scrollHeight + 'px';
+          setTimeout(function() {
+            preview.classList.remove('is-expanded');
+            inner.style.maxHeight = clampHeight + 'px';
+          }, 10);
         });
       }
     });
