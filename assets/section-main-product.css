@@ -490,14 +490,10 @@
 .product-form__buttons .shopify-payment-button {
   width: 100%;
 }
-.product-form__quantity {
-  flex: 0 0 auto;
-  max-width: 9rem;
-}
-
-.product-form__quantity .quantity {
-  width: 9rem;
-  min-width: 0;
+.product-form__submit {
+  position: relative;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 }
 .product-form__submit[aria-disabled=true] + .shopify-payment-button .shopify-payment-button__button[disabled], .product-form__submit[disabled] + .shopify-payment-button .shopify-payment-button__button[disabled] {
