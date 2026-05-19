@@ -123,22 +123,16 @@
               {%- endif -%}
             {%- endif -%}
           </div>
-          {%- when 'description' -%}
+         {%- when 'description' -%}
   {%- if product.description != blank -%}
     <div
       class="product__block product__block--{{ block.type }} rte product__description-wrapper"
       {{ block.shopify_attributes }}
     >
-      <div class="product__description-text product__description-collapsed" id="pdesc-{{ section.id }}">
+      <div class="product__description-text product__description-collapsed">
         {{ product.description }}
       </div>
-      <button
-        class="product__description-toggle"
-        aria-expanded="false"
-        aria-controls="pdesc-{{ section.id }}"
-        data-open-label="Read less"
-        data-closed-label="Read more"
-      >Read more</button>
+      <button class="product__description-toggle">Read more</button>
     </div>
   {%- endif -%}
         
@@ -729,19 +723,15 @@
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.product__description-toggle').forEach(function (btn) {
-      var descId = btn.getAttribute('aria-controls');
-      var desc = document.getElementById(descId);
-
+      var desc = btn.previousElementSibling;
       btn.addEventListener('click', function () {
-        var expanded = btn.getAttribute('aria-expanded') === 'true';
-        if (expanded) {
-          desc.classList.add('product__description-collapsed');
-          btn.setAttribute('aria-expanded', 'false');
-          btn.textContent = btn.dataset.closedLabel;
-        } else {
+        var isCollapsed = desc.classList.contains('product__description-collapsed');
+        if (isCollapsed) {
           desc.classList.remove('product__description-collapsed');
-          btn.setAttribute('aria-expanded', 'true');
-          btn.textContent = btn.dataset.openLabel;
+          btn.textContent = 'Read less';
+        } else {
+          desc.classList.add('product__description-collapsed');
+          btn.textContent = 'Read more';
         }
       });
     });

@@ -6819,6 +6819,13 @@ shopify-account::part(dialog)::backdrop {
 .product__block--badges {
   display: none;
 }
+.product__description-collapsed {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 .product__description-text > *:last-child {
   margin-bottom: 0 !important;
 }
@@ -6834,4 +6841,8 @@ shopify-account::part(dialog)::backdrop {
   color: var(--color-foreground);
   text-decoration: underline;
   display: block;
+}
+
+.product__description-toggle:hover {
+  opacity: 0.7;
 }
