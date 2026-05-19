@@ -61,10 +61,6 @@
             "show_inventory_quantity": true
           }
         },
-        "estimated_shipping_product_page_app_embed_block_YcDhgJ": {
-          "type": "shopify://apps/estimated-shipping/blocks/product-page-app-embed-block/7ebf54ba-5c4b-40a7-b66a-1f977644b1a9",
-          "settings": {}
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -89,7 +85,6 @@
         },
         "shipping_rates_calc_calculator_Ndz8qX": {
           "type": "shopify://apps/shipping-rates-calc/blocks/calculator/7c9e47cf-8b08-44b7-8b23-4584e9b2a043",
-          "disabled": true,
           "settings": {
             "calculator_background_color": "rgba(0,0,0,0)",
             "open_link_font_size": 16,
@@ -176,7 +171,6 @@
         "price",
         "variant_picker",
         "inventory",
-        "estimated_shipping_product_page_app_embed_block_YcDhgJ",
         "buy_buttons",
         "icon_with_text",
         "shipping_rates_calc_calculator_Ndz8qX",
