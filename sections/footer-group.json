@@ -1,1 +1,92 @@
-{"name":"t:sections.footer.name","type":"footer","sections":{"footer":{"type":"footer","blocks":{"image_text_F3FNhx":{"type":"image_text","settings":{"block_width":32,"heading":"","heading_size":"h6","image":"shopify:\/\/shop_images\/Artboard_1.png","image_width":210,"text":"<p>Proferlo is Brisbane-based, Australian-owned. We design and ship quality furniture to every corner of the country — no showroom, no middleman, just great pieces at honest prices.<\/p>","button_label":"Learn more about us","button_link":"","open_default":true,"show_divider":false}},"menu_DEKGYP":{"type":"menu","settings":{"block_width":20,"heading":"Shop","heading_size":"h5","menu":"footer","open_default":true,"show_divider":false}},"menu_4eCrBB":{"type":"menu","settings":{"block_width":20,"heading":"Customer care","heading_size":"h5","menu":"footer","open_default":true,"show_divider":false}},"contact_information_9YEJwU":{"type":"contact_information","settings":{"block_width":25,"heading":"Contact Us","heading_size":"h3","address":"","working_hours":"10:00am - 4:00pm, Mon to Fri","email":"support@proferlofurniture.com.au","phone":"07 3088 3457","open_default":true,"show_divider":false}}},"block_order":["image_text_F3FNhx","menu_DEKGYP","menu_4eCrBB","contact_information_9YEJwU"],"custom_css":[],"settings":{"color_scheme":"scheme-4","enable_follow_on_shop":true,"show_social":true,"enable_country_selector":true,"enable_language_selector":false,"payment_enable":true,"footer_bottom_menu":"","show_section_divider":true,"divider_width":"full"}}},"order":["footer"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "image_text_F3FNhx": {
+          "type": "image_text",
+          "settings": {
+            "block_width": 32,
+            "heading": "",
+            "heading_size": "h6",
+            "image": "shopify://shop_images/full_logo2.nobacground.png",
+            "image_width": 250,
+            "text": "<p>Proferlo is Brisbane-based, Australian-owned. We design and ship quality furniture to every corner of the country — no showroom, no middleman, just great pieces at honest prices.</p>",
+            "button_label": "Learn more about us",
+            "button_link": "",
+            "open_default": true,
+            "show_divider": false
+          }
+        },
+        "menu_DEKGYP": {
+          "type": "menu",
+          "settings": {
+            "block_width": 20,
+            "heading": "Shop",
+            "heading_size": "h5",
+            "menu": "footer",
+            "open_default": true,
+            "show_divider": false
+          }
+        },
+        "menu_4eCrBB": {
+          "type": "menu",
+          "settings": {
+            "block_width": 20,
+            "heading": "Customer care",
+            "heading_size": "h5",
+            "menu": "footer",
+            "open_default": true,
+            "show_divider": false
+          }
+        },
+        "contact_information_9YEJwU": {
+          "type": "contact_information",
+          "settings": {
+            "block_width": 25,
+            "heading": "Contact Us",
+            "heading_size": "h3",
+            "address": "",
+            "working_hours": "10:00am - 4:00pm, Mon to Fri",
+            "email": "support@proferlofurniture.com.au",
+            "phone": "07 3088 3457",
+            "open_default": true,
+            "show_divider": false
+          }
+        }
+      },
+      "block_order": [
+        "image_text_F3FNhx",
+        "menu_DEKGYP",
+        "menu_4eCrBB",
+        "contact_information_9YEJwU"
+      ],
+      "custom_css": [],
+      "settings": {
+        "color_scheme": "scheme-ef559241-393d-4947-8d52-eef4d81ce00a",
+        "enable_follow_on_shop": true,
+        "show_social": true,
+        "enable_country_selector": true,
+        "enable_language_selector": false,
+        "payment_enable": true,
+        "footer_bottom_menu": "",
+        "show_section_divider": true,
+        "divider_width": "full"
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}
