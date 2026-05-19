@@ -123,8 +123,8 @@
               {%- endif -%}
             {%- endif -%}
           </div>
-
-         {%- when 'description' -%}
+          
+{%- when 'description' -%}
   {%- if product.description != blank -%}
     <div
       class="product__block product__block--{{ block.type }}"
@@ -134,7 +134,7 @@
         {{ product.description }}
       </div>
       <p class="pf-desc-readmore">
-        <a href="javascript:void(0)" class="pf-desc-toggle">
+        <a href="#" class="pf-desc-toggle">
           Read <span class="pf-desc-more">more</span><span class="pf-desc-less" style="display:none;">less</span>
         </a>
       </p>
@@ -727,7 +727,8 @@
 </div>
 <script>
   document.querySelectorAll('.pf-desc-toggle').forEach(function(toggle) {
-    toggle.addEventListener('click', function() {
+    toggle.addEventListener('click', function(e) {
+      e.preventDefault();
       var content = toggle.closest('.product__block').querySelector('.pf-desc-content');
       var more = toggle.querySelector('.pf-desc-more');
       var less = toggle.querySelector('.pf-desc-less');
