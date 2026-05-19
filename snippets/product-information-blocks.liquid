@@ -133,37 +133,15 @@
     <div class="product__description-inner">
       {{ product.description }}
     </div>
-    <div class="product__description-fade" aria-hidden="true">
-      <button type="button" class="product__description-readmore">Read more</button>
-    </div>
     <button type="button" class="product__description-showless">Show less</button>
   </div>
 </div>
 
 <style>
-  .product__description-preview {
-    position: relative;
-  }
   .product__description-inner {
     overflow: hidden;
-    transition: max-height 0.4s ease;
-  }
-  .product__description-fade {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 160px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    background: linear-gradient(to right, transparent, var(--color-background, #fff) 55%);
-    pointer-events: none;
-  }
-  .product__description-preview.is-expanded .product__description-fade {
-    display: none;
   }
   .product__description-readmore {
-    pointer-events: all;
     cursor: pointer;
     border: none;
     background: none;
@@ -184,46 +162,68 @@
     font: inherit;
     color: inherit;
   }
-  .product__description-preview.is-expanded .product__description-showless {
-    display: inline-block;
-  }
 </style>
 
 <script>
   (function() {
     document.querySelectorAll('[data-description-preview]').forEach(function(preview) {
       var inner = preview.querySelector('.product__description-inner');
-      var fade = preview.querySelector('.product__description-fade');
-      var readMore = preview.querySelector('.product__description-readmore');
       var showLess = preview.querySelector('.product__description-showless');
+      if (!inner) return;
 
-      var computed = window.getComputedStyle(inner);
-      var lineHeight = parseFloat(computed.lineHeight);
-      if (isNaN(lineHeight)) lineHeight = parseFloat(computed.fontSize) * 1.5;
+      var style = window.getComputedStyle(inner);
+      var lineHeight = parseFloat(style.lineHeight);
+      if (isNaN(lineHeight)) lineHeight = parseFloat(style.fontSize) * 1.5;
+      var maxHeight = lineHeight * 3;
 
-      var clampHeight = lineHeight * 3;
-      inner.style.maxHeight = clampHeight + 'px';
-      if (fade) fade.style.height = lineHeight + 'px';
+      // No truncation needed
+      if (inner.scrollHeight <= maxHeight + 2) return;
 
-      if (inner.scrollHeight <= clampHeight + 2) {
-        if (fade) fade.style.display = 'none';
+      // Store original HTML to restore on Show less
+      var fullHTML = inner.innerHTML;
+      var fullText = inner.textContent;
+
+      // Create Read more button
+      var readMoreBtn = document.createElement('button');
+      readMoreBtn.type = 'button';
+      readMoreBtn.className = 'product__description-readmore';
+      readMoreBtn.textContent = 'Read more';
+
+      // Apply clipping
+      inner.style.maxHeight = maxHeight + 'px';
+
+      // Binary search for the right truncation point
+      var lo = 0, hi = fullText.length;
+      while (lo < hi) {
+        var mid = Math.floor((lo + hi + 1) / 2);
+        inner.textContent = fullText.substring(0, mid) + '...';
+        if (inner.scrollHeight <= maxHeight + 2) {
+          lo = mid;
+        } else {
+          hi = mid - 1;
+        }
       }
 
-      if (readMore) {
-        readMore.addEventListener('click', function() {
-          preview.classList.add('is-expanded');
-          inner.style.maxHeight = inner.scrollHeight + 'px';
-          setTimeout(function() { inner.style.maxHeight = 'none'; }, 400);
-        });
-      }
+      // Set truncated text and append Read more inline
+      inner.textContent = fullText.substring(0, lo).replace(/\s+$/, '') + '... ';
+      inner.appendChild(readMoreBtn);
 
+      // Expand on Read more click
+      readMoreBtn.addEventListener('click', function() {
+        inner.innerHTML = fullHTML;
+        inner.style.maxHeight = 'none';
+        inner.style.overflow = 'visible';
+        if (showLess) showLess.style.display = 'inline-block';
+      });
+
+      // Collapse on Show less click
       if (showLess) {
         showLess.addEventListener('click', function() {
-          inner.style.maxHeight = inner.scrollHeight + 'px';
-          setTimeout(function() {
-            preview.classList.remove('is-expanded');
-            inner.style.maxHeight = clampHeight + 'px';
-          }, 10);
+          showLess.style.display = 'none';
+          inner.style.overflow = 'hidden';
+          inner.style.maxHeight = maxHeight + 'px';
+          inner.textContent = fullText.substring(0, lo).replace(/\s+$/, '') + '... ';
+          inner.appendChild(readMoreBtn);
         });
       }
     });
