@@ -54,7 +54,7 @@
       "settings": {
         "bg_color": "#2c3639",
         "text_color": "#ffffff",
-        "font_size": 14,
+        "font_size": 15,
         "padding": 4,
         "alignment": "flex-end"
       }
