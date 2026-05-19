@@ -83,10 +83,6 @@
             "heading_3": "1 Year warranty"
           }
         },
-        "shiprate_estimator_shipping_estimator_widget_pMxY7W": {
-          "type": "shopify://apps/shiprate-estimator/blocks/shipping-estimator-widget/843d5f06-277b-4f65-985e-e9f039f92b9f",
-          "settings": {}
-        },
         "shipping_rates_calc_calculator_Ndz8qX": {
           "type": "shopify://apps/shipping-rates-calc/blocks/calculator/7c9e47cf-8b08-44b7-8b23-4584e9b2a043",
           "disabled": true,
@@ -178,7 +174,6 @@
         "inventory",
         "buy_buttons",
         "icon_with_text",
-        "shiprate_estimator_shipping_estimator_widget_pMxY7W",
         "shipping_rates_calc_calculator_Ndz8qX",
         "pickup_availability",
         "complementary",
