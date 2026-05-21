@@ -165,9 +165,9 @@
         "collapsible-row-1": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Overview",
-            "icon": "none",
-            "content": "<p>A clinically proven, non-sticky, vegan lip treatment that delivers the intense hydration of a lip mask with a sweet sheer tint using food-grade, non-artificial flavor. Designed for sensitive, irritated lips, this cushiony treatment delivers instant comfort to rescue dry, chapped lips.</p>",
+            "heading": "Material & Specifications",
+            "icon": "ruler",
+            "content": "{{ product.metafields.custom.material_specification | metafield_tag }}",
             "custom_liquid": "",
             "page": "",
             "default_open": false
