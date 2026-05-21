@@ -320,7 +320,7 @@
         "heading_highlight_style": "none",
         "subheading": "",
         "description": "",
-        "limit": 6,
+        "limit": 8,
         "columns": 4,
         "column_gap": "extra-small",
         "row_gap": "inherit",
