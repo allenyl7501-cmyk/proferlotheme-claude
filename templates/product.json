@@ -276,6 +276,17 @@
         "padding_bottom": 100
       }
     },
+    "custom_liquid_Cb37bw": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<hr style=\"border: none; border-top: 1px solid currentColor; opacity: 0.2; margin: 0;\">",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 50,
+        "custom_class": ""
+      }
+    },
     "1779341331f959a4d0": {
       "type": "apps",
       "blocks": {
@@ -329,6 +340,7 @@
   "order": [
     "breadcrumbs_EYgx99",
     "main",
+    "custom_liquid_Cb37bw",
     "1779341331f959a4d0",
     "related-products"
   ]
