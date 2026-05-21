@@ -6838,7 +6838,7 @@ shopify-account::part(dialog)::backdrop {
 }
 /* Variant picker — reduce text button size only, not colour swatches */
 .product-form__input--button {
-  --swatch-size: 36px;
+  --swatch-size: 70px;
 }
 
 .product-form__input--button label {
