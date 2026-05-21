@@ -88,9 +88,13 @@
     "social_tumblr_link": "",
     "social_vimeo_link": "",
     "predictive_search_enabled": true,
-    "number_results_to_show": 8,
+    "number_results_to_show": 10,
     "predictive_search_show_vendor": false,
     "predictive_search_show_price": true,
+    "most_searched_keyworkds": "Storage Bedframes, Dining, Solidwood",
+    "products_recommendations": [
+      "modena-bed-frame-oak"
+    ],
     "currency_code_enabled": false,
     "buttons_uppercase": false,
     "blog_card_style": "standard",
