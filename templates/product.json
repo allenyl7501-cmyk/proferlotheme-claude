@@ -217,14 +217,35 @@
             "button_text_color": "#000000",
             "show_sentiment_colors": false,
             "max_width": 1100,
-            "heading_text": "See what real Aussies are saying about Proferlo",
+            "heading_text": "What real Aussies are saying about Proferlo",
             "button_text": "See AI reviews summary"
           }
         },
-        "sku_ERYeda": {
-          "type": "sku",
+        "moast_carousel_84yehz": {
+          "type": "shopify://apps/moast/blocks/carousel/1ac7547b-5443-446c-868c-7fab4566ee16",
           "settings": {
-            "text_style": "body"
+            "dynamic": false,
+            "feed": "",
+            "feed_usage": "back_up",
+            "header": "",
+            "slide_type": "stories",
+            "product_cards": "none",
+            "autoplay_mode": "none",
+            "autoscroll_duration": 0,
+            "slide_size": "250",
+            "aspect_ratio": "vertical",
+            "border": 1,
+            "border_color": "linear-gradient(90deg, rgba(171, 180, 58, 1), rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%)",
+            "slide_rounding": "20",
+            "slide_spacing": 10,
+            "padding_top": 0,
+            "pagination": "below",
+            "alignment": "left",
+            "click_action": "fullscreen",
+            "float_location": "bottom_right",
+            "float_size": "medium",
+            "show_captions": false,
+            "custom_css": ""
           }
         },
         "addons": {
@@ -232,6 +253,12 @@
           "settings": {
             "show_share": true,
             "show_ask_question": true
+          }
+        },
+        "sku_ERYeda": {
+          "type": "sku",
+          "settings": {
+            "text_style": "subtitle"
           }
         }
       },
@@ -257,8 +284,9 @@
         "collapsible-row-2",
         "collapsible-row-3",
         "judge_me_reviews_store_summary_m4agFU",
-        "sku_ERYeda",
-        "addons"
+        "moast_carousel_84yehz",
+        "addons",
+        "sku_ERYeda"
       ],
       "custom_css": [
         ".product__media-gallery-viewer-wrap .swiper-button-prev,.product__media-gallery-viewer-wrap .swiper-button-next {transform: scale(0.6); --swiper-navigation-offset-x: -0.8rem;}",
