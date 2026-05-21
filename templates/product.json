@@ -262,7 +262,8 @@
       ],
       "custom_css": [
         ".product__media-gallery-viewer-wrap .swiper-button-prev,.product__media-gallery-viewer-wrap .swiper-button-next {transform: scale(0.6); --swiper-navigation-offset-x: -0.8rem;}",
-        "@media (max-width: 767px) {.product__media-gallery-viewer-wrap .swiper-button-prev, .product__media-gallery-viewer-wrap .swiper-button-next {display: none; }}"
+        "@media (max-width: 767px) {.product__media-gallery-viewer-wrap .swiper-button-prev, .product__media-gallery-viewer-wrap .swiper-button-next {display: none; }}",
+        ".accordion-details__content {font-size: 1.5rem;}"
       ],
       "settings": {
         "color_scheme": "scheme-1",
