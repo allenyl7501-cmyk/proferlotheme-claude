@@ -187,9 +187,9 @@
         "collapsible-row-3": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Ingredients",
-            "icon": "none",
-            "content": "<ul><li>Dulce De Leche</li><li>Ube vanilla</li><li>Watermelon kiwi</li><li>Blood orange vanilla</li></ul>",
+            "heading": "Delivery & Returns",
+            "icon": "truck",
+            "content": "",
             "custom_liquid": "",
             "page": "",
             "default_open": false
