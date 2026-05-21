@@ -155,7 +155,7 @@
           "type": "text",
           "settings": {
             "text": "<strong>Product Description</strong>",
-            "text_style": "body"
+            "text_style": "subtitle"
           }
         },
         "description": {
@@ -189,7 +189,7 @@
           "settings": {
             "heading": "Delivery & Returns",
             "icon": "truck",
-            "content": "{{ metaobjects.delivery_returns[\"standard-delivery-returns\"].delivery_content | metafield_tag }}{{ metaobjects.delivery_returns[\"standard-delivery-returns\"].returns_content | metafield_tag }}",
+            "content": "<p>{{ metaobjects.delivery_returns[\"standard-delivery-returns\"].delivery_content | metafield_tag }}{{ metaobjects.delivery_returns[\"standard-delivery-returns\"].returns_content | metafield_tag }}</p>",
             "custom_liquid": "",
             "page": "",
             "default_open": false
@@ -213,7 +213,7 @@
             "widget_color": "#eeece4",
             "text_color": "#000000",
             "lighter_text_color": "#787878",
-            "button_color": "#FFFFFF",
+            "button_color": "#ffffff",
             "button_text_color": "#000000",
             "show_sentiment_colors": false,
             "max_width": 1100,
