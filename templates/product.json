@@ -204,7 +204,7 @@
             "button_theme_text_color": "#000000",
             "show_keywords": true,
             "keywords_visibility": "shown",
-            "show_button": false,
+            "show_button": true,
             "button_visibility": "shown",
             "alignment": "left",
             "title_size": "large",
@@ -285,7 +285,7 @@
             "review_data": "real_data",
             "max_width": 1200,
             "show_shop_reviews": true,
-            "empty_state": "empty_widget"
+            "empty_state": "hide_widget"
           }
         }
       },
