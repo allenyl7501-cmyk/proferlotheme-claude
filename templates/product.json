@@ -176,9 +176,9 @@
         "collapsible-row-2": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "How to use",
-            "icon": "none",
-            "content": "<p>Apply generously to lips for hydration and comfort. Use at night for an overnight mask.</p>",
+            "heading": "Warranty & Assembly",
+            "icon": "seal-check",
+            "content": "{{ product.metafields.custom.assembly_and_care_dropdown | metafield_tag }}",
             "custom_liquid": "",
             "page": "",
             "default_open": false
