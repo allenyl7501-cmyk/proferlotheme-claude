@@ -189,7 +189,7 @@
           "settings": {
             "heading": "Delivery & Returns",
             "icon": "truck",
-            "content": "",
+            "content": "{{ metaobjects.delivery_returns[\"standard-delivery-returns\"].delivery_content | metafield_tag }}{{ metaobjects.delivery_returns[\"standard-delivery-returns\"].returns_content | metafield_tag }}",
             "custom_liquid": "",
             "page": "",
             "default_open": false
