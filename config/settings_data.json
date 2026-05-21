@@ -119,7 +119,8 @@
         "custom_css": [
           "/* Sticky ATC bar — 20% smaller overall */.sticky-atc-bar {border-top: 1.5px solid rgba(0, 0, 0, 0.15); border-bottom: 1.5px solid rgba(0, 0, 0, 0.15);}",
           ".sticky-atc-bar__inner {padding-top: 0.5rem; padding-bottom: 0.5rem;}",
-          ".sticky-atc-bar__product-image {width: 56px !important; height: 56px !important;}"
+          ".sticky-atc-bar__product-image {width: 56px !important; height: 56px !important;}",
+          ".sticky-atc-bar__inner {max-width: 800px; margin-inline: auto;}"
         ],
         "settings": {
           "container": "full",
