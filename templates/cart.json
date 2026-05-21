@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main-cart": {
@@ -5,6 +14,7 @@
       "blocks": {
         "free_shipping_goal_W8bXKE": {
           "type": "free_shipping_goal",
+          "disabled": true,
           "settings": {}
         },
         "cart_note_qpALBg": {
@@ -32,6 +42,8 @@
         "buttons_drwbch"
       ],
       "settings": {
+        "heading_size": "hd2",
+        "heading_tag": "h1",
         "padding_top": 100,
         "padding_bottom": 100
       }
@@ -43,15 +55,20 @@
         "header_layout": "vertical",
         "heading": "You may also like",
         "heading_size": "h1",
+        "heading_tag": "h2",
+        "heading_highlight_style": "none",
         "subheading": "",
         "description": "",
         "text_size": "text-base",
         "show_collection_description": false,
+        "collection": "",
         "limit": 4,
         "columns": 4,
         "column_gap": "extra-small",
         "row_gap": "inherit",
+        "grid_layout": "standard",
         "enable_slider": true,
+        "controls_position": "inside",
         "pcard_image_ratio": "",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
@@ -61,7 +78,8 @@
         "padding_top": 0,
         "padding_bottom": 100,
         "show_section_divider": false,
-        "divider_width": "fixed"
+        "divider_width": "fixed",
+        "custom_class": ""
       }
     }
   },
