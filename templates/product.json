@@ -195,6 +195,32 @@
             "default_open": false
           }
         },
+        "judge_me_reviews_store_summary_m4agFU": {
+          "type": "shopify://apps/judge-me-reviews/blocks/store_summary/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "data_source": "real",
+            "theme": "expanded",
+            "button_theme_color": "#FFFFFF",
+            "button_theme_text_color": "#000000",
+            "show_keywords": true,
+            "keywords_visibility": "shown",
+            "show_button": false,
+            "button_visibility": "shown",
+            "alignment": "left",
+            "title_size": "large",
+            "text_size": "default",
+            "corner_styling": "extra_round",
+            "widget_color": "#F9F9F9",
+            "text_color": "#000000",
+            "lighter_text_color": "#787878",
+            "button_color": "#108474",
+            "button_text_color": "#FFFFFF",
+            "show_sentiment_colors": false,
+            "max_width": 1100,
+            "heading_text": "See what real Aussies are saying about Proferlo",
+            "button_text": "See AI reviews summary"
+          }
+        },
         "sku_ERYeda": {
           "type": "sku",
           "settings": {
@@ -230,6 +256,7 @@
         "collapsible-row-1",
         "collapsible-row-2",
         "collapsible-row-3",
+        "judge_me_reviews_store_summary_m4agFU",
         "sku_ERYeda",
         "addons"
       ],
@@ -249,96 +276,13 @@
         "padding_bottom": 100
       }
     },
-    "collapsible_tabs_phAkEE": {
-      "type": "collapsible-tabs",
-      "blocks": {
-        "collapsible_item_eFemDY": {
-          "type": "collapsible_item",
-          "settings": {
-            "icon": "none",
-            "heading": "How long does shipping take?",
-            "content": "<p>Shipping typically takes 5-7 business days within the United States. For international orders, shipping can take 10-15 business days, depending on the destination and customs processing times. You will receive a tracking number once your order has shipped so you can monitor its progress.</p>",
-            "custom_liquid": "",
-            "page": "",
-            "open": true
-          }
-        },
-        "collapsible_item_RQ3WzW": {
-          "type": "collapsible_item",
-          "settings": {
-            "icon": "none",
-            "heading": "Does my piece come in any packaging?",
-            "content": "<p>Yes, all our skincare products come in protective and aesthetically pleasing packaging to ensure they arrive in perfect condition. Each product is securely wrapped, and we use eco-friendly materials whenever possible. Additionally, many of our products come in recyclable containers to support sustainability.</p>",
-            "custom_liquid": "",
-            "page": "",
-            "open": false
-          }
-        },
-        "collapsible_item_aKpRFm": {
-          "type": "collapsible_item",
-          "settings": {
-            "icon": "none",
-            "heading": "Do you ship internationally?",
-            "content": "<p>Yes, we do ship internationally! We offer worldwide shipping to ensure customers around the globe can enjoy our skincare products. Please note that shipping times and costs may vary depending on the destination country. International customers may also be subject to customs fees or import duties imposed by their country's customs authorities.</p>",
-            "custom_liquid": "",
-            "page": "",
-            "open": false
-          }
-        },
-        "collapsible_item_3c4PkF": {
-          "type": "collapsible_item",
-          "settings": {
-            "icon": "none",
-            "heading": "What payment methods do you accept?",
-            "content": "<p>We accept a variety of payment methods to make your shopping experience convenient. These include credit cards (Visa, Mastercard, American Express), PayPal, and, in some regions, alternative payment methods such as Apple Pay or Google Pay. Rest assured, your payment information is secure and protected during the checkout process.</p>",
-            "custom_liquid": "",
-            "page": "",
-            "open": false
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_item_eFemDY",
-        "collapsible_item_RQ3WzW",
-        "collapsible_item_aKpRFm",
-        "collapsible_item_3c4PkF"
-      ],
-      "settings": {
-        "container": "narrow",
-        "color_scheme": "",
-        "header_layout": "vertical",
-        "heading": "Questions check here",
-        "heading_size": "h1",
-        "heading_tag": "h2",
-        "heading_highlight_style": "none",
-        "subheading": "",
-        "description": "",
-        "text_size": "text-base",
-        "button_label": "",
-        "button_link": "",
-        "button_style": "btn--primary",
-        "column_gap": "large",
-        "row_gap": "inherit",
-        "item_style": "standard",
-        "item_color_scheme": "",
-        "item_heading_font": "heading",
-        "item_heading_size": "h4",
-        "item_heading_tag": "h2",
-        "item_icon_size": "extra-large",
-        "padding_top": 96,
-        "padding_bottom": 100,
-        "show_section_divider": true,
-        "divider_width": "fixed",
-        "custom_class": ""
-      }
-    },
     "17793366721f6e7d12": {
       "type": "apps",
       "blocks": {
         "judge_me_reviews_review_widget_6FtzUm": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
-            "review_data": "sample_data",
+            "review_data": "real_data",
             "max_width": 1200,
             "show_shop_reviews": true,
             "empty_state": "empty_widget"
@@ -385,7 +329,6 @@
   "order": [
     "breadcrumbs_EYgx99",
     "main",
-    "collapsible_tabs_phAkEE",
     "17793366721f6e7d12",
     "related-products"
   ]
