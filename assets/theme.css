@@ -6836,12 +6836,11 @@ shopify-account::part(dialog)::backdrop {
   cursor: pointer;
   color: inherit;
 }
-/* Variant picker — button size reduction */
+/* Variant picker — reduce text button size only, not colour swatches */
+.product-form__input--button {
+  --swatch-size: 36px;
+}
+
 .product-form__input--button label {
-  padding-top: 0.6rem;
-  padding-bottom: 0.6rem;
-  padding-left: 1.2rem;
-  padding-right: 1.2rem;
   font-size: 1.3rem;
-  min-height: 3.6rem;
 }
