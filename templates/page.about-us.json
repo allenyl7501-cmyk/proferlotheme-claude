@@ -12,74 +12,405 @@
     "about_hero": {
       "type": "rich-text",
       "blocks": {
-        "sub": { "type": "subheading", "settings": { "subheading": "Brisbane, Australia" } },
-        "head": { "type": "heading", "settings": { "heading": "Where Style Meets Real Life", "heading_size": "hd2", "heading_tag": "h1", "heading_highlight_style": "none" } },
-        "txt": { "type": "text", "settings": { "text": "<p>We built Proferlo for people who care about how their home looks and feels — without the markups, the middlemen, or the compromise.</p>" } }
+        "sub": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Brisbane, Australia"
+          }
+        },
+        "head": {
+          "type": "heading",
+          "settings": {
+            "heading": "Where Style Meets Real Life",
+            "heading_size": "hd2",
+            "heading_tag": "h1",
+            "heading_highlight_style": "none"
+          }
+        },
+        "txt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We built Proferlo for people who care about how their home looks and feels — without the markups, the middlemen, or the compromise.</p>",
+            "text_size": "text-base"
+          }
+        }
       },
-      "block_order": ["sub", "head", "txt"],
-      "settings": { "color_scheme": "scheme-2", "content_alignment": "center", "padding_top": 80, "padding_bottom": 80 }
+      "block_order": [
+        "sub",
+        "head",
+        "txt"
+      ],
+      "settings": {
+        "color_scheme": "scheme-2",
+        "content_alignment": "center",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "custom_class": ""
+      }
     },
     "about_story": {
       "type": "image-with-text",
       "blocks": {
-        "sub": { "type": "subheading", "settings": { "subheading": "Our Story" } },
-        "head": { "type": "heading", "settings": { "heading": "A Better Way to Buy Furniture", "heading_size": "h1", "heading_tag": "h2", "heading_highlight_style": "none" } },
-        "txt": { "type": "text", "settings": { "text": "<p>We started Proferlo with one question: why does good furniture have to cost so much?</p><p>The Australian furniture market gives you two extremes — legacy brands with luxury price tags, or flat-pack fast furniture that looks okay for a season and falls apart by the next. Neither felt right.</p><p>So we built a third option.</p><p>Proferlo is a fully vertically integrated furniture brand, based in Brisbane, Queensland. We own our manufacturing, control our supply chain, and manage our own delivery — no importers, no wholesalers, no retail floor markups. What you pay goes toward the furniture, not the layers in between.</p>", "text_size": "text-base" } }
+        "sub": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Our Story"
+          }
+        },
+        "head": {
+          "type": "heading",
+          "settings": {
+            "heading": "A Better Way to Buy Furniture",
+            "heading_size": "h1",
+            "heading_tag": "h2",
+            "heading_highlight_style": "none"
+          }
+        },
+        "txt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We started Proferlo with one question: why does good furniture have to cost so much?</p><p>The Australian furniture market gives you two extremes — legacy brands with luxury price tags, or flat-pack fast furniture that looks okay for a season and falls apart by the next. Neither felt right.</p><p>So we built a third option.</p><p>Proferlo is a fully vertically integrated furniture brand, based in Brisbane, Queensland. We own our manufacturing, control our supply chain, and manage our own delivery — no importers, no wholesalers, no retail floor markups. What you pay goes toward the furniture, not the layers in between.</p>",
+            "text_size": "text-base"
+          }
+        }
       },
-      "block_order": ["sub", "head", "txt"],
-      "settings": { "section_color_scheme": "scheme-1", "color_scheme": "scheme-1", "layout": "image_first", "image_height": "extra-medium", "desktop_content_position": "center", "desktop_content_alignment": "left", "mobile_content_alignment": "left", "padding_top": 0, "padding_bottom": 0 }
+      "block_order": [
+        "sub",
+        "head",
+        "txt"
+      ],
+      "settings": {
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-1",
+        "image_height": "extra-medium",
+        "layout": "image_first",
+        "desktop_content_position": "center",
+        "desktop_content_alignment": "left",
+        "enable_parallax": false,
+        "parallax_direction": "vertical",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "custom_class": ""
+      }
     },
     "about_pillars": {
       "type": "multicolumn",
       "blocks": {
-        "p1": { "type": "column", "settings": { "show_image": false, "title": "Lasting Design", "heading_size": "h3", "heading_tag": "h3", "text": "<p>Timeless style that looks good today and holds up for years. No built-in obsolescence, no trend-chasing.</p>", "text_size": "text-base", "button_label": "", "mobile_layout": "inherit" } },
-        "p2": { "type": "column", "settings": { "show_image": false, "title": "Healthy Materials", "heading_size": "h3", "heading_tag": "h3", "text": "<p>FSC certified timber and CARB2 certified finishes. Better for the planet, and safer inside your home.</p>", "text_size": "text-base", "button_label": "", "mobile_layout": "inherit" } },
-        "p3": { "type": "column", "settings": { "show_image": false, "title": "Honest Prices", "heading_size": "h3", "heading_tag": "h3", "text": "<p>Factory-direct savings passed straight to you. The same quality costs less when there's no one else taking a cut.</p>", "text_size": "text-base", "button_label": "", "mobile_layout": "inherit" } }
+        "p1": {
+          "type": "column",
+          "settings": {
+            "show_image": false,
+            "image_width": "medium",
+            "title": "Lasting Design",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Timeless style that looks good today and holds up for years. No built-in obsolescence, no trend-chasing.</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_style": "btn--underline",
+            "button_link": "",
+            "mobile_layout": "horizontal"
+          }
+        },
+        "p2": {
+          "type": "column",
+          "settings": {
+            "show_image": false,
+            "image_width": "medium",
+            "title": "Healthy Materials",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>FSC certified timber and CARB2 certified finishes. Better for the planet, and safer inside your home.</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_style": "btn--underline",
+            "button_link": "",
+            "mobile_layout": "inherit"
+          }
+        },
+        "p3": {
+          "type": "column",
+          "settings": {
+            "show_image": false,
+            "image_width": "medium",
+            "title": "Honest Prices",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Factory-direct savings passed straight to you. The same quality costs less when there's no one else taking a cut.</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_style": "btn--underline",
+            "button_link": "",
+            "mobile_layout": "inherit"
+          }
+        }
       },
-      "block_order": ["p1", "p2", "p3"],
-      "settings": { "color_scheme": "scheme-1", "heading": "Built Around What Actually Matters", "heading_size": "h2", "heading_tag": "h2", "heading_highlight_style": "none", "subheading": "Why Proferlo", "columns_desktop": 3, "column_gap": "large", "column_alignment": "left", "columns_mobile": "1", "swipe_on_mobile": false, "padding_top": 60, "padding_bottom": 60 }
+      "block_order": [
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "heading": "Built Around What Actually Matters",
+        "heading_size": "h2",
+        "heading_tag": "h2",
+        "heading_highlight_style": "none",
+        "subheading": "Why Proferlo",
+        "description": "",
+        "text_size": "text-base",
+        "column_alignment": "left",
+        "columns_desktop": 3,
+        "column_gap": "large",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "custom_class": ""
+      }
     },
     "about_stats": {
       "type": "multicolumn",
       "blocks": {
-        "s1": { "type": "column", "settings": { "show_image": false, "title": "3 Decades", "heading_size": "hd2", "heading_tag": "h3", "text": "<p>Manufacturing experience</p>", "text_size": "text-base", "button_label": "", "mobile_layout": "horizontal" } },
-        "s2": { "type": "column", "settings": { "show_image": false, "title": "30,000+", "heading_size": "hd2", "heading_tag": "h3", "text": "<p>Orders fulfilled Australia-wide</p>", "text_size": "text-base", "button_label": "", "mobile_layout": "horizontal" } },
-        "s3": { "type": "column", "settings": { "show_image": false, "title": "4.9 / 5", "heading_size": "hd2", "heading_tag": "h3", "text": "<p>Average customer rating</p>", "text_size": "text-base", "button_label": "", "mobile_layout": "horizontal" } },
-        "s4": { "type": "column", "settings": { "show_image": false, "title": "2-4 Days", "heading_size": "hd2", "heading_tag": "h3", "text": "<p>Metro delivery via Allied Express</p>", "text_size": "text-base", "button_label": "", "mobile_layout": "horizontal" } }
+        "s1": {
+          "type": "column",
+          "settings": {
+            "show_image": false,
+            "image_width": "medium",
+            "title": "3 Decades",
+            "heading_size": "hd2",
+            "heading_tag": "h3",
+            "text": "<p>Manufacturing experience</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_style": "btn--underline",
+            "button_link": "",
+            "mobile_layout": "horizontal"
+          }
+        },
+        "s2": {
+          "type": "column",
+          "settings": {
+            "show_image": false,
+            "image_width": "medium",
+            "title": "30,000+",
+            "heading_size": "hd2",
+            "heading_tag": "h3",
+            "text": "<p>Orders fulfilled Australia-wide</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_style": "btn--underline",
+            "button_link": "",
+            "mobile_layout": "horizontal"
+          }
+        },
+        "s3": {
+          "type": "column",
+          "settings": {
+            "show_image": false,
+            "image_width": "medium",
+            "title": "4.9 / 5",
+            "heading_size": "hd2",
+            "heading_tag": "h3",
+            "text": "<p>Average customer rating</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_style": "btn--underline",
+            "button_link": "",
+            "mobile_layout": "horizontal"
+          }
+        },
+        "s4": {
+          "type": "column",
+          "settings": {
+            "show_image": false,
+            "image_width": "medium",
+            "title": "2-4 Days",
+            "heading_size": "hd2",
+            "heading_tag": "h3",
+            "text": "<p>Metro delivery via Allied Express</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_style": "btn--underline",
+            "button_link": "",
+            "mobile_layout": "horizontal"
+          }
+        }
       },
-      "block_order": ["s1", "s2", "s3", "s4"],
-      "settings": { "color_scheme": "scheme-2", "heading": "", "subheading": "", "columns_desktop": 4, "column_gap": "large", "column_alignment": "center", "columns_mobile": "2", "swipe_on_mobile": false, "padding_top": 60, "padding_bottom": 60 }
+      "block_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "settings": {
+        "color_scheme": "scheme-2",
+        "heading": "",
+        "heading_size": "h1",
+        "heading_tag": "h2",
+        "heading_highlight_style": "none",
+        "subheading": "",
+        "description": "",
+        "text_size": "text-base",
+        "column_alignment": "center",
+        "columns_desktop": 4,
+        "column_gap": "large",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "custom_class": ""
+      }
     },
     "about_certs": {
       "type": "image-with-text",
       "blocks": {
-        "sub": { "type": "subheading", "settings": { "subheading": "Quality You Can Trust" } },
-        "head": { "type": "heading", "settings": { "heading": "We Don't Just Say It - We Certify It", "heading_size": "h1", "heading_tag": "h2", "heading_highlight_style": "none" } },
-        "txt": { "type": "text", "settings": { "text": "<p>All Proferlo timber furniture is FSC certified, meaning the wood is sourced from responsibly managed forests that meet strict environmental and social standards.</p><p>Our products also meet CARB2 certification - a rigorous standard for low formaldehyde emissions that ensures the furniture is safe for your home and family.</p><p>These aren't marketing badges. They're independent, third-party verified standards that we hold ourselves to.</p>", "text_size": "text-base" } }
+        "sub": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Quality You Can Trust"
+          }
+        },
+        "head": {
+          "type": "heading",
+          "settings": {
+            "heading": "We Don't Just Say It - We Certify It",
+            "heading_size": "h1",
+            "heading_tag": "h2",
+            "heading_highlight_style": "none"
+          }
+        },
+        "txt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>All Proferlo timber furniture is FSC certified, meaning the wood is sourced from responsibly managed forests that meet strict environmental and social standards.</p><p>Our products also meet CARB2 certification - a rigorous standard for low formaldehyde emissions that ensures the furniture is safe for your home and family.</p><p>These aren't marketing badges. They're independent, third-party verified standards that we hold ourselves to.</p>",
+            "text_size": "text-base"
+          }
+        }
       },
-      "block_order": ["sub", "head", "txt"],
-      "settings": { "section_color_scheme": "scheme-1", "color_scheme": "scheme-1", "layout": "text_first", "image_height": "extra-medium", "desktop_content_position": "center", "desktop_content_alignment": "left", "mobile_content_alignment": "left", "padding_top": 0, "padding_bottom": 0 }
+      "block_order": [
+        "sub",
+        "head",
+        "txt"
+      ],
+      "settings": {
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-1",
+        "image_height": "extra-medium",
+        "layout": "text_first",
+        "desktop_content_position": "center",
+        "desktop_content_alignment": "left",
+        "enable_parallax": false,
+        "parallax_direction": "vertical",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "custom_class": ""
+      }
     },
     "about_lifestyle": {
       "type": "rich-text",
       "blocks": {
-        "sub": { "type": "subheading", "settings": { "subheading": "For People Who Live In Their Homes" } },
-        "head": { "type": "heading", "settings": { "heading": "Made for Your Real Life", "heading_size": "h1", "heading_tag": "h2", "heading_highlight_style": "none" } },
-        "txt": { "type": "text", "settings": { "text": "<p>Whether you're setting up your first place, refreshing a rental, or finally investing in a space that feels like you - Proferlo is built around the way people actually live.</p><p>Style that doesn't make you feel precious about it. Comfort you notice on a Tuesday, not just in photos. Furniture that fits your life, not just your aesthetic.</p>" } }
+        "sub": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "For People Who Live In Their Homes"
+          }
+        },
+        "head": {
+          "type": "heading",
+          "settings": {
+            "heading": "Made for Your Real Life",
+            "heading_size": "h1",
+            "heading_tag": "h2",
+            "heading_highlight_style": "none"
+          }
+        },
+        "txt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Whether you're setting up your first place, refreshing a rental, or finally investing in a space that feels like you - Proferlo is built around the way people actually live.</p><p>Style that doesn't make you feel precious about it. Comfort you notice on a Tuesday, not just in photos. Furniture that fits your life, not just your aesthetic.</p>",
+            "text_size": "text-base"
+          }
+        }
       },
-      "block_order": ["sub", "head", "txt"],
-      "settings": { "color_scheme": "scheme-1", "content_alignment": "center", "padding_top": 60, "padding_bottom": 60 }
+      "block_order": [
+        "sub",
+        "head",
+        "txt"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "content_alignment": "center",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "custom_class": ""
+      }
     },
     "about_cta": {
       "type": "rich-text",
       "blocks": {
-        "head": { "type": "heading", "settings": { "heading": "Find your piece.", "heading_size": "hd2", "heading_tag": "h2", "heading_highlight_style": "none" } },
-        "txt": { "type": "text", "settings": { "text": "<p>Browse our full range of bed frames, bedroom, living room, and dining furniture - shipped Australia-wide from Brisbane.</p>" } },
-        "btn": { "type": "button", "settings": { "button_label": "Shop the range", "button_link": "\/collections\/all", "button_style": "btn--primary" } }
+        "head": {
+          "type": "heading",
+          "settings": {
+            "heading": "Find your piece.",
+            "heading_size": "hd2",
+            "heading_tag": "h2",
+            "heading_highlight_style": "none"
+          }
+        },
+        "txt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Browse our full range of bed frames, bedroom, living room, and dining furniture - shipped Australia-wide from Brisbane.</p>",
+            "text_size": "text-base"
+          }
+        },
+        "btn": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop the range",
+            "button_link": "/collections/all",
+            "button_style": "btn--primary"
+          }
+        }
       },
-      "block_order": ["head", "txt", "btn"],
-      "settings": { "color_scheme": "scheme-2", "content_alignment": "center", "padding_top": 80, "padding_bottom": 80 }
+      "block_order": [
+        "head",
+        "txt",
+        "btn"
+      ],
+      "settings": {
+        "color_scheme": "scheme-2",
+        "content_alignment": "center",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "custom_class": ""
+      }
     }
   },
-  "order": ["about_hero", "about_story", "about_pillars", "about_stats", "about_certs", "about_lifestyle", "about_cta"]
+  "order": [
+    "about_hero",
+    "about_story",
+    "about_pillars",
+    "about_stats",
+    "about_certs",
+    "about_lifestyle",
+    "about_cta"
+  ]
 }
