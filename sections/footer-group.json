@@ -17,7 +17,7 @@
         "image_text_F3FNhx": {
           "type": "image_text",
           "settings": {
-            "block_width": 32,
+            "block_width": 30,
             "heading": "",
             "heading_size": "h6",
             "image": "shopify://shop_images/full_logo2.nobacground.png",
@@ -25,6 +25,17 @@
             "text": "<p>Proferlo is Brisbane-based, Australian-owned. We design and ship quality furniture to every corner of the country — no showroom, no middleman, just great pieces at honest prices.</p>",
             "button_label": "Learn more about us",
             "button_link": "",
+            "open_default": true,
+            "show_divider": true
+          }
+        },
+        "menu_4eCrBB": {
+          "type": "menu",
+          "settings": {
+            "block_width": 20,
+            "heading": "ABOUT",
+            "heading_size": "h4",
+            "menu": "about-modiva",
             "open_default": true,
             "show_divider": true
           }
@@ -37,18 +48,7 @@
             "heading_size": "h4",
             "menu": "support-modiva",
             "open_default": true,
-            "show_divider": false
-          }
-        },
-        "menu_4eCrBB": {
-          "type": "menu",
-          "settings": {
-            "block_width": 20,
-            "heading": "ABOUT",
-            "heading_size": "h5",
-            "menu": "about-modiva",
-            "open_default": true,
-            "show_divider": false
+            "show_divider": true
           }
         },
         "contact_information_9YEJwU": {
@@ -62,14 +62,14 @@
             "email": "support@proferlofurniture.com.au",
             "phone": "07 3088 3457",
             "open_default": true,
-            "show_divider": false
+            "show_divider": true
           }
         }
       },
       "block_order": [
         "image_text_F3FNhx",
-        "menu_DEKGYP",
         "menu_4eCrBB",
+        "menu_DEKGYP",
         "contact_information_9YEJwU"
       ],
       "custom_css": [],
