@@ -302,11 +302,6 @@
             {%- endif -%}
           </div>
         {% endif %}
-        {% if section.settings.trust_badges_image != blank %}
-  <div style="text-align:center;padding:20px 0 12px;max-width:{{ section.settings.trust_badges_width }}px;margin:0 auto;">
-    {{ section.settings.trust_badges_image | image_url: width: 800 | image_tag: loading: 'lazy' }}
-  </div>
-{% endif %}
         <div class="footer__bottom-row flex justify-between items-center">
           <div class="footer__copyright">
             <p class="footer__copyright-content">
@@ -324,6 +319,11 @@
               </div>
             {%- endif -%}
           </div>
+          {% if section.settings.trust_badges_image != blank %}
+  <div style="text-align:center;max-width:{{ section.settings.trust_badges_width }}px;margin:0 auto;">
+    {{ section.settings.trust_badges_image | image_url: width: 800 | image_tag: loading: 'lazy' }}
+  </div>
+{% endif %}
           <div class="footer__info flex items-center">
             {% if section.settings.footer_bottom_menu != blank %}
               <ul class="linklist linklist--horizontal list-unstyled">
