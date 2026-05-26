@@ -72,9 +72,10 @@
       "settings": {
         "bg_color": "#2c3639",
         "text_color": "#ffffff",
-        "font_size": 13,
+        "font_size": 12,
         "padding": 4,
         "link_gap": 20,
+        "announcement_font_size": 15,
         "announcement_interval": 5
       }
     },
