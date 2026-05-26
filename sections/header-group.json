@@ -14,6 +14,22 @@
     "utility_bar_fGKK7w": {
       "type": "utility-bar",
       "blocks": {
+        "announcement_7BFz7i": {
+          "type": "announcement",
+          "settings": {
+            "text": "Free delivery on orders over $500",
+            "link": "",
+            "link_label": "Learn more"
+          }
+        },
+        "announcement_N88bJL": {
+          "type": "announcement",
+          "settings": {
+            "text": "14 DAY RETURNS",
+            "link": "",
+            "link_label": "Learn more"
+          }
+        },
         "link_NWez7y": {
           "type": "link",
           "settings": {
@@ -44,6 +60,8 @@
         }
       },
       "block_order": [
+        "announcement_7BFz7i",
+        "announcement_N88bJL",
         "link_NWez7y",
         "link_kVbDb3",
         "link_fXKjb6",
@@ -56,7 +74,8 @@
         "text_color": "#ffffff",
         "font_size": 13,
         "padding": 4,
-        "alignment": "flex-end"
+        "link_gap": 20,
+        "announcement_interval": 4
       }
     },
     "header": {
