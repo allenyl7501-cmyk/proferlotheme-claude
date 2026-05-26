@@ -1733,3 +1733,32 @@
   }
 }
 {% endschema %}
+{% stylesheet %}
+.menu-drawer__search {
+  padding: 12px 20px 8px;
+  flex-shrink: 0;
+}
+.menu-drawer__search-inner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--color-background-2, #f5f5f5);
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+.menu-drawer__search-inner svg {
+  flex-shrink: 0;
+  opacity: 0.5;
+}
+.menu-drawer__search input[type="search"] {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  color: currentColor;
+}
+.menu-drawer__search input[type="search"]::placeholder {
+  opacity: 0.5;
+}
+{% endstylesheet %}
