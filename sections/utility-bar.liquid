@@ -34,6 +34,7 @@
     white-space: nowrap;
     color: {{ section.settings.text_color }};
     line-height: 1.5;
+    font-size: {{ section.settings.announcement_font_size }}px;
   }
 
   #utility-bar-{{ section.id }} .utility-bar__announcement.is-active {
@@ -205,6 +206,15 @@
     {
       "type": "header",
       "content": "Announcement rotation"
+    },
+    {
+      "type": "range",
+      "id": "announcement_font_size",
+      "label": "Announcement font size",
+      "min": 10,
+      "max": 18,
+      "step": 1,
+      "default": 13
     },
     {
       "type": "range",

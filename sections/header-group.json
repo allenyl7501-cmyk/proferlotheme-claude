@@ -75,7 +75,7 @@
         "font_size": 13,
         "padding": 4,
         "link_gap": 20,
-        "announcement_interval": 4
+        "announcement_interval": 5
       }
     },
     "header": {
