@@ -302,6 +302,17 @@
             {%- endif -%}
           </div>
         {% endif %}
+        {% if section.settings.trust_badges_image != blank %}
+  <div class="footer__badges" style="text-align: center; padding: 20px 0 12px;">
+    {{
+      section.settings.trust_badges_image
+      | image_url: width: 800
+      | image_tag:
+        loading: 'lazy',
+        style: 'max-width: ' | append: section.settings.trust_badges_width | append: 'px; height: auto; display: inline-block;'
+    }}
+  </div>
+{% endif %}
         <div class="footer__bottom-row flex justify-between items-center">
           <div class="footer__copyright">
             <p class="footer__copyright-content">
@@ -873,6 +884,25 @@
       "default": "full",
       "label": "t:sections.all.divider.settings.divider_width.label",
       "visible_if": "{{ section.settings.show_section_divider == true }}"
+    },
+    {
+      "type": "header",
+      "content": "Trust badges"
+    },
+    {
+      "type": "image_picker",
+      "id": "trust_badges_image",
+      "label": "Trust badges image"
+    },
+    {
+      "type": "range",
+      "id": "trust_badges_width",
+      "label": "Badges width",
+      "min": 100,
+      "max": 700,
+      "step": 10,
+      "default": 400,
+      "unit": "px"
     }
   ],
   "default": {
