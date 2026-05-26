@@ -41,7 +41,7 @@
         "color_scheme": "scheme-260dd0dc-3183-4ca0-acf7-4a216e4dcaf7",
         "text_alignment": "left",
         "show_collection_image": true,
-        "image_overlay_opacity": 22,
+        "image_overlay_opacity": 36,
         "image_position": "as-bg",
         "image_height": "extra-small",
         "enable_parallax": false,
