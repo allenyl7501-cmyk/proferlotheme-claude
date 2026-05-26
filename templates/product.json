@@ -81,10 +81,10 @@
             "layout": "horizontal",
             "title_font": "body",
             "title_size": "text-base",
-            "icon_1": "package",
-            "heading_1": "Fast Nationwide Shipping",
-            "icon_2": "heart",
-            "heading_2": "14 day returns*",
+            "icon_1": "heart",
+            "heading_1": "14 day trial",
+            "icon_2": "truck",
+            "heading_2": "Fast Nationwide Shipping",
             "icon_3": "seal-check",
             "heading_3": "900+ five star store reviews from Aussies"
           }
