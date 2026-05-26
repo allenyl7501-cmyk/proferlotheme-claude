@@ -1,9 +1,19 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "breadcrumbs_Gxg9wp": {
       "type": "breadcrumbs",
+      "custom_css": [],
       "settings": {
-        "text_alignment": "center"
+        "text_alignment": "start"
       }
     },
     "banner": {
@@ -12,10 +22,10 @@
         "collection_info_zUNyKV": {
           "type": "collection_info",
           "settings": {
-            "heading_size": "hd2",
+            "heading_size": "hd1",
             "heading_tag": "h1",
             "show_description": true,
-            "padding_top": 0,
+            "padding_top": 100,
             "padding_bottom": 0
           }
         }
@@ -23,174 +33,22 @@
       "block_order": [
         "collection_info_zUNyKV"
       ],
-      "custom_css": [],
+      "custom_css": [
+        ".collection-hero__description {display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-size: 0.95rem; line-height: 1.5;}",
+        "@media (max-width: 767px) {.collection-hero__title {font-size: 3.5rem; } .collection-hero__description {display: none; }}"
+      ],
       "settings": {
-        "color_scheme": "scheme-1",
-        "text_alignment": "center",
-        "show_collection_image": false,
-        "image_overlay_opacity": 0,
-        "image_position": "top",
+        "color_scheme": "scheme-260dd0dc-3183-4ca0-acf7-4a216e4dcaf7",
+        "text_alignment": "left",
+        "show_collection_image": true,
+        "image_overlay_opacity": 22,
+        "image_position": "as-bg",
         "image_height": "extra-small",
-        "enable_parallax": true,
+        "enable_parallax": false,
         "parallax_direction": "vertical",
         "image_height_mobile": "auto",
-        "padding_top": 38,
-        "padding_bottom": 60
-      }
-    },
-    "custom_content_RecVe9": {
-      "type": "custom-content",
-      "blocks": {
-        "image_card_3BJ74T": {
-          "type": "image_card",
-          "settings": {
-            "color_scheme": "scheme-inverse",
-            "image_ratio": "adapt",
-            "image_overlay_opacity": 30,
-            "heading": "Eye care",
-            "heading_size": "h4",
-            "heading_highlight_style": "none",
-            "subheading": "",
-            "description": "",
-            "button_label": "",
-            "button_style": "btn--primary",
-            "content_position": "middle-center",
-            "content_alignment": "center",
-            "content_spacing": "small",
-            "color_scheme_mobile": "",
-            "show_text_below": true,
-            "content_alignment_mobile": "left",
-            "width": "20%",
-            "alignment": "center",
-            "block_custom_class": ""
-          }
-        },
-        "image_card_GRXz6y": {
-          "type": "image_card",
-          "settings": {
-            "color_scheme": "scheme-inverse",
-            "image_ratio": "adapt",
-            "image_overlay_opacity": 30,
-            "heading": "Accessories",
-            "heading_size": "h4",
-            "heading_highlight_style": "none",
-            "subheading": "",
-            "description": "",
-            "button_label": "",
-            "button_style": "btn--primary",
-            "content_position": "middle-center",
-            "content_alignment": "center",
-            "content_spacing": "small",
-            "color_scheme_mobile": "",
-            "show_text_below": true,
-            "content_alignment_mobile": "left",
-            "width": "20%",
-            "alignment": "center",
-            "block_custom_class": ""
-          }
-        },
-        "image_card_BAAmnt": {
-          "type": "image_card",
-          "settings": {
-            "color_scheme": "scheme-inverse",
-            "image_ratio": "adapt",
-            "image_overlay_opacity": 30,
-            "heading": "Moisturizers",
-            "heading_size": "h4",
-            "heading_highlight_style": "none",
-            "subheading": "",
-            "description": "",
-            "button_label": "",
-            "button_style": "btn--primary",
-            "content_position": "middle-center",
-            "content_alignment": "center",
-            "content_spacing": "small",
-            "color_scheme_mobile": "",
-            "show_text_below": true,
-            "content_alignment_mobile": "left",
-            "width": "20%",
-            "alignment": "center",
-            "block_custom_class": ""
-          }
-        },
-        "image_card_EA8TmL": {
-          "type": "image_card",
-          "settings": {
-            "color_scheme": "scheme-inverse",
-            "image_ratio": "adapt",
-            "image_overlay_opacity": 30,
-            "heading": "Treatments",
-            "heading_size": "h4",
-            "heading_highlight_style": "none",
-            "subheading": "",
-            "description": "",
-            "button_label": "",
-            "button_style": "btn--primary",
-            "content_position": "middle-center",
-            "content_alignment": "center",
-            "content_spacing": "small",
-            "color_scheme_mobile": "",
-            "show_text_below": true,
-            "content_alignment_mobile": "left",
-            "width": "20%",
-            "alignment": "center",
-            "block_custom_class": ""
-          }
-        },
-        "image_card_Cab8TR": {
-          "type": "image_card",
-          "settings": {
-            "color_scheme": "scheme-inverse",
-            "image_ratio": "adapt",
-            "image_overlay_opacity": 30,
-            "heading": "Cleansers",
-            "heading_size": "h4",
-            "heading_highlight_style": "none",
-            "subheading": "",
-            "description": "",
-            "button_label": "",
-            "button_style": "btn--primary",
-            "content_position": "middle-center",
-            "content_alignment": "center",
-            "content_spacing": "small",
-            "color_scheme_mobile": "",
-            "show_text_below": true,
-            "content_alignment_mobile": "left",
-            "width": "20%",
-            "alignment": "center",
-            "block_custom_class": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_card_3BJ74T",
-        "image_card_GRXz6y",
-        "image_card_BAAmnt",
-        "image_card_EA8TmL",
-        "image_card_Cab8TR"
-      ],
-      "custom_css": [
-        ".card-media {--padding-y-mobile: 1.2rem;}",
-        "@media (max-width: 767px) {.card-media--mobile-content-below .bg-overlay {display: none !important; }}"
-      ],
-      "settings": {
-        "container": "fixed",
-        "color_scheme": "",
-        "enable_sticky_column": false,
-        "heading": "",
-        "heading_size": "h1",
-        "heading_highlight_style": "none",
-        "subheading": "",
-        "description": "",
-        "column_gap": "extra-small",
-        "row_gap": "none",
-        "swipe_on_mobile": true,
-        "columns_mobile": "2",
         "padding_top": 0,
-        "padding_bottom": 40,
-        "show_section_divider": false,
-        "divider_width": "fixed",
-        "custom_class": ""
+        "padding_bottom": 18
       }
     },
     "product-grid": {
@@ -198,13 +56,13 @@
       "custom_css": [],
       "settings": {
         "color_scheme": "scheme-9",
-        "products_per_page": 15,
-        "columns_desktop": 3,
+        "products_per_page": 16,
+        "columns_desktop": 4,
         "grid_layout": "standard",
         "pagination": "number",
         "enable_color_swatch": true,
         "enable_filtering": true,
-        "filter_type": "vertical",
+        "filter_type": "drawer",
         "enable_sorting": true,
         "expand_filter_groups": "Availability, Price, Color, Size, Product type",
         "columns_mobile": "2",
@@ -218,7 +76,6 @@
   "order": [
     "breadcrumbs_Gxg9wp",
     "banner",
-    "custom_content_RecVe9",
     "product-grid"
   ]
 }
