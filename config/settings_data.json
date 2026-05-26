@@ -53,6 +53,7 @@
     "blocks_corner_radius": "square",
     "pcard_corner_radius": "square",
     "badges_corner_radius": "square",
+    "enable_page_transition": false,
     "pcard_style": "card",
     "pcard_content_alignment": "left",
     "pcard_color_scheme": "scheme-1",
