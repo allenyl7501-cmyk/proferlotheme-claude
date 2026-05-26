@@ -33,9 +33,9 @@
           "type": "menu",
           "settings": {
             "block_width": 20,
-            "heading": "Shop",
-            "heading_size": "h5",
-            "menu": "footer",
+            "heading": "SUPPORT",
+            "heading_size": "h4",
+            "menu": "support-modiva",
             "open_default": true,
             "show_divider": false
           }
@@ -44,9 +44,9 @@
           "type": "menu",
           "settings": {
             "block_width": 20,
-            "heading": "Customer care",
+            "heading": "ABOUT",
             "heading_size": "h5",
-            "menu": "footer",
+            "menu": "about-modiva",
             "open_default": true,
             "show_divider": false
           }
@@ -55,7 +55,7 @@
           "type": "contact_information",
           "settings": {
             "block_width": 25,
-            "heading": "Contact Us",
+            "heading": "CONTACT US",
             "heading_size": "h3",
             "address": "",
             "working_hours": "10:00am - 4:00pm, Mon to Fri",
@@ -80,7 +80,7 @@
         "enable_country_selector": false,
         "enable_language_selector": false,
         "payment_enable": true,
-        "footer_bottom_menu": "footer",
+        "footer_bottom_menu": "footerbottom-modiva",
         "show_section_divider": true,
         "divider_width": "full"
       }
