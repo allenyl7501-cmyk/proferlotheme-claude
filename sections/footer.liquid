@@ -302,14 +302,9 @@
             {%- endif -%}
           </div>
         {% endif %}
-{% if section.settings.trust_badges_image != blank %}
-  <div class="footer__badges" style="text-align: center; padding: 20px 0 12px;">
-    <img
-      src="{{ section.settings.trust_badges_image | image_url: width: 800 }}"
-      alt="Trust badges"
-      loading="lazy"
-      style="max-width: {{ section.settings.trust_badges_width }}px; height: auto; display: inline-block;"
-    >
+        {% if section.settings.trust_badges_image != blank %}
+  <div style="text-align:center;padding:20px 0 12px;max-width:{{ section.settings.trust_badges_width }}px;margin:0 auto;">
+    {{ section.settings.trust_badges_image | image_url: width: 800 | image_tag: loading: 'lazy' }}
   </div>
 {% endif %}
         <div class="footer__bottom-row flex justify-between items-center">
