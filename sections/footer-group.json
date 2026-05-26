@@ -77,7 +77,7 @@
         "color_scheme": "scheme-ef559241-393d-4947-8d52-eef4d81ce00a",
         "enable_follow_on_shop": true,
         "show_social": true,
-        "enable_country_selector": true,
+        "enable_country_selector": false,
         "enable_language_selector": false,
         "payment_enable": true,
         "footer_bottom_menu": "footer",
