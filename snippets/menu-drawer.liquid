@@ -47,13 +47,12 @@
       </button>
     </div>
     <div class="drawer__content menu-drawer__content flex-grow flex flex-col h-full w-full">
-      <form action="{{ routes.search_url }}" method="get" role="search" class="menu-drawer__search">
-  <input type="hidden" name="type" value="product">
-  <div class="menu-drawer__search-inner">
+      <div class="menu-drawer__search">
+  <button class="menu-drawer__search-inner search-drawer-button" aria-controls="SearchDrawer" aria-label="Search">
     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-    <input type="search" name="q" placeholder="Search products…" autocomplete="off" aria-label="Search">
-  </div>
-</form>
+    <span class="menu-drawer__search-placeholder">Search products…</span>
+  </button>
+</div>
       <nav class="overflow-hidden flex-grow" role="navigation">
         <ul class="menu-drawer__menus v-scrollable relative w-full h-full" data-parent>
           {%- for link in menu_mobile.links -%}
