@@ -23,7 +23,7 @@
             "image": "shopify://shop_images/full_logo2.nobacground.png",
             "image_width": 250,
             "text": "<p>Proferlo is Brisbane-based, Australian-owned. We design and ship quality furniture to every corner of the country — no showroom, no middleman, just great pieces at honest prices.</p>",
-            "button_label": "Learn more about us",
+            "button_label": "",
             "button_link": "",
             "open_default": true,
             "show_divider": true
@@ -58,7 +58,7 @@
             "heading": "CONTACT US",
             "heading_size": "h3",
             "address": "",
-            "working_hours": "10:00am - 4:00pm, Mon to Fri",
+            "working_hours": "10am - 4pm AEST, Mon to Fri",
             "email": "support@proferlofurniture.com.au",
             "phone": "07 3088 3457",
             "open_default": true,
@@ -79,7 +79,7 @@
         "show_social": true,
         "enable_country_selector": false,
         "enable_language_selector": false,
-        "payment_enable": true,
+        "payment_enable": false,
         "footer_bottom_menu": "footerbottom-modiva",
         "show_section_divider": true,
         "divider_width": "full"
