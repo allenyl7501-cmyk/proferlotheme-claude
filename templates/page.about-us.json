@@ -107,7 +107,7 @@
           "settings": {
             "show_image": true,
             "image": "shopify://shop_images/icon-factory-direct.svg",
-            "image_width": "medium",
+            "image_width": "large",
             "title": "Factory-direct pricing",
             "heading_size": "h4",
             "heading_tag": "h3",
@@ -124,7 +124,7 @@
           "settings": {
             "show_image": true,
             "image": "shopify://shop_images/icon-ships-australia.svg",
-            "image_width": "medium",
+            "image_width": "large",
             "title": "Ships Australia-wide",
             "heading_size": "h4",
             "heading_tag": "h3",
@@ -141,7 +141,7 @@
           "settings": {
             "show_image": true,
             "image": "shopify://shop_images/icon-returns.svg",
-            "image_width": "medium",
+            "image_width": "large",
             "title": "14-day risk-free returns",
             "heading_size": "h4",
             "heading_tag": "h3",
