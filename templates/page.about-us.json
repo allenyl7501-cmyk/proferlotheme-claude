@@ -11,13 +11,6 @@
   "sections": {
     "hero": {
       "type": "rich-text",
-      "settings": {
-        "color_scheme": "scheme-2",
-        "content_alignment": "center",
-        "padding_top": 80,
-        "padding_bottom": 80,
-        "show_section_divider": false
-      },
       "blocks": {
         "hero_sub": {
           "type": "subheading",
@@ -42,23 +35,23 @@
           }
         }
       },
-      "block_order": ["hero_sub", "hero_h", "hero_txt"]
+      "block_order": [
+        "hero_sub",
+        "hero_h",
+        "hero_txt"
+      ],
+      "settings": {
+        "color_scheme": "scheme-2",
+        "content_alignment": "center",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "custom_class": ""
+      }
     },
     "story": {
       "type": "image-with-text",
-      "settings": {
-        "section_color_scheme": "scheme-1",
-        "color_scheme": "scheme-1",
-        "layout": "image_first",
-        "image_height": "medium",
-        "desktop_content_position": "center",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "enable_parallax": false,
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "show_section_divider": false
-      },
       "blocks": {
         "story_sub": {
           "type": "subheading",
@@ -78,33 +71,40 @@
         "story_txt": {
           "type": "text",
           "settings": {
-            "text": "<p>Proferlo started with a simple frustration — furniture retail was full of markups, middlemen, and mediocre quality. So we went direct. We own our factory, which means we control the quality, the pricing, and the production.</p><p>Every piece is designed to be genuinely liveable — not just showroom-ready. We’re based in Brisbane, and while we don’t have a physical showroom (our warehouse is dispatch-only), we ship to every corner of Australia via Allied Express.</p>",
+            "text": "<p>Proferlo started with a simple frustration — furniture retail was full of markups, middlemen, and mediocre quality. So we went direct. We own our factory, which means we control the quality, the pricing, and the production.</p><p>Every piece is designed to be genuinely liveable — not just showroom-ready. We’re based in Brisbane, and while we don’t have a physical showroom (our warehouse is dispatch-only), we ship to every corner of Australia via our express couriers</p>",
             "text_size": "text-base"
           }
         }
       },
-      "block_order": ["story_sub", "story_h", "story_txt"]
+      "block_order": [
+        "story_sub",
+        "story_h",
+        "story_txt"
+      ],
+      "settings": {
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-1",
+        "image_height": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "center",
+        "desktop_content_alignment": "left",
+        "enable_parallax": false,
+        "parallax_direction": "vertical",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "custom_class": ""
+      }
     },
     "features": {
       "type": "feature-list",
-      "settings": {
-        "color_scheme": "scheme-3",
-        "subheading": "Why choose us",
-        "heading": "Quality you can feel. Pricing that makes sense.",
-        "heading_size": "h2",
-        "heading_tag": "h2",
-        "heading_highlight_style": "none",
-        "item_alignment": "center",
-        "icon_size": "extra-medium",
-        "swipe_on_mobile": false,
-        "padding_top": 80,
-        "padding_bottom": 80,
-        "show_section_divider": false
-      },
       "blocks": {
         "fi1": {
           "type": "feature_item",
           "settings": {
+            "color_scheme": "",
             "icon": "currency-circle-dollar",
             "icon_style": "btn--secondary",
             "text": "Factory-direct pricing — no middlemen, no retail markup"
@@ -113,6 +113,7 @@
         "fi2": {
           "type": "feature_item",
           "settings": {
+            "color_scheme": "",
             "icon": "truck",
             "icon_style": "btn--secondary",
             "text": "Ships Australia-wide via Allied Express"
@@ -121,6 +122,7 @@
         "fi3": {
           "type": "feature_item",
           "settings": {
+            "color_scheme": "",
             "icon": "check-circle",
             "icon_style": "btn--secondary",
             "text": "Metro delivery in 2–4 business days"
@@ -129,6 +131,7 @@
         "fi4": {
           "type": "feature_item",
           "settings": {
+            "color_scheme": "",
             "icon": "arrow-up-left",
             "icon_style": "btn--secondary",
             "text": "14-day risk-free returns"
@@ -137,6 +140,7 @@
         "fi5": {
           "type": "feature_item",
           "settings": {
+            "color_scheme": "",
             "icon": "recycle",
             "icon_style": "btn--secondary",
             "text": "FSC-certified timber — responsibly sourced"
@@ -145,6 +149,7 @@
         "fi6": {
           "type": "feature_item",
           "settings": {
+            "color_scheme": "",
             "icon": "seal-check",
             "icon_style": "btn--secondary",
             "text": "CARB2-compliant — low-emission materials"
@@ -153,6 +158,7 @@
         "fi7": {
           "type": "feature_item",
           "settings": {
+            "color_scheme": "",
             "icon": "heart",
             "icon_style": "btn--secondary",
             "text": "Designed for real homes, not just showrooms"
@@ -161,29 +167,44 @@
         "fi8": {
           "type": "feature_item",
           "settings": {
+            "color_scheme": "",
             "icon": "map-pin",
             "icon_style": "btn--secondary",
             "text": "Online-only — no showroom, direct to your door"
           }
         }
       },
-      "block_order": ["fi1", "fi2", "fi3", "fi4", "fi5", "fi6", "fi7", "fi8"]
+      "block_order": [
+        "fi1",
+        "fi2",
+        "fi3",
+        "fi4",
+        "fi5",
+        "fi6",
+        "fi7",
+        "fi8"
+      ],
+      "settings": {
+        "color_scheme": "scheme-3",
+        "subheading": "Why choose us",
+        "heading": "Quality you can feel. Pricing that makes sense.",
+        "heading_size": "h2",
+        "heading_tag": "h2",
+        "heading_highlight_style": "none",
+        "description": "",
+        "text_size": "text-base",
+        "item_alignment": "center",
+        "icon_size": "extra-medium",
+        "swipe_on_mobile": false,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "custom_class": ""
+      }
     },
     "certs": {
       "type": "image-with-text",
-      "settings": {
-        "section_color_scheme": "scheme-1",
-        "color_scheme": "scheme-1",
-        "layout": "text_first",
-        "image_height": "medium",
-        "desktop_content_position": "center",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "enable_parallax": false,
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "show_section_divider": false
-      },
       "blocks": {
         "certs_sub": {
           "type": "subheading",
@@ -208,27 +229,30 @@
           }
         }
       },
-      "block_order": ["certs_sub", "certs_h", "certs_txt"]
+      "block_order": [
+        "certs_sub",
+        "certs_h",
+        "certs_txt"
+      ],
+      "settings": {
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-1",
+        "image_height": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "center",
+        "desktop_content_alignment": "left",
+        "enable_parallax": false,
+        "parallax_direction": "vertical",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "custom_class": ""
+      }
     },
     "faq": {
       "type": "collapsible-tabs",
-      "settings": {
-        "container": "narrow",
-        "color_scheme": "scheme-1",
-        "header_layout": "vertical",
-        "heading": "Good to know",
-        "heading_size": "h1",
-        "heading_tag": "h2",
-        "heading_highlight_style": "none",
-        "subheading": "Quick answers",
-        "item_style": "standard",
-        "item_heading_font": "heading",
-        "item_heading_size": "h4",
-        "item_heading_tag": "h3",
-        "padding_top": 80,
-        "padding_bottom": 80,
-        "show_section_divider": false
-      },
       "blocks": {
         "faq1": {
           "type": "collapsible_item",
@@ -236,6 +260,8 @@
             "icon": "none",
             "heading": "Do you have a showroom?",
             "content": "<p>No — Proferlo is an online-only store. Our warehouse is located in Acacia Ridge, Brisbane, but it’s a dispatch facility only — not open to the public. All purchases are made online at proferlofurniture.com.au and shipped directly to you.</p>",
+            "custom_liquid": "",
+            "page": "",
             "open": true
           }
         },
@@ -245,6 +271,8 @@
             "icon": "none",
             "heading": "Where do you ship?",
             "content": "<p>We ship Australia-wide via Allied Express. Metro areas (Sydney, Melbourne, Brisbane, Adelaide, Perth) typically receive delivery in 2–4 business days. Regional timelines vary by location — check our Shipping page for full details.</p>",
+            "custom_liquid": "",
+            "page": "",
             "open": false
           }
         },
@@ -254,6 +282,8 @@
             "icon": "none",
             "heading": "What’s your return policy?",
             "content": "<p>We offer a 14-day risk-free return policy. If you’re not happy with your purchase, contact us within 14 days of delivery and we’ll arrange a return. See our Returns page for full conditions.</p>",
+            "custom_liquid": "",
+            "page": "",
             "open": false
           }
         },
@@ -263,6 +293,8 @@
             "icon": "none",
             "heading": "Are your products easy to assemble?",
             "content": "<p>Most Proferlo pieces require simple self-assembly with included hardware and instructions. Assembly time is typically 30–60 minutes per item. If you need help, our customer service team is happy to assist.</p>",
+            "custom_liquid": "",
+            "page": "",
             "open": false
           }
         },
@@ -272,21 +304,50 @@
             "icon": "none",
             "heading": "How do I contact you?",
             "content": "<p>Reach us via the contact form on our Contact page or by email. We aim to respond within 1 business day.</p>",
+            "custom_liquid": "",
+            "page": "",
             "open": false
           }
         }
       },
-      "block_order": ["faq1", "faq2", "faq3", "faq4", "faq5"]
+      "block_order": [
+        "faq1",
+        "faq2",
+        "faq3",
+        "faq4",
+        "faq5"
+      ],
+      "settings": {
+        "container": "narrow",
+        "color_scheme": "scheme-1",
+        "header_layout": "vertical",
+        "heading": "Good to know",
+        "heading_size": "h1",
+        "heading_tag": "h2",
+        "heading_highlight_style": "none",
+        "subheading": "Quick answers",
+        "description": "",
+        "text_size": "text-base",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--primary",
+        "column_gap": "large",
+        "row_gap": "inherit",
+        "item_style": "standard",
+        "item_color_scheme": "",
+        "item_heading_font": "heading",
+        "item_heading_size": "h4",
+        "item_heading_tag": "h3",
+        "item_icon_size": "extra-large",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "custom_class": ""
+      }
     },
     "cta": {
       "type": "rich-text",
-      "settings": {
-        "color_scheme": "scheme-2",
-        "content_alignment": "center",
-        "padding_top": 80,
-        "padding_bottom": 80,
-        "show_section_divider": false
-      },
       "blocks": {
         "cta_h": {
           "type": "heading",
@@ -313,8 +374,28 @@
           }
         }
       },
-      "block_order": ["cta_h", "cta_txt", "cta_btn"]
+      "block_order": [
+        "cta_h",
+        "cta_txt",
+        "cta_btn"
+      ],
+      "settings": {
+        "color_scheme": "scheme-2",
+        "content_alignment": "center",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "custom_class": ""
+      }
     }
   },
-  "order": ["hero", "story", "features", "certs", "faq", "cta"]
+  "order": [
+    "hero",
+    "story",
+    "features",
+    "certs",
+    "faq",
+    "cta"
+  ]
 }
