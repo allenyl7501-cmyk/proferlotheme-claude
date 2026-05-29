@@ -22,7 +22,7 @@
           "type": "heading",
           "settings": {
             "heading": "Your home should feel like you.",
-            "heading_size": "hd1",
+            "heading_size": "hd2",
             "heading_tag": "h1",
             "heading_highlight_style": "none"
           }
@@ -286,60 +286,64 @@
         "custom_class": ""
       }
     },
-    "collections_showcase_arBVkp": {
-      "type": "collections-showcase",
+    "collection_list_6AhMiN": {
+      "type": "collection-list",
       "blocks": {
-        "collection_K3hdwx": {
-          "type": "collection",
+        "featured_collection_Td8kgM": {
+          "type": "featured_collection",
           "settings": {
             "collection": "bedroom-furniture-shop-by-room",
-            "title": "",
-            "button_label": "Shop now",
-            "button_style": "btn--primary"
+            "title": "Bedroom",
+            "description": ""
           }
         },
-        "collection_z7dRq6": {
-          "type": "collection",
-          "settings": {
-            "collection": "living-room-furniture",
-            "title": "",
-            "button_label": "Shop now",
-            "button_style": "btn--primary"
-          }
-        },
-        "collection_8AzXjd": {
-          "type": "collection",
+        "featured_collection_eCXnF3": {
+          "type": "featured_collection",
           "settings": {
             "collection": "dining-furniture-shop-by-room",
-            "title": "",
-            "button_label": "Shop now",
-            "button_style": "btn--primary"
+            "title": "Dining",
+            "description": ""
+          }
+        },
+        "featured_collection_EnXyHy": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "living-room-furniture",
+            "title": "Living",
+            "description": ""
           }
         }
       },
       "block_order": [
-        "collection_K3hdwx",
-        "collection_z7dRq6",
-        "collection_8AzXjd"
+        "featured_collection_Td8kgM",
+        "featured_collection_eCXnF3",
+        "featured_collection_EnXyHy"
       ],
-      "name": "t:sections.collections-showcase.name",
+      "name": "t:sections.collection-list.name",
       "settings": {
-        "container": "full",
-        "color_scheme": "",
-        "heading": "Collections showcase",
+        "color_scheme": "scheme-260dd0dc-3183-4ca0-acf7-4a216e4dcaf7",
+        "layout": "standard",
+        "subheading": "",
+        "heading": "",
         "heading_size": "h1",
         "heading_tag": "h2",
         "heading_highlight_style": "none",
-        "subheading": "",
-        "tab_color_scheme": "",
-        "image_position": "left",
-        "image_ratio": "adapt",
-        "image_overlay_opacity": 30,
-        "collection_heading_size": "h1",
-        "products_to_display": 3,
-        "pcard_image_ratio": "",
-        "padding_top": 0,
-        "padding_bottom": 0,
+        "description": "",
+        "text_size": "text-base",
+        "card_color_inherited": true,
+        "show_product_count": false,
+        "show_icon": true,
+        "card_style": "style-2",
+        "card_image_ratio": "4/3",
+        "content_alignment": "left",
+        "columns_desktop": 3,
+        "column_gap": "medium",
+        "row_gap": "medium",
+        "enable_slider": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 10,
+        "padding_bottom": 50,
         "show_section_divider": false,
         "divider_width": "fixed",
         "custom_class": ""
@@ -502,7 +506,7 @@
     "features",
     "1780022978cdde98dd",
     "certs",
-    "collections_showcase_arBVkp",
+    "collection_list_6AhMiN",
     "faq",
     "cta"
   ]
