@@ -321,7 +321,7 @@
       ],
       "name": "t:sections.collection-list.name",
       "settings": {
-        "color_scheme": "scheme-260dd0dc-3183-4ca0-acf7-4a216e4dcaf7",
+        "color_scheme": "scheme-9",
         "layout": "standard",
         "subheading": "",
         "heading": "",
@@ -333,7 +333,7 @@
         "card_color_inherited": true,
         "show_product_count": false,
         "show_icon": true,
-        "card_style": "style-2",
+        "card_style": "style-1",
         "card_image_ratio": "4/3",
         "content_alignment": "left",
         "columns_desktop": 3,
