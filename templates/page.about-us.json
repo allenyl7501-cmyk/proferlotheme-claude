@@ -11,23 +11,20 @@
   "sections": {
     "hero": {
       "type": "rich-text",
-      "settings": {
-        "color_scheme": "scheme-2",
-        "content_alignment": "center",
-        "padding_top": 100,
-        "padding_bottom": 100
-      },
       "blocks": {
         "hero_sub": {
           "type": "subheading",
-          "settings": { "subheading": "Australian furniture, factory direct" }
+          "settings": {
+            "subheading": "Australian furniture, factory direct"
+          }
         },
         "hero_h": {
           "type": "heading",
           "settings": {
             "heading": "Your home should feel like you.",
             "heading_size": "hd1",
-            "heading_tag": "h1"
+            "heading_tag": "h1",
+            "heading_highlight_style": "none"
           }
         },
         "hero_txt": {
@@ -38,183 +35,380 @@
           }
         }
       },
-      "block_order": ["hero_sub", "hero_h", "hero_txt"]
+      "block_order": [
+        "hero_sub",
+        "hero_h",
+        "hero_txt"
+      ],
+      "settings": {
+        "color_scheme": "scheme-2",
+        "content_alignment": "center",
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "custom_class": ""
+      }
     },
     "story": {
       "type": "image-with-text",
-      "settings": {
-        "section_color_scheme": "scheme-1",
-        "color_scheme": "scheme-1",
-        "layout": "image_first",
-        "image_height": "medium",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "center",
-        "enable_parallax": false,
-        "padding_top": 60,
-        "padding_bottom": 60
-      },
       "blocks": {
         "story_sub": {
           "type": "subheading",
-          "settings": { "subheading": "Our story" }
+          "settings": {
+            "subheading": "Our story"
+          }
         },
         "story_h": {
           "type": "heading",
           "settings": {
             "heading": "We cut out the middlemen so you don't have to pay for them.",
             "heading_size": "h2",
-            "heading_tag": "h2"
+            "heading_tag": "h2",
+            "heading_highlight_style": "none"
           }
         },
         "story_txt": {
           "type": "text",
           "settings": {
-            "text": "<p>Proferlo started with a simple frustration: great furniture shouldn't cost a fortune just because it passed through too many hands. So we built a different model — we own our factory, design our own pieces, and ship directly to your door across Australia.</p><p>That means you get furniture that's genuinely well-made, at a price that makes sense. Our Acacia Ridge facility in Brisbane is a dispatch warehouse only — not a showroom, and not open to the public. Everything happens online, with zero fuss.</p><p>The result? A bedroom, living room, or dining space you're actually proud of — without spending like you had a designer on speed dial.</p>"
+            "text": "<p>Proferlo started with a simple frustration: great furniture shouldn't cost a fortune just because it passed through too many hands. So we built a different model — we own our factory, design our own pieces, and ship directly to your door across Australia.</p><p>That means you get furniture that's genuinely well-made, at a price that makes sense. Our Acacia Ridge facility in Brisbane is a dispatch warehouse only — not a showroom, and not open to the public. Everything happens online, with zero fuss.</p><p>The result? A bedroom, living room, or dining space you're actually proud of — without spending like you had a designer on speed dial.</p>",
+            "text_size": "text-base"
           }
         }
       },
-      "block_order": ["story_sub", "story_h", "story_txt"]
+      "block_order": [
+        "story_sub",
+        "story_h",
+        "story_txt"
+      ],
+      "settings": {
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-1",
+        "image_height": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "center",
+        "desktop_content_alignment": "left",
+        "enable_parallax": false,
+        "parallax_direction": "vertical",
+        "mobile_content_alignment": "center",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "custom_class": ""
+      }
     },
     "testimonials": {
       "type": "testimonials",
-      "settings": {
-        "color_scheme": "scheme-3",
-        "heading": "Real homes. Real people.",
-        "heading_size": "h2",
-        "heading_tag": "h2",
-        "subheading": "Don't take our word for it",
-        "enable_slider": true,
-        "columns_desktop": 3,
-        "swipe_on_mobile": true,
-        "padding_top": 80,
-        "padding_bottom": 80
-      },
       "blocks": {
         "t1": {
           "type": "testimonial",
           "settings": {
+            "show_image": true,
             "text": "<p>Ordered a bed frame on a Monday, it was at my door by Thursday. Assembly was straightforward and it looks exactly like the photos. Honestly couldn't be happier.</p>",
             "author": "Sarah M.",
             "bio": "Sydney, NSW",
+            "product": "",
             "icon": "5-stars"
           }
         },
         "t2": {
           "type": "testimonial",
           "settings": {
+            "show_image": true,
             "text": "<p>I was nervous buying furniture online but Proferlo made it easy. The quality is genuinely impressive for the price. My living room finally looks like something out of a magazine.</p>",
             "author": "James T.",
             "bio": "Melbourne, VIC",
+            "product": "",
             "icon": "5-stars"
           }
         },
         "t3": {
           "type": "testimonial",
           "settings": {
+            "show_image": true,
             "text": "<p>Third time ordering from Proferlo now. The dining table is my favourite purchase — solid, well-finished, and exactly what I needed for a small apartment.</p>",
             "author": "Priya K.",
             "bio": "Brisbane, QLD",
+            "product": "",
             "icon": "5-stars"
+          }
+        },
+        "testimonial_B6tAWQ": {
+          "type": "testimonial",
+          "settings": {
+            "show_image": true,
+            "text": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
+            "author": "Author's name",
+            "bio": "",
+            "product": "",
+            "icon": "none"
+          }
+        },
+        "testimonial_rUBwgz": {
+          "type": "testimonial",
+          "settings": {
+            "show_image": true,
+            "text": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
+            "author": "Author's name",
+            "bio": "",
+            "product": "",
+            "icon": "none"
           }
         }
       },
-      "block_order": ["t1", "t2", "t3"]
+      "block_order": [
+        "t1",
+        "t2",
+        "t3",
+        "testimonial_B6tAWQ",
+        "testimonial_rUBwgz"
+      ],
+      "settings": {
+        "color_scheme": "scheme-3",
+        "heading": "Real homes. Real people.",
+        "heading_size": "h2",
+        "heading_tag": "h2",
+        "heading_highlight_style": "none",
+        "subheading": "Don't take our word for it",
+        "description": "",
+        "text_size": "text-base",
+        "card_color_scheme": "",
+        "card_layout": "1",
+        "card_text_size": "text-base",
+        "columns_desktop": 3,
+        "column_gap": "medium",
+        "enable_slider": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "custom_class": ""
+      }
     },
     "features": {
       "type": "multicolumn",
-      "settings": {
-        "color_scheme": "scheme-1",
-        "heading": "Quality you can feel. Pricing that makes sense.",
-        "heading_size": "h2",
-        "heading_tag": "h2",
-        "subheading": "Why Proferlo",
-        "columns_desktop": 4,
-        "column_alignment": "center",
-        "swipe_on_mobile": true,
-        "padding_top": 80,
-        "padding_bottom": 80
-      },
       "blocks": {
         "mc1": {
           "type": "column",
           "settings": {
             "show_image": false,
+            "image_width": "medium",
             "title": "Factory-direct pricing",
             "heading_size": "h4",
             "heading_tag": "h3",
-            "text": "<p>We own our factory. No importers, no distributors — just better value passed straight to you.</p>"
+            "text": "<p>We own our factory. No importers, no distributors — just better value passed straight to you.</p>",
+            "text_size": "text-base",
+            "button_label": "Button label",
+            "button_style": "btn--underline",
+            "button_link": "",
+            "mobile_layout": "inherit"
           }
         },
         "mc2": {
           "type": "column",
           "settings": {
             "show_image": false,
+            "image_width": "medium",
             "title": "Ships Australia-wide",
             "heading_size": "h4",
             "heading_tag": "h3",
-            "text": "<p>Bed frames, bedroom furniture, living room furniture, and dining furniture delivered to your door, anywhere in Australia.</p>"
+            "text": "<p>Bed frames, bedroom furniture, living room furniture, and dining furniture delivered to your door, anywhere in Australia.</p>",
+            "text_size": "text-base",
+            "button_label": "Button label",
+            "button_style": "btn--underline",
+            "button_link": "",
+            "mobile_layout": "inherit"
           }
         },
         "mc3": {
           "type": "column",
           "settings": {
             "show_image": false,
+            "image_width": "medium",
             "title": "14-day risk-free returns",
             "heading_size": "h4",
             "heading_tag": "h3",
-            "text": "<p>Not what you expected? Return it within 14 days, no awkward conversations required.</p>"
+            "text": "<p>Not what you expected? Return it within 14 days, no awkward conversations required.</p>",
+            "text_size": "text-base",
+            "button_label": "Button label",
+            "button_style": "btn--underline",
+            "button_link": "",
+            "mobile_layout": "inherit"
           }
         },
         "mc4": {
           "type": "column",
           "settings": {
             "show_image": false,
+            "image_width": "medium",
             "title": "Certified sustainable",
             "heading_size": "h4",
             "heading_tag": "h3",
-            "text": "<p>FSC-certified timber and CARB2-compliant finishes. Good for your home and a little easier on the planet.</p>"
+            "text": "<p>FSC-certified timber and CARB2-compliant finishes. Good for your home and a little easier on the planet.</p>",
+            "text_size": "text-base",
+            "button_label": "Button label",
+            "button_style": "btn--underline",
+            "button_link": "",
+            "mobile_layout": "inherit"
           }
         }
       },
-      "block_order": ["mc1", "mc2", "mc3", "mc4"]
+      "block_order": [
+        "mc1",
+        "mc2",
+        "mc3",
+        "mc4"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "heading": "Quality you can feel. Pricing that makes sense.",
+        "heading_size": "h2",
+        "heading_tag": "h2",
+        "heading_highlight_style": "none",
+        "subheading": "Why Proferlo",
+        "description": "",
+        "text_size": "text-base",
+        "column_alignment": "center",
+        "columns_desktop": 4,
+        "column_gap": "large",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "custom_class": ""
+      }
     },
     "certs": {
       "type": "image-with-text",
-      "settings": {
-        "section_color_scheme": "scheme-3",
-        "color_scheme": "scheme-3",
-        "layout": "text_first",
-        "image_height": "medium",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "center",
-        "enable_parallax": false,
-        "padding_top": 60,
-        "padding_bottom": 60
-      },
       "blocks": {
         "certs_sub": {
           "type": "subheading",
-          "settings": { "subheading": "Our certifications" }
+          "settings": {
+            "subheading": "Our certifications"
+          }
         },
         "certs_h": {
           "type": "heading",
           "settings": {
             "heading": "Responsibly made. Certified to prove it.",
             "heading_size": "h2",
-            "heading_tag": "h2"
+            "heading_tag": "h2",
+            "heading_highlight_style": "none"
           }
         },
         "certs_txt": {
           "type": "text",
           "settings": {
-            "text": "<p>We don't just say our furniture is responsibly made — we back it up. Every timber piece is FSC-certified, meaning the wood is sourced from responsibly managed forests. And every finish is CARB2-compliant, meaning no nasty off-gassing in your home.</p><p><strong>FSC Certified</strong> · <strong>CARB2 Compliant</strong></p>"
+            "text": "<p>We don't just say our furniture is responsibly made — we back it up. Every timber piece is FSC-certified, meaning the wood is sourced from responsibly managed forests. And every finish is CARB2-compliant, meaning no nasty off-gassing in your home.</p><p><strong>FSC Certified</strong> · <strong>CARB2 Compliant</strong></p>",
+            "text_size": "text-base"
           }
         }
       },
-      "block_order": ["certs_sub", "certs_h", "certs_txt"]
+      "block_order": [
+        "certs_sub",
+        "certs_h",
+        "certs_txt"
+      ],
+      "settings": {
+        "section_color_scheme": "scheme-3",
+        "color_scheme": "scheme-3",
+        "image_height": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "center",
+        "desktop_content_alignment": "left",
+        "enable_parallax": false,
+        "parallax_direction": "vertical",
+        "mobile_content_alignment": "center",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "custom_class": ""
+      }
     },
     "faq": {
       "type": "collapsible-tabs",
+      "blocks": {
+        "faq0": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "What furniture do you sell?",
+            "content": "<p>Proferlo stocks bed frames and bases, bedroom furniture (including bedside tables and tallboys), living room furniture (sofas, coffee tables, TV units, and shelving), and dining furniture (dining tables and chairs). We're an online-only Australian furniture store — no showroom, just great pieces shipped directly to your door.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false
+          }
+        },
+        "faq1": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Do you have a showroom?",
+            "content": "<p>No — Proferlo is an online-only store. Our warehouse is located in Acacia Ridge, Brisbane, but it's a dispatch facility only and is not open to the public. All orders are placed through our website and delivered Australia-wide.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": true
+          }
+        },
+        "faq2": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Where do you ship?",
+            "content": "<p>We ship Australia-wide via Allied Express. Metro areas typically receive orders in 2–4 business days. Regional and remote delivery timeframes may vary — contact us for a delivery estimate to your area.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false
+          }
+        },
+        "faq3": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "What's your return policy?",
+            "content": "<p>We offer 14-day risk-free returns. If you're not happy with your purchase, contact our team within 14 days of delivery and we'll arrange a return. Items must be in original condition and packaging.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false
+          }
+        },
+        "faq4": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Are your products easy to assemble?",
+            "content": "<p>Most Proferlo pieces require basic self-assembly and come with clear instructions and all required hardware. Assembly typically takes 30–60 minutes for most items. If you have any issues, our support team is happy to help.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false
+          }
+        },
+        "faq5": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "How do I contact you?",
+            "content": "<p>You can reach us via the contact form on our website or by emailing us directly. We're an online-only business, so our team operates digitally — we aim to respond to all enquiries within 1 business day.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false
+          }
+        }
+      },
+      "block_order": [
+        "faq0",
+        "faq1",
+        "faq2",
+        "faq3",
+        "faq4",
+        "faq5"
+      ],
       "settings": {
         "container": "narrow",
         "color_scheme": "scheme-1",
@@ -222,87 +416,45 @@
         "heading": "Good to know",
         "heading_size": "h1",
         "heading_tag": "h2",
+        "heading_highlight_style": "none",
         "subheading": "Quick answers",
+        "description": "",
+        "text_size": "text-base",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--primary",
+        "column_gap": "large",
+        "row_gap": "inherit",
         "item_style": "standard",
+        "item_color_scheme": "",
         "item_heading_font": "heading",
         "item_heading_size": "h4",
         "item_heading_tag": "h3",
+        "item_icon_size": "extra-large",
         "padding_top": 80,
-        "padding_bottom": 80
-      },
-      "blocks": {
-        "faq0": {
-          "type": "collapsible_item",
-          "settings": {
-            "heading": "What furniture do you sell?",
-            "content": "<p>Proferlo stocks bed frames and bases, bedroom furniture (including bedside tables and tallboys), living room furniture (sofas, coffee tables, TV units, and shelving), and dining furniture (dining tables and chairs). We're an online-only Australian furniture store — no showroom, just great pieces shipped directly to your door.</p>",
-            "open": false
-          }
-        },
-        "faq1": {
-          "type": "collapsible_item",
-          "settings": {
-            "heading": "Do you have a showroom?",
-            "content": "<p>No — Proferlo is an online-only store. Our warehouse is located in Acacia Ridge, Brisbane, but it's a dispatch facility only and is not open to the public. All orders are placed through our website and delivered Australia-wide.</p>",
-            "open": true
-          }
-        },
-        "faq2": {
-          "type": "collapsible_item",
-          "settings": {
-            "heading": "Where do you ship?",
-            "content": "<p>We ship Australia-wide via Allied Express. Metro areas typically receive orders in 2–4 business days. Regional and remote delivery timeframes may vary — contact us for a delivery estimate to your area.</p>",
-            "open": false
-          }
-        },
-        "faq3": {
-          "type": "collapsible_item",
-          "settings": {
-            "heading": "What's your return policy?",
-            "content": "<p>We offer 14-day risk-free returns. If you're not happy with your purchase, contact our team within 14 days of delivery and we'll arrange a return. Items must be in original condition and packaging.</p>",
-            "open": false
-          }
-        },
-        "faq4": {
-          "type": "collapsible_item",
-          "settings": {
-            "heading": "Are your products easy to assemble?",
-            "content": "<p>Most Proferlo pieces require basic self-assembly and come with clear instructions and all required hardware. Assembly typically takes 30–60 minutes for most items. If you have any issues, our support team is happy to help.</p>",
-            "open": false
-          }
-        },
-        "faq5": {
-          "type": "collapsible_item",
-          "settings": {
-            "heading": "How do I contact you?",
-            "content": "<p>You can reach us via the contact form on our website or by emailing us directly. We're an online-only business, so our team operates digitally — we aim to respond to all enquiries within 1 business day.</p>",
-            "open": false
-          }
-        }
-      },
-      "block_order": ["faq0", "faq1", "faq2", "faq3", "faq4", "faq5"]
+        "padding_bottom": 80,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "custom_class": ""
+      }
     },
     "cta": {
       "type": "rich-text",
-      "settings": {
-        "color_scheme": "scheme-2",
-        "content_alignment": "center",
-        "padding_top": 100,
-        "padding_bottom": 100
-      },
       "blocks": {
         "cta_h": {
           "type": "heading",
           "settings": {
             "heading": "Ready to find your piece?",
             "heading_size": "hd2",
-            "heading_tag": "h2"
+            "heading_tag": "h2",
+            "heading_highlight_style": "none"
           }
         },
         "cta_txt": {
           "type": "text",
           "settings": {
-            "text": "<p>Browse our full range — bed frames, bedroom furniture, living room furniture, and dining furniture — shipped to your door, anywhere in Australia.</p>"
+            "text": "<p>Browse our full range — bed frames, bedroom furniture, living room furniture, and dining furniture — shipped to your door, anywhere in Australia.</p>",
+            "text_size": "text-base"
           }
         },
         "cta_btn": {
@@ -314,8 +466,29 @@
           }
         }
       },
-      "block_order": ["cta_h", "cta_txt", "cta_btn"]
+      "block_order": [
+        "cta_h",
+        "cta_txt",
+        "cta_btn"
+      ],
+      "settings": {
+        "color_scheme": "scheme-2",
+        "content_alignment": "center",
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "custom_class": ""
+      }
     }
   },
-  "order": ["hero", "story", "testimonials", "features", "certs", "faq", "cta"]
+  "order": [
+    "hero",
+    "story",
+    "testimonials",
+    "features",
+    "certs",
+    "faq",
+    "cta"
+  ]
 }
