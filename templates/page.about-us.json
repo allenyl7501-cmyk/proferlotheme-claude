@@ -84,6 +84,7 @@
       "settings": {
         "section_color_scheme": "scheme-1",
         "color_scheme": "scheme-1",
+        "image": "shopify://shop_images/Proferlo_Hero_WEB.jpg",
         "image_height": "medium",
         "layout": "image_first",
         "desktop_content_position": "center",
@@ -91,7 +92,7 @@
         "enable_parallax": false,
         "parallax_direction": "vertical",
         "mobile_content_alignment": "center",
-        "padding_top": 60,
+        "padding_top": 30,
         "padding_bottom": 60,
         "show_section_divider": false,
         "divider_width": "fixed",
@@ -104,14 +105,15 @@
         "mc1": {
           "type": "column",
           "settings": {
-            "show_image": false,
+            "show_image": true,
+            "image": "shopify://shop_images/icon-factory-direct.svg",
             "image_width": "medium",
             "title": "Factory-direct pricing",
             "heading_size": "h4",
             "heading_tag": "h3",
             "text": "<p>We own our factory. No importers, no distributors — just better value passed straight to you.</p>",
             "text_size": "text-base",
-            "button_label": "Button label",
+            "button_label": "",
             "button_style": "btn--underline",
             "button_link": "",
             "mobile_layout": "inherit"
@@ -120,14 +122,15 @@
         "mc2": {
           "type": "column",
           "settings": {
-            "show_image": false,
+            "show_image": true,
+            "image": "shopify://shop_images/icon-ships-australia.svg",
             "image_width": "medium",
             "title": "Ships Australia-wide",
             "heading_size": "h4",
             "heading_tag": "h3",
             "text": "<p>Bed frames, bedroom furniture, living room furniture, and dining furniture delivered to your door, anywhere in Australia.</p>",
             "text_size": "text-base",
-            "button_label": "Button label",
+            "button_label": "",
             "button_style": "btn--underline",
             "button_link": "",
             "mobile_layout": "inherit"
@@ -136,14 +139,15 @@
         "mc3": {
           "type": "column",
           "settings": {
-            "show_image": false,
+            "show_image": true,
+            "image": "shopify://shop_images/icon-returns.svg",
             "image_width": "medium",
             "title": "14-day risk-free returns",
             "heading_size": "h4",
             "heading_tag": "h3",
             "text": "<p>Not what you expected? Return it within 14 days, no awkward conversations required.</p>",
             "text_size": "text-base",
-            "button_label": "Button label",
+            "button_label": "",
             "button_style": "btn--underline",
             "button_link": "",
             "mobile_layout": "inherit"
@@ -152,14 +156,15 @@
         "mc4": {
           "type": "column",
           "settings": {
-            "show_image": false,
-            "image_width": "medium",
+            "show_image": true,
+            "image": "shopify://shop_images/icon-certified-sustainable.svg",
+            "image_width": "large",
             "title": "Certified sustainable",
             "heading_size": "h4",
             "heading_tag": "h3",
             "text": "<p>FSC-certified timber and CARB2-compliant finishes. Good for your home and a little easier on the planet.</p>",
             "text_size": "text-base",
-            "button_label": "Button label",
+            "button_label": "",
             "button_style": "btn--underline",
             "button_link": "",
             "mobile_layout": "inherit"
@@ -183,7 +188,7 @@
         "text_size": "text-base",
         "column_alignment": "center",
         "columns_desktop": 4,
-        "column_gap": "large",
+        "column_gap": "extra-large",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "padding_top": 80,
@@ -233,8 +238,8 @@
       ],
       "settings": {
         "include_margins": true,
-        "padding_top": 0,
-        "padding_bottom": 0,
+        "padding_top": 30,
+        "padding_bottom": 30,
         "custom_class": ""
       }
     },
@@ -431,7 +436,7 @@
         "container": "narrow",
         "color_scheme": "scheme-1",
         "header_layout": "vertical",
-        "heading": "Good to know",
+        "heading": "",
         "heading_size": "h1",
         "heading_tag": "h2",
         "heading_highlight_style": "none",
@@ -449,10 +454,50 @@
         "item_heading_size": "h4",
         "item_heading_tag": "h3",
         "item_icon_size": "extra-large",
-        "padding_top": 80,
+        "padding_top": 50,
         "padding_bottom": 80,
-        "show_section_divider": false,
+        "show_section_divider": true,
         "divider_width": "fixed",
+        "custom_class": ""
+      }
+    },
+    "1780024669fdddf33c": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_store_summary_PK6iRd": {
+          "type": "shopify://apps/judge-me-reviews/blocks/store_summary/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "data_source": "real",
+            "theme": "expanded",
+            "button_theme_color": "#FFFFFF",
+            "button_theme_text_color": "#000000",
+            "show_keywords": true,
+            "keywords_visibility": "shown",
+            "show_button": true,
+            "button_visibility": "shown",
+            "alignment": "center",
+            "title_size": "large",
+            "text_size": "extra_large",
+            "corner_styling": "soft",
+            "widget_color": "#f5f3ef",
+            "text_color": "#000000",
+            "lighter_text_color": "#787878",
+            "button_color": "#3f4e4f",
+            "button_text_color": "#FFFFFF",
+            "show_sentiment_colors": false,
+            "max_width": 800,
+            "heading_text": "What REAL Aussies are saying about Proferlo...",
+            "button_text": "See AI reviews summary"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_store_summary_PK6iRd"
+      ],
+      "settings": {
+        "include_margins": true,
+        "padding_top": 0,
+        "padding_bottom": 70,
         "custom_class": ""
       }
     },
@@ -498,6 +543,32 @@
         "divider_width": "fixed",
         "custom_class": ""
       }
+    },
+    "newsletter_ArN99r": {
+      "type": "newsletter",
+      "name": "t:sections.newsletter.presets.name",
+      "settings": {
+        "color_scheme": "",
+        "layout": "horizontal",
+        "heading": "Join Proferlo for exclusive savings, new products and more",
+        "heading_size": "h4",
+        "heading_tag": "h4",
+        "heading_highlight_style": "none",
+        "subheading": "",
+        "description": "<p><strong>Get the latest offers and product updates delivered straight to your inbox.</strong></p>",
+        "text_size": "text-base",
+        "alignment": "center",
+        "design": "design-2",
+        "form_width": 655,
+        "newsletter_term": "",
+        "newsletter_term_size": "text-sm",
+        "button_style": "btn--primary",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "show_section_divider": true,
+        "divider_width": "fixed",
+        "custom_class": ""
+      }
     }
   },
   "order": [
@@ -508,6 +579,8 @@
     "certs",
     "collection_list_6AhMiN",
     "faq",
-    "cta"
+    "1780024669fdddf33c",
+    "cta",
+    "newsletter_ArN99r"
   ]
 }
