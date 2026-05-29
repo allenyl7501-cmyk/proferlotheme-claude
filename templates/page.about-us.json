@@ -111,7 +111,7 @@
             "title": "Factory-direct pricing",
             "heading_size": "h4",
             "heading_tag": "h3",
-            "text": "<p>We own our factory. No importers, no distributors — just better value passed straight to you.</p>",
+            "text": "<p><em>We own our factory. No importers, no distributors — just better value passed straight to you.</em></p>",
             "text_size": "text-base",
             "button_label": "",
             "button_style": "btn--underline",
@@ -128,7 +128,7 @@
             "title": "Ships Australia-wide",
             "heading_size": "h4",
             "heading_tag": "h3",
-            "text": "<p>Bed frames, bedroom furniture, living room furniture, and dining furniture delivered to your door, anywhere in Australia.</p>",
+            "text": "<p><em>Bed frames, bedroom furniture, living room furniture, and dining furniture delivered to your door, anywhere in Australia.</em></p>",
             "text_size": "text-base",
             "button_label": "",
             "button_style": "btn--underline",
@@ -145,7 +145,7 @@
             "title": "14-day risk-free returns",
             "heading_size": "h4",
             "heading_tag": "h3",
-            "text": "<p>Not what you expected? Return it within 14 days, no awkward conversations required.</p>",
+            "text": "<p><em>Not what you expected? Return it within 14 days, no awkward conversations required.</em></p>",
             "text_size": "text-base",
             "button_label": "",
             "button_style": "btn--underline",
@@ -162,7 +162,7 @@
             "title": "Certified sustainable",
             "heading_size": "h4",
             "heading_tag": "h3",
-            "text": "<p>FSC-certified timber and CARB2-compliant finishes. Good for your home and a little easier on the planet.</p>",
+            "text": "<p><em>FSC-certified timber and CARB2-compliant finishes. Good for your home and a little easier on the planet.</em></p>",
             "text_size": "text-base",
             "button_label": "",
             "button_style": "btn--underline",
@@ -267,17 +267,27 @@
             "text": "<p>We don't just say our furniture is responsibly made — we back it up. Every timber piece is FSC-certified, meaning the wood is sourced from responsibly managed forests. And every finish is CARB2-compliant, meaning no nasty off-gassing in your home.</p><p><strong>FSC Certified</strong> · <strong>CARB2 Compliant</strong></p>",
             "text_size": "text-base"
           }
+        },
+        "button_KKmUhH": {
+          "type": "button",
+          "settings": {
+            "button_label": "Learn more",
+            "button_link": "",
+            "button_style": "btn--underline"
+          }
         }
       },
       "block_order": [
         "certs_sub",
         "certs_h",
-        "certs_txt"
+        "certs_txt",
+        "button_KKmUhH"
       ],
       "settings": {
         "section_color_scheme": "scheme-3",
         "color_scheme": "scheme-3",
-        "image_height": "medium",
+        "image": "shopify://shop_images/factory-eco-badges-v2.jpg",
+        "image_height": "small",
         "layout": "text_first",
         "desktop_content_position": "center",
         "desktop_content_alignment": "left",
@@ -347,7 +357,7 @@
         "enable_slider": false,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "padding_top": 10,
+        "padding_top": 30,
         "padding_bottom": 50,
         "show_section_divider": false,
         "divider_width": "fixed",
