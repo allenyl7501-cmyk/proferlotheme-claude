@@ -31,7 +31,7 @@
           "type": "text",
           "settings": {
             "text": "<p>We're Proferlo — an online-only Australian furniture store shipping bed frames, bedroom furniture, living room furniture, and dining furniture directly from our factory to your door. No showroom. No middlemen. Just furniture that fits your life.</p>",
-            "text_size": "text-base"
+            "text_size": "text-sm"
           }
         }
       },
@@ -283,6 +283,15 @@
         "custom_class": ""
       }
     },
+    "17800219990baef72c": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "custom_class": ""
+      }
+    },
     "certs": {
       "type": "image-with-text",
       "blocks": {
@@ -487,6 +496,7 @@
     "story",
     "testimonials",
     "features",
+    "17800219990baef72c",
     "certs",
     "faq",
     "cta"
