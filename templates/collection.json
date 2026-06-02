@@ -25,7 +25,7 @@
             "heading_size": "hd1",
             "heading_tag": "h1",
             "show_description": true,
-            "padding_top": 100,
+            "padding_top": 0,
             "padding_bottom": 0
           }
         }
@@ -38,9 +38,9 @@
         "@media (max-width: 767px) {.collection-hero__title {font-size: 3.5rem; } .collection-hero__description {display: none; }}"
       ],
       "settings": {
-        "color_scheme": "scheme-260dd0dc-3183-4ca0-acf7-4a216e4dcaf7",
+        "color_scheme": "scheme-ef559241-393d-4947-8d52-eef4d81ce00a",
         "text_alignment": "left",
-        "show_collection_image": true,
+        "show_collection_image": false,
         "image_overlay_opacity": 36,
         "image_position": "as-bg",
         "image_height": "extra-small",
