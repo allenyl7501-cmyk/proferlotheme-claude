@@ -1,0 +1,175 @@
+{%- comment -%}
+  Proferlo — Shipping & Delivery Policy : DELIVERY ZONES & TIMEFRAMES
+  Renders a responsive, machine-readable table from "zone" blocks AND emits
+  matching Schema.org OfferShippingDetails JSON-LD for Google / AI assistants.
+  Every value is editable per zone in the Theme customiser.
+{%- endcomment -%}
+<style>
+  #sdzones-{{ section.id }}{
+    --pf-forest:#2C3639;--pf-teal:#3F4E4F;--pf-linen:#DCD7C9;--pf-copper:#AB764B;
+    --pf-bg:#F4F1EA;--pf-card:#fff;--pf-cardbd:#E7E1D2;--pf-muted:#5A615C;
+    background:var(--pf-bg);padding-top:{{ section.settings.padding_top }}px;padding-bottom:{{ section.settings.padding_bottom }}px;
+    font-family:var(--font-body-family);
+  }
+  #sdzones-{{ section.id }} *{box-sizing:border-box;}
+  #sdzones-{{ section.id }} .sdwrap{max-width:104rem;margin:0 auto;padding:0 2rem;color:var(--pf-forest);}
+  #sdzones-{{ section.id }} h2{font-family:var(--font-heading-family);font-size:var(--font-h3-size);text-align:center;margin:0 0 .6rem;}
+  #sdzones-{{ section.id }} .sdsub,#sdzones-{{ section.id }} .sdsub p{text-align:center;color:var(--pf-muted);font-size:1.5rem;max-width:64rem;margin:0 auto 2.2rem;}
+  #sdzones-{{ section.id }} .sddispatch{background:#fff;border:1px solid var(--pf-cardbd);border-left:.4rem solid var(--pf-copper);border-radius:1rem;padding:1.6rem 2rem;margin-bottom:2.2rem;font-size:1.45rem;}
+  #sdzones-{{ section.id }} .sddispatch p{margin:0;}
+  #sdzones-{{ section.id }} .sddispatch strong{color:var(--pf-teal);}
+  #sdzones-{{ section.id }} .sddispatch ul{margin:.8rem 0 0;padding-left:2rem;color:var(--pf-muted);}
+  #sdzones-{{ section.id }} .sdtablecard{background:#fff;border:1px solid var(--pf-cardbd);border-radius:1.2rem;overflow:hidden;}
+  #sdzones-{{ section.id }} table{width:100%;border-collapse:collapse;font-size:1.45rem;}
+  #sdzones-{{ section.id }} thead th{background:var(--pf-teal);color:#fff;text-align:left;font-family:var(--font-heading-family);font-weight:600;font-size:1.35rem;letter-spacing:.03em;padding:1.4rem 1.6rem;}
+  #sdzones-{{ section.id }} tbody td{padding:1.4rem 1.6rem;border-top:1px solid #EEE9DC;vertical-align:top;}
+  #sdzones-{{ section.id }} tbody tr:nth-child(even) td{background:#FBFAF5;}
+  #sdzones-{{ section.id }} .sdzone{font-weight:700;color:var(--pf-teal);}
+  #sdzones-{{ section.id }} .sdfree{display:inline-block;background:#E4F0E8;color:#1E5E45;font-weight:700;font-size:1.2rem;padding:.2rem .9rem;border-radius:999px;}
+  #sdzones-{{ section.id }} .sdcalc{color:var(--pf-muted);}
+  #sdzones-{{ section.id }} .sdtnote,#sdzones-{{ section.id }} .sdtnote p{font-size:1.3rem;color:var(--pf-muted);margin:1.2rem 0 0;}
+  #sdzones-{{ section.id }} .sdtnote a{color:var(--pf-copper);font-weight:600;}
+  @media (max-width:749px){
+    #sdzones-{{ section.id }} thead{display:none;}
+    #sdzones-{{ section.id }} table,#sdzones-{{ section.id }} tbody,#sdzones-{{ section.id }} tr,#sdzones-{{ section.id }} td{display:block;width:100%;}
+    #sdzones-{{ section.id }} tbody tr{border-top:1px solid #EEE9DC;padding:.6rem 0;}
+    #sdzones-{{ section.id }} tbody tr:first-child{border-top:none;}
+    #sdzones-{{ section.id }} tbody td{border:none;padding:.7rem 1.6rem;background:none !important;}
+    #sdzones-{{ section.id }} tbody td:before{content:attr(data-label);display:block;font-size:1.1rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#9A8F77;margin-bottom:.2rem;}
+  }
+</style>
+
+{%- liquid
+  assign sc = section.settings
+-%}
+
+<div id="sdzones-{{ section.id }}">
+  <div class="sdwrap">
+    {%- if sc.heading != blank -%}<h2>{{ sc.heading | escape }}</h2>{%- endif -%}
+    {%- if sc.subtext != blank -%}<div class="sdsub">{{ sc.subtext }}</div>{%- endif -%}
+
+    {%- if sc.dispatch_note != blank -%}
+    <div class="sddispatch">{{ sc.dispatch_note }}</div>
+    {%- endif -%}
+
+    <div class="sdtablecard">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">{{ sc.col_zone | escape }}</th>
+            <th scope="col">{{ sc.col_areas | escape }}</th>
+            <th scope="col">{{ sc.col_cost | escape }}</th>
+            <th scope="col">{{ sc.col_time | escape }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {%- for block in section.blocks -%}{%- if block.type == 'zone' -%}
+          <tr {{ block.shopify_attributes }}>
+            <td class="sdzone" data-label="{{ sc.col_zone | escape }}">{{ block.settings.zone_name | escape }}</td>
+            <td data-label="{{ sc.col_areas | escape }}">{{ block.settings.areas | escape }}</td>
+            <td data-label="{{ sc.col_cost | escape }}" {% unless block.settings.is_free %}class="sdcalc"{% endunless %}>
+              {%- if block.settings.is_free -%}<span class="sdfree">FREE</span> {% endif -%}{{ block.settings.cost_label | escape }}
+            </td>
+            <td data-label="{{ sc.col_time | escape }}">{{ block.settings.transit_text | escape }}</td>
+          </tr>
+          {%- endif -%}{%- endfor -%}
+        </tbody>
+      </table>
+    </div>
+
+    {%- if sc.table_note != blank -%}<div class="sdtnote">{{ sc.table_note }}</div>{%- endif -%}
+  </div>
+</div>
+
+{%- comment -%} ===== Machine-readable structured data (Schema.org OfferShippingDetails) ===== {%- endcomment -%}
+{%- if sc.emit_jsonld -%}
+{%- capture sd_items -%}
+  {%- for block in section.blocks -%}{%- if block.type == 'zone' and block.settings.in_structured_data -%}
+    ,{
+      "@type":"OfferShippingDetails",
+      "name":{{ block.settings.zone_name | json }},
+      "shippingDestination":{
+        "@type":"DefinedRegion",
+        "addressCountry":{{ block.settings.region_country | default: 'AU' | json }}
+        {%- if block.settings.region_codes != blank -%}
+          {%- assign codes = block.settings.region_codes | split: ',' -%}
+          {%- if codes.size > 1 -%},"addressRegion":[{% for c in codes %}{{ c | strip | json }}{% unless forloop.last %},{% endunless %}{% endfor %}]
+          {%- else -%},"addressRegion":{{ block.settings.region_codes | strip | json }}{%- endif -%}
+        {%- endif -%}
+        {%- if block.settings.region_desc != blank -%},"description":{{ block.settings.region_desc | json }}{%- endif -%}
+      },
+      "shippingRate":{"@type":"MonetaryAmount",{% if block.settings.is_free %}"value":0,"currency":"AUD"{% else %}"currency":"AUD","description":{{ block.settings.cost_label | json }}{% endif %}},
+      "deliveryTime":{
+        "@type":"ShippingDeliveryTime",
+        "handlingTime":{"@type":"QuantitativeValue","minValue":{{ sc.handling_min | default: 0 }},"maxValue":{{ sc.handling_max | default: 2 }},"unitCode":"DAY"}
+        {%- if block.settings.transit_max > 0 -%},"transitTime":{"@type":"QuantitativeValue","minValue":{{ block.settings.transit_min }},"maxValue":{{ block.settings.transit_max }},"unitCode":"DAY"}{%- endif -%}
+        ,"businessDays":{"@type":"OpeningHoursSpecification","dayOfWeek":[{% assign days = sc.dispatch_days | split: ',' %}{% for d in days %}{{ d | strip | json }}{% unless forloop.last %},{% endunless %}{% endfor %}]}
+      }
+    }
+  {%- endif -%}{%- endfor -%}
+{%- endcapture -%}
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebPage",
+  "name":{{ page.title | default: sc.heading | json }},
+  "url":{{ canonical_url | json }},
+  "dateModified":"{{ 'now' | date: '%Y-%m-%d' }}",
+  "publisher":{"@type":"Organization","name":{{ shop.name | json }}},
+  "mainEntity":{
+    "@type":"ItemList",
+    "name":"Delivery zones and estimated timeframes",
+    "itemListElement":[{{ sd_items | remove_first: ',' }}]
+  }
+}
+</script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Shipping zones table",
+  "tag": "section",
+  "class": "section-shipping-zones",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Delivery Zones & Timeframes" },
+    { "type": "richtext", "id": "subtext", "label": "Sub-text", "default": "<p>Estimated transit times are calculated <em>after dispatch</em>. Delivery cost for non-metro areas is calculated live at checkout based on total order weight and destination.</p>" },
+    { "type": "richtext", "id": "dispatch_note", "label": "Dispatch schedule callout", "default": "<p><strong>Dispatch schedule:</strong> Orders are dispatched <strong>Monday, Wednesday & Friday</strong> and booked with the courier one day before collection.</p><ul><li>Ordered Friday–Sunday (by 4pm) → collected Monday</li><li>Ordered Monday–Tuesday (by 4pm) → collected Wednesday</li><li>Ordered Wednesday–Thursday (by 4pm) → collected Friday</li></ul>" },
+    { "type": "richtext", "id": "table_note", "label": "Note under table", "default": "<p>Free shipping eligibility for your postcode is shown on each product page and confirmed at checkout. Not sure if you're metro or regional? Your exact delivery cost and method are confirmed at checkout. Larger or wholesale orders may require palletised transport — <a href=\"/pages/contact-us\">contact us</a> for a tailored quote.</p>" },
+    { "type": "header", "content": "Table column labels" },
+    { "type": "text", "id": "col_zone", "label": "Column 1", "default": "Zone" },
+    { "type": "text", "id": "col_areas", "label": "Column 2", "default": "Areas covered" },
+    { "type": "text", "id": "col_cost", "label": "Column 3", "default": "Delivery cost" },
+    { "type": "text", "id": "col_time", "label": "Column 4", "default": "Est. delivery (after dispatch)" },
+    { "type": "header", "content": "Machine-readable structured data (JSON-LD)" },
+    { "type": "paragraph", "content": "Embeds invisible Schema.org OfferShippingDetails so Google & AI assistants can read your delivery terms. Edit per-zone values in each zone block." },
+    { "type": "checkbox", "id": "emit_jsonld", "label": "Embed JSON-LD structured data", "default": true },
+    { "type": "text", "id": "dispatch_days", "label": "Dispatch days (comma-separated)", "default": "Monday, Wednesday, Friday" },
+    { "type": "range", "id": "handling_min", "min": 0, "max": 10, "step": 1, "unit": "d", "label": "Handling time min (days)", "default": 0 },
+    { "type": "range", "id": "handling_max", "min": 0, "max": 10, "step": 1, "unit": "d", "label": "Handling time max (days)", "default": 2 },
+    { "type": "header", "content": "Section spacing" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Top padding", "default": 40 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Bottom padding", "default": 8 }
+  ],
+  "blocks": [
+    {
+      "type": "zone",
+      "name": "Zone row",
+      "settings": [
+        { "type": "text", "id": "zone_name", "label": "Zone name", "default": "Brisbane Metro" },
+        { "type": "text", "id": "areas", "label": "Areas covered", "default": "Eligible Brisbane metro postcodes" },
+        { "type": "checkbox", "id": "is_free", "label": "Free delivery (shows FREE badge + rate 0 in data)", "default": false },
+        { "type": "text", "id": "cost_label", "label": "Cost text", "default": "Calculated at checkout" },
+        { "type": "text", "id": "transit_text", "label": "Delivery time text (shown in table)", "default": "2–4 business days" },
+        { "type": "header", "content": "Structured data (this zone)" },
+        { "type": "checkbox", "id": "in_structured_data", "label": "Include this zone in JSON-LD", "default": true },
+        { "type": "text", "id": "region_country", "label": "Country code", "default": "AU" },
+        { "type": "text", "id": "region_codes", "label": "State/region codes (comma-separated, optional)", "info": "e.g. QLD  or  NSW,VIC,ACT" },
+        { "type": "text", "id": "region_desc", "label": "Region description (optional)" },
+        { "type": "number", "id": "transit_min", "label": "Transit time min (days)", "default": 2 },
+        { "type": "number", "id": "transit_max", "label": "Transit time max (days)", "default": 4 }
+      ]
+    }
+  ],
+  "presets": [ { "name": "Shipping zones table", "blocks": [ { "type": "zone" } ] } ]
+}
+{% endschema %}
