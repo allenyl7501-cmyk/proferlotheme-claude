@@ -19,13 +19,41 @@
       "type": "main-page",
       "disabled": true,
       "settings": {
+        "heading_size": "h1",
+        "heading_tag": "h1",
         "padding_top": 36,
         "padding_bottom": 0
       }
     },
     "contact_page": {
       "type": "contact-page",
-      "settings": {}
+      "settings": {
+        "heading": "Get in touch",
+        "intro": "<p>Questions about an order, a product, or delivery? Drop us a message and we’ll get back to you within 24 hours.</p>",
+        "form_heading": "Send us a message",
+        "info_heading": "Other ways to reach us",
+        "email": "support@proferlofurniture.com.au",
+        "show_phone": true,
+        "phone": "(07) 3088 3457",
+        "support_hours": "Mon–Fri, 10am–4pm AEST",
+        "reply_time": "Within 24 hours",
+        "reply_note": "incl. enquiries sent outside support hours",
+        "walkins_note": "<p>We’re an <strong>online-only store</strong> — no public showroom, and we don’t accept walk-ins.</p>",
+        "dispatch_heading": "Dispatch warehouse",
+        "dispatch_address": "<p>5 Success Street, Acacia Ridge QLD 4110<br/>Dispatch only — not open to the public.</p>",
+        "show_links": true,
+        "links_label": "Before you message — quick answers",
+        "link1_label": "FAQ",
+        "link1_url": "/pages/frequently-asked-questions",
+        "link2_label": "Shipping & Pick Up",
+        "link2_url": "/pages/shipping-pick-up",
+        "link3_label": "Returns & Warranty",
+        "link3_url": "/pages/returns-warranty",
+        "link4_label": "Trade",
+        "link4_url": "#",
+        "padding_top": 40,
+        "padding_bottom": 72
+      }
     }
   },
   "order": [
