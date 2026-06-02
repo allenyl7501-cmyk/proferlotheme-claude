@@ -115,7 +115,7 @@
         <div class="irow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h3.4l1.8 4.5-2.3 1.5a12 12 0 0 0 5.6 5.6l1.5-2.3 4.5 1.8V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><div><div class="ilab">Phone</div><div class="ival"><a href="tel:{{ sc.phone | remove: ' ' | remove: '(' | remove: ')' }}">{{ sc.phone | escape }}</a></div></div></div>
         {%- endif -%}
         {%- if sc.support_hours != blank -%}
-        <div class="irow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg><div><div class="ilab">Support hours</div><div class="ival">{{ sc.support_hours | escape }}</div></div></div>
+        <div class="irow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg><div><div class="ilab">Live support hours</div><div class="ival">{{ sc.support_hours | escape }}</div></div></div>
         {%- endif -%}
         {%- if sc.reply_time != blank -%}
         <div class="irow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 2.6-6.3"/><path d="M3 4.5V9h4.5"/></svg><div><div class="ilab">Reply time</div><div class="ival">{{ sc.reply_time | escape }}</div>{%- if sc.reply_note != blank -%}<div class="inote">{{ sc.reply_note | escape }}</div>{%- endif -%}</div></div>
