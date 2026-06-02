@@ -1,0 +1,88 @@
+{%- comment -%}
+  Proferlo — Shipping & Delivery Policy : FAQ ACCORDION (reusable)
+  One instance per FAQ group. Native <details> accordions (no JS).
+  Optional closing CTA panel (enable on the last instance).
+{%- endcomment -%}
+<style>
+  #sdfaq-{{ section.id }}{
+    --pf-forest:#2C3639;--pf-teal:#3F4E4F;--pf-linen:#DCD7C9;--pf-copper:#AB764B;
+    --pf-bg:#F4F1EA;--pf-card:#fff;--pf-cardbd:#E7E1D2;--pf-muted:#5A615C;
+    background:var(--pf-bg);padding-top:{{ section.settings.padding_top }}px;padding-bottom:{{ section.settings.padding_bottom }}px;
+    font-family:var(--font-body-family);
+  }
+  #sdfaq-{{ section.id }} *{box-sizing:border-box;}
+  #sdfaq-{{ section.id }} .sdwrap{max-width:104rem;margin:0 auto;padding:0 2rem;color:var(--pf-forest);}
+  #sdfaq-{{ section.id }} .sdgrp-h{font-family:var(--font-heading-family);font-size:2.1rem;margin:0 0 1.4rem;padding-bottom:.8rem;border-bottom:.2rem solid var(--pf-cardbd);}
+  #sdfaq-{{ section.id }} details{background:#fff;border:1px solid var(--pf-cardbd);border-radius:1rem;margin-bottom:1rem;}
+  #sdfaq-{{ section.id }} summary{cursor:pointer;list-style:none;padding:1.5rem 1.8rem;font-weight:600;font-size:1.55rem;color:var(--pf-forest);display:flex;justify-content:space-between;gap:1.2rem;align-items:center;}
+  #sdfaq-{{ section.id }} summary::-webkit-details-marker{display:none;}
+  #sdfaq-{{ section.id }} summary .sdchev{flex:0 0 auto;color:var(--pf-copper);font-size:1.8rem;line-height:1;transition:transform .2s;}
+  #sdfaq-{{ section.id }} details[open] summary .sdchev{transform:rotate(45deg);}
+  #sdfaq-{{ section.id }} .sda{padding:0 1.8rem 1.6rem;font-size:1.45rem;color:var(--pf-muted);line-height:1.6;}
+  #sdfaq-{{ section.id }} .sda p{margin:0 0 1rem;}
+  #sdfaq-{{ section.id }} .sda p:last-child{margin-bottom:0;}
+  #sdfaq-{{ section.id }} .sda a{color:var(--pf-copper);font-weight:600;}
+  #sdfaq-{{ section.id }} .sda ul,#sdfaq-{{ section.id }} .sda ol{margin:.6rem 0 1rem;padding-left:2rem;}
+  #sdfaq-{{ section.id }} .sda li{margin-bottom:.6rem;}
+  #sdfaq-{{ section.id }} .sda strong{color:var(--pf-forest);}
+  #sdfaq-{{ section.id }} .sdcta{background:var(--pf-teal);color:var(--pf-linen);border-radius:1.2rem;text-align:center;padding:4rem 2.4rem;margin-top:2.6rem;}
+  #sdfaq-{{ section.id }} .sdcta h3,#sdfaq-{{ section.id }} .sdcta h3 *{color:#fff;font-family:var(--font-heading-family);font-size:var(--font-h4-size);margin:0 0 1.8rem;}
+  #sdfaq-{{ section.id }} .sdcta a.sdbtn{display:inline-block;background:var(--pf-copper);color:#fff;text-decoration:none;font-family:var(--font-heading-family);font-weight:600;font-size:1.6rem;padding:1.4rem 3.4rem;border-radius:.8rem;}
+  #sdfaq-{{ section.id }} .sdcta a.sdbtn:hover{background:#9A6A43;}
+</style>
+
+{%- liquid
+  assign sc = section.settings
+-%}
+
+<div id="sdfaq-{{ section.id }}">
+  <div class="sdwrap">
+    {%- if sc.group_heading != blank -%}<h3 class="sdgrp-h">{{ sc.group_heading | escape }}</h3>{%- endif -%}
+
+    {%- for block in section.blocks -%}{%- if block.type == 'faq' -%}
+      <details {{ block.shopify_attributes }}>
+        <summary>{{ block.settings.question | escape }}<span class="sdchev">+</span></summary>
+        <div class="sda">{{ block.settings.answer }}</div>
+      </details>
+    {%- endif -%}{%- endfor -%}
+
+    {%- if sc.show_cta -%}
+    <div class="sdcta">
+      {%- if sc.cta_heading != blank -%}<h3>{{ sc.cta_heading }}</h3>{%- endif -%}
+      {%- if sc.cta_button_label != blank and sc.cta_button_url != blank -%}
+        <a class="sdbtn" href="{{ sc.cta_button_url }}">{{ sc.cta_button_label | escape }}</a>
+      {%- endif -%}
+    </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Shipping FAQ group",
+  "tag": "section",
+  "class": "section-shipping-faq",
+  "settings": [
+    { "type": "text", "id": "group_heading", "label": "Group heading", "default": "Order & Scheduling (Delivery)" },
+    { "type": "header", "content": "Closing CTA (enable on last group only)" },
+    { "type": "checkbox", "id": "show_cta", "label": "Show closing CTA", "default": false },
+    { "type": "richtext", "id": "cta_heading", "label": "CTA heading", "default": "<p>Got unanswered questions or need a Custom Shipping Solution?</p>" },
+    { "type": "text", "id": "cta_button_label", "label": "Button label", "default": "Contact Us" },
+    { "type": "url", "id": "cta_button_url", "label": "Button link" },
+    { "type": "header", "content": "Section spacing" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Top padding", "default": 24 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Bottom padding", "default": 16 }
+  ],
+  "blocks": [
+    {
+      "type": "faq",
+      "name": "Q&A",
+      "settings": [
+        { "type": "text", "id": "question", "label": "Question", "default": "Your question here" },
+        { "type": "richtext", "id": "answer", "label": "Answer", "default": "<p>Your answer here.</p>" }
+      ]
+    }
+  ],
+  "presets": [ { "name": "Shipping FAQ group", "blocks": [ { "type": "faq" } ] } ]
+}
+{% endschema %}
