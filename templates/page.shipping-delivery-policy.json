@@ -1,0 +1,157 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": { "text_alignment": "center" }
+    },
+    "top": {
+      "type": "shipping-policy-top",
+      "blocks": {
+        "g1": { "type": "guarantee", "settings": { "icon": "truck", "title": "Express Shipping", "text": "<p>Nationwide express shipping with our trusted partners and <strong>real-time SMS & email tracking</strong>.</p>" } },
+        "g2": { "type": "guarantee", "settings": { "icon": "people", "title": "Custom Shipping Solution", "text": "<p>Have special shipping needs or an extra-large order? Reach out for a custom solution. <a href='/pages/contact-us'>Click here</a></p>" } },
+        "g3": { "type": "guarantee", "settings": { "icon": "shield", "title": "ShipGuard Package Protection", "text": "<p>Optional protection covering theft, loss and damage — peace of mind beyond standard insurance. <a href='/pages/terms-conditions'><em>(T&Cs apply)</em></a></p>" } }
+      },
+      "block_order": ["g1", "g2", "g3"],
+      "settings": {
+        "eyebrow": "Shipping & Delivery",
+        "heading": "Shipping & Delivery Policy",
+        "intro": "<p>Everything you need to know about how, when and where we deliver — including delivery zones, estimated timeframes, pickups and our delivery guarantee.</p>",
+        "guarantee_title": "Our Shipping Guarantee",
+        "show_usp": true,
+        "usp_text": "<p>Free Brisbane Metro Shipping & Free Pickups</p>",
+        "padding_top": 48,
+        "padding_bottom": 8
+      }
+    },
+    "zones": {
+      "type": "shipping-zones",
+      "blocks": {
+        "z1": { "type": "zone", "settings": { "zone_name": "Brisbane Metro", "areas": "Eligible Brisbane metro postcodes", "is_free": true, "cost_label": "express (same-day available at extra cost)", "transit_text": "2–4 business days", "in_structured_data": true, "region_country": "AU", "region_codes": "QLD", "region_desc": "Eligible Brisbane metro postcodes", "transit_min": 2, "transit_max": 4 } },
+        "z2": { "type": "zone", "settings": { "zone_name": "Metro — other states", "areas": "Sydney, Melbourne, Canberra & other capital-city metro areas", "is_free": false, "cost_label": "Calculated at checkout", "transit_text": "2–5 business days", "in_structured_data": true, "region_country": "AU", "region_codes": "NSW,VIC,ACT", "region_desc": "Capital-city metro areas (other states)", "transit_min": 2, "transit_max": 5 } },
+        "z3": { "type": "zone", "settings": { "zone_name": "Regional", "areas": "All regional postcodes nationwide", "is_free": false, "cost_label": "Calculated at checkout", "transit_text": "3–7 business days", "in_structured_data": true, "region_country": "AU", "region_codes": "", "region_desc": "Regional postcodes (all states)", "transit_min": 3, "transit_max": 7 } },
+        "z4": { "type": "zone", "settings": { "zone_name": "Click & Collect (Pickup)", "areas": "Acacia Ridge 4116 warehouse, Brisbane QLD", "is_free": true, "cost_label": "", "transit_text": "Ready in 24–48 hrs · collect Mon–Fri 10am–4pm", "in_structured_data": false, "region_country": "AU", "region_codes": "QLD", "region_desc": "Warehouse pickup", "transit_min": 0, "transit_max": 0 } }
+      },
+      "block_order": ["z1", "z2", "z3", "z4"],
+      "settings": {
+        "heading": "Delivery Zones & Timeframes",
+        "subtext": "<p>Estimated transit times are calculated <em>after dispatch</em>. Delivery cost for non-metro areas is calculated live at checkout based on total order weight and destination.</p>",
+        "dispatch_note": "<p><strong>Dispatch schedule:</strong> Orders are dispatched <strong>Monday, Wednesday & Friday</strong> and booked with the courier one day before collection.</p><ul><li>Ordered Friday–Sunday (by 4pm) → collected Monday</li><li>Ordered Monday–Tuesday (by 4pm) → collected Wednesday</li><li>Ordered Wednesday–Thursday (by 4pm) → collected Friday</li></ul>",
+        "table_note": "<p>Free shipping eligibility for your postcode is shown on each product page and confirmed at checkout. Not sure if you're metro or regional? Your exact delivery cost and method are confirmed at checkout. Larger or wholesale orders may require palletised transport — <a href='/pages/contact-us'>contact us</a> for a tailored quote.</p>",
+        "col_zone": "Zone",
+        "col_areas": "Areas covered",
+        "col_cost": "Delivery cost",
+        "col_time": "Est. delivery (after dispatch)",
+        "emit_jsonld": true,
+        "dispatch_days": "Monday, Wednesday, Friday",
+        "handling_min": 0,
+        "handling_max": 2,
+        "padding_top": 40,
+        "padding_bottom": 8
+      }
+    },
+    "faq_guarantee": {
+      "type": "shipping-faq",
+      "blocks": {
+        "q1": { "type": "faq", "settings": { "question": "What is ShipGuard package protection?", "answer": "<p>Our ShipGuard Package Protection is an optional service you can add at checkout that guarantees the safe arrival of your order. It ensures that if your item is lost, damaged, or stolen during transit, you are <strong>guaranteed</strong> a replacement.</p>" } },
+        "q2": { "type": "faq", "settings": { "question": "Is a signature required for delivery?", "answer": "<p>Yes. When you select Package Protection, your delivery will automatically require a signature. This is an added security measure to ensure your package is handed directly to someone at the address.</p>" } },
+        "q3": { "type": "faq", "settings": { "question": "What is the claim process if my order is lost, damaged, or stolen under ShipGuard Protection?", "answer": "<p>Our ShipGuard Package Protection is your guarantee of a worry-free delivery. We've created a simple and direct resolution process for the rare moments when things don't go as planned.</p><ul><li><strong>For items lost or damaged in transit:</strong> Instead of dealing with lengthy courier claims, simply contact our team directly. We guarantee a prompt, <strong>hassle-free replacement</strong> of your item(s).</li><li><strong>For items stolen after delivery:</strong> We take theft seriously. To validate the incident, a formal police report is required. Once you provide a copy, our team can process your replacement, <strong>safeguarding you even against porch piracy</strong>.</li><li><strong>Our secure delivery promise:</strong> Protection covers your order right up to the moment it is securely signed for at your address. The signature is proof of a successful handover. Once a delivery is successfully signed for at the correct address, the order is no longer covered.</li></ul>" } }
+      },
+      "block_order": ["q1", "q2", "q3"],
+      "settings": { "group_heading": "ShipGuard Delivery Guarantee", "show_cta": false, "padding_top": 24, "padding_bottom": 12 }
+    },
+    "faq_order": {
+      "type": "shipping-faq",
+      "blocks": {
+        "q1": { "type": "faq", "settings": { "question": "How can I track the status of my delivery?", "answer": "<p>Tracking details will be emailed to you once your order has been dispatched. This information is provided by our third-party courier partners and includes both a tracking link and reference number.</p><p>Updates begin once the parcel has been collected and scanned into the courier's local depot. You will typically receive email and/or SMS notifications within 24–48 hours (excluding weekends).</p><p>A signature is required upon delivery unless alternative arrangements have been approved with our team prior to dispatch. If you would prefer the parcel left in a secure location, please submit this request directly to the courier using the tracking link, as we are unable to make changes once the shipment has been booked for collection.</p><p>For any delivery-related support after dispatch, please use the <strong>“Lodge an Enquiry”</strong> option on the tracking page.</p>" } },
+        "q2": { "type": "faq", "settings": { "question": "How much does delivery cost?", "answer": "<p>We offer free express delivery within eligible Brisbane Metro postcodes (eligibility can be checked on each product page or at checkout). For orders outside this area — including Greater Brisbane, regional Queensland, and interstate — delivery costs are calculated at checkout once all items are added to your cart and your address is entered.</p><p>For non-metro locations, a delivery surcharge based on our courier rates is applied automatically at checkout.</p><p><strong>Pro tip:</strong> Shipping is calculated by total order weight, so combining multiple items into one order usually results in significantly lower delivery costs than placing separate orders.</p>" } },
+        "q3": { "type": "faq", "settings": { "question": "How long will it take for my order to arrive?", "answer": "<p>Orders are dispatched on <strong>Monday, Wednesday, and Friday</strong>. All shipments are booked with our couriers one day in advance of collection for the next available collection day. For example:</p><ul><li>Orders placed between Friday and 4pm Sunday → collected Monday</li><li>Orders placed between Monday and 4pm Tuesday → collected Wednesday</li><li>Orders placed between Wednesday and 4pm Thursday → collected Friday</li></ul><p><strong>Estimated delivery timeframes (after dispatch):</strong></p><ul><li><strong>Brisbane Metro:</strong> 2–4 business days (same-day available at extra cost)</li><li><strong>Other capital-city metro (NSW, VIC, etc.):</strong> 2–5 business days</li><li><strong>All regional postcodes:</strong> 3–7 business days</li></ul><p><strong>Custom shipping:</strong> Larger or wholesale orders may require palletised transport. Please <a href='/pages/contact-us'>contact us</a> directly to arrange a tailored shipping quote.</p>" } },
+        "q4": { "type": "faq", "settings": { "question": "If I order several items, will they be delivered at the same time?", "answer": "<p>As standard practice, we aim to dispatch all items in your order together when they are in stock and located at the same warehouse. However, we cannot guarantee that all items will arrive at the same time due to factors such as courier operations, product availability, or partial deliveries.</p><p>Larger orders containing multiple items may require palletised transport for safe handling. If you prefer not to have your order delivered on a pallet, we can ship the cartons individually instead; however, this will involve multiple consignment numbers and you may receive separate or partial deliveries.</p><p>To inquire about bulk delivery, please <a href='/pages/contact-us'>contact us</a> and our friendly customer care team will be ready to assist you.</p>" } },
+        "q5": { "type": "faq", "settings": { "question": "My order contains items that are both in-stock and on pre-order — can I split/partial the delivery?", "answer": "<p>By default, all orders are held and dispatched once all items are in stock. If you would like any available items sent earlier, please let us know and we can arrange a partial delivery.</p><p>Please note that each delivery will be booked separately, and tracking details will be provided once dispatched. Depending on the items and circumstances, a fee may apply for split deliveries.</p>" } },
+        "q6": { "type": "faq", "settings": { "question": "Can I request a delayed dispatch for my order?", "answer": "<p>Yes! You can request to delay the dispatch of your order. To do so, please notify our team prior to dispatch by emailing <strong>support@proferlofurniture.com.au</strong>.</p><p>While we cannot guarantee delivery on a specific date or time, we can ensure your order is not delivered before your requested date.</p><p><strong>After dispatch:</strong> Once an order has been dispatched, we are unable to accommodate delay requests. If you need to arrange a delayed dispatch, please contact our team at your earliest convenience — we're here to help.</p>" } },
+        "q7": { "type": "faq", "settings": { "question": "Can I choose a specific delivery date or time?", "answer": "<p>Unfortunately, no. Delivery is controlled by our delivery partners, and they provide a delivery time frame between 9am and 5pm depending on your location. We recommend visiting the courier's website to track the progress of your delivery.</p>" } },
+        "q8": { "type": "faq", "settings": { "question": "What does the delivery service include / can the courier deliver upstairs?", "answer": "<p>To ensure the safety of both our customers and delivery partners, all orders are delivered to the front door at ground level or to the building lobby. This also helps minimise the risk of damage to your property. We recommend arranging assistance in advance, as you may need help moving the items inside.</p><p>You can <strong>add delivery notes</strong> to your order on the Cart page prior to checkout. If you miss it, you may contact our customer service team via email with your order number and request <a href='/pages/contact-us'>here</a>.</p><p>Additional delivery instructions <strong>only</strong> cover address instructions and Authority to Leave (ATL). Please note that “preferred delivery time” is not guaranteed as we do not control courier operations.</p>" } },
+        "q9": { "type": "faq", "settings": { "question": "What happens if I'm not home on the day of delivery?", "answer": "<p>For orders within the <strong>Free Brisbane Metro catchment</strong>, no signature is required on delivery. Your order will be left in a safe place, and proof of delivery will be captured by our courier partners. Tracking information is supplied via email once dispatched.</p><p>For all other delivery methods, someone must be available to receive the delivery on the scheduled day. If you would like to provide <strong>Authority to Leave (ATL)</strong>, please notify our team after placing your order or prior to dispatch; otherwise a signature will be required.</p><p>If your order has already been dispatched, ATL can be arranged directly with the courier via the <strong>“Lodge an Enquiry”</strong> option on the tracking page or through the SMS/email notifications sent when your parcel is onboard for delivery.</p><p>If no one is available to receive the order and ATL has not been arranged, the delivery will be unsuccessful and the shipment will be returned to the depot or our warehouse. A re-delivery will then need to be organised, and additional charges will apply.</p>" } },
+        "q10": { "type": "faq", "settings": { "question": "Can I change my delivery address after I've placed my order?", "answer": "<p>If you need to change or correct your delivery address, please notify our team via email at <strong>support@proferlofurniture.com.au</strong> prior to dispatch.</p><p>If your order has already been dispatched, a redirection fee may apply depending on the new destination and the stage of the delivery process.</p>" } }
+      },
+      "block_order": ["q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "q9", "q10"],
+      "settings": { "group_heading": "Order & Scheduling (Delivery)", "show_cta": false, "padding_top": 24, "padding_bottom": 12 }
+    },
+    "faq_delivery": {
+      "type": "shipping-faq",
+      "blocks": {
+        "q1": { "type": "faq", "settings": { "question": "What does your express delivery service include?", "answer": "<p>To ensure the safety of both our customers and delivery partners, all deliveries are completed to the front door at ground level or to the building lobby only. We recommend arranging assistance in advance, as you may need help moving the items inside.</p><p>You may include additional delivery notes at checkout. If you are unable to do so, please contact our customer service team via email at <strong>support@proferlofurniture.com.au</strong> prior to dispatch. Additional instructions are limited to address guidance and Authority to Leave (ATL) requests. Preferred delivery dates or times cannot be guaranteed, as delivery schedules are determined by the courier's route and availability.</p>" } },
+        "q2": { "type": "faq", "settings": { "question": "Will the delivery team bring the furniture inside my home?", "answer": "<p>To ensure the safety of both our customers and delivery partners, all deliveries are completed to the front door at ground level or to the building lobby only. We recommend arranging assistance in advance, as you may need help moving the items inside.</p>" } },
+        "q3": { "type": "faq", "settings": { "question": "Do you deliver to apartments and multi-story buildings?", "answer": "<p>Yes, we deliver to all addresses. However, to ensure the safety of both our customers and delivery partners, all deliveries are completed to the front door at ground level or to the building lobby only. We recommend arranging assistance in advance, as you may need help moving the items inside.</p>" } },
+        "q4": { "type": "faq", "settings": { "question": "Will the delivery team assemble my furniture?", "answer": "<p>Our shipping services do not include assembly, and all products are delivered flat-packed for self-assembly. Please refer to the assembly instructions provided with your product or available on the product page under the “Warranty & Assembly” tab.</p><p>Depending on your location and items purchased, we may be able to assist with assembly services subject to availability — please contact our team via email at <strong>support@proferlofurniture.com.au</strong> to enquire.</p>" } },
+        "q5": { "type": "faq", "settings": { "question": "Will you take away my old furniture?", "answer": "<p>Unfortunately, we do not offer furniture recycling services at the moment.</p>" } },
+        "q6": { "type": "faq", "settings": { "question": "What should I do to prepare for my delivery?", "answer": "<p>Please ensure your delivery address is accurate and that someone is available to receive the order at the scheduled delivery time if Authority to Leave (ATL) has not been arranged. For heavier or bulky items, we strongly recommend having assistance on hand, as couriers deliver to the front door or building lobby only.</p><p>Please note, all Free Brisbane Metro shipping methods will not require a signature on delivery.</p>" } }
+      },
+      "block_order": ["q1", "q2", "q3", "q4", "q5", "q6"],
+      "settings": { "group_heading": "The Delivery Itself (Delivery)", "show_cta": false, "padding_top": 24, "padding_bottom": 12 }
+    },
+    "faq_issues": {
+      "type": "shipping-faq",
+      "blocks": {
+        "q1": { "type": "faq", "settings": { "question": "I think the delivery is too expensive, or I need some extra help with the delivery", "answer": "<p>If the delivery fee for your location appears unusually high, please contact our support team via email at <strong>support@proferlofurniture.com.au</strong> with your receiving address and the items you wish to purchase. We can review the charge and provide updated live quotes directly from our courier partners.</p>" } },
+        "q2": { "type": "faq", "settings": { "question": "What should I do if my order is damaged, lost or stolen during delivery?", "answer": "<ol><li><strong>Contact our team:</strong> Get in touch with our customer service team via email within 14 days of receiving your order. Please provide your <strong>order number</strong>, a clear <strong>description of the issue</strong>, and attach <strong>photos or a short video</strong> showing the fault.</li><li><strong>Assessment:</strong> Our team will carefully assess the situation based on the information provided. We may ask a few follow-up questions to ensure we have all the details.</li><li><strong>Resolution:</strong> We will work with you to find the best solution — whether it's sending a replacement part, arranging a repair, or organising a full replacement.</li></ol>" } },
+        "q3": { "type": "faq", "settings": { "question": "What happens if my order is delayed?", "answer": "<p>For orders that have not yet been dispatched (including pre-orders), we will notify you as soon as possible if any delays occur.</p><p>Once your order has been dispatched and is in transit, if you notice no tracking updates for 72 hours, please contact the courier directly using the <strong>“Lodge an Enquiry”</strong> option on the tracking page.</p>" } },
+        "q4": { "type": "faq", "settings": { "question": "Do you deliver to PO Boxes or Parcel Lockers?", "answer": "<p>Unfortunately, we aren't able to deliver to PO Boxes or Parcel Lockers due to security reasons and carton dimensions.</p>" } },
+        "q5": { "type": "faq", "settings": { "question": "What do I do if I missed my delivery?", "answer": "<p>For orders requiring a signature on delivery, if a delivery attempt is missed, the order will be returned to site or the courier's depot and a re-delivery will need to be organised.</p><p>Please contact our customer care team as soon as possible to arrange re-delivery. Please note:</p><ul><li>A re-delivery fee will apply, as charged by the courier.</li><li>The courier provides a limited timeframe for re-delivery arrangements.</li><li>Missed delivery fees apply.</li></ul><p>To avoid additional charges, we strongly recommend ensuring someone is available to receive the delivery or requesting Authority to Leave (ATL) before your order is dispatched.</p>" } }
+      },
+      "block_order": ["q1", "q2", "q3", "q4", "q5"],
+      "settings": { "group_heading": "Issues & Support (Delivery)", "show_cta": false, "padding_top": 24, "padding_bottom": 12 }
+    },
+    "faq_pickup_order": {
+      "type": "shipping-faq",
+      "blocks": {
+        "q1": { "type": "faq", "settings": { "question": "How do I place an order for Click & Collect?", "answer": "<p>Simply enter your address at checkout and a free pickup option at our Brisbane, Acacia Ridge 4116 warehouse will appear. Please note this is a warehouse only and not a showroom.</p>" } },
+        "q2": { "type": "faq", "settings": { "question": "How soon after ordering can I pick up my items?", "answer": "<p>Pickup orders are typically ready within 24–48 hours. Collection hours at our warehouse are <strong>10:00am – 4:00pm, Monday to Friday</strong>.</p><p>As our team are frequently out on deliveries, we require advance notice of your intended collection date and time to ensure staff are available to assist.</p><p>If you require same-day pickup, please contact us so we can assess availability. Same-day collections are subject to warehouse hours (10:00am – 4:00pm, Monday to Friday only) and are not available on weekends or public holidays.</p>" } },
+        "q3": { "type": "faq", "settings": { "question": "How will I know when my order is ready for collection?", "answer": "<p>We will send you a <strong>“Ready for Pickup”</strong> notification via email/SMS. Please note <strong>this is separate</strong> from the <strong>order confirmation email</strong> you receive immediately after placing your order. We cannot guarantee that an order will be ready for pickup if a customer arrives at our warehouse without the “Ready for Pickup” notification.</p>" } }
+      },
+      "block_order": ["q1", "q2", "q3"],
+      "settings": { "group_heading": "Placing Your Order (Pickups)", "show_cta": false, "padding_top": 24, "padding_bottom": 12 }
+    },
+    "faq_pickup_process": {
+      "type": "shipping-faq",
+      "blocks": {
+        "q1": { "type": "faq", "settings": { "question": "Where is your pickup location?", "answer": "<p>Our pickup location is at <strong>Acacia Ridge 4116 warehouse, Brisbane, Queensland</strong>. Our exact address will be provided once you receive confirmation that your order is ready for pickup.</p>" } },
+        "q2": { "type": "faq", "settings": { "question": "What are your pickup hours?", "answer": "<p>Order collection hours are <strong>10:00am to 4:00pm, Monday to Friday</strong>. Collections are not available on weekends or public holidays, as the warehouse is closed during these times.</p><p>As our staff are frequently out on deliveries, we require advance notice of your intended collection date and time to ensure sufficient staff are on-site to assist.</p>" } },
+        "q3": { "type": "faq", "settings": { "question": "What do I need to bring with me to collect my order?", "answer": "<p>Please bring your order number or <strong>“Ready for Pickup” email</strong> AND a <strong>valid government ID</strong> that matches the name the order was placed under. You can also request pickup by someone else — just email us directly prior to pickup.</p>" } },
+        "q4": { "type": "faq", "settings": { "question": "How soon do I need to pick up my order once ready?", "answer": "<p>Orders must be collected within 7 days of being ready. If you require a later collection date, please contact us to arrange secure storage so your order remains safe until pickup.</p><p>If the order is not collected within 7 days and we have not received a response, our team will follow up, and the order may be cancelled if we do not hear back from you.</p>" } },
+        "q5": { "type": "faq", "settings": { "question": "Can someone else pick up my order on my behalf?", "answer": "<p>Yes, someone may pick up orders on your behalf. However, this must be requested via email through the person/contact method that placed the order, along with information on who else is coming to pick up the order.</p>" } },
+        "q6": { "type": "faq", "settings": { "question": "What size vehicle will I need to pick up my order?", "answer": "<p>All packaging and carton sizes are available on our product pages under the “Materials & Specification” tab. Please ensure the vehicle you bring can safely fit the products you wish to pick up. Our friendly warehouse staff will also assist you in loading your products as long as it's safe to do so.</p>" } },
+        "q7": { "type": "faq", "settings": { "question": "Will your staff help me load the furniture into my vehicle?", "answer": "<p>Yes — our friendly staff will help you load your product into the vehicle as long as it's safe to do so.</p>" } }
+      },
+      "block_order": ["q1", "q2", "q3", "q4", "q5", "q6", "q7"],
+      "settings": {
+        "group_heading": "The Pickup Process (Pickups)",
+        "show_cta": true,
+        "cta_heading": "<p>Got unanswered questions or need a Custom Shipping Solution?</p>",
+        "cta_button_label": "Contact Us",
+        "cta_button_url": "shopify://pages/contact-us",
+        "padding_top": 24,
+        "padding_bottom": 60
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "top",
+    "zones",
+    "faq_guarantee",
+    "faq_order",
+    "faq_delivery",
+    "faq_issues",
+    "faq_pickup_order",
+    "faq_pickup_process"
+  ]
+}
