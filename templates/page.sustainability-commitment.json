@@ -1,0 +1,217 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {}
+    },
+    "sustainability": {
+      "type": "sustainability-page",
+      "blocks": {
+        "why_1": {
+          "type": "why_card",
+          "settings": {
+            "title": "Is your furniture affecting your air?",
+            "text": "Many mass-produced pieces release VOCs and formaldehyde, which can irritate airways and trigger allergies. Choosing low-VOC, formaldehyde-free furniture is a simple way to a healthier home."
+          }
+        },
+        "why_2": {
+          "type": "why_card",
+          "settings": {
+            "title": "Tired of fast furniture?",
+            "text": "Cheaply made pieces are built to be replaced — and end up in landfill. We make sustainable furniture from responsibly sourced materials, designed to last for years."
+          }
+        },
+        "why_3": {
+          "type": "why_card",
+          "settings": {
+            "title": "Invest in quality, not replacements",
+            "text": "Well-made furniture is a long-term investment. Quality craftsmanship lasts, saving you money and waste compared to the endless cycle of replacing cheap items."
+          }
+        },
+        "pillar_1": {
+          "type": "pillar",
+          "settings": {
+            "label": "01 — Materials",
+            "title": "Building with certified, safe materials",
+            "text": "<p>We source timber, finishes and fabrics that meet the highest global standards for safety and sustainability. Our materials are chosen for <strong>low or zero VOC</strong> (volatile organic compound) content and are <strong>formaldehyde-free</strong> — so your furniture looks beautiful, lasts, and helps keep your indoor air cleaner.</p>",
+            "usp": "<p><strong>For you:</strong> low-VOC, formaldehyde-free furniture for a healthier home — verified by FSC and CARB Phase 2.</p>",
+            "chips": "FSC certified, CARB Phase 2",
+            "image": "shopify://shop_images/Screenshot_2025-08-05_at_9.43.34_pm.png"
+          }
+        },
+        "pillar_2": {
+          "type": "pillar",
+          "settings": {
+            "label": "02 — Production",
+            "title": "Minimising our production footprint",
+            "text": "<p>We work with manufacturing partners who repurpose offcuts and run energy-efficient machinery and lighting. Our partners are independently certified to <strong>ISO 14001 (environmental management)</strong>, so your furniture is made with respect for the planet's resources.</p>",
+            "usp": "<p><strong>For you:</strong> confidence that your choice supports a manufacturing process that's kinder to the planet's resources.</p>",
+            "chips": "",
+            "image": "shopify://shop_images/jpg70-t3-scale100.webp"
+          }
+        },
+        "pillar_3": {
+          "type": "pillar",
+          "settings": {
+            "label": "03 — Lifecycle",
+            "title": "Designing for the full lifecycle",
+            "text": "<p>To stand against throwaway culture, we design timeless furniture built to last. That mindset extends to our packaging, where we use <strong>recycled cardboard</strong> while continuing to find more sustainable alternatives.</p>",
+            "usp": "<p><strong>For you:</strong> a piece of furniture built for a lifetime of use — not a landfill.</p>",
+            "chips": "",
+            "image": "shopify://shop_images/Untitled_design_1a079410-bc8b-4079-a070-df2cfe090fc6.png"
+          }
+        },
+        "cert_fsc": {
+          "type": "cert_material",
+          "settings": {
+            "logo": "shopify://shop_images/71b7e851fa30df7193a2026c4fb1f951_-_Edited.png",
+            "code": "FSC",
+            "full": "Forest Stewardship Council",
+            "plain": "Timber is traced back to responsibly managed forests.",
+            "why": "your furniture doesn't come at the cost of the world's forests."
+          }
+        },
+        "cert_carb": {
+          "type": "cert_material",
+          "settings": {
+            "logo": "shopify://shop_images/Screenshot_2025-08-05_at_11.16.37_pm_-_Edited.png",
+            "code": "CARB Phase 2",
+            "full": "California Air Resources Board",
+            "plain": "A strict limit on formaldehyde emissions from engineered wood.",
+            "why": "ultra-low formaldehyde means cleaner, healthier indoor air."
+          }
+        },
+        "cert_iso9001": {
+          "type": "cert_partner",
+          "settings": {
+            "logo": "shopify://shop_images/53d3dada66a607a320ee89e4d5daec91_-_Edited_afafdba7-a393-4ec2-8521-f2a98f269df8.png",
+            "code": "ISO 9001",
+            "full": "Quality management",
+            "plain": "An audited system for consistent quality control in production.",
+            "why": "reliable build quality, piece after piece."
+          }
+        },
+        "cert_iso14001": {
+          "type": "cert_partner",
+          "settings": {
+            "logo": "shopify://shop_images/Untitled_Design_-_1_-_Edited.png",
+            "code": "ISO 14001",
+            "full": "Environmental management",
+            "plain": "A managed system to reduce energy use, waste and environmental impact.",
+            "why": "lower-impact manufacturing behind every item."
+          }
+        },
+        "cert_iso45001": {
+          "type": "cert_partner",
+          "settings": {
+            "logo": "shopify://shop_images/ezgif_-_Edited.png",
+            "code": "ISO 45001",
+            "full": "Occupational health & safety",
+            "plain": "A safe, healthy working environment for factory staff.",
+            "why": "your furniture is made by people treated fairly and safely."
+          }
+        },
+        "cert_bsci": {
+          "type": "cert_partner",
+          "settings": {
+            "logo": "shopify://shop_images/BSCI_7e1b75c0-228c-46c1-af01-63b139cbfa2c_-_Edited.png",
+            "code": "BSCI",
+            "full": "Business Social Compliance Initiative",
+            "plain": "Independent monitoring of fair wages and safe working conditions.",
+            "why": "ethically made, with workers' welfare verified."
+          }
+        },
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "question": "Is Proferlo furniture safe and non-toxic?",
+            "answer": "<p>Yes. We choose materials with low or zero VOCs that are formaldehyde-free, and our engineered wood meets CARB Phase 2 — the strict standard for ultra-low formaldehyde emissions. The result is furniture that helps keep your indoor air cleaner and healthier.</p>",
+            "open": true
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "question": "Is Proferlo furniture sustainable?",
+            "answer": "<p>We source FSC-certified timber from responsibly managed forests, design pieces to last rather than be replaced, and ship in recycled cardboard. Our manufacturing partners are certified to ISO 14001 for environmental management.</p>",
+            "open": false
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "question": "What certifications does Proferlo furniture have?",
+            "answer": "<p>Our materials and products are backed by FSC (responsibly sourced timber) and CARB Phase 2 (ultra-low formaldehyde). Our manufacturing partners are independently certified to ISO 9001 (quality), ISO 14001 (environment), ISO 45001 (workplace health &amp; safety) and BSCI (ethical manufacturing).</p>",
+            "open": false
+          }
+        },
+        "faq_4": {
+          "type": "faq",
+          "settings": {
+            "question": "Is Proferlo furniture low-VOC and formaldehyde-free?",
+            "answer": "<p>Yes. Our materials are selected for low or zero VOC content and are formaldehyde-free, and our engineered wood components meet CARB Phase 2 emission limits — so your new furniture won't off-gas harsh chemicals into your home.</p>",
+            "open": false
+          }
+        }
+      },
+      "block_order": [
+        "why_1",
+        "why_2",
+        "why_3",
+        "pillar_1",
+        "pillar_2",
+        "pillar_3",
+        "cert_fsc",
+        "cert_carb",
+        "cert_iso9001",
+        "cert_iso14001",
+        "cert_iso45001",
+        "cert_bsci",
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4"
+      ],
+      "settings": {
+        "show_hero": true,
+        "eyebrow": "Sustainability & Certifications",
+        "heading": "Furniture that nurtures your home and your health",
+        "intro": "<p>We build to last, source responsibly, and finish clean — for you and the planet. Designed for healthier indoor air and a lighter footprint, shipped Australia-wide.</p>",
+        "why_heading": "Why your furniture choices matter",
+        "why_text": "The furniture you live with every day affects both your home's air and the planet. Here's why we do things differently.",
+        "pillars_heading": "Our blueprint for better furniture",
+        "pillars_text": "Three commitments shape every piece we make — from the raw materials in, to the packaging out.",
+        "certs_heading": "Our certifications: your guarantee of quality",
+        "certs_text": "Don't just take our word for it. Our commitments are verified by independent organisations — two standards cover the materials and products we stand behind, and four more are held by the factories that build our furniture.",
+        "group_material_label": "Materials & product standards we stand behind",
+        "group_partner_label": "Our manufacturing partners are certified to",
+        "faq_heading": "Common questions about our sustainability",
+        "faq_text": "",
+        "show_cta": true,
+        "cta_heading": "Ready to create a home that reflects your values?",
+        "cta_text": "Shop with confidence, knowing your choice supports a healthier home and a more sustainable world.",
+        "cta_btn1_label": "Shop all furniture",
+        "cta_btn1_url": "shopify://collections/all",
+        "cta_btn2_label": "Contact us",
+        "cta_btn2_url": "shopify://pages/contact-us",
+        "cta_sub": "Have a question about our practices? We're online-only and happy to help — Mon–Fri, 10am–4pm AEST.",
+        "emit_jsonld": true,
+        "padding_top": 32,
+        "padding_bottom": 56
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "sustainability"
+  ]
+}
