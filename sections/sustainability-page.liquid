@@ -1,0 +1,365 @@
+{%- comment -%}
+  Proferlo — Sustainability & Certifications page (self-contained, no JS, mobile-first)
+  Pattern matches contact / shipping / returns / faq / bnpl sections.
+  Structure: hero -> why-cards -> three pillars -> certifications (2 groups) -> SEO FAQ -> CTA
+  Block types:
+    - "why_card"      : a "why it matters" card (title + text)
+    - "pillar"        : one of the three pillars (label, title, richtext, usp, chips)
+    - "cert_material" : a Proferlo material/product standard (FSC, CARB2)
+    - "cert_partner"  : a manufacturing-partner certification (ISO, BSCI)
+    - "faq"           : visible Q&A that also feeds FAQPage JSON-LD
+  Blocks are rendered in fixed groups by type (not raw block_order) so the
+  layout stays clean regardless of editor ordering.
+{%- endcomment -%}
+<style>
+  #sus-{{ section.id }}{
+    --pf-forest:#2C3639;--pf-teal:#3F4E4F;--pf-linen:#DCD7C9;--pf-copper:#AB764B;
+    --pf-bg:#F4F1EA;--pf-card:#fff;--pf-cardbd:#E7E1D2;--pf-muted:#5A615C;
+    background:var(--pf-bg);padding-top:{{ section.settings.padding_top }}px;padding-bottom:{{ section.settings.padding_bottom }}px;
+    font-family:var(--font-body-family);color:var(--pf-forest);
+  }
+  #sus-{{ section.id }} *{box-sizing:border-box;}
+  #sus-{{ section.id }} .suswrap{max-width:108rem;margin:0 auto;padding:0 2rem;}
+  #sus-{{ section.id }} .eyebrow{font-size:1.2rem;letter-spacing:.14em;text-transform:uppercase;color:var(--pf-copper);font-weight:600;margin:0 0 1rem;}
+
+  /* HERO */
+  #sus-{{ section.id }} .sushero{background:var(--pf-forest);color:var(--pf-linen);border-radius:1.4rem;padding:5rem 3rem;text-align:center;}
+  #sus-{{ section.id }} .sushero .eyebrow{color:#D7B991;}
+  #sus-{{ section.id }} .sushero h1,#sus-{{ section.id }} .sushero h1 *{font-family:var(--font-heading-family);color:#fff;font-size:var(--font-h1-size);line-height:1.15;margin:0;}
+  #sus-{{ section.id }} .sushero .susintro,#sus-{{ section.id }} .sushero .susintro *{font-size:1.7rem;line-height:1.6;color:#C9C3B2;max-width:64rem;margin:1.6rem auto 0;}
+
+  /* SECTION HEAD */
+  #sus-{{ section.id }} .sushead{text-align:center;max-width:70rem;margin:5rem auto 3.4rem;}
+  #sus-{{ section.id }} .sushead h2,#sus-{{ section.id }} .sushead h2 *{font-family:var(--font-heading-family);font-size:var(--font-h3-size);color:var(--pf-forest);margin:0;line-height:1.2;}
+  #sus-{{ section.id }} .sushead p{font-size:1.55rem;color:var(--pf-muted);line-height:1.6;margin:1.2rem 0 0;}
+
+  /* WHY CARDS */
+  #sus-{{ section.id }} .susgrid3{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;}
+  #sus-{{ section.id }} .suscard{background:var(--pf-card);border:1px solid var(--pf-cardbd);border-radius:1.2rem;padding:2.6rem 2.4rem;}
+  #sus-{{ section.id }} .suscard h3{font-family:var(--font-heading-family);font-size:1.9rem;color:var(--pf-forest);margin:0 0 1rem;line-height:1.25;}
+  #sus-{{ section.id }} .suscard p{font-size:1.5rem;color:var(--pf-muted);line-height:1.6;margin:0;}
+
+  /* PILLARS */
+  #sus-{{ section.id }} .pillar{display:grid;grid-template-columns:1.05fr 1fr;gap:3.6rem;align-items:center;padding:2.4rem 0;}
+  #sus-{{ section.id }} .pillar.rev .pcopy{order:2;}
+  #sus-{{ section.id }} .pillar .pimg{border-radius:1.2rem;overflow:hidden;background:var(--pf-linen);aspect-ratio:4/3;}
+  #sus-{{ section.id }} .pillar .pimg img{width:100%;height:100%;object-fit:cover;display:block;}
+  #sus-{{ section.id }} .pillar .pimg.placeholder{display:flex;align-items:center;justify-content:center;color:var(--pf-muted);font-size:1.3rem;text-align:center;padding:2rem;border:1px solid var(--pf-cardbd);}
+  #sus-{{ section.id }} .pillar .plabel{font-family:var(--font-heading-family);font-size:1.3rem;color:var(--pf-copper);font-weight:600;letter-spacing:.04em;}
+  #sus-{{ section.id }} .pillar h3{font-family:var(--font-heading-family);font-size:2.2rem;color:var(--pf-forest);margin:.8rem 0 1.2rem;line-height:1.2;}
+  #sus-{{ section.id }} .pillar .ptext,#sus-{{ section.id }} .pillar .ptext *{font-size:1.55rem;color:var(--pf-muted);line-height:1.65;}
+  #sus-{{ section.id }} .pillar .ptext strong{color:var(--pf-forest);}
+  #sus-{{ section.id }} .pillar .usp{display:flex;gap:1rem;align-items:flex-start;background:#fff;border-left:.3rem solid var(--pf-teal);padding:1.2rem 1.6rem;border-radius:0 .8rem .8rem 0;font-size:1.45rem;color:var(--pf-forest);line-height:1.55;margin-top:1.6rem;}
+  #sus-{{ section.id }} .pillar .usp strong{color:var(--pf-teal);}
+  #sus-{{ section.id }} .pillar .chips{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.4rem;}
+  #sus-{{ section.id }} .pillar .chip{background:#fff;border:1px solid var(--pf-teal);color:var(--pf-teal);font-size:1.25rem;font-weight:600;padding:.6rem 1.3rem;border-radius:3rem;}
+
+  /* CERTS */
+  #sus-{{ section.id }} .certblock{background:var(--pf-forest);border-radius:1.4rem;padding:4rem 3rem;margin-top:5rem;color:#EDEAE0;}
+  #sus-{{ section.id }} .certblock .sushead{margin-top:0;}
+  #sus-{{ section.id }} .certblock .sushead h2,#sus-{{ section.id }} .certblock .sushead h2 *{color:#fff;}
+  #sus-{{ section.id }} .certblock .sushead p{color:#C9C3B2;}
+  #sus-{{ section.id }} .grouplabel{font-family:var(--font-body-family);text-transform:uppercase;letter-spacing:.14em;font-size:1.25rem;font-weight:600;color:#D7B991;margin:3.4rem 0 1.6rem;padding-bottom:1rem;border-bottom:1px solid rgba(255,255,255,.16);}
+  #sus-{{ section.id }} .certgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.8rem;}
+  #sus-{{ section.id }} .cert{background:#334140;border:1px solid rgba(255,255,255,.1);border-radius:1.2rem;padding:2.4rem;display:flex;gap:1.8rem;}
+  #sus-{{ section.id }} .cert .logo{flex:0 0 6rem;height:6rem;border-radius:1rem;background:var(--pf-linen);display:flex;align-items:center;justify-content:center;overflow:hidden;}
+  #sus-{{ section.id }} .cert .logo img{max-width:100%;max-height:100%;object-fit:contain;}
+  #sus-{{ section.id }} .cert .logo span{color:var(--pf-forest);font-weight:700;font-size:1.2rem;text-align:center;line-height:1.1;padding:.4rem;}
+  #sus-{{ section.id }} .cert h3{font-family:var(--font-heading-family);color:#fff;font-size:1.8rem;margin:0 0 .3rem;}
+  #sus-{{ section.id }} .cert .full{font-size:1.2rem;color:#AEB6AE;text-transform:uppercase;letter-spacing:.07em;margin:0 0 1rem;}
+  #sus-{{ section.id }} .cert .pe{font-size:1.45rem;color:#E4E8DF;margin:0 0 .8rem;line-height:1.55;}
+  #sus-{{ section.id }} .cert .wm{font-size:1.4rem;color:#C2CBC2;margin:0;line-height:1.55;}
+  #sus-{{ section.id }} .cert .wm strong{color:#D7B991;font-weight:600;}
+
+  /* FAQ (visible + feeds JSON-LD) */
+  #sus-{{ section.id }} .susfaq{max-width:80rem;margin:0 auto;}
+  #sus-{{ section.id }} .susfaq details{background:#fff;border:1px solid var(--pf-cardbd);border-radius:1rem;margin-bottom:1rem;}
+  #sus-{{ section.id }} .susfaq summary{cursor:pointer;list-style:none;padding:1.5rem 1.8rem;font-weight:600;font-size:1.55rem;color:var(--pf-forest);display:flex;justify-content:space-between;gap:1.2rem;align-items:center;}
+  #sus-{{ section.id }} .susfaq summary::-webkit-details-marker{display:none;}
+  #sus-{{ section.id }} .susfaq summary .chev{flex:0 0 auto;color:var(--pf-copper);font-size:1.9rem;line-height:1;transition:transform .2s;}
+  #sus-{{ section.id }} .susfaq details[open] summary .chev{transform:rotate(45deg);}
+  #sus-{{ section.id }} .susfaq .faqa,#sus-{{ section.id }} .susfaq .faqa *{padding-left:0;font-size:1.45rem;color:var(--pf-muted);line-height:1.6;}
+  #sus-{{ section.id }} .susfaq .faqa{padding:0 1.8rem 1.6rem;}
+  #sus-{{ section.id }} .susfaq .faqa p{margin:0 0 1rem;}
+  #sus-{{ section.id }} .susfaq .faqa p:last-child{margin-bottom:0;}
+  #sus-{{ section.id }} .susfaq .faqa a{color:var(--pf-copper);font-weight:600;}
+
+  /* CTA */
+  #sus-{{ section.id }} .suscta{background:var(--pf-copper);color:#fff;border-radius:1.4rem;text-align:center;padding:4.4rem 2.6rem;margin-top:5rem;}
+  #sus-{{ section.id }} .suscta h2,#sus-{{ section.id }} .suscta h2 *{font-family:var(--font-heading-family);color:#fff;font-size:var(--font-h3-size);margin:0 0 1.2rem;}
+  #sus-{{ section.id }} .suscta p{font-size:1.65rem;color:#FBEFE3;max-width:58rem;margin:0 auto 2.4rem;line-height:1.6;}
+  #sus-{{ section.id }} .suscta .ctabtns{display:flex;gap:1.2rem;justify-content:center;flex-wrap:wrap;}
+  #sus-{{ section.id }} .suscta a.btn{display:inline-block;text-decoration:none;font-family:var(--font-heading-family);font-weight:600;font-size:1.6rem;padding:1.4rem 3.2rem;border-radius:.8rem;}
+  #sus-{{ section.id }} .suscta a.btn-solid{background:#fff;color:var(--pf-copper);}
+  #sus-{{ section.id }} .suscta a.btn-solid:hover{background:var(--pf-forest);color:#fff;}
+  #sus-{{ section.id }} .suscta a.btn-ghost{border:1.5px solid #fff;color:#fff;}
+  #sus-{{ section.id }} .suscta a.btn-ghost:hover{background:#fff;color:var(--pf-copper);}
+  #sus-{{ section.id }} .suscta .ctasub{margin-top:2.6rem;font-size:1.4rem;color:#FBEFE3;}
+
+  @media (max-width:780px){
+    #sus-{{ section.id }} .susgrid3{grid-template-columns:1fr;}
+    #sus-{{ section.id }} .certgrid{grid-template-columns:1fr;}
+    #sus-{{ section.id }} .pillar{grid-template-columns:1fr;gap:1.8rem;}
+    #sus-{{ section.id }} .pillar.rev .pcopy{order:0;}
+    #sus-{{ section.id }} .pillar .pimg{aspect-ratio:16/9;}
+    #sus-{{ section.id }} .sushero{padding:3.4rem 2rem;}
+    #sus-{{ section.id }} .certblock{padding:3rem 1.8rem;}
+    #sus-{{ section.id }} .suswrap{padding:0 1.4rem;}
+  }
+</style>
+
+{%- liquid
+  assign sc = section.settings
+  assign why_cards = section.blocks | where: 'type', 'why_card'
+  assign pillars = section.blocks | where: 'type', 'pillar'
+  assign certs_material = section.blocks | where: 'type', 'cert_material'
+  assign certs_partner = section.blocks | where: 'type', 'cert_partner'
+  assign faqs = section.blocks | where: 'type', 'faq'
+-%}
+
+<div id="sus-{{ section.id }}">
+  <div class="suswrap">
+
+    {%- if sc.show_hero -%}
+    <header class="sushero">
+      {%- if sc.eyebrow != blank -%}<p class="eyebrow">{{ sc.eyebrow | escape }}</p>{%- endif -%}
+      {%- if sc.heading != blank -%}<h1>{{ sc.heading | escape }}</h1>{%- endif -%}
+      {%- if sc.intro != blank -%}<div class="susintro">{{ sc.intro }}</div>{%- endif -%}
+    </header>
+    {%- endif -%}
+
+    {%- if why_cards.size > 0 -%}
+    <div class="sushead">
+      {%- if sc.why_heading != blank -%}<h2>{{ sc.why_heading | escape }}</h2>{%- endif -%}
+      {%- if sc.why_text != blank -%}<p>{{ sc.why_text | escape }}</p>{%- endif -%}
+    </div>
+    <div class="susgrid3">
+      {%- for block in why_cards -%}
+        <div class="suscard" {{ block.shopify_attributes }}>
+          {%- if block.settings.title != blank -%}<h3>{{ block.settings.title | escape }}</h3>{%- endif -%}
+          {%- if block.settings.text != blank -%}<p>{{ block.settings.text | escape }}</p>{%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+    {%- endif -%}
+
+    {%- if pillars.size > 0 -%}
+    <div class="sushead">
+      {%- if sc.pillars_heading != blank -%}<h2>{{ sc.pillars_heading | escape }}</h2>{%- endif -%}
+      {%- if sc.pillars_text != blank -%}<p>{{ sc.pillars_text | escape }}</p>{%- endif -%}
+    </div>
+    {%- for block in pillars -%}
+      {%- assign pmod = forloop.index | modulo: 2 -%}
+      <div class="pillar{% if pmod == 0 %} rev{% endif %}" {{ block.shopify_attributes }}>
+        <div class="pcopy">
+          {%- if block.settings.label != blank -%}<span class="plabel">{{ block.settings.label | escape }}</span>{%- endif -%}
+          {%- if block.settings.title != blank -%}<h3>{{ block.settings.title | escape }}</h3>{%- endif -%}
+          {%- if block.settings.text != blank -%}<div class="ptext">{{ block.settings.text }}</div>{%- endif -%}
+          {%- if block.settings.usp != blank -%}<div class="usp"><span>{{ block.settings.usp }}</span></div>{%- endif -%}
+          {%- if block.settings.chips != blank -%}
+            <div class="chips">
+              {%- assign chiplist = block.settings.chips | split: ',' -%}
+              {%- for c in chiplist -%}<span class="chip">{{ c | strip | escape }}</span>{%- endfor -%}
+            </div>
+          {%- endif -%}
+        </div>
+        {%- if block.settings.image != blank -%}
+          <div class="pimg"><img src="{{ block.settings.image | image_url: width: 800 }}" alt="{{ block.settings.title | escape }}" loading="lazy" width="800" height="600"></div>
+        {%- else -%}
+          <div class="pimg placeholder">Add an image in the theme editor</div>
+        {%- endif -%}
+      </div>
+    {%- endfor -%}
+    {%- endif -%}
+
+    {%- if certs_material.size > 0 or certs_partner.size > 0 -%}
+    <div class="certblock">
+      <div class="sushead">
+        {%- if sc.certs_heading != blank -%}<h2>{{ sc.certs_heading | escape }}</h2>{%- endif -%}
+        {%- if sc.certs_text != blank -%}<p>{{ sc.certs_text | escape }}</p>{%- endif -%}
+      </div>
+
+      {%- if certs_material.size > 0 -%}
+        {%- if sc.group_material_label != blank -%}<p class="grouplabel">{{ sc.group_material_label | escape }}</p>{%- endif -%}
+        <div class="certgrid">
+          {%- for block in certs_material -%}
+          <div class="cert" {{ block.shopify_attributes }}>
+            <div class="logo">{%- if block.settings.logo != blank -%}<img src="{{ block.settings.logo | image_url: width: 120 }}" alt="{{ block.settings.code | escape }} logo" loading="lazy">{%- else -%}<span>{{ block.settings.code | escape }}</span>{%- endif -%}</div>
+            <div>
+              <h3>{{ block.settings.code | escape }}</h3>
+              {%- if block.settings.full != blank -%}<div class="full">{{ block.settings.full | escape }}</div>{%- endif -%}
+              {%- if block.settings.plain != blank -%}<p class="pe">{{ block.settings.plain | escape }}</p>{%- endif -%}
+              {%- if block.settings.why != blank -%}<p class="wm"><strong>Why it matters:</strong> {{ block.settings.why | escape }}</p>{%- endif -%}
+            </div>
+          </div>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+
+      {%- if certs_partner.size > 0 -%}
+        {%- if sc.group_partner_label != blank -%}<p class="grouplabel">{{ sc.group_partner_label | escape }}</p>{%- endif -%}
+        <div class="certgrid">
+          {%- for block in certs_partner -%}
+          <div class="cert" {{ block.shopify_attributes }}>
+            <div class="logo">{%- if block.settings.logo != blank -%}<img src="{{ block.settings.logo | image_url: width: 120 }}" alt="{{ block.settings.code | escape }} logo" loading="lazy">{%- else -%}<span>{{ block.settings.code | escape }}</span>{%- endif -%}</div>
+            <div>
+              <h3>{{ block.settings.code | escape }}</h3>
+              {%- if block.settings.full != blank -%}<div class="full">{{ block.settings.full | escape }}</div>{%- endif -%}
+              {%- if block.settings.plain != blank -%}<p class="pe">{{ block.settings.plain | escape }}</p>{%- endif -%}
+              {%- if block.settings.why != blank -%}<p class="wm"><strong>Why it matters:</strong> {{ block.settings.why | escape }}</p>{%- endif -%}
+            </div>
+          </div>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+    </div>
+    {%- endif -%}
+
+    {%- if faqs.size > 0 -%}
+    <div class="sushead">
+      {%- if sc.faq_heading != blank -%}<h2>{{ sc.faq_heading | escape }}</h2>{%- endif -%}
+      {%- if sc.faq_text != blank -%}<p>{{ sc.faq_text | escape }}</p>{%- endif -%}
+    </div>
+    <div class="susfaq">
+      {%- for block in faqs -%}
+        <details {{ block.shopify_attributes }}{% if block.settings.open %} open{% endif %}>
+          <summary>{{ block.settings.question | escape }}<span class="chev" aria-hidden="true">+</span></summary>
+          <div class="faqa">{{ block.settings.answer }}</div>
+        </details>
+      {%- endfor -%}
+    </div>
+    {%- endif -%}
+
+    {%- if sc.show_cta -%}
+    <div class="suscta">
+      {%- if sc.cta_heading != blank -%}<h2>{{ sc.cta_heading | escape }}</h2>{%- endif -%}
+      {%- if sc.cta_text != blank -%}<p>{{ sc.cta_text | escape }}</p>{%- endif -%}
+      <div class="ctabtns">
+        {%- if sc.cta_btn1_label != blank and sc.cta_btn1_url != blank -%}<a class="btn btn-solid" href="{{ sc.cta_btn1_url }}">{{ sc.cta_btn1_label | escape }}</a>{%- endif -%}
+        {%- if sc.cta_btn2_label != blank and sc.cta_btn2_url != blank -%}<a class="btn btn-ghost" href="{{ sc.cta_btn2_url }}">{{ sc.cta_btn2_label | escape }}</a>{%- endif -%}
+      </div>
+      {%- if sc.cta_sub != blank -%}<div class="ctasub">{{ sc.cta_sub | escape }}</div>{%- endif -%}
+    </div>
+    {%- endif -%}
+
+  </div>
+</div>
+
+{%- if sc.emit_jsonld and faqs.size > 0 -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {%- for block in faqs -%}
+    {%- assign atext = block.settings.answer | replace: '</p>', ' ' | replace: '</li>', ' ' | replace: '<br>', ' ' | replace: '<br/>', ' ' | replace: '<br />', ' ' | strip_html | strip_newlines -%}
+    {
+      "@type": "Question",
+      "name": {{ block.settings.question | strip_html | json }},
+      "acceptedAnswer": { "@type": "Answer", "text": {{ atext | json }} }
+    }{%- unless forloop.last -%},{%- endunless -%}
+    {%- endfor -%}
+  ]
+}
+</script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Sustainability page",
+  "tag": "section",
+  "class": "section-sustainability-page",
+  "max_blocks": 30,
+  "settings": [
+    { "type": "header", "content": "Hero" },
+    { "type": "checkbox", "id": "show_hero", "label": "Show hero", "default": true },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Sustainability & Certifications" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Furniture that nurtures your home and your health" },
+    { "type": "richtext", "id": "intro", "label": "Intro text", "default": "<p>We build to last, source responsibly, and finish clean — for you and the planet. Designed for healthier indoor air and a lighter footprint, shipped Australia-wide.</p>" },
+    { "type": "header", "content": "Why it matters (section heading)" },
+    { "type": "text", "id": "why_heading", "label": "Heading", "default": "Why your furniture choices matter" },
+    { "type": "text", "id": "why_text", "label": "Sub-text", "default": "The furniture you live with every day affects both your home's air and the planet. Here's why we do things differently." },
+    { "type": "header", "content": "Three pillars (section heading)" },
+    { "type": "text", "id": "pillars_heading", "label": "Heading", "default": "Our blueprint for better furniture" },
+    { "type": "text", "id": "pillars_text", "label": "Sub-text", "default": "Three commitments shape every piece we make — from the raw materials in, to the packaging out." },
+    { "type": "header", "content": "Certifications (section heading)" },
+    { "type": "text", "id": "certs_heading", "label": "Heading", "default": "Our certifications: your guarantee of quality" },
+    { "type": "text", "id": "certs_text", "label": "Sub-text", "default": "Don't just take our word for it. Our commitments are verified by independent organisations — two standards cover the materials and products we stand behind, and four more are held by the factories that build our furniture." },
+    { "type": "text", "id": "group_material_label", "label": "Group 1 label", "default": "Materials & product standards we stand behind" },
+    { "type": "text", "id": "group_partner_label", "label": "Group 2 label", "default": "Our manufacturing partners are certified to" },
+    { "type": "header", "content": "Common questions (section heading)" },
+    { "type": "text", "id": "faq_heading", "label": "Heading", "default": "Common questions about our sustainability" },
+    { "type": "text", "id": "faq_text", "label": "Sub-text" },
+    { "type": "header", "content": "Closing CTA" },
+    { "type": "checkbox", "id": "show_cta", "label": "Show closing CTA", "default": true },
+    { "type": "text", "id": "cta_heading", "label": "CTA heading", "default": "Ready to create a home that reflects your values?" },
+    { "type": "text", "id": "cta_text", "label": "CTA text", "default": "Shop with confidence, knowing your choice supports a healthier home and a more sustainable world." },
+    { "type": "text", "id": "cta_btn1_label", "label": "Button 1 label", "default": "Shop all furniture" },
+    { "type": "url", "id": "cta_btn1_url", "label": "Button 1 link" },
+    { "type": "text", "id": "cta_btn2_label", "label": "Button 2 label", "default": "Contact us" },
+    { "type": "url", "id": "cta_btn2_url", "label": "Button 2 link" },
+    { "type": "text", "id": "cta_sub", "label": "CTA sub-text", "default": "Have a question about our practices? We're online-only and happy to help — Mon–Fri, 10am–4pm AEST." },
+    { "type": "header", "content": "SEO / structured data" },
+    { "type": "checkbox", "id": "emit_jsonld", "label": "Emit FAQPage JSON-LD schema", "info": "Adds Schema.org FAQPage markup from the Common questions, so Google and AI crawlers can read them. Leave on.", "default": true },
+    { "type": "header", "content": "Section spacing" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Top padding", "default": 32 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Bottom padding", "default": 56 }
+  ],
+  "blocks": [
+    {
+      "type": "why_card",
+      "name": "Why-it-matters card",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title", "default": "Why this matters" },
+        { "type": "textarea", "id": "text", "label": "Text", "default": "Explain the point here." }
+      ]
+    },
+    {
+      "type": "pillar",
+      "name": "Pillar",
+      "settings": [
+        { "type": "text", "id": "label", "label": "Small label", "default": "01 — Materials" },
+        { "type": "text", "id": "title", "label": "Title", "default": "Pillar title" },
+        { "type": "richtext", "id": "text", "label": "Body", "default": "<p>Pillar body copy.</p>" },
+        { "type": "richtext", "id": "usp", "label": "Highlight (For you...)", "default": "<p><strong>For you:</strong> the benefit.</p>" },
+        { "type": "text", "id": "chips", "label": "Badge chips (comma-separated)", "info": "e.g. FSC certified, CARB Phase 2" },
+        { "type": "image_picker", "id": "image", "label": "Image" }
+      ]
+    },
+    {
+      "type": "cert_material",
+      "name": "Material standard",
+      "settings": [
+        { "type": "image_picker", "id": "logo", "label": "Logo" },
+        { "type": "text", "id": "code", "label": "Short name", "default": "FSC" },
+        { "type": "text", "id": "full", "label": "Full name", "default": "Forest Stewardship Council" },
+        { "type": "textarea", "id": "plain", "label": "Plain-English meaning", "default": "What it means in plain English." },
+        { "type": "textarea", "id": "why", "label": "Why it matters to the buyer", "default": "Why the buyer should care." }
+      ]
+    },
+    {
+      "type": "cert_partner",
+      "name": "Partner certification",
+      "settings": [
+        { "type": "image_picker", "id": "logo", "label": "Logo" },
+        { "type": "text", "id": "code", "label": "Short name", "default": "ISO 9001" },
+        { "type": "text", "id": "full", "label": "Full name", "default": "Quality management" },
+        { "type": "textarea", "id": "plain", "label": "Plain-English meaning", "default": "What it means in plain English." },
+        { "type": "textarea", "id": "why", "label": "Why it matters to the buyer", "default": "Why the buyer should care." }
+      ]
+    },
+    {
+      "type": "faq",
+      "name": "Common question",
+      "settings": [
+        { "type": "text", "id": "question", "label": "Question", "default": "Your question here" },
+        { "type": "richtext", "id": "answer", "label": "Answer", "default": "<p>Your answer here.</p>" },
+        { "type": "checkbox", "id": "open", "label": "Open by default", "default": false }
+      ]
+    }
+  ],
+  "presets": [
+    { "name": "Sustainability page" }
+  ]
+}
+{% endschema %}
