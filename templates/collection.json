@@ -38,7 +38,7 @@
         "@media (max-width: 767px) {.collection-hero__title {font-size: 3.5rem; } .collection-hero__description {display: none; }}"
       ],
       "settings": {
-        "color_scheme": "scheme-ef559241-393d-4947-8d52-eef4d81ce00a",
+        "color_scheme": "scheme-3",
         "text_alignment": "left",
         "show_collection_image": false,
         "image_overlay_opacity": 36,
@@ -47,8 +47,8 @@
         "enable_parallax": false,
         "parallax_direction": "vertical",
         "image_height_mobile": "auto",
-        "padding_top": 0,
-        "padding_bottom": 18
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     },
     "product-grid": {
