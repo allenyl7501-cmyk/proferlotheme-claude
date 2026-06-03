@@ -11,7 +11,9 @@
   "sections": {
     "breadcrumbs": {
       "type": "breadcrumbs",
-      "settings": {}
+      "settings": {
+        "text_alignment": "center"
+      }
     },
     "sustainability": {
       "type": "sustainability-page",
@@ -83,7 +85,7 @@
         "cert_carb": {
           "type": "cert_material",
           "settings": {
-            "logo": "shopify://shop_images/Screenshot_2025-08-05_at_11.16.37_pm_-_Edited.png",
+            "logo": "shopify://shop_images/CARB_Phase_2.png",
             "code": "CARB Phase 2",
             "full": "California Air Resources Board",
             "plain": "A strict limit on formaldehyde emissions from engineered wood.",
@@ -93,7 +95,7 @@
         "cert_iso9001": {
           "type": "cert_partner",
           "settings": {
-            "logo": "shopify://shop_images/53d3dada66a607a320ee89e4d5daec91_-_Edited_afafdba7-a393-4ec2-8521-f2a98f269df8.png",
+            "logo": "shopify://shop_images/ISO9001.png",
             "code": "ISO 9001",
             "full": "Quality management",
             "plain": "An audited system for consistent quality control in production.",
@@ -123,7 +125,7 @@
         "cert_bsci": {
           "type": "cert_partner",
           "settings": {
-            "logo": "shopify://shop_images/BSCI_7e1b75c0-228c-46c1-af01-63b139cbfa2c_-_Edited.png",
+            "logo": "shopify://shop_images/bsci.png",
             "code": "BSCI",
             "full": "Business Social Compliance Initiative",
             "plain": "Independent monitoring of fair wages and safe working conditions.",
