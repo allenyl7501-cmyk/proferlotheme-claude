@@ -1,0 +1,163 @@
+{%- comment -%}
+  Proferlo — Returns & Warranty : WARRANTY TIERS + COVERAGE
+  Tiered warranty cards (blocks) + "what we cover / don't cover" columns
+  + "how to claim" steps + Australian Consumer Law note.
+  Self-contained, fully editable. No JS.
+{%- endcomment -%}
+<style>
+  #rwtier-{{ section.id }}{
+    --pf-forest:#2C3639;--pf-teal:#3F4E4F;--pf-linen:#DCD7C9;--pf-copper:#AB764B;
+    --pf-bg:#F4F1EA;--pf-card:#fff;--pf-cardbd:#E7E1D2;--pf-muted:#5A615C;
+    --pf-green:#1E5E45;--pf-greenbg:#E4F0E8;--pf-red:#9A3B3B;--pf-redbg:#F6E7E4;
+    background:var(--pf-bg);padding-top:{{ section.settings.padding_top }}px;padding-bottom:{{ section.settings.padding_bottom }}px;
+    font-family:var(--font-body-family);
+  }
+  #rwtier-{{ section.id }} *{box-sizing:border-box;}
+  #rwtier-{{ section.id }} .rwwrap{max-width:104rem;margin:0 auto;padding:0 2rem;color:var(--pf-forest);}
+  #rwtier-{{ section.id }} h2{font-family:var(--font-heading-family);font-size:var(--font-h3-size);text-align:center;margin:0 0 .6rem;}
+  #rwtier-{{ section.id }} .rwsub,#rwtier-{{ section.id }} .rwsub p{text-align:center;color:var(--pf-muted);font-size:1.5rem;max-width:64rem;margin:0 auto 2.4rem;}
+  #rwtier-{{ section.id }} .rwtiers{display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem;}
+  #rwtier-{{ section.id }} .rwtier{background:#fff;border:1px solid var(--pf-cardbd);border-radius:1.2rem;padding:2.4rem 2rem;text-align:center;border-top:.4rem solid var(--pf-copper);}
+  #rwtier-{{ section.id }} .rwterm{font-family:var(--font-heading-family);font-weight:700;color:var(--pf-copper);font-size:2.6rem;line-height:1;margin:0 0 .6rem;}
+  #rwtier-{{ section.id }} .rwtier h3{font-family:var(--font-heading-family);font-size:1.8rem;margin:0 0 .8rem;}
+  #rwtier-{{ section.id }} .rwtier .rwtx,#rwtier-{{ section.id }} .rwtier .rwtx p{font-size:1.4rem;color:var(--pf-muted);margin:0;line-height:1.55;}
+  #rwtier-{{ section.id }} .rwtier .rwapplies{display:block;margin-top:1.2rem;font-size:1.25rem;font-weight:600;letter-spacing:.03em;text-transform:uppercase;color:var(--pf-teal);}
+  #rwtier-{{ section.id }} .rwcols{display:grid;grid-template-columns:1fr 1fr;gap:1.8rem;margin-top:3rem;}
+  #rwtier-{{ section.id }} .rwcol{background:#fff;border:1px solid var(--pf-cardbd);border-radius:1.2rem;padding:2.2rem 2.2rem;}
+  #rwtier-{{ section.id }} .rwcol h3{font-family:var(--font-heading-family);font-size:1.9rem;margin:0 0 1.2rem;display:flex;align-items:center;gap:.8rem;}
+  #rwtier-{{ section.id }} .rwcol--yes h3{color:var(--pf-green);}
+  #rwtier-{{ section.id }} .rwcol--no h3{color:var(--pf-red);}
+  #rwtier-{{ section.id }} .rwbadge{flex:0 0 auto;width:2.6rem;height:2.6rem;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;font-size:1.5rem;font-weight:700;}
+  #rwtier-{{ section.id }} .rwcol--yes .rwbadge{background:var(--pf-greenbg);color:var(--pf-green);}
+  #rwtier-{{ section.id }} .rwcol--no .rwbadge{background:var(--pf-redbg);color:var(--pf-red);}
+  #rwtier-{{ section.id }} .rwcol ul{list-style:none;margin:0;padding:0;}
+  #rwtier-{{ section.id }} .rwcol li{position:relative;padding-left:2.6rem;margin-bottom:1rem;font-size:1.45rem;color:var(--pf-forest);line-height:1.5;}
+  #rwtier-{{ section.id }} .rwcol li:last-child{margin-bottom:0;}
+  #rwtier-{{ section.id }} .rwcol li:before{position:absolute;left:0;top:0;font-weight:700;}
+  #rwtier-{{ section.id }} .rwcol--yes li:before{content:"\2713";color:var(--pf-green);}
+  #rwtier-{{ section.id }} .rwcol--no li:before{content:"\2715";color:var(--pf-red);}
+  #rwtier-{{ section.id }} .rwsteps{margin-top:3rem;}
+  #rwtier-{{ section.id }} .rwsteps > h3{text-align:center;font-family:var(--font-heading-family);font-size:var(--font-h4-size);margin:0 0 2rem;}
+  #rwtier-{{ section.id }} .rwstepgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem;}
+  #rwtier-{{ section.id }} .rwstep{background:#fff;border:1px solid var(--pf-cardbd);border-radius:1.2rem;padding:2.2rem 2rem;}
+  #rwtier-{{ section.id }} .rwstepn{width:3.4rem;height:3.4rem;border-radius:999px;background:var(--pf-teal);color:#fff;font-family:var(--font-heading-family);font-weight:700;font-size:1.7rem;display:flex;align-items:center;justify-content:center;margin-bottom:1.2rem;}
+  #rwtier-{{ section.id }} .rwstep h4{font-family:var(--font-heading-family);font-size:1.65rem;margin:0 0 .6rem;}
+  #rwtier-{{ section.id }} .rwstep .rwtx,#rwtier-{{ section.id }} .rwstep .rwtx p{font-size:1.4rem;color:var(--pf-muted);margin:0;line-height:1.55;}
+  #rwtier-{{ section.id }} .rwacl{background:#fff;border:1px solid var(--pf-cardbd);border-left:.4rem solid var(--pf-teal);border-radius:1rem;padding:1.6rem 2rem;margin-top:2.6rem;font-size:1.4rem;color:var(--pf-muted);}
+  #rwtier-{{ section.id }} .rwacl p{margin:0;}
+  #rwtier-{{ section.id }} .rwacl strong{color:var(--pf-teal);}
+  @media (max-width:749px){
+    #rwtier-{{ section.id }} .rwtiers,#rwtier-{{ section.id }} .rwcols,#rwtier-{{ section.id }} .rwstepgrid{grid-template-columns:1fr;}
+  }
+</style>
+
+{%- liquid
+  assign sc = section.settings
+-%}
+
+<div id="rwtier-{{ section.id }}">
+  <div class="rwwrap">
+    {%- if sc.heading != blank -%}<h2>{{ sc.heading | escape }}</h2>{%- endif -%}
+    {%- if sc.subtext != blank -%}<div class="rwsub">{{ sc.subtext }}</div>{%- endif -%}
+
+    {%- assign tier_count = 0 -%}
+    {%- for block in section.blocks -%}{%- if block.type == 'tier' -%}{%- assign tier_count = tier_count | plus: 1 -%}{%- endif -%}{%- endfor -%}
+    {%- if tier_count > 0 -%}
+    <div class="rwtiers">
+      {%- for block in section.blocks -%}{%- if block.type == 'tier' -%}
+        <div class="rwtier" {{ block.shopify_attributes }}>
+          {%- if block.settings.term != blank -%}<div class="rwterm">{{ block.settings.term | escape }}</div>{%- endif -%}
+          {%- if block.settings.title != blank -%}<h3>{{ block.settings.title | escape }}</h3>{%- endif -%}
+          {%- if block.settings.text != blank -%}<div class="rwtx">{{ block.settings.text }}</div>{%- endif -%}
+          {%- if block.settings.applies != blank -%}<span class="rwapplies">{{ block.settings.applies | escape }}</span>{%- endif -%}
+        </div>
+      {%- endif -%}{%- endfor -%}
+    </div>
+    {%- endif -%}
+
+    {%- if sc.covers != blank or sc.not_covers != blank -%}
+    <div class="rwcols">
+      {%- if sc.covers != blank -%}
+      <div class="rwcol rwcol--yes">
+        <h3><span class="rwbadge">&#10003;</span>{{ sc.covers_title | escape }}</h3>
+        {{ sc.covers }}
+      </div>
+      {%- endif -%}
+      {%- if sc.not_covers != blank -%}
+      <div class="rwcol rwcol--no">
+        <h3><span class="rwbadge">&#10005;</span>{{ sc.not_covers_title | escape }}</h3>
+        {{ sc.not_covers }}
+      </div>
+      {%- endif -%}
+    </div>
+    {%- endif -%}
+
+    {%- assign step_count = 0 -%}
+    {%- for block in section.blocks -%}{%- if block.type == 'step' -%}{%- assign step_count = step_count | plus: 1 -%}{%- endif -%}{%- endfor -%}
+    {%- if step_count > 0 -%}
+    <div class="rwsteps">
+      {%- if sc.steps_title != blank -%}<h3>{{ sc.steps_title | escape }}</h3>{%- endif -%}
+      <div class="rwstepgrid">
+        {%- assign n = 0 -%}
+        {%- for block in section.blocks -%}{%- if block.type == 'step' -%}
+          {%- assign n = n | plus: 1 -%}
+          <div class="rwstep" {{ block.shopify_attributes }}>
+            <div class="rwstepn">{{ n }}</div>
+            {%- if block.settings.title != blank -%}<h4>{{ block.settings.title | escape }}</h4>{%- endif -%}
+            {%- if block.settings.text != blank -%}<div class="rwtx">{{ block.settings.text }}</div>{%- endif -%}
+          </div>
+        {%- endif -%}{%- endfor -%}
+      </div>
+    </div>
+    {%- endif -%}
+
+    {%- if sc.acl_note != blank -%}<div class="rwacl">{{ sc.acl_note }}</div>{%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Warranty tiers & coverage",
+  "tag": "section",
+  "class": "section-rw-tiers",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Our Warranty Periods" },
+    { "type": "richtext", "id": "subtext", "label": "Sub-text", "default": "<p>To reflect the quality and durability of our different products, we offer a tiered warranty structure. All warranties cover defects in materials and workmanship.</p>" },
+    { "type": "header", "content": "What we cover / don't cover" },
+    { "type": "text", "id": "covers_title", "label": "Covered column title", "default": "What our warranty covers" },
+    { "type": "richtext", "id": "covers", "label": "Covered list", "default": "<ul><li>Defects in materials, such as timber splitting or significant fabric flaws.</li><li>Defects in workmanship, such as faulty joinery, failed stitching or broken hardware.</li><li>For approved claims we repair, provide a replacement part, or replace the product at our discretion — and cover all associated shipping &amp; handling.</li></ul>" },
+    { "type": "text", "id": "not_covers_title", "label": "Not-covered column title", "default": "What it does not cover" },
+    { "type": "richtext", "id": "not_covers", "label": "Not-covered list", "default": "<ul><li>Normal wear and tear from everyday use.</li><li>Damage from improper assembly, cleaning or maintenance.</li><li>Accidental damage such as spills, cuts, stains or pet damage.</li><li>Fading or discolouration from prolonged sunlight exposure.</li><li>Use for a purpose other than intended (e.g. commercial use).</li><li>Personal preference such as comfort or style (covered by our 14-day change-of-mind return).</li></ul>" },
+    { "type": "header", "content": "How to make a claim (heading)" },
+    { "type": "text", "id": "steps_title", "label": "Steps heading", "default": "How to Make a Warranty Claim" },
+    { "type": "header", "content": "Australian Consumer Law note" },
+    { "type": "richtext", "id": "acl_note", "label": "ACL note", "default": "<p><strong>Your rights under this warranty are in addition to your rights under the Australian Consumer Law.</strong> Our goods come with guarantees that cannot be excluded under the ACL.</p>" },
+    { "type": "header", "content": "Section spacing" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Top padding", "default": 40 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Bottom padding", "default": 12 }
+  ],
+  "blocks": [
+    {
+      "type": "tier",
+      "name": "Warranty tier",
+      "settings": [
+        { "type": "text", "id": "term", "label": "Term (large)", "info": "Provisional — confirm before publishing.", "default": "12 Months" },
+        { "type": "text", "id": "title", "label": "Title", "default": "Standard Warranty" },
+        { "type": "richtext", "id": "text", "label": "Text", "default": "<p>Every Proferlo product is covered against defects in materials and workmanship.</p>" },
+        { "type": "text", "id": "applies", "label": "Applies to (small caps)", "default": "All products" }
+      ]
+    },
+    {
+      "type": "step",
+      "name": "Claim step",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Step title", "default": "Contact our team" },
+        { "type": "richtext", "id": "text", "label": "Step text", "default": "<p>Email us with your order number, a clear description of the issue, and photos or a short video of the fault.</p>" }
+      ]
+    }
+  ],
+  "presets": [
+    { "name": "Warranty tiers & coverage", "blocks": [ { "type": "tier" }, { "type": "tier" }, { "type": "tier" }, { "type": "step" }, { "type": "step" }, { "type": "step" } ] }
+  ]
+}
+{% endschema %}
