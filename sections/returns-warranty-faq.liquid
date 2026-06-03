@@ -1,0 +1,104 @@
+{%- comment -%}
+  Proferlo — Returns & Warranty : FAQ ACCORDION (reusable)
+  One instance per FAQ group. Native <details> accordions (no JS).
+  Optional Schema.org FAQPage JSON-LD (enable on ONE instance only).
+  Optional closing CTA panel (enable on the last instance).
+{%- endcomment -%}
+<style>
+  #rwfaq-{{ section.id }}{
+    --pf-forest:#2C3639;--pf-teal:#3F4E4F;--pf-linen:#DCD7C9;--pf-copper:#AB764B;
+    --pf-bg:#F4F1EA;--pf-card:#fff;--pf-cardbd:#E7E1D2;--pf-muted:#5A615C;
+    background:var(--pf-bg);padding-top:{{ section.settings.padding_top }}px;padding-bottom:{{ section.settings.padding_bottom }}px;
+    font-family:var(--font-body-family);
+  }
+  #rwfaq-{{ section.id }} *{box-sizing:border-box;}
+  #rwfaq-{{ section.id }} .rwwrap{max-width:104rem;margin:0 auto;padding:0 2rem;color:var(--pf-forest);}
+  #rwfaq-{{ section.id }} .rwgrp-h{font-family:var(--font-heading-family);font-size:2.1rem;margin:0 0 1.4rem;padding-bottom:.8rem;border-bottom:.2rem solid var(--pf-cardbd);}
+  #rwfaq-{{ section.id }} details{background:#fff;border:1px solid var(--pf-cardbd);border-radius:1rem;margin-bottom:1rem;}
+  #rwfaq-{{ section.id }} summary{cursor:pointer;list-style:none;padding:1.5rem 1.8rem;font-weight:600;font-size:1.55rem;color:var(--pf-forest);display:flex;justify-content:space-between;gap:1.2rem;align-items:center;}
+  #rwfaq-{{ section.id }} summary::-webkit-details-marker{display:none;}
+  #rwfaq-{{ section.id }} summary .rwchev{flex:0 0 auto;color:var(--pf-copper);font-size:1.8rem;line-height:1;transition:transform .2s;}
+  #rwfaq-{{ section.id }} details[open] summary .rwchev{transform:rotate(45deg);}
+  #rwfaq-{{ section.id }} .rwa{padding:0 1.8rem 1.6rem;font-size:1.45rem;color:var(--pf-muted);line-height:1.6;}
+  #rwfaq-{{ section.id }} .rwa p{margin:0 0 1rem;}
+  #rwfaq-{{ section.id }} .rwa p:last-child{margin-bottom:0;}
+  #rwfaq-{{ section.id }} .rwa a{color:var(--pf-copper);font-weight:600;}
+  #rwfaq-{{ section.id }} .rwa ul,#rwfaq-{{ section.id }} .rwa ol{margin:.6rem 0 1rem;padding-left:2rem;}
+  #rwfaq-{{ section.id }} .rwa li{margin-bottom:.6rem;}
+  #rwfaq-{{ section.id }} .rwa strong{color:var(--pf-forest);}
+  #rwfaq-{{ section.id }} .rwcta{background:var(--pf-teal);color:var(--pf-linen);border-radius:1.2rem;text-align:center;padding:4rem 2.4rem;margin-top:2.6rem;}
+  #rwfaq-{{ section.id }} .rwcta h3,#rwfaq-{{ section.id }} .rwcta h3 *{color:#fff;font-family:var(--font-heading-family);font-size:var(--font-h4-size);margin:0 0 1.8rem;}
+  #rwfaq-{{ section.id }} .rwcta a.rwbtn{display:inline-block;background:var(--pf-copper);color:#fff;text-decoration:none;font-family:var(--font-heading-family);font-weight:600;font-size:1.6rem;padding:1.4rem 3.4rem;border-radius:.8rem;}
+  #rwfaq-{{ section.id }} .rwcta a.rwbtn:hover{background:#9A6A43;}
+</style>
+
+{%- liquid
+  assign sc = section.settings
+-%}
+
+<div id="rwfaq-{{ section.id }}">
+  <div class="rwwrap">
+    {%- if sc.group_heading != blank -%}<h2 class="rwgrp-h">{{ sc.group_heading | escape }}</h2>{%- endif -%}
+
+    {%- for block in section.blocks -%}{%- if block.type == 'faq' -%}
+      <details {{ block.shopify_attributes }}>
+        <summary>{{ block.settings.question | escape }}<span class="rwchev">+</span></summary>
+        <div class="rwa">{{ block.settings.answer }}</div>
+      </details>
+    {%- endif -%}{%- endfor -%}
+
+    {%- if sc.show_cta -%}
+    <div class="rwcta">
+      {%- if sc.cta_heading != blank -%}<h3>{{ sc.cta_heading }}</h3>{%- endif -%}
+      {%- if sc.cta_button_label != blank and sc.cta_button_url != blank -%}
+        <a class="rwbtn" href="{{ sc.cta_button_url }}">{{ sc.cta_button_label | escape }}</a>
+      {%- endif -%}
+    </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{%- comment -%} ===== Machine-readable structured data (Schema.org FAQPage) ===== {%- endcomment -%}
+{%- if sc.emit_faq_jsonld -%}
+{%- capture faq_items -%}
+  {%- for block in section.blocks -%}{%- if block.type == 'faq' and block.settings.question != blank -%}
+    ,{"@type":"Question","name":{{ block.settings.question | json }},"acceptedAnswer":{"@type":"Answer","text":{{ block.settings.answer | strip_html | strip | json }}}}
+  {%- endif -%}{%- endfor -%}
+{%- endcapture -%}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","name":{{ page.title | default: sc.group_heading | json }},"url":{{ canonical_url | json }},"mainEntity":[{{ faq_items | remove_first: ',' }}]}
+</script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Returns/warranty FAQ",
+  "tag": "section",
+  "class": "section-rw-faq",
+  "settings": [
+    { "type": "text", "id": "group_heading", "label": "Group heading", "default": "Frequently Asked Questions" },
+    { "type": "header", "content": "Structured data (JSON-LD)" },
+    { "type": "paragraph", "content": "Embeds invisible Schema.org FAQPage so Google & AI assistants can read your Q&As. Enable on ONE FAQ group only (the main customer FAQ)." },
+    { "type": "checkbox", "id": "emit_faq_jsonld", "label": "Embed FAQPage JSON-LD", "default": false },
+    { "type": "header", "content": "Closing CTA (enable on last group only)" },
+    { "type": "checkbox", "id": "show_cta", "label": "Show closing CTA", "default": false },
+    { "type": "richtext", "id": "cta_heading", "label": "CTA heading", "default": "<p>Still have a question about returns or warranty?</p>" },
+    { "type": "text", "id": "cta_button_label", "label": "Button label", "default": "Contact Us" },
+    { "type": "url", "id": "cta_button_url", "label": "Button link" },
+    { "type": "header", "content": "Section spacing" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Top padding", "default": 24 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Bottom padding", "default": 16 }
+  ],
+  "blocks": [
+    {
+      "type": "faq",
+      "name": "Q&A",
+      "settings": [
+        { "type": "text", "id": "question", "label": "Question", "default": "Your question here" },
+        { "type": "richtext", "id": "answer", "label": "Answer", "default": "<p>Your answer here.</p>" }
+      ]
+    }
+  ],
+  "presets": [ { "name": "Returns/warranty FAQ", "blocks": [ { "type": "faq" } ] } ]
+}
+{% endschema %}
