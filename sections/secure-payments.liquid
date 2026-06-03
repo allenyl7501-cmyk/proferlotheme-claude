@@ -1,0 +1,84 @@
+{%- comment -%}
+  Proferlo — Secure Payments trust strip
+  Accepted payment-method badges + security reassurance.
+  Each badge is editable (label + optional logo image) in the customiser.
+{%- endcomment -%}
+<style>
+  #bnsec-{{ section.id }}{
+    --pf-forest:#2C3639;--pf-teal:#3F4E4F;--pf-linen:#DCD7C9;--pf-copper:#AB764B;
+    --pf-bg:#F4F1EA;--pf-card:#fff;--pf-cardbd:#E7E1D2;--pf-muted:#5A615C;
+    background:var(--pf-bg);padding-top:{{ section.settings.padding_top }}px;padding-bottom:{{ section.settings.padding_bottom }}px;
+    font-family:var(--font-body-family);
+  }
+  #bnsec-{{ section.id }} *{box-sizing:border-box;}
+  #bnsec-{{ section.id }} .bnwrap{max-width:104rem;margin:0 auto;padding:0 2rem;color:var(--pf-forest);}
+  #bnsec-{{ section.id }} .bncard{background:#fff;border:1px solid var(--pf-cardbd);border-radius:1.4rem;padding:3rem 2.6rem;text-align:center;}
+  #bnsec-{{ section.id }} .bnsh{display:inline-flex;align-items:center;gap:.9rem;font-family:var(--font-heading-family);font-size:var(--font-h4-size);margin:0 0 1rem;justify-content:center;}
+  #bnsec-{{ section.id }} .bnsh svg{width:2.6rem;height:2.6rem;color:var(--pf-copper);}
+  #bnsec-{{ section.id }} .bnsd,#bnsec-{{ section.id }} .bnsd p{font-size:1.5rem;color:var(--pf-muted);line-height:1.6;max-width:68rem;margin:0 auto 2.2rem;}
+  #bnsec-{{ section.id }} .bnbadges{display:flex;flex-wrap:wrap;justify-content:center;gap:1.1rem;}
+  #bnsec-{{ section.id }} .bnbadge{background:#FBFAF5;border:1px solid #EAE4D5;border-radius:.8rem;height:4.8rem;min-width:7.4rem;padding:0 1.6rem;display:inline-flex;align-items:center;justify-content:center;}
+  #bnsec-{{ section.id }} .bnbadge img{max-height:3rem;max-width:9rem;width:auto;}
+  #bnsec-{{ section.id }} .bnbadge .bnbl{font-weight:700;font-size:1.4rem;color:var(--pf-teal);letter-spacing:.01em;}
+  #bnsec-{{ section.id }} .bnfine,#bnsec-{{ section.id }} .bnfine p{font-size:1.25rem;color:var(--pf-muted);margin:2rem auto 0;max-width:70rem;line-height:1.55;}
+</style>
+
+{%- liquid
+  assign sc = section.settings
+-%}
+
+<div id="bnsec-{{ section.id }}">
+  <div class="bnwrap">
+    <div class="bncard">
+      <div class="bnsh">
+        {%- if sc.show_lock -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/><circle cx="12" cy="15.5" r="1.3"/></svg>{%- endif -%}
+        {%- if sc.heading != blank -%}<span>{{ sc.heading | escape }}</span>{%- endif -%}
+      </div>
+      {%- if sc.subtext != blank -%}<div class="bnsd">{{ sc.subtext }}</div>{%- endif -%}
+
+      <div class="bnbadges">
+        {%- for block in section.blocks -%}{%- if block.type == 'method' -%}
+          <div class="bnbadge" {{ block.shopify_attributes }}>
+            {%- if block.settings.logo != blank -%}
+              <img src="{{ block.settings.logo | image_url: height: 60 }}" alt="{{ block.settings.label | escape }}" loading="lazy">
+            {%- else -%}
+              <span class="bnbl">{{ block.settings.label | escape }}</span>
+            {%- endif -%}
+          </div>
+        {%- endif -%}{%- endfor -%}
+      </div>
+
+      {%- if sc.fineprint != blank -%}<div class="bnfine">{{ sc.fineprint }}</div>{%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Secure payments strip",
+  "tag": "section",
+  "class": "section-secure-payments",
+  "settings": [
+    { "type": "checkbox", "id": "show_lock", "label": "Show padlock icon", "default": true },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Safe & Secure Checkout" },
+    { "type": "richtext", "id": "subtext", "label": "Sub-text", "default": "<p>Every order is processed through Shopify's PCI-DSS compliant, fully encrypted checkout. We never see or store your full card details. Pay your way with the trusted methods below.</p>" },
+    { "type": "richtext", "id": "fineprint", "label": "Fine print", "default": "<p>Afterpay, Zip and PayPal Pay in 4 are independent services. Approval, limits and terms are determined by each provider. All trademarks and logos are property of their respective owners.</p>" },
+    { "type": "header", "content": "Section spacing" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Top padding", "default": 24 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Bottom padding", "default": 16 }
+  ],
+  "blocks": [
+    {
+      "type": "method",
+      "name": "Payment method",
+      "settings": [
+        { "type": "text", "id": "label", "label": "Label (shown if no logo)", "default": "Visa" },
+        { "type": "image_picker", "id": "logo", "label": "Logo image (recommended)" }
+      ]
+    }
+  ],
+  "presets": [
+    { "name": "Secure payments strip", "blocks": [ { "type": "method" }, { "type": "method" }, { "type": "method" }, { "type": "method" }, { "type": "method" }, { "type": "method" } ] }
+  ]
+}
+{% endschema %}

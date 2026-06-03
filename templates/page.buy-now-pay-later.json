@@ -1,0 +1,143 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": { "text_alignment": "center" }
+    },
+    "top": {
+      "type": "bnpl-top",
+      "blocks": {
+        "t1": { "type": "trust", "settings": { "icon": "split", "title": "Interest-free options", "text": "<p>Split your purchase into easy instalments — no interest when you pay on time.</p>" } },
+        "t2": { "type": "trust", "settings": { "icon": "bolt", "title": "Fast approval", "text": "<p>Quick sign-up and instant decisions directly with your chosen provider.</p>" } },
+        "t3": { "type": "trust", "settings": { "icon": "lock", "title": "Secure checkout", "text": "<p>Encrypted, PCI-compliant payments through Shopify's trusted checkout.</p>" } },
+        "t4": { "type": "trust", "settings": { "icon": "map", "title": "Australia-wide", "text": "<p>Buy now, pay later on every item, delivered right across Australia.</p>" } }
+      },
+      "block_order": ["t1", "t2", "t3", "t4"],
+      "settings": {
+        "eyebrow": "Buy Now, Pay Later",
+        "heading": "Buy Now, Pay Later on Furniture",
+        "intro": "<p>Spread the cost of your furniture with interest-free payment plans from Australia's most trusted Buy Now, Pay Later providers — Afterpay, Zip and PayPal. Every Proferlo item is eligible, available at checkout, and delivered Australia-wide.</p>",
+        "trust_title": "Why shop with Buy Now, Pay Later",
+        "show_usp": true,
+        "usp_text": "<p><strong>All Proferlo furniture is eligible for Buy Now, Pay Later</strong> — available at checkout, Australia-wide.</p>",
+        "padding_top": 48,
+        "padding_bottom": 8
+      }
+    },
+    "providers": {
+      "type": "bnpl-providers",
+      "blocks": {
+        "p1": {
+          "type": "provider",
+          "settings": {
+            "name": "Afterpay",
+            "tagline": "<p>4 interest-free payments over 6 weeks.</p>",
+            "how_label": "How it works",
+            "how": "<p>Split your order into <strong>4 equal payments</strong>, due every fortnight. The first instalment is paid at checkout and the remaining three are automatically charged to your card over the following six weeks.</p><ul><li>Always interest-free</li><li>A late fee may apply if a payment is missed</li><li>For Australian residents aged 18+</li></ul>",
+            "checkout": "<p><strong>At checkout:</strong> select <strong>Afterpay</strong> as your payment method and follow the prompts to approve your plan.</p>",
+            "link_label": "Learn more about Afterpay",
+            "link_url": "https://www.afterpay.com/en-AU/how-it-works"
+          }
+        },
+        "p2": {
+          "type": "provider",
+          "settings": {
+            "name": "Zip Pay",
+            "tagline": "<p>Interest-free, with flexible repayments.</p>",
+            "how_label": "How it works",
+            "how": "<p>Buy now and pay over time with <strong>flexible weekly, fortnightly or monthly</strong> repayments that suit your budget. Zip Pay is always interest-free.</p><ul><li>Choose a repayment schedule that works for you</li><li>A small monthly account fee may apply if you carry a balance — waived when you pay in full</li><li>For Australian residents aged 18+</li></ul>",
+            "checkout": "<p><strong>At checkout:</strong> select <strong>Zip</strong> as your payment method and approve your plan in seconds.</p>",
+            "link_label": "Learn more about Zip",
+            "link_url": "https://zip.co/au/how-zip-works"
+          }
+        },
+        "p3": {
+          "type": "provider",
+          "settings": {
+            "name": "PayPal Pay in 4",
+            "tagline": "<p>4 interest-free payments, no late fees.</p>",
+            "how_label": "How it works",
+            "how": "<p>Pay in <strong>4 interest-free instalments</strong> with PayPal. The first payment is taken at checkout and the rest are charged every two weeks.</p><ul><li>No interest and no late fees</li><li>PayPal Buyer Protection applies to eligible orders</li><li>For Australian residents aged 18+</li></ul>",
+            "checkout": "<p><strong>At checkout:</strong> choose <strong>PayPal</strong>, then select <strong>Pay in 4</strong> if it is offered for your order.</p>",
+            "link_label": "Learn more about PayPal Pay in 4",
+            "link_url": "https://www.paypal.com/au/digital-wallet/ways-to-pay/buy-now-pay-later"
+          }
+        }
+      },
+      "block_order": ["p1", "p2", "p3"],
+      "settings": {
+        "heading": "Your Pay-Later Options",
+        "subtext": "<p>Choose the provider that suits you at checkout. All three are interest-free when you pay on time, and every item we sell is eligible.</p>",
+        "disclaimer": "<p>Spending limits and approval are set by each provider based on your individual account — not by Proferlo. Approval is subject to the provider's terms. Please review each provider's website for full details and current fees.</p>",
+        "padding_top": 40,
+        "padding_bottom": 8
+      }
+    },
+    "secure": {
+      "type": "secure-payments",
+      "blocks": {
+        "m1": { "type": "method", "settings": { "label": "Visa" } },
+        "m2": { "type": "method", "settings": { "label": "Mastercard" } },
+        "m3": { "type": "method", "settings": { "label": "Amex" } },
+        "m4": { "type": "method", "settings": { "label": "PayPal" } },
+        "m5": { "type": "method", "settings": { "label": "Shop Pay" } },
+        "m6": { "type": "method", "settings": { "label": "Apple Pay" } },
+        "m7": { "type": "method", "settings": { "label": "Google Pay" } },
+        "m8": { "type": "method", "settings": { "label": "Afterpay" } },
+        "m9": { "type": "method", "settings": { "label": "Zip" } }
+      },
+      "block_order": ["m1", "m2", "m3", "m4", "m5", "m6", "m7", "m8", "m9"],
+      "settings": {
+        "show_lock": true,
+        "heading": "Safe & Secure Checkout",
+        "subtext": "<p>Every order is processed through Shopify's PCI-DSS compliant, fully encrypted checkout. We never see or store your full card details. Pay your way with the trusted methods below.</p>",
+        "fineprint": "<p>Afterpay, Zip and PayPal Pay in 4 are independent services. Approval, limits and terms are determined by each provider. All trademarks and logos are property of their respective owners.</p>",
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
+    },
+    "faq": {
+      "type": "bnpl-faq",
+      "blocks": {
+        "q1": { "type": "faq", "settings": { "question": "Do you offer Afterpay?", "answer": "<p>Yes. Afterpay is available at checkout on all Proferlo furniture. Choose Afterpay as your payment method and split your order into 4 interest-free payments over 6 weeks. The first payment is taken at checkout and the rest are charged fortnightly.</p>" } },
+        "q2": { "type": "faq", "settings": { "question": "Can I use Zip Pay on furniture?", "answer": "<p>Yes. Zip Pay can be used on all of our furniture. Select Zip at checkout to buy now and pay over time with flexible weekly, fortnightly or monthly repayments. Zip Pay is always interest-free, though a small monthly account fee may apply if you carry a balance.</p>" } },
+        "q3": { "type": "faq", "settings": { "question": "How do I pay with PayPal Pay Later?", "answer": "<p>At checkout, choose PayPal, then select Pay in 4 if it is offered for your order. PayPal splits your purchase into 4 interest-free payments — the first at checkout and the rest every two weeks. There is no interest and no late fees, and PayPal Buyer Protection applies to eligible orders.</p>" } },
+        "q4": { "type": "faq", "settings": { "question": "Is Buy Now, Pay Later available on all your furniture?", "answer": "<p>Yes. Every item in our store is eligible for Buy Now, Pay Later using Afterpay, Zip or PayPal Pay in 4. There are no excluded products or collections.</p>" } },
+        "q5": { "type": "faq", "settings": { "question": "Do I pay interest or extra fees with Buy Now, Pay Later?", "answer": "<p>All three providers are interest-free when you pay on time. Afterpay and PayPal Pay in 4 charge no interest; Afterpay may charge a late fee if a payment is missed, while PayPal Pay in 4 has no late fees. Zip Pay is always interest-free but may charge a small monthly account fee if you carry a balance, which is waived when you pay in full. Always check the provider's current terms for full details.</p>" } },
+        "q6": { "type": "faq", "settings": { "question": "What is my spending limit?", "answer": "<p>Spending limits are set by each provider based on your individual account and approval — not by Proferlo. When you select a provider at checkout you'll see what you're approved to spend. All of our furniture is eligible, so the only limit is the one your provider sets for you.</p>" } },
+        "q7": { "type": "faq", "settings": { "question": "Is it safe to use Buy Now, Pay Later at your checkout?", "answer": "<p>Yes. Our checkout is powered by Shopify and is fully encrypted and PCI-DSS compliant. Afterpay, Zip and PayPal are established, regulated Australian payment providers. We never see or store your full card or banking details.</p>" } },
+        "q8": { "type": "faq", "settings": { "question": "Do I need an account to use Buy Now, Pay Later?", "answer": "<p>Yes — you'll need an account with your chosen provider (Afterpay, Zip or PayPal). Sign-up is quick and you can apply during checkout, with most decisions returned instantly.</p>" } },
+        "q9": { "type": "faq", "settings": { "question": "Which Buy Now, Pay Later option should I choose?", "answer": "<p>It comes down to preference. Afterpay and PayPal Pay in 4 both split your order into 4 interest-free fortnightly payments over 6 weeks. Zip Pay offers more flexible weekly, fortnightly or monthly repayments. PayPal Pay in 4 also includes PayPal Buyer Protection. All three are available at our checkout and cover all our furniture.</p>" } },
+        "q10": { "type": "faq", "settings": { "question": "Can I use Buy Now, Pay Later on large or bulky furniture orders?", "answer": "<p>Yes. There's no product restriction from our side — every item, including large multi-carton pieces, is eligible. The amount you can spend depends on the limit your provider has approved for your account.</p>" } }
+      },
+      "block_order": ["q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "q9", "q10"],
+      "settings": {
+        "heading": "Buy Now, Pay Later — FAQs",
+        "subtext": "<p>Quick answers to the most common questions about paying later on furniture.</p>",
+        "emit_jsonld": true,
+        "show_cta": true,
+        "cta_heading": "<p>Ready to furnish now and pay later?</p>",
+        "cta_button_label": "Shop Furniture",
+        "cta_button_url": "shopify://collections/all",
+        "padding_top": 32,
+        "padding_bottom": 56
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "top",
+    "providers",
+    "secure",
+    "faq"
+  ]
+}
