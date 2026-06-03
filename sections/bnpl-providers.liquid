@@ -1,0 +1,111 @@
+{%- comment -%}
+  Proferlo — Buy Now, Pay Later : PROVIDER OPTIONS
+  One card per provider (Afterpay / Zip / PayPal Pay Later).
+  Each card = logo, tagline, "How it works", "Where to find it at checkout".
+  Fully editable per provider in the Theme customiser.
+{%- endcomment -%}
+<style>
+  #bnprov-{{ section.id }}{
+    --pf-forest:#2C3639;--pf-teal:#3F4E4F;--pf-linen:#DCD7C9;--pf-copper:#AB764B;
+    --pf-bg:#F4F1EA;--pf-card:#fff;--pf-cardbd:#E7E1D2;--pf-muted:#5A615C;
+    background:var(--pf-bg);padding-top:{{ section.settings.padding_top }}px;padding-bottom:{{ section.settings.padding_bottom }}px;
+    font-family:var(--font-body-family);
+  }
+  #bnprov-{{ section.id }} *{box-sizing:border-box;}
+  #bnprov-{{ section.id }} .bnwrap{max-width:104rem;margin:0 auto;padding:0 2rem;color:var(--pf-forest);}
+  #bnprov-{{ section.id }} h2{font-family:var(--font-heading-family);font-size:var(--font-h3-size);text-align:center;margin:0 0 .6rem;}
+  #bnprov-{{ section.id }} .bnsub,#bnprov-{{ section.id }} .bnsub p{text-align:center;color:var(--pf-muted);font-size:1.5rem;max-width:66rem;margin:0 auto 2.6rem;}
+  #bnprov-{{ section.id }} .bngrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem;align-items:stretch;}
+  #bnprov-{{ section.id }} .bnp{background:#fff;border:1px solid var(--pf-cardbd);border-radius:1.4rem;padding:2.6rem 2.2rem;display:flex;flex-direction:column;}
+  #bnprov-{{ section.id }} .bnp .bnlogo{height:4rem;display:flex;align-items:center;margin-bottom:1.6rem;}
+  #bnprov-{{ section.id }} .bnp .bnlogo img{max-height:4rem;max-width:18rem;width:auto;}
+  #bnprov-{{ section.id }} .bnp .bnlogo .bnname{font-family:var(--font-heading-family);font-size:2.2rem;font-weight:700;color:var(--pf-forest);}
+  #bnprov-{{ section.id }} .bnp .bntag,#bnprov-{{ section.id }} .bnp .bntag p{font-size:1.55rem;font-weight:600;color:var(--pf-teal);margin:0 0 1.4rem;line-height:1.4;}
+  #bnprov-{{ section.id }} .bnp .bnlabel{font-family:var(--font-heading-family);font-size:1.2rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--pf-copper);margin:1.4rem 0 .5rem;}
+  #bnprov-{{ section.id }} .bnp .bnbody,#bnprov-{{ section.id }} .bnp .bnbody p{font-size:1.4rem;color:var(--pf-muted);line-height:1.6;margin:0 0 .8rem;}
+  #bnprov-{{ section.id }} .bnp .bnbody ul{margin:.4rem 0 .8rem;padding-left:1.8rem;}
+  #bnprov-{{ section.id }} .bnp .bnbody li{font-size:1.4rem;color:var(--pf-muted);line-height:1.55;margin-bottom:.5rem;}
+  #bnprov-{{ section.id }} .bnp .bnbody strong{color:var(--pf-forest);}
+  #bnprov-{{ section.id }} .bnp .bncheckout{background:#FBFAF5;border:1px solid #EEE9DC;border-left:.4rem solid var(--pf-copper);border-radius:.8rem;padding:1.2rem 1.4rem;font-size:1.35rem;color:var(--pf-forest);line-height:1.55;margin-top:.4rem;}
+  #bnprov-{{ section.id }} .bnp .bncheckout strong{color:var(--pf-teal);}
+  #bnprov-{{ section.id }} .bnp .bnlink{margin-top:auto;padding-top:1.6rem;}
+  #bnprov-{{ section.id }} .bnp .bnlink a{color:var(--pf-copper);font-weight:600;font-size:1.35rem;text-decoration:none;}
+  #bnprov-{{ section.id }} .bnp .bnlink a:hover{text-decoration:underline;}
+  #bnprov-{{ section.id }} .bnnote,#bnprov-{{ section.id }} .bnnote p{font-size:1.3rem;color:var(--pf-muted);text-align:center;margin:2.2rem auto 0;max-width:74rem;line-height:1.6;}
+  #bnprov-{{ section.id }} .bnnote a{color:var(--pf-copper);font-weight:600;}
+  @media (max-width:989px){ #bnprov-{{ section.id }} .bngrid{grid-template-columns:1fr;} }
+</style>
+
+{%- liquid
+  assign sc = section.settings
+-%}
+
+<div id="bnprov-{{ section.id }}">
+  <div class="bnwrap">
+    {%- if sc.heading != blank -%}<h2>{{ sc.heading | escape }}</h2>{%- endif -%}
+    {%- if sc.subtext != blank -%}<div class="bnsub">{{ sc.subtext }}</div>{%- endif -%}
+
+    <div class="bngrid">
+      {%- for block in section.blocks -%}{%- if block.type == 'provider' -%}
+        <div class="bnp" {{ block.shopify_attributes }}>
+          <div class="bnlogo">
+            {%- if block.settings.logo != blank -%}
+              <img src="{{ block.settings.logo | image_url: height: 80 }}" alt="{{ block.settings.name | escape }}" loading="lazy">
+            {%- else -%}
+              <span class="bnname">{{ block.settings.name | escape }}</span>
+            {%- endif -%}
+          </div>
+          {%- if block.settings.tagline != blank -%}<div class="bntag">{{ block.settings.tagline }}</div>{%- endif -%}
+
+          {%- if block.settings.how_label != blank -%}<div class="bnlabel">{{ block.settings.how_label | escape }}</div>{%- endif -%}
+          {%- if block.settings.how != blank -%}<div class="bnbody">{{ block.settings.how }}</div>{%- endif -%}
+
+          {%- if block.settings.checkout != blank -%}
+            <div class="bncheckout">{{ block.settings.checkout }}</div>
+          {%- endif -%}
+
+          {%- if block.settings.link_label != blank and block.settings.link_url != blank -%}
+            <div class="bnlink"><a href="{{ block.settings.link_url }}" target="_blank" rel="nofollow noopener">{{ block.settings.link_label | escape }} &rarr;</a></div>
+          {%- endif -%}
+        </div>
+      {%- endif -%}{%- endfor -%}
+    </div>
+
+    {%- if sc.disclaimer != blank -%}<div class="bnnote">{{ sc.disclaimer }}</div>{%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "BNPL — providers",
+  "tag": "section",
+  "class": "section-bnpl-providers",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Your Pay-Later Options" },
+    { "type": "richtext", "id": "subtext", "label": "Sub-text", "default": "<p>Choose the provider that suits you at checkout. All three are interest-free when you pay on time, and all our furniture is eligible.</p>" },
+    { "type": "richtext", "id": "disclaimer", "label": "Disclaimer note", "default": "<p>Spending limits and approval are set by each provider based on your individual account — not by Proferlo. Approval is subject to the provider's terms. Please review the provider's website for full details and current fees.</p>" },
+    { "type": "header", "content": "Section spacing" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Top padding", "default": 40 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Bottom padding", "default": 8 }
+  ],
+  "blocks": [
+    {
+      "type": "provider",
+      "name": "Provider card",
+      "settings": [
+        { "type": "text", "id": "name", "label": "Provider name (shown if no logo)", "default": "Afterpay" },
+        { "type": "image_picker", "id": "logo", "label": "Provider logo (recommended)" },
+        { "type": "richtext", "id": "tagline", "label": "Tagline", "default": "<p>4 interest-free payments over 6 weeks.</p>" },
+        { "type": "text", "id": "how_label", "label": "How-it-works label", "default": "How it works" },
+        { "type": "richtext", "id": "how", "label": "How it works", "default": "<p>Split your order into 4 equal payments, due every fortnight. The first instalment is paid at checkout and the rest are automatically charged to your card over the following six weeks.</p><ul><li>Always interest-free</li><li>Late fees may apply if a payment is missed</li></ul>" },
+        { "type": "richtext", "id": "checkout", "label": "Where to find it at checkout", "default": "<p><strong>At checkout:</strong> select <strong>Afterpay</strong> as your payment method and follow the prompts.</p>" },
+        { "type": "text", "id": "link_label", "label": "Link label", "default": "Learn more about Afterpay" },
+        { "type": "url", "id": "link_url", "label": "Link URL" }
+      ]
+    }
+  ],
+  "presets": [
+    { "name": "BNPL — providers", "blocks": [ { "type": "provider" }, { "type": "provider" }, { "type": "provider" } ] }
+  ]
+}
+{% endschema %}
