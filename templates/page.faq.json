@@ -1,6 +1,15 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
-    "breadcrumbs_RzgTi9": {
+    "breadcrumbs_faq": {
       "type": "breadcrumbs",
       "settings": {
         "text_alignment": "center"
@@ -14,155 +23,411 @@
         "padding_bottom": 28
       }
     },
-    "rich_text_rwWQrL": {
-      "type": "rich-text",
+    "faq_main": {
+      "type": "faq-page",
       "blocks": {
-        "heading_GeX69R": {
-          "type": "heading",
+        "cat_1": {
+          "type": "category",
           "settings": {
-            "heading": "Discover more in our FAQ",
-            "heading_size": "hd2"
+            "heading": "Delivery & pickup"
           }
         },
-        "text_nb9hEL": {
-          "type": "text",
+        "qa_1": {
+          "type": "qa",
           "settings": {
-            "text": "<p>Have a question or comment? Don't be shy: Reach out and say hi! <br/>Support hours: Monday-Friday, 7am-3pm</p>",
-            "text_size": "text-lg"
-          }
-        }
-      },
-      "block_order": [
-        "heading_GeX69R",
-        "text_nb9hEL"
-      ],
-      "settings": {
-        "color_scheme": "",
-        "content_alignment": "center",
-        "padding_top": 36,
-        "padding_bottom": 0
-      }
-    },
-    "collapsible_tabs_phAkEE": {
-      "type": "collapsible-tabs",
-      "blocks": {
-        "image_card_RxbCX3": {
-          "type": "image_card",
-          "settings": {
-            "color_scheme": "scheme-inverse",
-            "desktop_image_position": "left",
-            "image_width": 34,
-            "alignment": "start",
-            "image_ratio": "adapt",
-            "image_overlay_opacity": 20,
-            "heading": "Still need help?",
-            "heading_size": "h1",
-            "subheading": "",
-            "description": "<p>Shoot our team an email & we’ll get<br/> back to you ASAP</p>",
-            "button_label": "Contact us",
-            "button_style": "btn--primary",
-            "content_position": "middle-center",
-            "content_alignment": "center",
-            "content_spacing": "medium",
-            "order_first": false
-          }
-        },
-        "collapsible_item_eFemDY": {
-          "type": "collapsible_item",
-          "settings": {
-            "icon": "none",
-            "heading": "How long does shipping take?",
-            "content": "<p>Shipping typically takes 5-7 business days within the United States. For international orders, shipping can take 10-15 business days, depending on the destination and customs processing times. You will receive a tracking number once your order has shipped so you can monitor its progress.</p>",
-            "custom_liquid": "",
-            "page": "",
+            "question": "Where do you deliver and how much does shipping cost?",
+            "answer": "<p>We deliver Australia-wide through our courier partner Allied Express. Brisbane Metro orders ship free via express (2–4 business days), with same-day Brisbane Metro delivery available at extra cost on enquiry. Shipping to other regions is calculated at checkout, and free pickup is always available from our Acacia Ridge warehouse in Brisbane.</p>",
             "open": true
           }
         },
-        "collapsible_item_RQ3WzW": {
-          "type": "collapsible_item",
+        "qa_2": {
+          "type": "qa",
           "settings": {
-            "icon": "none",
-            "heading": "Does my piece come in any packaging?",
-            "content": "<p>Yes, all our skincare products come in protective and aesthetically pleasing packaging to ensure they arrive in perfect condition. Each product is securely wrapped, and we use eco-friendly materials whenever possible. Additionally, many of our products come in recyclable containers to support sustainability.</p>",
-            "custom_liquid": "",
-            "page": "",
+            "question": "How long will my order take to arrive?",
+            "answer": "<p>Brisbane Metro deliveries arrive within 2–4 business days. Other metro areas such as Sydney and Melbourne take 2–5 business days, and regional postcodes take 3–7 business days. Pre-order items ship once incoming stock arrives and passes inspection — the expected date is shown on the product page.</p>",
             "open": false
           }
         },
-        "collapsible_item_aKpRFm": {
-          "type": "collapsible_item",
+        "qa_3": {
+          "type": "qa",
           "settings": {
-            "icon": "none",
-            "heading": "Do you ship internationally?",
-            "content": "<p>Yes, we do ship internationally! We offer worldwide shipping to ensure customers around the globe can enjoy our skincare products. Please note that shipping times and costs may vary depending on the destination country. International customers may also be subject to customs fees or import duties imposed by their country's customs authorities.</p>",
-            "custom_liquid": "",
-            "page": "",
+            "question": "Which orders qualify for free shipping?",
+            "answer": "<p>Free express shipping applies to eligible Brisbane Metro orders, and free pickup is always available from our Acacia Ridge warehouse. You can check free-shipping eligibility for any item on its product page under the “Delivery & Refund” tab. For same-day or custom delivery, please contact us directly.</p>",
             "open": false
           }
         },
-        "collapsible_item_3c4PkF": {
-          "type": "collapsible_item",
+        "qa_4": {
+          "type": "qa",
           "settings": {
-            "icon": "none",
-            "heading": "What payment methods do you accept?",
-            "content": "<p>We accept a variety of payment methods to make your shopping experience convenient. These include credit cards (Visa, Mastercard, American Express), PayPal, and, in some regions, alternative payment methods such as Apple Pay or Google Pay. Rest assured, your payment information is secure and protected during the checkout process.</p>",
-            "custom_liquid": "",
-            "page": "",
+            "question": "Can I pick up my order myself?",
+            "answer": "<p>Yes — free pickup is available from our Acacia Ridge 4110 QLD warehouse. Orders must be paid in full before collection, as we don’t accept payment (including cash) on site. Please wait for confirmation that your order is ready before coming in.</p>",
             "open": false
           }
         },
-        "collapsible_item_Hwt9zL": {
-          "type": "collapsible_item",
+        "qa_5": {
+          "type": "qa",
           "settings": {
-            "icon": "none",
-            "heading": "What are your sizing options?",
-            "content": "<p>We’re sorry to hear that you’re unable to place an order. Please contact <a href=\"/pages/contact\" target=\"_blank\" title=\"Contact\">Customer Service </a>and we will work on resolving the issue as quickly as possible</p>",
-            "custom_liquid": "",
-            "page": "",
+            "question": "Will the couriers assemble my furniture or remove my old furniture?",
+            "answer": "<p>No. Our couriers deliver your order but do not assemble new furniture or dismantle and remove old furniture. If you need assembly, contact us and we may be able to arrange a custom solution independently of the courier, subject to approval.</p>",
+            "open": false
+          }
+        },
+        "cat_2": {
+          "type": "category",
+          "settings": {
+            "heading": "Products & stock"
+          }
+        },
+        "qa_6": {
+          "type": "qa",
+          "settings": {
+            "question": "What's the difference between “Add to Cart”, “Pre-Order” and “Out of Stock”?",
+            "answer": "<p>Items marked “Add to Cart” are in stock and ready for fulfilment at the earliest date. “Pre-Order” items can be purchased while incoming stock is in transit and ship once they arrive and pass inspection. “Out of Stock” items aren’t currently available and can’t be pre-ordered until new stock is confirmed.</p>",
+            "open": false
+          }
+        },
+        "qa_7": {
+          "type": "qa",
+          "settings": {
+            "question": "My order has both in-stock and pre-order items — when will it ship?",
+            "answer": "<p>Orders containing a pre-order item are held and shipped together once every item is available. If you’d prefer the in-stock items sent sooner as a partial shipment, email us at <a href=\"mailto:support@proferlofurniture.com.au\">support@proferlofurniture.com.au</a> and we’ll arrange it where possible.</p>",
+            "open": false
+          }
+        },
+        "qa_8": {
+          "type": "qa",
+          "settings": {
+            "question": "Can you notify me when a product is back in stock?",
+            "answer": "<p>Yes — contact us to request a back-in-stock notification and we’ll let you know as soon as the item is confirmed for restock. We also recommend signing up for our email updates, as popular items can sell out quickly after restocking.</p>",
+            "open": false
+          }
+        },
+        "qa_9": {
+          "type": "qa",
+          "settings": {
+            "question": "Do you have a showroom I can visit?",
+            "answer": "<p>We don’t have a Brisbane showroom — our only showroom is in Auckland, New Zealand. If you’d like to see a specific product in person before buying, contact us and we can request photos or a video of that item from our Auckland showroom.</p>",
+            "open": false
+          }
+        },
+        "qa_10": {
+          "type": "qa",
+          "settings": {
+            "question": "How do I know a piece will fit my space?",
+            "answer": "<p>Full dimensions (width, depth and height) are listed on every product page, so we recommend measuring your space — and your doorways, hallways and lifts — before ordering. For multi-carton items, carton sizes are available on request. If you’re unsure, contact us and we’ll help you check.</p>",
+            "open": false
+          }
+        },
+        "cat_3": {
+          "type": "category",
+          "settings": {
+            "heading": "Materials, certifications & care"
+          }
+        },
+        "qa_11": {
+          "type": "qa",
+          "settings": {
+            "question": "What materials is your furniture made from?",
+            "answer": "<p>Our furniture is made from responsibly sourced timber and engineered wood, paired with quality fabrics and finishes selected for durability. We prioritise low- or zero-VOC and formaldehyde-free materials for a healthier home. The exact materials are listed on each product page.</p>",
+            "open": false
+          }
+        },
+        "qa_12": {
+          "type": "qa",
+          "settings": {
+            "question": "Is your furniture certified, safe and non-toxic?",
+            "answer": "<p>Yes. Our manufacturing meets leading international standards including FSC (responsibly sourced timber), CARB Phase 2 (ultra-low formaldehyde emissions), and ISO 9001, ISO 14001 and ISO 45001 for quality, environmental and safety management. We use low- or zero-VOC, formaldehyde-free finishes to support healthier indoor air. Read more on our <a href=\"/pages/sustainability\">Sustainability page</a>.</p>",
+            "open": false
+          }
+        },
+        "qa_13": {
+          "type": "qa",
+          "settings": {
+            "question": "Is your furniture eco-friendly and sustainably made?",
+            "answer": "<p>Sustainability is central to how we build. We source certified materials, run energy-efficient production, and ship in recycled cardboard packaging while working toward even greener alternatives. Our pieces are designed to last for years rather than end up in landfill.</p>",
+            "open": false
+          }
+        },
+        "qa_14": {
+          "type": "qa",
+          "settings": {
+            "question": "How do I care for and clean my furniture?",
+            "answer": "<p>Wipe surfaces with a soft, dry or slightly damp cloth and avoid harsh chemicals, solvents and abrasive pads. Keep furniture out of prolonged direct sunlight and away from heat sources to protect the finish, and clean up spills promptly. Periodically check and tighten fixings, and use felt pads to prevent floor scratches.</p>",
+            "open": false
+          }
+        },
+        "qa_15": {
+          "type": "qa",
+          "settings": {
+            "question": "Will the timber grain or colour vary between pieces?",
+            "answer": "<p>Yes — natural timber and timber-look finishes have unique grain and slight colour variation, so your piece may differ subtly from the photos or from another unit. This is a normal characteristic of natural materials, not a fault. Screens can also display colours differently, so contact us if you’d like additional photos.</p>",
+            "open": false
+          }
+        },
+        "cat_4": {
+          "type": "category",
+          "settings": {
+            "heading": "Assembly"
+          }
+        },
+        "qa_16": {
+          "type": "qa",
+          "settings": {
+            "question": "Is assembly required, and is it difficult?",
+            "answer": "<p>Most of our furniture arrives flat-packed and requires assembly, but it’s designed to be straightforward with clear instructions included. Some larger items are multi-carton, so we recommend two people for heavier pieces. If you’d like a hand, see the questions below.</p>",
+            "open": false
+          }
+        },
+        "qa_17": {
+          "type": "qa",
+          "settings": {
+            "question": "Where can I find the assembly instructions?",
+            "answer": "<p>A digital copy of the assembly guide is available on each product page under the “Warranty & Assembly” tab. If your printed copy is missing or you can’t locate the digital version, contact us and we’ll send you one.</p>",
+            "open": false
+          }
+        },
+        "qa_18": {
+          "type": "qa",
+          "settings": {
+            "question": "Do you offer an assembly service?",
+            "answer": "<p>Our courier partners don’t provide assembly. For assembly enquiries, contact us to discuss a custom solution — we may be able to arrange this independently of our couriers, subject to approval and your location.</p>",
+            "open": false
+          }
+        },
+        "qa_19": {
+          "type": "qa",
+          "settings": {
+            "question": "What if I make a mistake during assembly?",
+            "answer": "<p>Mistakes happen and we’re glad to help. Email us describing the issue (photos help) and we’ll do our best to find a solution, whether that’s guidance or a replacement part.</p>",
+            "open": false
+          }
+        },
+        "cat_5": {
+          "type": "category",
+          "settings": {
+            "heading": "Warranty"
+          }
+        },
+        "qa_20": {
+          "type": "qa",
+          "settings": {
+            "question": "Does my purchase come with a warranty?",
+            "answer": "<p>Yes. All products include a 12-month quality guarantee covering defects in materials and workmanship. Sofas, chairs and bedframes also receive an extended 3-year structural warranty covering the internal structure and hard frames. Full details are on our <a href=\"/pages/returns-warranty\">Returns & Warranty page</a>.</p>",
+            "open": false
+          }
+        },
+        "qa_21": {
+          "type": "qa",
+          "settings": {
+            "question": "How do I make a warranty claim for a manufacturing defect?",
+            "answer": "<p>Email our team with your order number, a description of the issue, and photos or a short video of the fault. We’ll assess the claim, may ask a few follow-up questions, and once approved we’ll arrange the best solution — a replacement part, a repair, or a full replacement.</p>",
+            "open": false
+          }
+        },
+        "qa_22": {
+          "type": "qa",
+          "settings": {
+            "question": "I received the wrong item, or there are missing parts — what do I do?",
+            "answer": "<p>Contact us within 48 hours of delivery for a wrong item and we’ll arrange replacement and return delivery. For missing parts, send us photos and the part numbers as soon as you can and we’ll organise a solution.</p>",
+            "open": false
+          }
+        },
+        "qa_23": {
+          "type": "qa",
+          "settings": {
+            "question": "Will I pay return shipping on a warranty claim?",
+            "answer": "<p>No. For all approved warranty claims, Proferlo covers the associated shipping and handling costs to repair the item, send a replacement part, or replace the product at our discretion.</p>",
+            "open": false
+          }
+        },
+        "cat_6": {
+          "type": "category",
+          "settings": {
+            "heading": "Returns & refunds"
+          }
+        },
+        "qa_24": {
+          "type": "qa",
+          "settings": {
+            "question": "What is your change-of-mind return policy?",
+            "answer": "<p>You have a 14-day change-of-mind trial that begins the day your order is delivered (or 7 days after dispatch if there’s no proof of delivery). Most items can be returned within this window provided they’re unused, undamaged and in their original protective packaging. You must request and receive return approval by email before sending anything back.</p>",
+            "open": false
+          }
+        },
+        "qa_25": {
+          "type": "qa",
+          "settings": {
+            "question": "Are any items excluded from change-of-mind returns?",
+            "answer": "<p>Yes. Clearance stock, items discounted more than 30% off RRP, ex-display stock, made-to-order or special-order products, and items with hygiene concerns (such as mattresses) are not eligible for change-of-mind returns. Items with a genuine fault are handled separately under our warranty policy.</p>",
+            "open": false
+          }
+        },
+        "qa_26": {
+          "type": "qa",
+          "settings": {
+            "question": "Do I have to pay for return shipping?",
+            "answer": "<p>For change-of-mind returns you’re responsible for return shipping, and the original delivery cost is deducted from your refund — including on “free shipping” orders, where both legs of delivery are calculated and deducted. If the item isn’t returned in its original packaging or condition, a 20% repackaging/restocking fee applies. Returning directly to our Acacia Ridge warehouse with prior approval avoids return shipping fees.</p>",
+            "open": false
+          }
+        },
+        "qa_27": {
+          "type": "qa",
+          "settings": {
+            "question": "When will I receive my refund?",
+            "answer": "<p>Refunds are processed once we receive the returned item and after any shipping costs are deducted. We typically review returns within 24 hours of receipt, and you’ll get a confirmation email once the refund is processed. Please allow up to 10 business days for funds to reach your account.</p>",
+            "open": false
+          }
+        },
+        "qa_28": {
+          "type": "qa",
+          "settings": {
+            "question": "Can I exchange an item instead of returning it?",
+            "answer": "<p>Yes — you can request an exchange any time within the 14-day trial period. You’ll only pay the price difference (if any) plus the return cost of the original item, and this applies to free-shipping orders too.</p>",
+            "open": false
+          }
+        },
+        "cat_7": {
+          "type": "category",
+          "settings": {
+            "heading": "Payments & promotions"
+          }
+        },
+        "qa_29": {
+          "type": "qa",
+          "settings": {
+            "question": "What payment methods do you accept?",
+            "answer": "<p>We accept Visa, Mastercard and American Express, Buy Now Pay Later via Afterpay and Zip Pay, and digital wallets including Apple Pay, Google Pay and PayPal. All payments are processed securely at checkout, and you’ll receive confirmation by SMS and/or email once payment completes.</p>",
+            "open": false
+          }
+        },
+        "qa_30": {
+          "type": "qa",
+          "settings": {
+            "question": "Are my card details secure?",
+            "answer": "<p>Yes. Payments are processed through Shopify Payments, which is PCI DSS Level 1 compliant — the highest standard in the industry. Your card details are encrypted and handled by Shopify’s secure gateway; we never store or see your full card information.</p>",
+            "open": false
+          }
+        },
+        "qa_31": {
+          "type": "qa",
+          "settings": {
+            "question": "Can I pay on delivery or at pickup?",
+            "answer": "<p>No. All balances must be paid in full before dispatch or collection, and we don’t accept payment (including cash) on site at pickup.</p>",
+            "open": false
+          }
+        },
+        "qa_32": {
+          "type": "qa",
+          "settings": {
+            "question": "The item I bought just went on sale — can I get the difference refunded?",
+            "answer": "<p>If the price of an identical item (same SKU, model, size and finish, still in stock) drops within 14 days of your purchase, we can refund the difference or issue store credit. Proof of purchase is required, and the policy excludes clearance items, products over 30% off RRP, ex-display and made-to-order items, and limited-time promotions. Requests must be made by email.</p>",
+            "open": false
+          }
+        },
+        "qa_33": {
+          "type": "qa",
+          "settings": {
+            "question": "How do I use a promo code?",
+            "answer": "<p>Add your items to the cart, then enter your code in the “Discount code” box on the checkout page and click Apply — codes are case-sensitive. Your discount appears in the order summary before payment. Only one promo code can be used per order, and codes can’t be applied after a purchase is completed.</p>",
+            "open": false
+          }
+        },
+        "cat_8": {
+          "type": "category",
+          "settings": {
+            "heading": "Damaged, lost or stolen in transit"
+          }
+        },
+        "qa_34": {
+          "type": "qa",
+          "settings": {
+            "question": "My order arrived damaged, or is lost or stolen — how do I make a claim?",
+            "answer": "<p>Email <a href=\"mailto:support@proferlofurniture.com.au\">support@proferlofurniture.com.au</a> with your order number, proof of purchase, clear photos of any damage and packaging, and a description of the issue. Claims must be lodged within 14 days of delivery for damage, or within 48 hours of the marked delivery date for lost or stolen items. We’ll investigate with the courier and aim to resolve most claims within 7–14 business days.</p>",
+            "open": false
+          }
+        },
+        "cat_9": {
+          "type": "category",
+          "settings": {
+            "heading": "Trade & bulk enquiries"
+          }
+        },
+        "qa_35": {
+          "type": "qa",
+          "settings": {
+            "question": "Do you offer trade, bulk or commercial pricing?",
+            "answer": "<p>We welcome trade, project and bulk enquiries from interior designers, builders, property stylists and commercial buyers. Contact us with your requirements — including quantities and timeframe — and our team will prepare a tailored quote. <em>(Editable: add your trade terms or a trade application link here.)</em></p>",
             "open": false
           }
         }
       },
       "block_order": [
-        "image_card_RxbCX3",
-        "collapsible_item_eFemDY",
-        "collapsible_item_RQ3WzW",
-        "collapsible_item_aKpRFm",
-        "collapsible_item_3c4PkF",
-        "collapsible_item_Hwt9zL"
-      ],
-      "custom_css": [
-        ".collapsible-tabs__wrapper {--row-gap-mobile: 4.8rem !important;}",
-        "@media (min-width: 768px) {.accordion-item:first-child .accordion-details__summary {padding-top: 0; }}",
-        "@media (min-width: 1280px) {.section--collapsible-tabs {max-width: 1170px; } .collapsible-tabs__wrapper {--column-gap: 9rem; }}",
-        "@media (max-width: 767px) {.section--collapsible-tabs {padding-top: 1.2rem; }}"
+        "cat_1",
+        "qa_1",
+        "qa_2",
+        "qa_3",
+        "qa_4",
+        "qa_5",
+        "cat_2",
+        "qa_6",
+        "qa_7",
+        "qa_8",
+        "qa_9",
+        "qa_10",
+        "cat_3",
+        "qa_11",
+        "qa_12",
+        "qa_13",
+        "qa_14",
+        "qa_15",
+        "cat_4",
+        "qa_16",
+        "qa_17",
+        "qa_18",
+        "qa_19",
+        "cat_5",
+        "qa_20",
+        "qa_21",
+        "qa_22",
+        "qa_23",
+        "cat_6",
+        "qa_24",
+        "qa_25",
+        "qa_26",
+        "qa_27",
+        "qa_28",
+        "cat_7",
+        "qa_29",
+        "qa_30",
+        "qa_31",
+        "qa_32",
+        "qa_33",
+        "cat_8",
+        "qa_34",
+        "cat_9",
+        "qa_35"
       ],
       "settings": {
-        "container": "narrow",
-        "color_scheme": "",
-        "header_layout": "vertical",
-        "heading": "",
-        "heading_size": "h1",
-        "subheading": "",
-        "description": "",
-        "button_label": "",
-        "button_link": "",
-        "button_style": "btn--primary",
-        "column_gap": "large",
-        "row_gap": "inherit",
-        "item_style": "standard",
-        "item_color_scheme": "",
-        "item_heading_font": "heading",
-        "item_heading_size": "h3",
-        "padding_top": 80,
-        "padding_bottom": 100
+        "show_hero": true,
+        "eyebrow": "Help centre",
+        "heading": "Frequently asked questions",
+        "intro": "<p>Everything about delivery, returns, assembly, materials, certifications, payments and trade — answered. Can’t find what you need? Get in touch and our team will help.</p>",
+        "hero_button_label": "Get in touch",
+        "hero_button_url": "/pages/contact-us",
+        "show_jumpnav": true,
+        "show_cta": true,
+        "cta_heading": "<p>Still have a question?</p>",
+        "cta_button_label": "Contact us",
+        "cta_button_url": "/pages/contact-us",
+        "emit_jsonld": true,
+        "padding_top": 32,
+        "padding_bottom": 48
       }
     }
   },
   "order": [
-    "breadcrumbs_RzgTi9",
+    "breadcrumbs_faq",
     "main",
-    "rich_text_rwWQrL",
-    "collapsible_tabs_phAkEE"
+    "faq_main"
   ]
 }

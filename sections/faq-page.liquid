@@ -1,0 +1,179 @@
+{%- comment -%}
+  Proferlo — FAQ page (self-contained, no JS, mobile-first)
+  Pattern matches contact / shipping / returns sections.
+  Blocks:
+    - "category"  : a section heading + jump-nav target
+    - "qa"        : one question + answer (editable rich text)
+  The jump nav is auto-built from every "category" block.
+  Emits FAQPage JSON-LD (Schema.org) from every "qa" block when enabled.
+{%- endcomment -%}
+<style>
+  #faqp-{{ section.id }}{
+    --pf-forest:#2C3639;--pf-teal:#3F4E4F;--pf-linen:#DCD7C9;--pf-copper:#AB764B;
+    --pf-bg:#F4F1EA;--pf-card:#fff;--pf-cardbd:#E7E1D2;--pf-muted:#5A615C;
+    background:var(--pf-bg);padding-top:{{ section.settings.padding_top }}px;padding-bottom:{{ section.settings.padding_bottom }}px;
+    font-family:var(--font-body-family);
+  }
+  #faqp-{{ section.id }} *{box-sizing:border-box;}
+  #faqp-{{ section.id }} .faqwrap{max-width:90rem;margin:0 auto;padding:0 2rem;color:var(--pf-forest);}
+  #faqp-{{ section.id }} .faqhero{background:var(--pf-forest);color:var(--pf-linen);border-radius:1.4rem;padding:3.2rem 2.6rem;text-align:center;}
+  #faqp-{{ section.id }} .faqhero .eyebrow{font-size:1.2rem;letter-spacing:.12em;text-transform:uppercase;color:var(--pf-copper);margin:0 0 1rem;font-weight:600;}
+  #faqp-{{ section.id }} .faqhero h1,#faqp-{{ section.id }} .faqhero h1 *{font-family:var(--font-heading-family);color:#fff;font-size:var(--font-h2-size);margin:0 0 1rem;line-height:1.15;}
+  #faqp-{{ section.id }} .faqhero .faqintro,#faqp-{{ section.id }} .faqhero .faqintro *{font-size:1.6rem;line-height:1.6;color:#C9C3B2;margin:0 auto;max-width:60rem;}
+  #faqp-{{ section.id }} .faqhero a.faqherobtn{display:inline-block;margin-top:2rem;background:var(--pf-copper);color:#fff;text-decoration:none;font-family:var(--font-heading-family);font-weight:600;font-size:1.5rem;padding:1.3rem 3rem;border-radius:.8rem;}
+  #faqp-{{ section.id }} .faqhero a.faqherobtn:hover{background:#9A6A43;}
+  #faqp-{{ section.id }} .faqnav{display:flex;flex-wrap:wrap;gap:.8rem;justify-content:center;margin:2.4rem 0 1rem;}
+  #faqp-{{ section.id }} .faqnav a{font-size:1.3rem;font-weight:600;color:var(--pf-forest);text-decoration:none;background:#fff;border:1px solid var(--pf-cardbd);border-radius:3rem;padding:.8rem 1.6rem;}
+  #faqp-{{ section.id }} .faqnav a:hover{background:var(--pf-forest);color:#fff;border-color:var(--pf-forest);}
+  #faqp-{{ section.id }} .faqcat{font-family:var(--font-heading-family);font-size:2.1rem;margin:3.2rem 0 1.4rem;padding-bottom:.8rem;border-bottom:.2rem solid var(--pf-cardbd);scroll-margin-top:9rem;}
+  #faqp-{{ section.id }} details{background:#fff;border:1px solid var(--pf-cardbd);border-radius:1rem;margin-bottom:1rem;}
+  #faqp-{{ section.id }} summary{cursor:pointer;list-style:none;padding:1.5rem 1.8rem;font-weight:600;font-size:1.55rem;color:var(--pf-forest);display:flex;justify-content:space-between;gap:1.2rem;align-items:center;}
+  #faqp-{{ section.id }} summary::-webkit-details-marker{display:none;}
+  #faqp-{{ section.id }} summary .faqchev{flex:0 0 auto;color:var(--pf-copper);font-size:1.9rem;line-height:1;transition:transform .2s;}
+  #faqp-{{ section.id }} details[open] summary .faqchev{transform:rotate(45deg);}
+  #faqp-{{ section.id }} .faqa{padding:0 1.8rem 1.6rem;font-size:1.45rem;color:var(--pf-muted);line-height:1.6;}
+  #faqp-{{ section.id }} .faqa p{margin:0 0 1rem;}
+  #faqp-{{ section.id }} .faqa p:last-child{margin-bottom:0;}
+  #faqp-{{ section.id }} .faqa a{color:var(--pf-copper);font-weight:600;}
+  #faqp-{{ section.id }} .faqa ul,#faqp-{{ section.id }} .faqa ol{margin:.6rem 0 1rem;padding-left:2rem;}
+  #faqp-{{ section.id }} .faqa li{margin-bottom:.6rem;}
+  #faqp-{{ section.id }} .faqa strong{color:var(--pf-forest);}
+  #faqp-{{ section.id }} .faqcta{background:var(--pf-teal);color:var(--pf-linen);border-radius:1.2rem;text-align:center;padding:4rem 2.4rem;margin-top:3.2rem;}
+  #faqp-{{ section.id }} .faqcta h3,#faqp-{{ section.id }} .faqcta h3 *{color:#fff;font-family:var(--font-heading-family);font-size:var(--font-h4-size);margin:0 0 1.8rem;}
+  #faqp-{{ section.id }} .faqcta a.faqbtn{display:inline-block;background:var(--pf-copper);color:#fff;text-decoration:none;font-family:var(--font-heading-family);font-weight:600;font-size:1.6rem;padding:1.4rem 3.4rem;border-radius:.8rem;}
+  #faqp-{{ section.id }} .faqcta a.faqbtn:hover{background:#9A6A43;}
+  @media (max-width:600px){
+    #faqp-{{ section.id }} .faqhero{padding:2.6rem 1.8rem;}
+    #faqp-{{ section.id }} .faqwrap{padding:0 1.4rem;}
+    #faqp-{{ section.id }} summary{font-size:1.5rem;padding:1.4rem 1.5rem;}
+    #faqp-{{ section.id }} .faqa{padding:0 1.5rem 1.4rem;}
+  }
+</style>
+
+{%- liquid
+  assign sc = section.settings
+-%}
+
+<div id="faqp-{{ section.id }}">
+  <div class="faqwrap">
+
+    {%- if sc.show_hero -%}
+    <div class="faqhero">
+      {%- if sc.eyebrow != blank -%}<p class="eyebrow">{{ sc.eyebrow | escape }}</p>{%- endif -%}
+      {%- if sc.heading != blank -%}<h1>{{ sc.heading | escape }}</h1>{%- endif -%}
+      {%- if sc.intro != blank -%}<div class="faqintro">{{ sc.intro }}</div>{%- endif -%}
+      {%- if sc.hero_button_label != blank and sc.hero_button_url != blank -%}
+        <a class="faqherobtn" href="{{ sc.hero_button_url }}">{{ sc.hero_button_label | escape }}</a>
+      {%- endif -%}
+    </div>
+    {%- endif -%}
+
+    {%- if sc.show_jumpnav -%}
+    <nav class="faqnav" aria-label="FAQ categories">
+      {%- for block in section.blocks -%}{%- if block.type == 'category' -%}
+        <a href="#faqcat-{{ block.id }}">{{ block.settings.heading | escape }}</a>
+      {%- endif -%}{%- endfor -%}
+    </nav>
+    {%- endif -%}
+
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+        {%- when 'category' -%}
+          <h2 class="faqcat" id="faqcat-{{ block.id }}" {{ block.shopify_attributes }}>{{ block.settings.heading | escape }}</h2>
+        {%- when 'qa' -%}
+          <details {{ block.shopify_attributes }}{% if block.settings.open %} open{% endif %}>
+            <summary>{{ block.settings.question | escape }}<span class="faqchev" aria-hidden="true">+</span></summary>
+            <div class="faqa">{{ block.settings.answer }}</div>
+          </details>
+      {%- endcase -%}
+    {%- endfor -%}
+
+    {%- if sc.show_cta -%}
+    <div class="faqcta">
+      {%- if sc.cta_heading != blank -%}<h3>{{ sc.cta_heading }}</h3>{%- endif -%}
+      {%- if sc.cta_button_label != blank and sc.cta_button_url != blank -%}
+        <a class="faqbtn" href="{{ sc.cta_button_url }}">{{ sc.cta_button_label | escape }}</a>
+      {%- endif -%}
+    </div>
+    {%- endif -%}
+
+  </div>
+</div>
+
+{%- if sc.emit_jsonld -%}
+{%- assign qas = section.blocks | where: 'type', 'qa' -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {%- for block in qas -%}
+    {%- assign atext = block.settings.answer | replace: '</p>', ' ' | replace: '</li>', ' ' | replace: '<br>', ' ' | replace: '<br/>', ' ' | replace: '<br />', ' ' | strip_html | strip_newlines -%}
+    {
+      "@type": "Question",
+      "name": {{ block.settings.question | strip_html | json }},
+      "acceptedAnswer": { "@type": "Answer", "text": {{ atext | json }} }
+    }{%- unless forloop.last -%},{%- endunless -%}
+    {%- endfor -%}
+  ]
+}
+</script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "FAQ page",
+  "tag": "section",
+  "class": "section-faq-page",
+  "max_blocks": 50,
+  "settings": [
+    { "type": "header", "content": "Hero" },
+    { "type": "checkbox", "id": "show_hero", "label": "Show hero", "default": true },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Help centre" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Frequently asked questions" },
+    { "type": "richtext", "id": "intro", "label": "Intro text", "default": "<p>Delivery, returns, assembly, materials, certifications, payments and trade — answered.</p>" },
+    { "type": "text", "id": "hero_button_label", "label": "Hero button label", "default": "Get in touch" },
+    { "type": "url", "id": "hero_button_url", "label": "Hero button link" },
+    { "type": "header", "content": "Category jump nav" },
+    { "type": "checkbox", "id": "show_jumpnav", "label": "Show category jump nav", "default": true },
+    { "type": "header", "content": "Closing CTA" },
+    { "type": "checkbox", "id": "show_cta", "label": "Show closing CTA", "default": true },
+    { "type": "richtext", "id": "cta_heading", "label": "CTA heading", "default": "<p>Still have a question?</p>" },
+    { "type": "text", "id": "cta_button_label", "label": "CTA button label", "default": "Contact us" },
+    { "type": "url", "id": "cta_button_url", "label": "CTA button link" },
+    { "type": "header", "content": "SEO / structured data" },
+    { "type": "checkbox", "id": "emit_jsonld", "label": "Emit FAQPage JSON-LD schema", "info": "Adds Schema.org FAQPage markup so Google and AI crawlers can read every Q&A. Leave on.", "default": true },
+    { "type": "header", "content": "Section spacing" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Top padding", "default": 32 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Bottom padding", "default": 48 }
+  ],
+  "blocks": [
+    {
+      "type": "category",
+      "name": "Category heading",
+      "settings": [
+        { "type": "text", "id": "heading", "label": "Category name", "default": "New category" }
+      ]
+    },
+    {
+      "type": "qa",
+      "name": "Q&A",
+      "settings": [
+        { "type": "text", "id": "question", "label": "Question", "default": "Your question here" },
+        { "type": "richtext", "id": "answer", "label": "Answer", "default": "<p>Your answer here.</p>" },
+        { "type": "checkbox", "id": "open", "label": "Open by default", "default": false }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ page",
+      "blocks": [
+        { "type": "category" },
+        { "type": "qa" },
+        { "type": "qa" }
+      ]
+    }
+  ]
+}
+{% endschema %}
