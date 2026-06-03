@@ -11,26 +11,53 @@
   "sections": {
     "breadcrumbs": {
       "type": "breadcrumbs",
-      "settings": { "text_alignment": "center" }
+      "settings": {
+        "text_alignment": "center"
+      }
     },
     "top": {
       "type": "returns-warranty-top",
       "blocks": {
-        "h1": { "type": "highlight", "settings": { "icon": "refresh", "title": "14-Day Returns", "text": "<p>Changed your mind? Request a return within <strong>14 days</strong> of delivery (conditions apply).</p>" } },
-        "h2": { "type": "highlight", "settings": { "icon": "shield", "title": "Tiered Warranty", "text": "<p>A 12-month standard warranty on every product, plus extended structural &amp; mattress cover.</p>" } },
-        "h3": { "type": "highlight", "settings": { "icon": "tools", "title": "Faults Sorted", "text": "<p>Replacement parts, repairs or a full replacement on approved warranty claims — shipping covered.</p>" } }
+        "h1": {
+          "type": "highlight",
+          "settings": {
+            "icon": "refresh",
+            "title": "14-Day Returns",
+            "text": "<p>Changed your mind? Request a return within <strong>14 days</strong> of delivery (conditions apply).</p>"
+          }
+        },
+        "h2": {
+          "type": "highlight",
+          "settings": {
+            "icon": "shield",
+            "title": "Tiered Warranty",
+            "text": "<p>A 12-month standard warranty on every product, plus extended structural &amp; mattress cover.</p>"
+          }
+        },
+        "h3": {
+          "type": "highlight",
+          "settings": {
+            "icon": "tools",
+            "title": "Faults Sorted",
+            "text": "<p>Replacement parts, repairs or a full replacement on approved warranty claims — shipping covered.</p>"
+          }
+        }
       },
-      "block_order": ["h1", "h2", "h3"],
+      "block_order": [
+        "h1",
+        "h2",
+        "h3"
+      ],
       "settings": {
         "eyebrow": "Returns & Warranty",
         "heading": "Returns & Warranty",
         "intro": "<p>We're sure you'll love your Proferlo furniture. If for any reason you're not completely satisfied, you can request a change-of-mind return within 14 days of receiving your order (conditions apply). We'll arrange a swap, replacement or refund. If an item has a fault, we can also arrange replacement parts, repairs or a replacement under warranty.</p>",
-        "btn1_label": "Start a return",
-        "btn1_url": "mailto:support@proferlofurniture.com.au?subject=Change%20of%20mind%20return%20request&body=Order%20number%3A%0D%0AItem(s)%20to%20return%3A%0D%0AReason%20for%20return%3A%0D%0A%0D%0APlease%20attach%20photos%20of%20the%20item%20and%20its%20original%20packaging.",
-        "btn2_label": "Make a warranty claim",
-        "btn2_url": "mailto:support@proferlofurniture.com.au?subject=Warranty%20claim&body=Order%20number%3A%0D%0ADescription%20of%20the%20fault%3A%0D%0A%0D%0APlease%20attach%20photos%20or%20a%20short%20video%20clearly%20showing%20the%20fault.",
+        "btn1_label": "",
+        "btn1_url": "",
+        "btn2_label": "",
+        "btn2_url": "",
         "show_usp": true,
-        "usp_text": "<p>Faulty item? <strong>We cover shipping &amp; handling on all approved warranty claims.</strong></p>",
+        "usp_text": "<p>Faulty item? <strong>We cover shipping & handling on all approved warranty claims.</strong></p>",
         "padding_top": 48,
         "padding_bottom": 8
       }
@@ -38,14 +65,63 @@
     "tiers": {
       "type": "warranty-tiers",
       "blocks": {
-        "t1": { "type": "tier", "settings": { "term": "12 Months", "title": "Standard Warranty", "text": "<p>Every Proferlo product comes with a 12-month manufacturer's warranty against defects in materials and workmanship.</p>", "applies": "All products" } },
-        "t2": { "type": "tier", "settings": { "term": "3 Years", "title": "Structural Warranty", "text": "<p>An extended warranty on the robust internal frames of our sofas, armchairs and bed frames.</p>", "applies": "Sofas · Armchairs · Bed frames" } },
-        "t3": { "type": "tier", "settings": { "term": "5 Years", "title": "Mattress Warranty", "text": "<p>Our mattresses are backed against manufacturing defects, so you can rest easy.</p>", "applies": "Mattresses" } },
-        "s1": { "type": "step", "settings": { "title": "Contact our team", "text": "<p>Email our customer service team with your order number, a clear description of the issue, and photos or a short video showing the fault.</p>" } },
-        "s2": { "type": "step", "settings": { "title": "Assessment", "text": "<p>Our team carefully assesses your claim from the information provided. We may ask a few follow-up questions to make sure we have all the details.</p>" } },
-        "s3": { "type": "step", "settings": { "title": "Resolution", "text": "<p>Once approved, we'll find the best solution — a replacement part, a repair, or a full replacement. Proferlo covers shipping &amp; handling on approved claims.</p>" } }
+        "t1": {
+          "type": "tier",
+          "settings": {
+            "term": "12 Months",
+            "title": "Standard Warranty",
+            "text": "<p>Every Proferlo product comes with a 12-month manufacturer's warranty against defects in materials and workmanship.</p>",
+            "applies": "All products"
+          }
+        },
+        "t2": {
+          "type": "tier",
+          "settings": {
+            "term": "3 Years",
+            "title": "Structural Warranty",
+            "text": "<p>An extended warranty on the robust internal frames of our sofas, armchairs and bed frames.</p>",
+            "applies": "Sofas · Armchairs · Bed frames"
+          }
+        },
+        "t3": {
+          "type": "tier",
+          "settings": {
+            "term": "5 Years",
+            "title": "Mattress Warranty",
+            "text": "<p>Our mattresses are backed against manufacturing defects, so you can rest easy.</p>",
+            "applies": "Mattresses"
+          }
+        },
+        "s1": {
+          "type": "step",
+          "settings": {
+            "title": "Contact our team",
+            "text": "<p>Email our customer service team with your order number, a clear description of the issue, and photos or a short video showing the fault.</p>"
+          }
+        },
+        "s2": {
+          "type": "step",
+          "settings": {
+            "title": "Assessment",
+            "text": "<p>Our team carefully assesses your claim from the information provided. We may ask a few follow-up questions to make sure we have all the details.</p>"
+          }
+        },
+        "s3": {
+          "type": "step",
+          "settings": {
+            "title": "Resolution",
+            "text": "<p>Once approved, we'll find the best solution — a replacement part, a repair, or a full replacement. Proferlo covers shipping &amp; handling on approved claims.</p>"
+          }
+        }
       },
-      "block_order": ["t1", "t2", "t3", "s1", "s2", "s3"],
+      "block_order": [
+        "t1",
+        "t2",
+        "t3",
+        "s1",
+        "s2",
+        "s3"
+      ],
       "settings": {
         "heading": "Our Warranty Periods",
         "subtext": "<p>To reflect the quality and durability of our different products, we offer a tiered warranty structure. Every warranty covers defects in materials and workmanship.</p>",
@@ -62,27 +138,122 @@
     "faq_returns": {
       "type": "returns-warranty-faq",
       "blocks": {
-        "q1": { "type": "faq", "settings": { "question": "When does the 14-day change-of-mind period start?", "answer": "<p>The 14-day change-of-mind period begins when your delivery is received. If a proof of delivery is not available, delivery is assumed to be one week from the dispatch date.</p>" } },
-        "q2": { "type": "faq", "settings": { "question": "Will I be charged for return shipping on a change-of-mind return?", "answer": "<p>Within the 14-day change-of-mind period there is <strong>no restocking fee</strong> on items returned in their original condition and packaging — you simply cover the return shipping, and the initial delivery cost is also deducted from your refund where applicable. <strong>This also applies to free metro shipping products.</strong></p><p>For change-of-mind returns made during a Free Shipping Promotion, the cost of delivery both <em>to</em> and <em>from</em> you is deducted from your final refund. Our staff will quote this amount after you submit your returns request.</p>" } },
-        "q3": { "type": "faq", "settings": { "question": "Which items are excluded from change-of-mind returns?", "answer": "<p>The following are excluded from change-of-mind returns:</p><ul><li>Items marked as <strong>“clearance”</strong> or discounted by more than 30% off RRP.</li><li>Any ex-display items purchased from our Showroom or Warehouse Clearance Sales.</li><li>Items with a <strong>“Made to Order”</strong> or <strong>“Special Order”</strong> lead time on their description.</li></ul>" } },
-        "q4": { "type": "faq", "settings": { "question": "Do I need to keep the original packaging?", "answer": "<p>Yes. Original packaging is specially designed to protect the item in transit, so we recommend opening items carefully and keeping the packaging until you're certain you won't return them.</p><p>Any item not returned in its original packaging and/or original condition will incur a <strong>20% fee</strong>. It is your responsibility to ensure items are returned in the same condition they arrived in — Proferlo is not liable for damage that occurs during the return, whether by you or the courier. If you cannot supply the item in its original condition, a fee may apply or we may be unable to accept the return.</p>" } },
-        "q5": { "type": "faq", "settings": { "question": "What condition do returned items need to be in, and when does the 20% fee apply?", "answer": "<p>We accept change-of-mind returns subject to the following terms:</p><ul><li>Within the 14-day change-of-mind period, items returned in their <strong>original condition and original packaging are not charged a restocking fee</strong> — you only cover the return shipping (the original delivery cost is also deducted where applicable).</li><li>A <strong>20% fee</strong> applies to returns made <strong>outside</strong> the change-of-mind period, or to items not returned in their original packaging or condition.</li><li>Items must be in <strong>new condition</strong> — we cannot accept items that have been scratched, stained, damaged, drilled into or otherwise altered. We reserve the right to refuse a refund where, in our reasonable assessment, the item has deteriorated due to wear and tear, misuse, or failure to take reasonable care.</li></ul><p><strong>Tip:</strong> take photographs of the item and its packaging before handing it to our delivery partners.</p>" } },
-        "q6": { "type": "faq", "settings": { "question": "Can I return an item directly to your warehouse?", "answer": "<p>Yes. Items can be returned to our <strong>Acacia Ridge warehouse</strong>, and return shipping will not be charged if you do. Products must still pass through our returns request and be approved by our support staff before being returned.</p><p>Returning items to our warehouse without prior approval, or returning them to our showroom, will be denied.</p>" } },
-        "q7": { "type": "faq", "settings": { "question": "How do I cancel or change my order?", "answer": "<p>If you wish to cancel your order before dispatch, or adjust the items in it, please contact our team. If an item has already left our warehouse, it will be considered under our change-of-mind return policy, including delivery costs.</p>" } }
+        "q1": {
+          "type": "faq",
+          "settings": {
+            "question": "When does the 14-day change-of-mind period start?",
+            "answer": "<p>The 14-day change-of-mind period begins when your delivery is received. If a proof of delivery is not available, delivery is assumed to be one week from the dispatch date.</p>"
+          }
+        },
+        "q2": {
+          "type": "faq",
+          "settings": {
+            "question": "Will I be charged for return shipping on a change-of-mind return?",
+            "answer": "<p>Within the 14-day change-of-mind period there is <strong>no restocking fee</strong> on items returned in their original condition and packaging — you simply cover the return shipping, and the initial delivery cost is also deducted from your refund where applicable. <strong>This also applies to free metro shipping products.</strong></p><p>For change-of-mind returns made during a Free Shipping Promotion, the cost of delivery both <em>to</em> and <em>from</em> you is deducted from your final refund. Our staff will quote this amount after you submit your returns request.</p>"
+          }
+        },
+        "q3": {
+          "type": "faq",
+          "settings": {
+            "question": "Which items are excluded from change-of-mind returns?",
+            "answer": "<p>The following are excluded from change-of-mind returns:</p><ul><li>Items marked as <strong>“clearance”</strong> or discounted by more than 30% off RRP.</li><li>Any ex-display items purchased from our Showroom or Warehouse Clearance Sales.</li><li>Items with a <strong>“Made to Order”</strong> or <strong>“Special Order”</strong> lead time on their description.</li></ul>"
+          }
+        },
+        "q4": {
+          "type": "faq",
+          "settings": {
+            "question": "Do I need to keep the original packaging?",
+            "answer": "<p>Yes. Original packaging is specially designed to protect the item in transit, so we recommend opening items carefully and keeping the packaging until you're certain you won't return them.</p><p>Any item not returned in its original packaging and/or original condition will incur a <strong>20% fee</strong>. It is your responsibility to ensure items are returned in the same condition they arrived in — Proferlo is not liable for damage that occurs during the return, whether by you or the courier. If you cannot supply the item in its original condition, a fee may apply or we may be unable to accept the return.</p>"
+          }
+        },
+        "q5": {
+          "type": "faq",
+          "settings": {
+            "question": "What condition do returned items need to be in, and when does the 20% fee apply?",
+            "answer": "<p>We accept change-of-mind returns subject to the following terms:</p><ul><li>Within the 14-day change-of-mind period, items returned in their <strong>original condition and original packaging are not charged a restocking fee</strong> — you only cover the return shipping (the original delivery cost is also deducted where applicable).</li><li>A <strong>20% fee</strong> applies to returns made <strong>outside</strong> the change-of-mind period, or to items not returned in their original packaging or condition.</li><li>Items must be in <strong>new condition</strong> — we cannot accept items that have been scratched, stained, damaged, drilled into or otherwise altered. We reserve the right to refuse a refund where, in our reasonable assessment, the item has deteriorated due to wear and tear, misuse, or failure to take reasonable care.</li></ul><p><strong>Tip:</strong> take photographs of the item and its packaging before handing it to our delivery partners.</p>"
+          }
+        },
+        "q6": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I return an item directly to your warehouse?",
+            "answer": "<p>Yes. Items can be returned to our <strong>Acacia Ridge warehouse</strong>, and return shipping will not be charged if you do. Products must still pass through our returns request and be approved by our support staff before being returned.</p><p>Returning items to our warehouse without prior approval, or returning them to our showroom, will be denied.</p>"
+          }
+        },
+        "q7": {
+          "type": "faq",
+          "settings": {
+            "question": "How do I cancel or change my order?",
+            "answer": "<p>If you wish to cancel your order before dispatch, or adjust the items in it, please contact our team. If an item has already left our warehouse, it will be considered under our change-of-mind return policy, including delivery costs.</p>"
+          }
+        }
       },
-      "block_order": ["q1", "q2", "q3", "q4", "q5", "q6", "q7"],
-      "settings": { "group_heading": "Returns — The Details", "emit_faq_jsonld": false, "show_cta": false, "padding_top": 24, "padding_bottom": 12 }
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6",
+        "q7"
+      ],
+      "settings": {
+        "group_heading": "Returns — The Details",
+        "emit_faq_jsonld": false,
+        "show_cta": false,
+        "cta_heading": "<p>Still have a question about returns or warranty?</p>",
+        "cta_button_label": "Contact Us",
+        "cta_button_url": "",
+        "padding_top": 24,
+        "padding_bottom": 12
+      }
     },
     "faq_main": {
       "type": "returns-warranty-faq",
       "blocks": {
-        "q1": { "type": "faq", "settings": { "question": "How long do I have to return an item?", "answer": "<p>You can request a change-of-mind return within <strong>14 days</strong> of receiving your order. Some items are excluded (such as clearance, ex-display and made-to-order items) — see the Returns details above.</p>" } },
-        "q2": { "type": "faq", "settings": { "question": "How do I start a return or warranty claim?", "answer": "<p>Email <strong>support@proferlofurniture.com.au</strong> with your <strong>order number</strong> and supporting evidence — clear <strong>photos</strong> of the item, and for faults a short <strong>video</strong> showing the issue. For change-of-mind returns, include photos of the item and its original packaging. Our team will guide you through the next steps and approve your request before anything is returned.</p>" } },
-        "q3": { "type": "faq", "settings": { "question": "What does my warranty cover?", "answer": "<p>Our warranty covers issues that arise from a <strong>manufacturing fault</strong> — defects in materials (such as timber splitting or significant fabric flaws) and workmanship (such as faulty joinery, failed stitching or broken hardware). It does not cover normal wear and tear, accidental damage, misuse, or fading from sunlight. Approved claims are repaired, partially replaced, or fully replaced at our discretion, with shipping &amp; handling covered.</p>" } },
-        "q4": { "type": "faq", "settings": { "question": "Will I be charged a fee for a change-of-mind return?", "answer": "<p>Within the 14-day change-of-mind window there is <strong>no restocking fee</strong> on items returned in their original condition and packaging — you only cover the return shipping, and the original delivery cost is deducted from your refund where applicable (including on free-metro and free-promotion orders). A <strong>20% fee</strong> applies to returns made outside the change-of-mind period, or to items not returned in their original packaging or condition. Returning directly to our Acacia Ridge warehouse avoids the return shipping fee.</p>" } },
-        "q5": { "type": "faq", "settings": { "question": "Are my consumer rights affected?", "answer": "<p>No. These warranties are <strong>in addition to</strong> your rights under the Australian Consumer Law. Our goods come with guarantees that cannot be excluded under the ACL.</p>" } }
+        "q1": {
+          "type": "faq",
+          "settings": {
+            "question": "How long do I have to return an item?",
+            "answer": "<p>You can request a change-of-mind return within <strong>14 days</strong> of receiving your order. Some items are excluded (such as clearance, ex-display and made-to-order items) — see the Returns details above.</p>"
+          }
+        },
+        "q2": {
+          "type": "faq",
+          "settings": {
+            "question": "How do I start a return or warranty claim?",
+            "answer": "<p>Email <strong>support@proferlofurniture.com.au</strong> with your <strong>order number</strong> and supporting evidence — clear <strong>photos</strong> of the item, and for faults a short <strong>video</strong> showing the issue. For change-of-mind returns, include photos of the item and its original packaging. Our team will guide you through the next steps and approve your request before anything is returned.</p>"
+          }
+        },
+        "q3": {
+          "type": "faq",
+          "settings": {
+            "question": "What does my warranty cover?",
+            "answer": "<p>Our warranty covers issues that arise from a <strong>manufacturing fault</strong> — defects in materials (such as timber splitting or significant fabric flaws) and workmanship (such as faulty joinery, failed stitching or broken hardware). It does not cover normal wear and tear, accidental damage, misuse, or fading from sunlight. Approved claims are repaired, partially replaced, or fully replaced at our discretion, with shipping &amp; handling covered.</p>"
+          }
+        },
+        "q4": {
+          "type": "faq",
+          "settings": {
+            "question": "Will I be charged a fee for a change-of-mind return?",
+            "answer": "<p>Within the 14-day change-of-mind window there is <strong>no restocking fee</strong> on items returned in their original condition and packaging — you only cover the return shipping, and the original delivery cost is deducted from your refund where applicable (including on free-metro and free-promotion orders). A <strong>20% fee</strong> applies to returns made outside the change-of-mind period, or to items not returned in their original packaging or condition. Returning directly to our Acacia Ridge warehouse avoids the return shipping fee.</p>"
+          }
+        },
+        "q5": {
+          "type": "faq",
+          "settings": {
+            "question": "Are my consumer rights affected?",
+            "answer": "<p>No. These warranties are <strong>in addition to</strong> your rights under the Australian Consumer Law. Our goods come with guarantees that cannot be excluded under the ACL.</p>"
+          }
+        }
       },
-      "block_order": ["q1", "q2", "q3", "q4", "q5"],
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5"
+      ],
       "settings": {
         "group_heading": "Frequently Asked Questions",
         "emit_faq_jsonld": true,
