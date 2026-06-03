@@ -1,0 +1,124 @@
+{%- comment -%}
+  Proferlo — Buy Now, Pay Later : TOP section
+  Hero + trust cards + interest-free USP strip.
+  Self-contained, fully editable in the Theme customiser.
+  Sizing uses the theme's 10px (62.5%) rem root + theme font variables.
+{%- endcomment -%}
+<style>
+  #bntop-{{ section.id }}{
+    --pf-forest:#2C3639;--pf-teal:#3F4E4F;--pf-linen:#DCD7C9;--pf-copper:#AB764B;--pf-copper-l:#C89568;
+    --pf-bg:#F4F1EA;--pf-card:#fff;--pf-cardbd:#E7E1D2;--pf-muted:#5A615C;
+    background:var(--pf-bg);padding-top:{{ section.settings.padding_top }}px;padding-bottom:{{ section.settings.padding_bottom }}px;
+    font-family:var(--font-body-family);
+  }
+  #bntop-{{ section.id }} *{box-sizing:border-box;}
+  #bntop-{{ section.id }} .bnwrap{max-width:104rem;margin:0 auto;padding:0 2rem;color:var(--pf-forest);}
+  #bntop-{{ section.id }} .bnhero{text-align:center;margin-bottom:1.2rem;}
+  #bntop-{{ section.id }} .bneyebrow{font-family:var(--font-heading-family);font-size:1.3rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#6B6B63;margin-bottom:1rem;}
+  #bntop-{{ section.id }} .bnhero h1{font-family:var(--font-heading-family);font-weight:var(--font-heading-weight,700);font-size:var(--font-h2-size);line-height:1.12;margin:0 0 1.2rem;}
+  #bntop-{{ section.id }} .bnintro,#bntop-{{ section.id }} .bnintro p{font-size:1.7rem;color:var(--pf-muted);line-height:1.6;margin:0 auto;max-width:64rem;}
+  #bntop-{{ section.id }} .bntrust{margin-top:3.2rem;}
+  #bntop-{{ section.id }} .bntrust > h2{text-align:center;font-family:var(--font-heading-family);font-size:var(--font-h3-size);margin:0 0 2.2rem;}
+  #bntop-{{ section.id }} .bncards{display:grid;grid-template-columns:repeat(4,1fr);gap:1.6rem;}
+  #bntop-{{ section.id }} .bncard{background:var(--pf-card);border:1px solid var(--pf-cardbd);border-radius:1.2rem;padding:2.4rem 1.8rem;text-align:center;}
+  #bntop-{{ section.id }} .bncard svg{width:4.2rem;height:4.2rem;color:var(--pf-copper);margin:0 auto 1.3rem;}
+  #bntop-{{ section.id }} .bncard img{height:4.4rem;width:auto;margin:0 auto 1.3rem;display:block;}
+  #bntop-{{ section.id }} .bncard h3{font-family:var(--font-heading-family);font-size:1.8rem;font-weight:700;margin:0 0 .7rem;}
+  #bntop-{{ section.id }} .bncard .bntx,#bntop-{{ section.id }} .bncard .bntx p{font-size:1.4rem;color:var(--pf-muted);margin:0;line-height:1.55;}
+  #bntop-{{ section.id }} .bnusp{background:var(--pf-teal);color:var(--pf-linen);text-align:center;font-size:1.6rem;letter-spacing:.02em;padding:1.8rem 2rem;margin-top:3rem;border-radius:1rem;}
+  #bntop-{{ section.id }} .bnusp p{margin:0;}
+  #bntop-{{ section.id }} .bnusp strong{color:#fff;}
+  @media (max-width:989px){ #bntop-{{ section.id }} .bncards{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:560px){ #bntop-{{ section.id }} .bncards{grid-template-columns:1fr;} }
+</style>
+
+{%- liquid
+  assign sc = section.settings
+-%}
+
+<div id="bntop-{{ section.id }}">
+  <div class="bnwrap">
+    <div class="bnhero">
+      {%- if sc.eyebrow != blank -%}<div class="bneyebrow">{{ sc.eyebrow | escape }}</div>{%- endif -%}
+      {%- if sc.heading != blank -%}<h1>{{ sc.heading | escape }}</h1>{%- endif -%}
+      {%- if sc.intro != blank -%}<div class="bnintro">{{ sc.intro }}</div>{%- endif -%}
+    </div>
+
+    {%- assign trust_count = 0 -%}
+    {%- for block in section.blocks -%}{%- if block.type == 'trust' -%}{%- assign trust_count = trust_count | plus: 1 -%}{%- endif -%}{%- endfor -%}
+
+    {%- if trust_count > 0 -%}
+    <div class="bntrust">
+      {%- if sc.trust_title != blank -%}<h2>{{ sc.trust_title | escape }}</h2>{%- endif -%}
+      <div class="bncards">
+        {%- for block in section.blocks -%}{%- if block.type == 'trust' -%}
+          <div class="bncard" {{ block.shopify_attributes }}>
+            {%- if block.settings.image != blank -%}
+              <img src="{{ block.settings.image | image_url: height: 88 }}" alt="{{ block.settings.title | escape }}" loading="lazy">
+            {%- else -%}
+              {%- case block.settings.icon -%}
+                {%- when 'wallet' -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18"/><circle cx="17" cy="14" r="1.3"/></svg>
+                {%- when 'split' -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="6" height="6" rx="1.2"/><rect x="3" y="14" width="6" height="6" rx="1.2"/><rect x="15" y="4" width="6" height="6" rx="1.2"/><rect x="15" y="14" width="6" height="6" rx="1.2"/></svg>
+                {%- when 'shield' -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="m9 12 2 2 4-4"/></svg>
+                {%- when 'lock' -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/><circle cx="12" cy="15.5" r="1.3"/></svg>
+                {%- when 'bolt' -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>
+                {%- when 'map' -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.4"/></svg>
+              {%- endcase -%}
+            {%- endif -%}
+            {%- if block.settings.title != blank -%}<h3>{{ block.settings.title | escape }}</h3>{%- endif -%}
+            {%- if block.settings.text != blank -%}<div class="bntx">{{ block.settings.text }}</div>{%- endif -%}
+          </div>
+        {%- endif -%}{%- endfor -%}
+      </div>
+    </div>
+    {%- endif -%}
+
+    {%- if sc.show_usp and sc.usp_text != blank -%}
+    <div class="bnusp">{{ sc.usp_text }}</div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "BNPL — top",
+  "tag": "section",
+  "class": "section-bnpl-top",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow / kicker", "default": "Buy Now, Pay Later" },
+    { "type": "text", "id": "heading", "label": "Page heading", "default": "Buy Now, Pay Later on Furniture" },
+    { "type": "richtext", "id": "intro", "label": "Intro text", "default": "<p>Spread the cost of your furniture with interest-free payment plans from Australia's most trusted Buy Now, Pay Later providers. Every Proferlo item is eligible — split your purchase into easy instalments and have it delivered Australia-wide.</p>" },
+    { "type": "header", "content": "Trust cards" },
+    { "type": "text", "id": "trust_title", "label": "Trust heading", "default": "Why shop with Buy Now, Pay Later" },
+    { "type": "header", "content": "Eligibility strip" },
+    { "type": "checkbox", "id": "show_usp", "label": "Show eligibility strip", "default": true },
+    { "type": "richtext", "id": "usp_text", "label": "Strip text", "default": "<p><strong>All Proferlo furniture is eligible for Buy Now, Pay Later</strong> — available at checkout, Australia-wide.</p>" },
+    { "type": "header", "content": "Section spacing" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Top padding", "default": 48 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Bottom padding", "default": 8 }
+  ],
+  "blocks": [
+    {
+      "type": "trust",
+      "name": "Trust card",
+      "settings": [
+        { "type": "select", "id": "icon", "label": "Icon", "default": "split", "options": [
+          { "value": "wallet", "label": "Wallet" },
+          { "value": "split", "label": "Split payments" },
+          { "value": "shield", "label": "Shield" },
+          { "value": "lock", "label": "Lock" },
+          { "value": "bolt", "label": "Instant / bolt" },
+          { "value": "map", "label": "Map pin" },
+          { "value": "none", "label": "None" }
+        ] },
+        { "type": "image_picker", "id": "image", "label": "Custom icon image (overrides icon)" },
+        { "type": "text", "id": "title", "label": "Title", "default": "Interest-free options" },
+        { "type": "richtext", "id": "text", "label": "Text", "default": "<p>Pay in instalments with no interest when you pay on time.</p>" }
+      ]
+    }
+  ],
+  "presets": [
+    { "name": "BNPL — top", "blocks": [ { "type": "trust" }, { "type": "trust" }, { "type": "trust" }, { "type": "trust" } ] }
+  ]
+}
+{% endschema %}
