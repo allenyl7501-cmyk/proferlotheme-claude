@@ -207,26 +207,33 @@
                             </div>
                           {%- endif -%}
                           <div class="cart-item__prices">
-                            <div class="price font-body-bolder{% if item.original_price != item.final_price %} price--on-sale{% endif %}">
-                              {%- liquid
+                            {%- liquid
+                              assign unit_compare = item.variant.compare_at_price
+                              assign show_rrp = false
+                              if unit_compare > item.original_price
+                                assign show_rrp = true
+                              endif
+                              if settings.currency_code_enabled
+                                assign money_price = item.original_price | money_with_currency
+                                assign money_compare = unit_compare | money_with_currency
+                                assign money_final = item.final_price | money_with_currency
+                              else
                                 assign money_price = item.original_price | money
-                                if settings.currency_code_enabled
-                                  assign money_price = item.original_price | money_with_currency
-                                endif
-                              -%}
-                              {%- if item.original_price != item.final_price -%}
+                                assign money_compare = unit_compare | money
+                                assign money_final = item.final_price | money
+                              endif
+                            -%}
+                            <div class="price font-body-bolder{% if show_rrp or item.original_price != item.final_price %} price--on-sale{% endif %}">
+                              {%- if show_rrp -%}
+                                <span class="visually-hidden">{{ 'products.product.price.regular_price' | t }}</span>
+                                <s class="price__sale font-body text-sm text-subtext">{{ money_compare }}</s>
+                                <span class="visually-hidden">{{ 'products.product.price.sale_price' | t }}</span>
+                                <span class="price__regular">{{ money_price }}</span>
+                              {%- elsif item.original_price != item.final_price -%}
                                 <span class="visually-hidden">{{ 'products.product.price.regular_price' | t }}</span>
                                 <s class="price__sale font-body text-sm text-subtext">{{ money_price }}</s>
                                 <span class="visually-hidden">{{ 'products.product.price.sale_price' | t }}</span>
-                                <span class="price__regular">
-                                  {%- liquid 
-                                    if settings.currency_code_enabled
-                                      echo item.final_price | money_with_currency
-                                    else
-                                      echo item.final_price | money
-                                    endif  
-                                  -%}
-                                </span>
+                                <span class="price__regular">{{ money_final }}</span>
                               {%- else -%}
                                 {{- money_price -}}
                               {%- endif -%}
@@ -810,14 +817,34 @@
                     {%- endif -%}
                   </ul>
                 {%- endif -%}
+                {%- liquid
+                  assign rrp_total = 0
+                  for line_item in cart.items
+                    if line_item.variant.compare_at_price > line_item.original_price
+                      assign line_rrp = line_item.variant.compare_at_price | times: line_item.quantity
+                    else
+                      assign line_rrp = line_item.original_price | times: line_item.quantity
+                    endif
+                    assign rrp_total = rrp_total | plus: line_rrp
+                  endfor
+                  assign total_savings = rrp_total | minus: cart.total_price
+                -%}
                 <div class="totals flex justify-between items-center">
                   <span class="totals__subtotal h4">
                     {{- 'sections.cart.estimated_total' | t -}}
                   </span>
-                  <span class="totals__subtotal-value h4 font-body-bolder">
-                    {{- cart.total_price | money_with_currency -}}
+                  <span class="totals__subtotal-value h4 font-body-bolder flex items-center gap-2">
+                    {%- if rrp_total > cart.total_price -%}
+                      <s class="cart-rrp font-body text-sm text-subtext">{{ rrp_total | money }}</s>
+                    {%- endif -%}
+                    <span>{{- cart.total_price | money_with_currency -}}</span>
                   </span>
                 </div>
+                {%- if total_savings > 0 -%}
+                  <div class="cart-savings flex justify-end">
+                    <span class="cart-savings__badge">You save {{ total_savings | money }}</span>
+                  </div>
+                {%- endif -%}
                 <div class="tax-note">
                   {%- liquid
                     if cart.taxes_included and shop.shipping_policy.body != blank
