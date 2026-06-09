@@ -67,9 +67,13 @@
           "type": "buy_buttons",
           "settings": {
             "show_quantity_selector": true,
-            "show_dynamic_checkout": true,
+            "show_dynamic_checkout": false,
             "show_gift_card_recipient": true
           }
+        },
+        "pickup_availability_67YaaQ": {
+          "type": "pickup_availability",
+          "settings": {}
         }
       },
       "block_order": [
@@ -78,7 +82,8 @@
         "inventory",
         "description",
         "variant_picker",
-        "buy_buttons"
+        "buy_buttons",
+        "pickup_availability_67YaaQ"
       ],
       "settings": {
         "enable_video_looping": true
