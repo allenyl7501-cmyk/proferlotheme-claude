@@ -548,7 +548,7 @@
             "corner_styling": "soft",
             "header_text_color": "#000000",
             "text_color": "#000000",
-            "card_color": "#F9F9F9",
+            "card_color": "#f9f9f9",
             "stars_color": "",
             "arrows_color": "#000000",
             "transition_speed": 5,
@@ -566,6 +566,69 @@
         "padding_bottom": 0,
         "custom_class": ""
       }
+    },
+    "usp_strip_D9Vwiq": {
+      "type": "usp-strip",
+      "blocks": {
+        "usp_qwxX8M": {
+          "type": "usp",
+          "settings": {
+            "icon": "truck",
+            "title": "Australia-Wide Delivery",
+            "text": "Dispatched from our Brisbane warehouse",
+            "link": ""
+          }
+        },
+        "usp_FYywne": {
+          "type": "usp",
+          "settings": {
+            "icon": "seal-check",
+            "title": "FSC & CARB2 Certified",
+            "text": "Responsibly sourced, low-emission materials",
+            "link": ""
+          }
+        },
+        "usp_9Aiz3H": {
+          "type": "usp",
+          "settings": {
+            "icon": "shield-check",
+            "title": "Warranty Included",
+            "text": "Every product backed by our warranty",
+            "link": ""
+          }
+        },
+        "usp_Y9AAXM": {
+          "type": "usp",
+          "settings": {
+            "icon": "factory",
+            "title": "Factory-Direct Value",
+            "text": "Quality and pricing without the middleman",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "usp_qwxX8M",
+        "usp_FYywne",
+        "usp_9Aiz3H",
+        "usp_Y9AAXM"
+      ],
+      "name": "USP Strip",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "subheading": "",
+        "heading": "",
+        "heading_size": "h3",
+        "layout": "left",
+        "columns_mobile": "2",
+        "icon_size": 30,
+        "icon_color": "",
+        "title_size": 15,
+        "text_size": 13,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": ""
+      }
     }
   },
   "order": [
@@ -574,10 +637,11 @@
     "feature_list_cW3d9c",
     "video_hero_AtQKVU",
     "product_tabs_iJHLzK",
-    "17787259545fe07a92",
-    "collapsible_tabs_KNKLiF",
-    "layered_images_with_text_mCxbTm",
+    "usp_strip_D9Vwiq",
     "rich_text_JMzwcB",
-    "1781060174483db7d2"
+    "1781060174483db7d2",
+    "collapsible_tabs_KNKLiF",
+    "17787259545fe07a92",
+    "layered_images_with_text_mCxbTm"
   ]
 }
