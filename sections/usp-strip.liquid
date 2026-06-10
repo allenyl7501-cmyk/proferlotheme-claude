@@ -1,0 +1,354 @@
+{%- comment -%}
+  USP Strip — lightweight trust/USP bar.
+  Zero JS, no external CSS file (styles inline below, only load when section is used).
+  Icons are inline SVG (no image requests, no layout shift).
+{%- endcomment -%}
+
+{%- liquid
+  assign desktop_cols = section.blocks.size | at_most: 6 | at_least: 1
+-%}
+
+{% style %}
+  #shopify-section-{{ section.id }} .usp-strip__items {
+    display: grid;
+    grid-template-columns: repeat({{ section.settings.columns_mobile }}, 1fr);
+    gap: 2.4rem 1.6rem;
+  }
+  #shopify-section-{{ section.id }} .usp-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.4rem;
+    color: inherit;
+    text-decoration: none;
+  }
+  #shopify-section-{{ section.id }} .usp-item--top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  #shopify-section-{{ section.id }} .usp-item__icon {
+    display: flex;
+    flex-shrink: 0;
+  }
+  #shopify-section-{{ section.id }} .usp-item__icon svg {
+    width: {{ section.settings.icon_size }}px;
+    height: {{ section.settings.icon_size }}px;
+    {%- if section.settings.icon_color != blank %}
+      color: {{ section.settings.icon_color }};
+    {%- endif %}
+  }
+  #shopify-section-{{ section.id }} .usp-item__title {
+    display: block;
+    font-weight: 600;
+    font-size: {{ section.settings.title_size }}px;
+    line-height: 1.4;
+    margin-bottom: 0.2rem;
+  }
+  #shopify-section-{{ section.id }} .usp-item__text {
+    display: block;
+    font-size: {{ section.settings.text_size }}px;
+    line-height: 1.5;
+    opacity: 0.75;
+  }
+  @media (min-width: 750px) {
+    #shopify-section-{{ section.id }} .usp-strip__items {
+      grid-template-columns: repeat({{ desktop_cols }}, 1fr);
+      gap: 2.4rem;
+    }
+  }
+{% endstyle %}
+
+<div
+  class="section section--padding usp-strip color-{{ section.settings.color_scheme }}{% if section.settings.custom_class != blank %} {{ section.settings.custom_class }}{% endif %}"
+  style="--section-padding-top: {{ section.settings.padding_top }}px;--section-padding-bottom: {{ section.settings.padding_bottom }}px;"
+>
+  <div class="page-width">
+    {%- if section.settings.heading != blank or section.settings.subheading != blank -%}
+      <div class="section__header text-center rich-text">
+        {%- if section.settings.subheading != blank -%}
+          <span class="block rich-text__subheading text-subheading">{{ section.settings.subheading }}</span>
+        {%- endif -%}
+        {%- if section.settings.heading != blank -%}
+          <h2 class="rich-text__heading inline-richtext {{ section.settings.heading_size }}">{{ section.settings.heading }}</h2>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    <div class="usp-strip__items">
+      {%- for block in section.blocks -%}
+        {%- liquid
+          assign item_tag = 'div'
+          if block.settings.link != blank
+            assign item_tag = 'a'
+          endif
+        -%}
+        <{{ item_tag }}
+          {% if item_tag == 'a' %}href="{{ block.settings.link }}"{% endif %}
+          class="usp-item{% if section.settings.layout == 'top' %} usp-item--top{% endif %}"
+          {{ block.shopify_attributes }}
+        >
+          {%- if block.settings.icon != 'none' -%}
+            <span class="usp-item__icon" aria-hidden="true">
+              {%- case block.settings.icon -%}
+                {%- when 'truck' -%}
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="5" width="14" height="11" rx="1"/><path d="M15 9h4l4 4v3h-4"/><circle cx="6.5" cy="18" r="2"/><circle cx="17.5" cy="18" r="2"/><path d="M8.5 18h7"/></svg>
+                {%- when 'seal-check' -%}
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg>
+                {%- when 'shield-check' -%}
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                {%- when 'factory' -%}
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20V9.5l6 4v-4l6 4V4h8v16Z"/><path d="M2 20h22"/><path d="M17 12h2M17 16h2"/></svg>
+                {%- when 'leaf' -%}
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C13.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10Z"/><path d="M2 21c0-3 1.9-5.4 5.1-6C9.5 14.5 12 13 13 12"/></svg>
+                {%- when 'tag' -%}
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12.6 2.6A2 2 0 0 0 11.2 2H4a2 2 0 0 0-2 2v7.2a2 2 0 0 0 .6 1.4l8.7 8.7a2.4 2.4 0 0 0 3.4 0l6.6-6.6a2.4 2.4 0 0 0 0-3.4Z"/><circle cx="7.5" cy="7.5" r="0.8"/></svg>
+                {%- when 'dollar' -%}
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M15.5 8.5h-4.75a2 2 0 0 0 0 4h2.5a2 2 0 0 1 0 4H8.5"/><path d="M12 6.5v11"/></svg>
+                {%- when 'package' -%}
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="M3.3 7 12 12l8.7-5"/><path d="M12 22V12"/></svg>
+                {%- when 'credit-card' -%}
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+                {%- when 'returns' -%}
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 2.64-6.36L3 8"/><path d="M3 3v5h5"/></svg>
+                {%- when 'star' -%}
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01Z"/></svg>
+                {%- when 'headset' -%}
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14v-3a9 9 0 0 1 18 0v3"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"/><path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3Z"/></svg>
+              {%- endcase -%}
+            </span>
+          {%- endif -%}
+          <span class="usp-item__content">
+            {%- if block.settings.title != blank -%}
+              <strong class="usp-item__title">{{ block.settings.title }}</strong>
+            {%- endif -%}
+            {%- if block.settings.text != blank -%}
+              <span class="usp-item__text">{{ block.settings.text }}</span>
+            {%- endif -%}
+          </span>
+        </{{ item_tag }}>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "USP Strip",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 6,
+  "disabled_on": {
+    "groups": ["footer", "header", "custom.overlay"]
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Section header (optional)"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading size",
+      "default": "h3",
+      "options": [
+        { "value": "h4", "label": "Small" },
+        { "value": "h3", "label": "Medium" },
+        { "value": "h2", "label": "Large" }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Item layout",
+      "default": "left",
+      "options": [
+        { "value": "left", "label": "Icon left of text" },
+        { "value": "top", "label": "Icon above text (centered)" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "columns_mobile",
+      "label": "Columns on mobile",
+      "default": "2",
+      "options": [
+        { "value": "1", "label": "1 column" },
+        { "value": "2", "label": "2 columns" }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "label": "Icon size",
+      "min": 20,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Icon color (leave empty to match text)"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "label": "Title text size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "label": "Description text size",
+      "min": 11,
+      "max": 16,
+      "step": 1,
+      "unit": "px",
+      "default": 13
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 36
+    },
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom CSS class"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "usp",
+      "name": "USP item",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "default": "truck",
+          "options": [
+            { "value": "none", "label": "None" },
+            { "value": "truck", "label": "Delivery truck" },
+            { "value": "seal-check", "label": "Certified seal" },
+            { "value": "shield-check", "label": "Shield (warranty)" },
+            { "value": "factory", "label": "Factory" },
+            { "value": "leaf", "label": "Leaf (sustainability)" },
+            { "value": "tag", "label": "Price tag" },
+            { "value": "dollar", "label": "Dollar" },
+            { "value": "package", "label": "Package" },
+            { "value": "credit-card", "label": "Credit card" },
+            { "value": "returns", "label": "Returns arrow" },
+            { "value": "star", "label": "Star" },
+            { "value": "headset", "label": "Support headset" }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Your USP here"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Description",
+          "default": "Short supporting line"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link (optional)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "USP Strip",
+      "blocks": [
+        {
+          "type": "usp",
+          "settings": {
+            "icon": "truck",
+            "title": "Australia-Wide Delivery",
+            "text": "Dispatched from our Brisbane warehouse"
+          }
+        },
+        {
+          "type": "usp",
+          "settings": {
+            "icon": "seal-check",
+            "title": "FSC & CARB2 Certified",
+            "text": "Responsibly sourced, low-emission materials"
+          }
+        },
+        {
+          "type": "usp",
+          "settings": {
+            "icon": "shield-check",
+            "title": "Warranty Included",
+            "text": "Every product backed by our warranty"
+          }
+        },
+        {
+          "type": "usp",
+          "settings": {
+            "icon": "factory",
+            "title": "Factory-Direct Value",
+            "text": "Quality and pricing without the middleman"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
