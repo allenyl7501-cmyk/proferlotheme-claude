@@ -439,8 +439,8 @@
           "type": "collapsible_item",
           "settings": {
             "icon": "none",
-            "heading": "How long does shipping take?",
-            "content": "<p>Shipping usually takes 3-7 business days, depending on your location. Expedited shipping options are available for faster delivery. Contact us for any specific shipping inquiries.</p>",
+            "heading": "Does Proferlo have a showroom I can visit?",
+            "content": "<p>No — Proferlo is online-only with no physical showroom. Our Acacia Ridge, Brisbane location is a warehouse and dispatch centre only and isn't open to the public. Selling factory-direct online is how we keep quality high without the retail markup. Every product page has detailed photos, exact dimensions, and real customer reviews so you can buy with confidence.</p>",
             "custom_liquid": "",
             "page": "",
             "open": true
@@ -450,8 +450,8 @@
           "type": "collapsible_item",
           "settings": {
             "icon": "none",
-            "heading": "Does my piece come in any packaging?",
-            "content": "<p>Yes, every item comes in our signature, eco-friendly packaging, designed to protect your product and add a touch of luxury to your unboxing experience.</p>",
+            "heading": "What if I change my mind?",
+            "content": "<p>We offer 14-day change-of-mind returns. If a piece doesn't feel right in your space, you can return it within 14 days of delivery — you just cover the return shipping. Items need to be unused and in their original packaging.</p>",
             "custom_liquid": "",
             "page": "",
             "open": false
@@ -461,8 +461,8 @@
           "type": "collapsible_item",
           "settings": {
             "icon": "none",
-            "heading": "Do you ship internationally?",
-            "content": "<p>Yes, we ship internationally to most countries. Shipping times and costs vary by location. Please check our shipping policy for more details on international orders.</p>",
+            "heading": "How long does delivery take?",
+            "content": "<p>Delivery takes 2–4 business days to metro areas, with regional areas taking a little longer. We ship Australia-wide via our  express couriers from our Brisbane warehouse, and you'll receive tracking as soon as your order is dispatched.</p>",
             "custom_liquid": "",
             "page": "",
             "open": false
@@ -472,8 +472,41 @@
           "type": "collapsible_item",
           "settings": {
             "icon": "none",
-            "heading": "What payment methods do you accept?",
-            "content": "<p>We accept various payment methods including credit/debit cards, PayPal, Apple Pay, and Google Pay. Secure payment options ensure a smooth and safe checkout process.</p>",
+            "heading": "Why are Proferlo's prices lower than furniture retailers?",
+            "content": "<p>Proferlo is factory-direct — we own the factory that makes our furniture, so there's no middleman markup. You're paying for the materials and craftsmanship, not a chain of wholesalers and showroom overheads. Smart choice, same quality.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false
+          }
+        },
+        "collapsible_item_afrmKt": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Is Proferlo furniture sustainably made?",
+            "content": "<p>Yes — our timber is FSC-certified and our boards meet CARB Phase 2 low-emission standards. Our factory is also certified to ISO 9001, ISO 14001, and ISO 45001, and audited under BSCI. Quality that holds up, made responsibly.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false
+          }
+        },
+        "collapsible_item_HynDyF": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Will my furniture need assembly?",
+            "content": "<p>Most Proferlo furniture requires some flat-pack assembly, and each product page states exactly what's involved. Our pieces are designed for straightforward setup — clear instructions, labelled parts, no engineering degree required.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false
+          }
+        },
+        "collapsible_item_HURCdi": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Can I buy now and pay later?",
+            "content": "<p>Yes — we accept Afterpay, Zip Pay, and PayPal Pay Later, plus all major cards and PayPal. Split your purchase into interest-free instalments and style your space now.</p>",
             "custom_liquid": "",
             "page": "",
             "open": false
@@ -484,7 +517,10 @@
         "collapsible_item_t7UtgE",
         "collapsible_item_AMx7Wd",
         "collapsible_item_rUAHxc",
-        "collapsible_item_JCwmkt"
+        "collapsible_item_JCwmkt",
+        "collapsible_item_afrmKt",
+        "collapsible_item_HynDyF",
+        "collapsible_item_HURCdi"
       ],
       "custom_css": [
         ".card-media {background: transparent; border-radius: 0;}",
