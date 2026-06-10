@@ -201,6 +201,15 @@
     "video_hero_AtQKVU": {
       "type": "video-hero",
       "blocks": {
+        "heading_eiyPQT": {
+          "type": "heading",
+          "settings": {
+            "heading": "Solid ash bed frame. Assembles itself, almost.",
+            "heading_size": "h5",
+            "heading_tag": "h2",
+            "heading_highlight_style": "none"
+          }
+        },
         "button_pNLxKh": {
           "type": "button",
           "settings": {
@@ -208,20 +217,11 @@
             "button_link": "",
             "button_style": "btn--primary"
           }
-        },
-        "heading_eiyPQT": {
-          "type": "heading",
-          "settings": {
-            "heading": "Solid ash bed frame. Assembles itself, almost.",
-            "heading_size": "h4",
-            "heading_tag": "h2",
-            "heading_highlight_style": "none"
-          }
         }
       },
       "block_order": [
-        "button_pNLxKh",
-        "heading_eiyPQT"
+        "heading_eiyPQT",
+        "button_pNLxKh"
       ],
       "custom_css": [
         ".video-hero__content-wrapper {--text-margin-top: 0.8rem;}"
