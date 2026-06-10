@@ -105,7 +105,7 @@
         "layout": "standard",
         "subheading": "Good design shouldn't need a markup",
         "heading": "Designer Quality. Factory-direct prices",
-        "heading_size": "h1",
+        "heading_size": "hd3",
         "heading_tag": "h2",
         "heading_highlight_style": "none",
         "description": "",
@@ -222,7 +222,7 @@
       "settings": {
         "color_scheme": "",
         "header_layout": "vertical",
-        "heading": "Australia's best-selling furniture online - Delivered to your door",
+        "heading": "Australia's best-selling online factory direct furniture - Delivered to your door",
         "heading_size": "h6",
         "heading_tag": "h2",
         "heading_highlight_style": "none",
