@@ -48,35 +48,28 @@
         "padding_bottom": 100
       }
     },
-    "featured_collection_Y4GDWA": {
-      "type": "featured-collection",
+    "related_products_Ftjn6T": {
+      "type": "related-products",
+      "name": "t:sections.related-products.name",
       "settings": {
-        "color_scheme": "",
-        "header_layout": "vertical",
+        "color_scheme": "scheme-1",
         "heading": "You may also like",
         "heading_size": "h1",
         "heading_tag": "h2",
         "heading_highlight_style": "none",
         "subheading": "",
         "description": "",
-        "text_size": "text-base",
-        "show_collection_description": false,
-        "collection": "",
-        "limit": 4,
+        "limit": 8,
         "columns": 4,
-        "column_gap": "extra-small",
+        "column_gap": "medium",
         "row_gap": "inherit",
-        "grid_layout": "standard",
         "enable_slider": true,
         "controls_position": "inside",
         "pcard_image_ratio": "",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "show_all_button_on_top": false,
-        "button_label": "",
-        "button_style": "btn--primary",
-        "padding_top": 0,
-        "padding_bottom": 100,
+        "padding_top": 50,
+        "padding_bottom": 50,
         "show_section_divider": false,
         "divider_width": "fixed",
         "custom_class": ""
@@ -85,6 +78,6 @@
   },
   "order": [
     "main-cart",
-    "featured_collection_Y4GDWA"
+    "related_products_Ftjn6T"
   ]
 }
