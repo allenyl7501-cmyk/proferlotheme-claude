@@ -535,7 +535,7 @@
         "heading_tag": "h2",
         "heading_highlight_style": "none",
         "subheading": "",
-        "description": "<p>We create safe products that really work and are designed to make you feel good. Any question about our products? </p><p>Check if you can find them here or <br/>Contact us</p>",
+        "description": "<p>Any question about our products? </p><p>Check if you can find them here or <br/>Contact us</p>",
         "text_size": "text-base",
         "button_label": "See More Answers",
         "button_link": "shopify://pages/frequently-asked-questions",
@@ -674,10 +674,10 @@
     "video_hero_AtQKVU",
     "product_tabs_iJHLzK",
     "usp_strip_D9Vwiq",
+    "17787259545fe07a92",
     "rich_text_JMzwcB",
     "1781060174483db7d2",
     "collapsible_tabs_KNKLiF",
-    "17787259545fe07a92",
     "layered_images_with_text_mCxbTm"
   ]
 }
