@@ -297,24 +297,6 @@
         "custom_class": ""
       }
     },
-    "1778727216fea65f3d": {
-      "type": "apps",
-      "blocks": {
-        "judge_me_reviews_all_reviews_text_cB4kHh": {
-          "type": "shopify://apps/judge-me-reviews/blocks/all_reviews_text/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_all_reviews_text_cB4kHh"
-      ],
-      "settings": {
-        "include_margins": true,
-        "padding_top": 22,
-        "padding_bottom": 22,
-        "custom_class": ""
-      }
-    },
     "17787259545fe07a92": {
       "type": "apps",
       "blocks": {
@@ -513,6 +495,33 @@
         "custom_class": ""
       }
     },
+    "rich_text_JMzwcB": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_98DFEM": {
+          "type": "heading",
+          "settings": {
+            "heading": "What Australians are saying about Proferlo...",
+            "heading_size": "h4",
+            "heading_tag": "h3",
+            "heading_highlight_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "heading_98DFEM"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "color_scheme": "",
+        "content_alignment": "center",
+        "padding_top": 50,
+        "padding_bottom": 0,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "custom_class": ""
+      }
+    },
     "1781060174483db7d2": {
       "type": "apps",
       "blocks": {
@@ -520,17 +529,17 @@
           "type": "shopify://apps/judge-me-reviews/blocks/cards_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
             "show_sample_reviews": false,
-            "reviews_selection": "custom_products",
+            "reviews_selection": "featured_reviews",
             "products": [],
-            "star_rating": "all",
+            "star_rating": "5_star",
             "show_review_media": true,
             "display_order": "media_first",
-            "no_image_fallback": "review_text_only",
+            "no_image_fallback": "product_image",
             "max_reviews": 20,
             "review_length": "medium",
             "text_size": "medium",
             "image_ratio": "1",
-            "reviews_shown": 4,
+            "reviews_shown": 5,
             "show_reviewer_name": true,
             "show_product_name": true,
             "hide_arrows_mobile": true,
@@ -543,7 +552,7 @@
             "stars_color": "",
             "arrows_color": "#000000",
             "transition_speed": 5,
-            "header_text": "Customers are saying",
+            "header_text": "",
             "show_average_rating": true
           }
         }
@@ -565,10 +574,10 @@
     "feature_list_cW3d9c",
     "video_hero_AtQKVU",
     "product_tabs_iJHLzK",
-    "1778727216fea65f3d",
     "17787259545fe07a92",
     "collapsible_tabs_KNKLiF",
     "layered_images_with_text_mCxbTm",
+    "rich_text_JMzwcB",
     "1781060174483db7d2"
   ]
 }
