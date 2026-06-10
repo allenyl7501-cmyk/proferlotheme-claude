@@ -117,7 +117,7 @@
         "card_image_ratio": "4/3",
         "content_alignment": "left",
         "columns_desktop": 4,
-        "column_gap": "extra-small",
+        "column_gap": "small",
         "row_gap": "inherit",
         "enable_slider": false,
         "columns_mobile": "2",
@@ -175,6 +175,7 @@
         "feature_item_R8A8eX",
         "feature_item_yyNV9A"
       ],
+      "disabled": true,
       "custom_css": [
         "@media (max-width: 767px) {.swipe-mobile .feature-item__text {text-wrap: nowrap; }}"
       ],
@@ -194,6 +195,74 @@
         "padding_bottom": 16,
         "show_section_divider": false,
         "divider_width": "fixed",
+        "custom_class": ""
+      }
+    },
+    "video_hero_AtQKVU": {
+      "type": "video-hero",
+      "blocks": {
+        "button_pNLxKh": {
+          "type": "button",
+          "settings": {
+            "button_label": "See the Aria Solid Wood Bed Base",
+            "button_link": "",
+            "button_style": "btn--primary"
+          }
+        },
+        "heading_eiyPQT": {
+          "type": "heading",
+          "settings": {
+            "heading": "Solid ash bed frame. Assembles itself, almost.",
+            "heading_size": "h4",
+            "heading_tag": "h2",
+            "heading_highlight_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "button_pNLxKh",
+        "heading_eiyPQT"
+      ],
+      "custom_css": [
+        ".video-hero__content-wrapper {--text-margin-top: 0.8rem;}"
+      ],
+      "name": "t:sections.video-hero.name",
+      "settings": {
+        "container": "full",
+        "video": "shopify://files/videos/landscape bed hero.mp4",
+        "mobile_video": "shopify://files/videos/cropped verticle bed hero compressed copy.mp4",
+        "video_url": "",
+        "description": "",
+        "video_height": "extra-medium",
+        "overlay_opacity": 0,
+        "enable_parallax": false,
+        "parallax_direction": "vertical",
+        "color_scheme": "",
+        "content_position": "bottom-center",
+        "content_alignment": "center",
+        "video_mobile_height": "auto",
+        "padding_top": 30,
+        "padding_bottom": 50,
+        "show_section_divider": false,
+        "divider_width": "full",
+        "custom_class": ""
+      }
+    },
+    "1778727216fea65f3d": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_all_reviews_text_cB4kHh": {
+          "type": "shopify://apps/judge-me-reviews/blocks/all_reviews_text/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_all_reviews_text_cB4kHh"
+      ],
+      "settings": {
+        "include_margins": true,
+        "padding_top": 22,
+        "padding_bottom": 22,
         "custom_class": ""
       }
     },
@@ -226,8 +295,8 @@
         "heading_size": "h6",
         "heading_tag": "h2",
         "heading_highlight_style": "none",
-        "limit": 8,
-        "columns": 4,
+        "limit": 10,
+        "columns": 5,
         "column_gap": "extra-small",
         "row_gap": "inherit",
         "grid_layout": "standard",
@@ -242,152 +311,6 @@
         "padding_top": 50,
         "padding_bottom": 50,
         "show_section_divider": true,
-        "divider_width": "fixed",
-        "custom_class": ""
-      }
-    },
-    "1778727216fea65f3d": {
-      "type": "apps",
-      "blocks": {
-        "judge_me_reviews_all_reviews_text_cB4kHh": {
-          "type": "shopify://apps/judge-me-reviews/blocks/all_reviews_text/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_all_reviews_text_cB4kHh"
-      ],
-      "settings": {
-        "include_margins": true,
-        "padding_top": 0,
-        "padding_bottom": 16,
-        "custom_class": ""
-      }
-    },
-    "video_hero_AtQKVU": {
-      "type": "video-hero",
-      "blocks": {
-        "button_pNLxKh": {
-          "type": "button",
-          "settings": {
-            "button_label": "See The NEW Aria Solid Wood Bed Base",
-            "button_link": "",
-            "button_style": "btn--underline"
-          }
-        }
-      },
-      "block_order": [
-        "button_pNLxKh"
-      ],
-      "name": "t:sections.video-hero.name",
-      "settings": {
-        "container": "full",
-        "video": "shopify://files/videos/landscape bed hero.mp4",
-        "mobile_video": "shopify://files/videos/cropped verticle bed hero compressed copy.mp4",
-        "video_url": "",
-        "description": "",
-        "video_height": "extra-medium",
-        "overlay_opacity": 0,
-        "enable_parallax": false,
-        "parallax_direction": "vertical",
-        "color_scheme": "",
-        "content_position": "bottom-center",
-        "content_alignment": "center",
-        "video_mobile_height": "auto",
-        "padding_top": 30,
-        "padding_bottom": 50,
-        "show_section_divider": true,
-        "divider_width": "full",
-        "custom_class": ""
-      }
-    },
-    "testimonials_8JHr3L": {
-      "type": "testimonials",
-      "blocks": {
-        "testimonial_dhi3Xf": {
-          "type": "testimonial",
-          "settings": {
-            "show_image": true,
-            "text": "<p>This clay mask deeply cleanses my pores and leaves my skin feeling smooth and refreshed. Perfect for weekly use.</p>",
-            "author": "Jaroslava K.",
-            "bio": "Verified Buyer",
-            "product": "",
-            "icon": "5-stars"
-          }
-        },
-        "testimonial_aDtknt": {
-          "type": "testimonial",
-          "settings": {
-            "show_image": true,
-            "text": "<p>This clay mask deeply cleanses my pores and leaves my skin feeling smooth and refreshed. Perfect for weekly use.</p>",
-            "author": "Jaroslava K.",
-            "bio": "Verified Buyer",
-            "product": "",
-            "icon": "5-stars"
-          }
-        },
-        "testimonial_DDVmBK": {
-          "type": "testimonial",
-          "settings": {
-            "show_image": true,
-            "text": "<p>This clay mask deeply cleanses my pores and leaves my skin feeling smooth and refreshed. Perfect for weekly use.</p>",
-            "author": "Jaroslava K.",
-            "bio": "Verified Buyer",
-            "product": "",
-            "icon": "5-stars"
-          }
-        },
-        "testimonial_QgXA8M": {
-          "type": "testimonial",
-          "settings": {
-            "show_image": true,
-            "text": "<p>This clay mask deeply cleanses my pores and leaves my skin feeling smooth and refreshed. Perfect for weekly use.</p>",
-            "author": "Jaroslava K.",
-            "bio": "Verified Buyer",
-            "product": "",
-            "icon": "5-stars"
-          }
-        },
-        "testimonial_QQ6iLx": {
-          "type": "testimonial",
-          "settings": {
-            "show_image": true,
-            "text": "<p>This clay mask deeply cleanses my pores and leaves my skin feeling smooth and refreshed. Perfect for weekly use.</p>",
-            "author": "Jaroslava K.",
-            "bio": "Verified Buyer",
-            "product": "",
-            "icon": "5-stars"
-          }
-        }
-      },
-      "block_order": [
-        "testimonial_dhi3Xf",
-        "testimonial_aDtknt",
-        "testimonial_DDVmBK",
-        "testimonial_QgXA8M",
-        "testimonial_QQ6iLx"
-      ],
-      "custom_css": [],
-      "settings": {
-        "color_scheme": "scheme-4",
-        "heading": "What Australians are saying about Proferlo",
-        "heading_size": "h3",
-        "heading_tag": "h2",
-        "heading_highlight_style": "none",
-        "subheading": "Real Customers. Real Homes.",
-        "description": "",
-        "text_size": "text-base",
-        "card_color_scheme": "scheme-2",
-        "card_layout": "1",
-        "card_text_size": "text-base",
-        "columns_desktop": 4,
-        "column_gap": "extra-small",
-        "enable_slider": true,
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 30,
-        "padding_bottom": 30,
-        "show_section_divider": false,
         "divider_width": "fixed",
         "custom_class": ""
       }
@@ -595,12 +518,11 @@
     "slideshow_WWriMK",
     "collection_list_Pr36qH",
     "feature_list_cW3d9c",
-    "product_tabs_iJHLzK",
-    "1778727216fea65f3d",
     "video_hero_AtQKVU",
-    "testimonials_8JHr3L",
-    "collapsible_tabs_KNKLiF",
+    "1778727216fea65f3d",
+    "product_tabs_iJHLzK",
     "17787259545fe07a92",
+    "collapsible_tabs_KNKLiF",
     "layered_images_with_text_mCxbTm"
   ]
 }
