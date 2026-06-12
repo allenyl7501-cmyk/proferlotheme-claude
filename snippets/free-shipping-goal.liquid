@@ -8,6 +8,7 @@
     - tierN_message: message shown while tier N is the next target.
       Use [amount] where the remaining spend should appear.
     - completed_message: shown when all tiers are unlocked.
+    - enabled: master on/off switch — set to False to hide the bar everywhere.
 
   Tier 1 amount falls back to theme setting "free_shipping_minimum_amount" when blank.
   NOTE: display only — actual discounts must be configured in Admin → Discounts.
@@ -17,6 +18,11 @@
 
 {%- liquid
   assign rb = shop.metaobjects['rewards_bar']['main']
+
+  assign bar_enabled = true
+  if rb.enabled.value == false
+    assign bar_enabled = false
+  endif
 
   assign t1_amount = minimum_amount | plus: 0
   if rb.tier1_amount.value != blank
@@ -42,7 +48,7 @@
   endif
 -%}
 
-{%- if max_amount > 0 -%}
+{%- if bar_enabled and max_amount > 0 -%}
   {%- liquid
     assign cart_cents = cart.total_price | plus: 0
     assign max_cents = max_amount | times: 100
