@@ -1,22 +1,280 @@
+{%- comment -%}
+  Reward progression bar — up to 3 tiers. Shared by cart drawer + /cart page.
+
+  EDIT TIER CONTENT: Shopify Admin → Content → Metaobjects → "Cart rewards bar" → main
+    - tierN_amount: threshold in dollars (AUD). Leave blank to disable a tier.
+      Enter tiers in ascending order (tier1 < tier2 < tier3).
+    - tierN_label: short label under the checkpoint (e.g. "Free shipping").
+    - tierN_message: message shown while tier N is the next target.
+      Use [amount] where the remaining spend should appear.
+    - completed_message: shown when all tiers are unlocked.
+
+  Tier 1 amount falls back to theme setting "free_shipping_minimum_amount" when blank.
+  NOTE: display only — actual discounts must be configured in Admin → Discounts.
+
+  Accepts: minimum_amount (dollars), classes (optional)
+{%- endcomment -%}
+
 {%- liquid
-  assign minimum_amount_in_cents = minimum_amount | plus: 0
-  assign total_price = cart.total_price | plus: 0
+  assign rb = shop.metaobjects['rewards_bar']['main']
+
+  assign t1_amount = minimum_amount | plus: 0
+  if rb.tier1_amount.value != blank
+    assign t1_amount = rb.tier1_amount.value | plus: 0
+  endif
+
+  assign t2_amount = 0
+  if rb.tier2_amount.value != blank
+    assign t2_amount = rb.tier2_amount.value | plus: 0
+  endif
+
+  assign t3_amount = 0
+  if rb.tier3_amount.value != blank
+    assign t3_amount = rb.tier3_amount.value | plus: 0
+  endif
+
+  assign max_amount = t1_amount
+  if t2_amount > max_amount
+    assign max_amount = t2_amount
+  endif
+  if t3_amount > max_amount
+    assign max_amount = t3_amount
+  endif
 -%}
-{%- capture left_to_spend -%}
-    <strong data-left-to-spend>{{ limit_currency | minus: cart.total_price | money }}</strong>
-{%- endcapture -%}
-<free-shipping-goal
-  data-cart-total="{{ total_price }}"
-  data-minimum-amount="{{ minimum_amount_in_cents }}"
-  class="free-shipping-goal grid gap-3{% if classes %} {{ classes }}{% endif %}"
->
-  <span class="free-shipping-goal__label free-shipping-goal__label--success">
-    {{- 'general.cart.free_shipping.congratulations_html' | t -}}
-  </span>
-  <span class="free-shipping-goal__label free-shipping-goal__label--default">
-    {{- 'general.cart.free_shipping.remaining_html' | t: remaining_amount: left_to_spend -}}
-  </span>
-  <progress-bar
-    class="progress-bar"
-  ></progress-bar>
-</free-shipping-goal>
+
+{%- if max_amount > 0 -%}
+  {%- liquid
+    assign cart_cents = cart.total_price | plus: 0
+    assign max_cents = max_amount | times: 100
+    assign percent = cart_cents | times: 100.0 | divided_by: max_cents | round: 1
+    if percent > 100
+      assign percent = 100
+    endif
+
+    assign tier_count = 1
+    if t2_amount > 0
+      assign tier_count = tier_count | plus: 1
+    endif
+    if t3_amount > 0
+      assign tier_count = tier_count | plus: 1
+    endif
+
+    assign active_msg = 'done'
+    assign idx = 0
+    assign markers_html = ''
+    assign labels_html = ''
+    assign messages_html = ''
+  -%}
+
+  {%- for i in (1..3) -%}
+    {%- liquid
+      case i
+        when 1
+          assign amt = t1_amount
+          assign tier_label = rb.tier1_label.value
+          assign tier_msg = rb.tier1_message.value
+        when 2
+          assign amt = t2_amount
+          assign tier_label = rb.tier2_label.value
+          assign tier_msg = rb.tier2_message.value
+        when 3
+          assign amt = t3_amount
+          assign tier_label = rb.tier3_label.value
+          assign tier_msg = rb.tier3_message.value
+      endcase
+    -%}
+    {%- if amt > 0 -%}
+      {%- liquid
+        assign idx = idx | plus: 1
+        assign idx_str = idx | append: ''
+        assign amt_cents = amt | times: 100
+        assign pos = amt_cents | times: 100.0 | divided_by: max_cents | round: 1
+        assign remaining = amt_cents | minus: cart_cents
+        if remaining < 0
+          assign remaining = 0
+        endif
+        if active_msg == 'done' and cart_cents < amt_cents
+          assign active_msg = idx_str
+        endif
+      -%}
+
+      {%- capture markers_html -%}
+        {{- markers_html -}}
+        <span class="fsg-marker{% if cart_cents >= amt_cents %} is-done{% endif %}" data-tier-marker style="--at: {{ pos }}%"></span>
+      {%- endcapture -%}
+
+      {%- capture labels_html -%}
+        {{- labels_html -}}
+        <span class="fsg-label{% if cart_cents >= amt_cents %} is-done{% endif %}{% if pos > 88 %} is-edge{% elsif pos < 12 %} is-start{% endif %}" data-tier-label style="--at: {{ pos }}%"><strong>{{ amt_cents | money_without_trailing_zeros }}</strong>{{ tier_label | escape }}</span>
+      {%- endcapture -%}
+
+      {%- capture amount_html -%}<strong data-left-to-spend>{{ remaining | money }}</strong>{%- endcapture -%}
+      {%- capture messages_html -%}
+        {{- messages_html -}}
+        <span class="free-shipping-goal__label" data-tier-msg="{{ idx }}" {% unless active_msg == idx_str %}hidden{% endunless %}>
+          {%- if tier_msg != blank -%}
+            {{- tier_msg | escape | replace: '[amount]', amount_html -}}
+          {%- else -%}
+            {{- 'general.cart.free_shipping.remaining_html' | t: remaining_amount: amount_html -}}
+          {%- endif -%}
+        </span>
+      {%- endcapture -%}
+    {%- endif -%}
+  {%- endfor -%}
+
+  <reward-progress-goal
+    class="free-shipping-goal grid gap-3{% if classes %} {{ classes }}{% endif %}{% if cart_cents == 0 %} hidden{% endif %}{% if active_msg == 'done' %} free-shipping-goal--done{% endif %}"
+    data-cart-total="{{ cart_cents }}"
+    data-tiers="{{ t1_amount }},{{ t2_amount }},{{ t3_amount }}"
+  >
+    {{ messages_html }}
+    <span class="free-shipping-goal__label" data-tier-msg="done" {% unless active_msg == 'done' %}hidden{% endunless %}>
+      {%- if rb.completed_message.value != blank -%}
+        {{- rb.completed_message.value | escape -}}
+      {%- else -%}
+        {{- 'general.cart.free_shipping.congratulations_html' | t -}}
+      {%- endif -%}
+    </span>
+    {%- if tier_count > 1 -%}
+      <div class="fsg-track">
+        <progress-bar class="progress-bar" style="--percent: {{ percent }}%"></progress-bar>
+        {{ markers_html }}
+      </div>
+      <div class="fsg-labels">{{ labels_html }}</div>
+    {%- else -%}
+      <progress-bar class="progress-bar" style="--percent: {{ percent }}%"></progress-bar>
+    {%- endif -%}
+  </reward-progress-goal>
+
+  {%- if tier_count > 1 -%}
+    <style>
+      .free-shipping-goal .progress-bar {
+        --progress-bar-size: 0.8rem;
+      }
+      .fsg-track {
+        position: relative;
+      }
+      .fsg-marker {
+        position: absolute;
+        top: 50%;
+        left: var(--at);
+        transform: translate(-50%, -50%);
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        background: rgb(var(--color-background));
+        border: 0.2rem solid rgba(var(--color-foreground), 0.3);
+        z-index: 1;
+        transition: background-color 0.3s, border-color 0.3s;
+      }
+      .fsg-marker.is-done {
+        background: currentColor;
+        border-color: currentColor;
+      }
+      .fsg-labels {
+        position: relative;
+        min-height: 3.2em;
+        font-size: 1.1rem;
+        line-height: 1.4;
+      }
+      .fsg-label {
+        position: absolute;
+        top: 0;
+        left: var(--at);
+        transform: translateX(-50%);
+        text-align: center;
+        max-width: 10rem;
+        opacity: 0.7;
+        transition: opacity 0.3s;
+      }
+      .fsg-label strong {
+        display: block;
+      }
+      .fsg-label.is-done {
+        opacity: 1;
+      }
+      .fsg-label.is-edge {
+        left: auto;
+        right: 0;
+        transform: none;
+        text-align: right;
+      }
+      .fsg-label.is-start {
+        left: 0;
+        transform: none;
+        text-align: left;
+      }
+      .cart .fsg-labels {
+        font-size: 1.2rem;
+      }
+    </style>
+  {%- endif -%}
+
+  <script>
+    if (!customElements.get('reward-progress-goal')) {
+      customElements.define(
+        'reward-progress-goal',
+        class extends HTMLElement {
+          connectedCallback() {
+            var rate = Number(window.Shopify && Shopify.currency && Shopify.currency.rate) || 1;
+            this.tiers = (this.dataset.tiers || '')
+              .split(',')
+              .map(Number)
+              .filter(function (amount) {
+                return amount > 0;
+              })
+              .map(function (amount) {
+                return amount * rate;
+              });
+            this.max = Math.max.apply(null, this.tiers);
+            this.bar = this.querySelector('.progress-bar');
+            this.markers = this.querySelectorAll('[data-tier-marker]');
+            this.labels = this.querySelectorAll('[data-tier-label]');
+            this.messages = this.querySelectorAll('[data-tier-msg]');
+            this.onCartUpdated = this.handleCartUpdated.bind(this);
+            document.addEventListener('cart:updated', this.onCartUpdated);
+          }
+          disconnectedCallback() {
+            document.removeEventListener('cart:updated', this.onCartUpdated);
+          }
+          handleCartUpdated(event) {
+            if (event.detail && event.detail.cart) {
+              this.update(event.detail.cart.items_subtotal_price);
+            }
+          }
+          update(cents) {
+            this.classList.toggle('hidden', !(cents > 0));
+            var total = cents / 100;
+            var percent = Math.min(100, (total * 100) / this.max);
+            if (this.bar) this.bar.style.setProperty('--percent', percent + '%');
+            var next = 0;
+            while (next < this.tiers.length && total >= this.tiers[next]) next++;
+            var allDone = next >= this.tiers.length;
+            this.classList.toggle('free-shipping-goal--done', allDone);
+            var tiers = this.tiers;
+            this.markers.forEach(function (marker, i) {
+              marker.classList.toggle('is-done', total >= tiers[i]);
+            });
+            this.labels.forEach(function (label, i) {
+              label.classList.toggle('is-done', total >= tiers[i]);
+            });
+            var activeKey = allDone ? 'done' : String(next + 1);
+            this.messages.forEach(function (message) {
+              var active = message.dataset.tierMsg === activeKey;
+              message.hidden = !active;
+              if (active && !allDone) {
+                var target = message.querySelector('[data-left-to-spend]');
+                if (target) {
+                  target.innerHTML = FoxTheme.Currency.formatMoney(
+                    (tiers[next] - total) * 100,
+                    FoxTheme.settings.moneyFormat
+                  );
+                }
+              }
+            });
+          }
+        }
+      );
+    }
+  </script>
+{%- endif -%}
