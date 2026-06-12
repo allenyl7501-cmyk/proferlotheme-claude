@@ -199,6 +199,22 @@
   display: none;
 }
 
+/* === Cart compare-at savings badge (added) === */
+.cart-savings {
+  margin-top: -0.6rem;
+}
+.cart-savings__badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1a7f4b;
+  background: rgba(26, 127, 75, 0.08);
+  padding: 0.3rem 0.9rem;
+  border-radius: 0.6rem;
+  line-height: 1.4;
+}
+
 .tax-note {
   font-size: 1.2rem;
   line-height: 1.4;
