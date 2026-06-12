@@ -9,6 +9,8 @@
       Use [amount] where the remaining spend should appear.
     - completed_message: shown when all tiers are unlocked.
     - enabled: master on/off switch — set to False to hide the bar everywhere.
+    - promo_enabled + promo_text: set promo_enabled to True to show a coupon-style
+      promo text box INSTEAD of the progression bar (line breaks kept).
 
   Tier 1 amount falls back to theme setting "free_shipping_minimum_amount" when blank.
   NOTE: display only — actual discounts must be configured in Admin → Discounts.
@@ -22,6 +24,11 @@
   assign bar_enabled = true
   if rb.enabled.value == false
     assign bar_enabled = false
+  endif
+
+  assign promo_on = false
+  if rb.promo_enabled.value == true and rb.promo_text.value != blank
+    assign promo_on = true
   endif
 
   assign t1_amount = minimum_amount | plus: 0
@@ -48,7 +55,20 @@
   endif
 -%}
 
-{%- if bar_enabled and max_amount > 0 -%}
+{%- if promo_on -%}
+  <div class="free-shipping-goal fsg-promo{% if classes %} {{ classes }}{% endif %}">
+    {{- rb.promo_text.value | escape | newline_to_br -}}
+  </div>
+  <style>
+    .fsg-promo {
+      border: 0.2rem dashed rgba(var(--color-foreground), 0.45);
+      border-radius: 0.8rem;
+      padding: 1.2rem 1.6rem;
+      text-align: center;
+      line-height: 1.5;
+    }
+  </style>
+{%- elsif bar_enabled and max_amount > 0 -%}
   {%- liquid
     assign cart_cents = cart.total_price | plus: 0
     assign max_cents = max_amount | times: 100
