@@ -9,23 +9,56 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "main-list-collections",
+    "shop_by_room": {
+      "type": "collection-list",
+      "blocks": {
+        "fc_bedroom": { "type": "featured_collection", "settings": { "collection": "bedroom-furniture-shop-by-room", "title": "Bedroom", "description": "" } },
+        "fc_living": { "type": "featured_collection", "settings": { "collection": "living-room-furniture", "title": "Living Room", "description": "" } },
+        "fc_dining": { "type": "featured_collection", "settings": { "collection": "dining-furniture-shop-by-room", "title": "Dining", "description": "" } },
+        "fc_office": { "type": "featured_collection", "settings": { "collection": "office-furniture-shop-by-room", "title": "Home Office", "description": "" } }
+      },
+      "block_order": [ "fc_bedroom", "fc_living", "fc_dining", "fc_office" ],
       "settings": {
-        "sort": "alphabetical",
-        "title": "Collections",
-        "heading_size": "h1",
-        "heading_tag": "h1",
-        "card_image_ratio": "1/1",
-        "columns_desktop": 4,
-        "column_gap": "medium",
-        "columns_mobile": "1",
-        "padding_top": 100,
-        "padding_bottom": 100
+        "color_scheme": "scheme-1", "layout": "standard", "subheading": "Where style meets real life", "heading": "Shop furniture by room", "heading_size": "hd3", "heading_tag": "h1", "heading_highlight_style": "none", "description": "", "text_size": "text-sm", "card_color_inherited": false, "show_product_count": false, "show_icon": false, "card_style": "style-2", "card_image_ratio": "4/3", "content_alignment": "left", "columns_desktop": 4, "column_gap": "small", "row_gap": "inherit", "enable_slider": false, "columns_mobile": "2", "swipe_on_mobile": false, "padding_top": 50, "padding_bottom": 50, "show_section_divider": false, "divider_width": "fixed", "custom_class": ""
+      },
+      "custom_css": [ "@media (max-width: 767.98px) {.collection-card--style-2 .collection-card__inner {position: absolute; }}" ]
+    },
+    "shop_by_category": {
+      "type": "collection-list",
+      "blocks": {
+        "fc_bedframes": { "type": "featured_collection", "settings": { "collection": "bed-frames", "title": "Bed Frames", "description": "" } },
+        "fc_storagebeds": { "type": "featured_collection", "settings": { "collection": "storage-bed-frames", "title": "Storage Beds", "description": "" } },
+        "fc_mattresses": { "type": "featured_collection", "settings": { "collection": "mattresses", "title": "Mattresses", "description": "" } },
+        "fc_bedside": { "type": "featured_collection", "settings": { "collection": "bedside-tables", "title": "Bedside Tables", "description": "" } },
+        "fc_dressers": { "type": "featured_collection", "settings": { "collection": "tallboys-lowboys-dressers", "title": "Dressers & Tallboys", "description": "" } },
+        "fc_sofas": { "type": "featured_collection", "settings": { "collection": "sofas", "title": "Sofas & Chairs", "description": "" } },
+        "fc_coffee": { "type": "featured_collection", "settings": { "collection": "coffee-side-table", "title": "Coffee & Side Tables", "description": "" } },
+        "fc_ent": { "type": "featured_collection", "settings": { "collection": "entertainment-units", "title": "Entertainment Units", "description": "" } },
+        "fc_diningtables": { "type": "featured_collection", "settings": { "collection": "dining-tables", "title": "Dining Tables", "description": "" } },
+        "fc_diningchairs": { "type": "featured_collection", "settings": { "collection": "dining-chairs", "title": "Dining Chairs", "description": "" } },
+        "fc_sideboards": { "type": "featured_collection", "settings": { "collection": "sideboards-storage-cabinets-product-cate", "title": "Sideboards & Shelves", "description": "" } },
+        "fc_storage": { "type": "featured_collection", "settings": { "collection": "shoe-cabinets-storage-cabinets", "title": "Storage Cabinets", "description": "" } }
+      },
+      "block_order": [ "fc_bedframes", "fc_storagebeds", "fc_mattresses", "fc_bedside", "fc_dressers", "fc_sofas", "fc_coffee", "fc_ent", "fc_diningtables", "fc_diningchairs", "fc_sideboards", "fc_storage" ],
+      "settings": {
+        "color_scheme": "scheme-1", "layout": "standard", "subheading": "", "heading": "Shop by category", "heading_size": "h3", "heading_tag": "h2", "heading_highlight_style": "none", "description": "", "text_size": "text-sm", "card_color_inherited": false, "show_product_count": true, "show_icon": false, "card_style": "style-2", "card_image_ratio": "4/3", "content_alignment": "left", "columns_desktop": 4, "column_gap": "small", "row_gap": "inherit", "enable_slider": false, "columns_mobile": "2", "swipe_on_mobile": false, "padding_top": 20, "padding_bottom": 50, "show_section_divider": false, "divider_width": "fixed", "custom_class": ""
+      },
+      "custom_css": [ "@media (max-width: 767.98px) {.collection-card--style-2 .collection-card__inner {position: absolute; }}" ]
+    },
+    "usp": {
+      "type": "usp-strip",
+      "blocks": {
+        "usp_del": { "type": "usp", "settings": { "icon": "truck", "title": "Australia-Wide Delivery", "text": "Dispatched from our Brisbane warehouse", "link": "" } },
+        "usp_cert": { "type": "usp", "settings": { "icon": "seal-check", "title": "FSC & CARB2 Certified", "text": "Responsibly sourced, low-emission materials", "link": "" } },
+        "usp_warr": { "type": "usp", "settings": { "icon": "shield-check", "title": "Warranty Included", "text": "Every product backed by our factory warranty", "link": "" } },
+        "usp_fd": { "type": "usp", "settings": { "icon": "factory", "title": "Factory-Direct Value", "text": "Quality and pricing without the middleman", "link": "" } }
+      },
+      "block_order": [ "usp_del", "usp_cert", "usp_warr", "usp_fd" ],
+      "name": "USP Strip",
+      "settings": {
+        "color_scheme": "scheme-2", "subheading": "", "heading": "", "heading_size": "h3", "layout": "left", "columns_mobile": "2", "icon_size": 30, "icon_color": "", "title_size": 15, "text_size": 13, "padding_top": 36, "padding_bottom": 36, "custom_class": ""
       }
     }
   },
-  "order": [
-    "main"
-  ]
+  "order": [ "shop_by_room", "shop_by_category", "usp" ]
 }
