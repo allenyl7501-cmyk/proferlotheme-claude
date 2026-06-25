@@ -1,0 +1,36 @@
+{%- comment -%}
+  Outputs FAQPage JSON-LD for AI search and Google rich results.
+  Reads the article's custom.faq_schema metafield (type: json).
+  Value: an array of objects, each with a q (question) and a (answer) key.
+  Renders nothing when empty, so it is safe on every article.
+{%- endcomment -%}
+{%- liquid
+  assign faqs = article.metafields.custom.faq_schema.value
+-%}
+{%- if faqs != blank and faqs.size > 0 -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {%- for item in faqs -%}
+    {
+      "@type": "Question",
+      "name": {{ item.q | strip_html | json }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ item.a | strip_html | json }}
+      }
+    }{%- unless forloop.last -%},{%- endunless -%}
+    {%- endfor -%}
+  ]
+}
+</script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "FAQ schema",
+  "settings": []
+}
+{% endschema %}
