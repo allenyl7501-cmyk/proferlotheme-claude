@@ -23,6 +23,12 @@
       },
       "custom_css": [ "@media (max-width: 767.98px) {.collection-card--style-2 .collection-card__inner {position: absolute; }}" ]
     },
+    "featured_products": {
+      "type": "featured-collection",
+      "settings": {
+        "color_scheme": "scheme-1", "header_layout": "vertical", "heading": "Shop our best sellers", "heading_size": "h2", "heading_tag": "h2", "heading_highlight_style": "none", "subheading": "Not sure where to start?", "description": "", "text_size": "text-sm", "show_collection_description": false, "collection": "best-sellers-all-products", "limit": 8, "columns": 4, "column_gap": "extra-small", "row_gap": "inherit", "grid_layout": "standard", "enable_slider": true, "controls_position": "inside", "pcard_image_ratio": "", "columns_mobile": "1", "swipe_on_mobile": true, "show_all_button_on_top": true, "button_label": "Shop all best sellers", "button_style": "btn--secondary", "padding_top": 50, "padding_bottom": 50, "show_section_divider": false, "divider_width": "fixed", "custom_class": ""
+      }
+    },
     "usp": {
       "type": "usp-strip",
       "blocks": {
@@ -38,5 +44,5 @@
       }
     }
   },
-  "order": [ "shop_by_room", "usp" ]
+  "order": [ "shop_by_room", "featured_products", "usp" ]
 }
