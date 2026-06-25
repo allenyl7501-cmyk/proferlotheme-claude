@@ -20,11 +20,12 @@
             "text": "Home"
           }
         },
-        "products_nxDwT3": {
-          "type": "products",
+        "link_4DQTGC": {
+          "type": "link",
           "settings": {
-            "text": "Best Sellers",
-            "collection": "best-sellers-all-products"
+            "text": "Collections",
+            "url": "shopify://collections",
+            "icon": "tag"
           }
         },
         "search_FpAnTE": {
@@ -42,7 +43,7 @@
       },
       "block_order": [
         "home_AJ8h6k",
-        "products_nxDwT3",
+        "link_4DQTGC",
         "search_FpAnTE",
         "cart_je7ERA"
       ],
