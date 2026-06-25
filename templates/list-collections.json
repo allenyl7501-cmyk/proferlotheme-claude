@@ -83,71 +83,12 @@
         "custom_class": ""
       }
     },
-    "usp": {
-      "type": "usp-strip",
-      "blocks": {
-        "usp_del": {
-          "type": "usp",
-          "settings": {
-            "icon": "truck",
-            "title": "2-4 Day Metro Delivery",
-            "text": "Shipped Australia-wide via Allied Express",
-            "link": ""
-          }
-        },
-        "usp_ret": {
-          "type": "usp",
-          "settings": {
-            "icon": "returns",
-            "title": "14-Day Change-of-Mind Returns",
-            "text": "Change your mind within 14 days",
-            "link": ""
-          }
-        },
-        "usp_fd": {
-          "type": "usp",
-          "settings": {
-            "icon": "factory",
-            "title": "Factory-Direct Prices",
-            "text": "No middleman markup",
-            "link": ""
-          }
-        },
-        "usp_pay": {
-          "type": "usp",
-          "settings": {
-            "icon": "credit-card",
-            "title": "Afterpay & Zip",
-            "text": "Buy now, pay later",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "usp_del",
-        "usp_ret",
-        "usp_fd",
-        "usp_pay"
-      ],
-      "name": "USP Strip",
-      "settings": {
-        "color_scheme": "scheme-2",
-        "subheading": "",
-        "heading": "",
-        "heading_size": "h3",
-        "layout": "left",
-        "columns_mobile": "2",
-        "icon_size": 30,
-        "icon_color": "",
-        "title_size": 15,
-        "text_size": 13,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "custom_class": ""
-      }
-    },
     "featured_products": {
       "type": "featured-collection",
+      "custom_css": [
+        ".section__header-wrap {flex-direction: column; align-items: center; text-align: center;}",
+        ".section__header-wrap .btn {margin-inline: auto;}"
+      ],
       "settings": {
         "color_scheme": "scheme-4",
         "header_layout": "vertical",
@@ -179,11 +120,74 @@
         "divider_width": "fixed",
         "custom_class": ""
       }
+    },
+    "usp": {
+      "type": "usp-strip",
+      "blocks": {
+        "usp_del": {
+          "type": "usp",
+          "settings": {
+            "icon": "truck",
+            "title": "2-4 Day Metro Delivery",
+            "text": "Learn more",
+            "link": "shopify://pages/shipping-delivery-policy"
+          }
+        },
+        "usp_ret": {
+          "type": "usp",
+          "settings": {
+            "icon": "returns",
+            "title": "14-Day Change-of-Mind Returns",
+            "text": "Learn more",
+            "link": "shopify://pages/returns-warranty-policy"
+          }
+        },
+        "usp_fd": {
+          "type": "usp",
+          "settings": {
+            "icon": "factory",
+            "title": "Factory-Direct Prices",
+            "text": "Learn more",
+            "link": "shopify://pages/about-us"
+          }
+        },
+        "usp_pay": {
+          "type": "usp",
+          "settings": {
+            "icon": "credit-card",
+            "title": "Buy now, pay later options",
+            "text": "Learn more",
+            "link": "shopify://pages/buy-now-pay-later"
+          }
+        }
+      },
+      "block_order": [
+        "usp_del",
+        "usp_ret",
+        "usp_fd",
+        "usp_pay"
+      ],
+      "name": "USP Strip",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "subheading": "",
+        "heading": "",
+        "heading_size": "h3",
+        "layout": "left",
+        "columns_mobile": "2",
+        "icon_size": 30,
+        "icon_color": "",
+        "title_size": 15,
+        "text_size": 13,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": ""
+      }
     }
   },
   "order": [
     "shop_by_room",
-    "usp",
-    "featured_products"
+    "featured_products",
+    "usp"
   ]
 }
