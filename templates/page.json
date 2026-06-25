@@ -18,6 +18,60 @@
         "padding_bottom": 28
       }
     },
+    "review_trust_summary": {
+      "type": "review-trust-summary",
+      "blocks": {
+        "pillar_authentic": {
+          "type": "pillar",
+          "settings": {
+            "icon": "verified",
+            "title": "Authentic reviews",
+            "text": "Every review is collected and verified through Judge.me from real buyers"
+          }
+        },
+        "pillar_certified": {
+          "type": "pillar",
+          "settings": {
+            "icon": "leaf",
+            "title": "FSC & CARB2 certified",
+            "text": "Responsibly sourced timber and low-emission materials"
+          }
+        },
+        "pillar_dispatch": {
+          "type": "pillar",
+          "settings": {
+            "icon": "truck",
+            "title": "Fast Australia-wide dispatch",
+            "text": "Shipped from our Brisbane (QLD) warehouse"
+          }
+        },
+        "pillar_returns": {
+          "type": "pillar",
+          "settings": {
+            "icon": "shield",
+            "title": "14-day returns & warranty",
+            "text": "Shop with confidence, backed after delivery"
+          }
+        }
+      },
+      "block_order": [
+        "pillar_authentic",
+        "pillar_certified",
+        "pillar_dispatch",
+        "pillar_returns"
+      ],
+      "settings": {
+        "heading": "Why Australian homes trust Proferlo",
+        "target_handle": "our-reviews",
+        "show_summary": true,
+        "summary_heading": "What customers tell us most",
+        "summary_text": "<p>Australian customers consistently praise fast delivery — furniture frequently arriving within just a few days — alongside solid, sturdy construction, straightforward flat-pack assembly and genuine value for money. Time and again, shoppers tell us their pieces look even better in person and feel built to last.</p>",
+        "keywords": "Fast delivery, Easy assembly, Solid quality, Great value, Looks great",
+        "color_scheme": "scheme-1",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
     "1782348046d8fc7c0d": {
       "type": "apps",
       "blocks": {
@@ -45,6 +99,7 @@
   },
   "order": [
     "main",
+    "review_trust_summary",
     "1782348046d8fc7c0d"
   ]
 }
