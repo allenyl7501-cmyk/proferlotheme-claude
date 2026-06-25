@@ -57,6 +57,10 @@
         "comments_heading_size": "h1"
       }
     },
+    "faq_schema": {
+      "type": "faq-schema",
+      "settings": {}
+    },
     "featured_blog_X7HEVz": {
       "type": "featured-blog",
       "name": "t:sections.featured-blog.presets.name",
@@ -90,6 +94,7 @@
   },
   "order": [
     "main",
+    "faq_schema",
     "featured_blog_X7HEVz"
   ]
 }
