@@ -63,13 +63,53 @@
       "settings": {
         "heading": "Why Australian homes trust Proferlo",
         "target_handle": "our-reviews",
-        "show_summary": true,
+        "show_summary": false,
         "summary_heading": "What customers tell us most",
         "summary_text": "<p>Australian customers consistently praise fast delivery — furniture frequently arriving within just a few days — alongside solid, sturdy construction, straightforward flat-pack assembly and genuine value for money. Time and again, shoppers tell us their pieces look even better in person and feel built to last.</p>",
         "keywords": "Fast delivery, Easy assembly, Solid quality, Great value, Looks great",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-2",
         "padding_top": 40,
         "padding_bottom": 40
+      }
+    },
+    "178235218161dfeae5": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_store_summary_wrbEwc": {
+          "type": "shopify://apps/judge-me-reviews/blocks/store_summary/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "data_source": "real",
+            "theme": "expanded",
+            "button_theme_color": "#FFFFFF",
+            "button_theme_text_color": "#000000",
+            "show_keywords": true,
+            "keywords_visibility": "shown",
+            "show_button": false,
+            "button_visibility": "shown",
+            "alignment": "left",
+            "title_size": "default",
+            "text_size": "default",
+            "corner_styling": "soft",
+            "widget_color": "#F9F9F9",
+            "text_color": "#000000",
+            "lighter_text_color": "#787878",
+            "button_color": "#108474",
+            "button_text_color": "#FFFFFF",
+            "show_sentiment_colors": false,
+            "max_width": 1100,
+            "heading_text": "What Aussies are saying about Proferlo..",
+            "button_text": "See AI reviews summary"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_store_summary_wrbEwc"
+      ],
+      "settings": {
+        "include_margins": true,
+        "padding_top": 20,
+        "padding_bottom": 0,
+        "custom_class": ""
       }
     },
     "1782348046d8fc7c0d": {
@@ -100,6 +140,7 @@
   "order": [
     "main",
     "review_trust_summary",
+    "178235218161dfeae5",
     "1782348046d8fc7c0d"
   ]
 }
