@@ -11,6 +11,47 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "mobile_sticky_bar_kfLXbq": {
+      "type": "mobile-sticky-bar",
+      "blocks": {
+        "home_AJ8h6k": {
+          "type": "home",
+          "settings": {
+            "text": "Home"
+          }
+        },
+        "products_nxDwT3": {
+          "type": "products",
+          "settings": {
+            "text": "Best Sellers",
+            "collection": "best-sellers-all-products"
+          }
+        },
+        "search_FpAnTE": {
+          "type": "search",
+          "settings": {
+            "text": "Search"
+          }
+        },
+        "cart_je7ERA": {
+          "type": "cart",
+          "settings": {
+            "text": "Cart"
+          }
+        }
+      },
+      "block_order": [
+        "home_AJ8h6k",
+        "products_nxDwT3",
+        "search_FpAnTE",
+        "cart_je7ERA"
+      ],
+      "name": "t:sections.mobile-sticky-bar.name",
+      "settings": {
+        "enable_sticky_bar": true,
+        "show_text": true
+      }
+    },
     "footer": {
       "type": "footer",
       "blocks": {
@@ -89,6 +130,7 @@
     }
   },
   "order": [
+    "mobile_sticky_bar_kfLXbq",
     "footer"
   ]
 }
