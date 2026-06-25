@@ -20,14 +20,6 @@
             "description": ""
           }
         },
-        "fc_bedframes": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "bed-frames",
-            "title": "Bed Frames",
-            "description": ""
-          }
-        },
         "fc_living": {
           "type": "featured_collection",
           "settings": {
@@ -47,7 +39,6 @@
       },
       "block_order": [
         "fc_bedroom",
-        "fc_bedframes",
         "fc_living",
         "fc_dining"
       ],
@@ -56,7 +47,7 @@
       ],
       "settings": {
         "color_scheme": "scheme-4",
-        "layout": "standard",
+        "layout": "split",
         "subheading": "Good design shouldn't need a markup",
         "heading": "Shop by room",
         "heading_size": "hd3",
@@ -74,7 +65,7 @@
         "column_gap": "small",
         "row_gap": "inherit",
         "enable_slider": false,
-        "columns_mobile": "2",
+        "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 50,
         "padding_bottom": 50,
@@ -83,40 +74,94 @@
         "custom_class": ""
       }
     },
-    "featured_products": {
-      "type": "featured-collection",
+    "collection_list_Bnh6QP": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_M7TaFN": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "storage-bed-frames",
+            "title": "",
+            "description": ""
+          }
+        },
+        "featured_collection_8WPdqn": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "title": "",
+            "description": ""
+          }
+        },
+        "featured_collection_FyJfen": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "title": "",
+            "description": ""
+          }
+        },
+        "featured_collection_JhYaYe": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "title": "",
+            "description": ""
+          }
+        },
+        "featured_collection_9g7KnQ": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "title": "",
+            "description": ""
+          }
+        },
+        "featured_collection_Rr6Qzt": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "title": "",
+            "description": ""
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_M7TaFN",
+        "featured_collection_8WPdqn",
+        "featured_collection_FyJfen",
+        "featured_collection_JhYaYe",
+        "featured_collection_9g7KnQ",
+        "featured_collection_Rr6Qzt"
+      ],
       "custom_css": [
-        ".section__header-wrap {flex-direction: column; align-items: center; text-align: center;}",
-        ".section__header-wrap .btn {margin-inline: auto;}"
+        "@media (max-width: 767.98px) {.collection-card--style-2 .collection-card__inner {position: absolute; }}"
       ],
       "settings": {
         "color_scheme": "scheme-4",
-        "header_layout": "vertical",
-        "heading": "Shop our best sellers",
-        "heading_size": "h2",
+        "layout": "split",
+        "subheading": "",
+        "heading": "Shop by category",
+        "heading_size": "h3",
         "heading_tag": "h2",
         "heading_highlight_style": "none",
-        "subheading": "Not sure where to start?",
         "description": "",
         "text_size": "text-sm",
-        "show_collection_description": false,
-        "collection": "best-sellers-all-products",
-        "limit": 12,
-        "columns": 4,
-        "column_gap": "extra-small",
+        "card_color_inherited": false,
+        "show_product_count": false,
+        "show_icon": false,
+        "card_style": "style-2",
+        "card_image_ratio": "4/3",
+        "content_alignment": "left",
+        "columns_desktop": 3,
+        "column_gap": "small",
         "row_gap": "inherit",
-        "grid_layout": "standard",
         "enable_slider": true,
-        "controls_position": "inside",
-        "pcard_image_ratio": "",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "show_all_button_on_top": true,
-        "button_label": "Shop all best sellers",
-        "button_style": "btn--secondary",
         "padding_top": 50,
         "padding_bottom": 50,
-        "show_section_divider": false,
+        "show_section_divider": true,
         "divider_width": "fixed",
         "custom_class": ""
       }
@@ -169,13 +214,13 @@
       ],
       "name": "USP Strip",
       "settings": {
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-11",
         "subheading": "",
         "heading": "",
         "heading_size": "h3",
         "layout": "left",
         "columns_mobile": "2",
-        "icon_size": 30,
+        "icon_size": 36,
         "icon_color": "",
         "title_size": 15,
         "text_size": 13,
@@ -183,11 +228,108 @@
         "padding_bottom": 36,
         "custom_class": ""
       }
+    },
+    "collections_slider_7eXaL6": {
+      "type": "collections-slider",
+      "blocks": {
+        "collection_j49UyD": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "",
+            "collection": "arezzo-series",
+            "image": "shopify://shop_images/34397afeaebaf1496795488508bead8b_9fa10395-8d29-480e-8ffe-205fc5d1d196.jpg",
+            "title": "",
+            "title_size": "h4",
+            "description": "",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_style": "btn--underline",
+            "image_2": "shopify://shop_images/ChatGPT_Image_Oct_29_2025_12_13_49_PM.png"
+          }
+        },
+        "collection_bN7Q9L": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "",
+            "collection": "",
+            "title": "",
+            "title_size": "hd2",
+            "description": "",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_style": "btn--underline"
+          }
+        }
+      },
+      "block_order": [
+        "collection_j49UyD",
+        "collection_bN7Q9L"
+      ],
+      "name": "t:sections.collections-slider.name",
+      "settings": {
+        "color_scheme": "scheme-4",
+        "use_color_scheme_in_container": false,
+        "show_product_count": false,
+        "heading": "Curated Collections",
+        "heading_size": "h6",
+        "heading_tag": "h2",
+        "heading_highlight_style": "none",
+        "subheading": "",
+        "image_ratio": "1/1",
+        "slider_position": "left",
+        "autoplay": false,
+        "autoplay_delay": 3,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "custom_class": ""
+      }
+    },
+    "featured_products": {
+      "type": "featured-collection",
+      "custom_css": [
+        ".section__header-wrap {flex-direction: column; align-items: center; text-align: center;}",
+        ".section__header-wrap .btn {margin-inline: auto;}"
+      ],
+      "settings": {
+        "color_scheme": "scheme-4",
+        "header_layout": "vertical",
+        "heading": "Shop our best sellers",
+        "heading_size": "h2",
+        "heading_tag": "h2",
+        "heading_highlight_style": "none",
+        "subheading": "Not sure where to start?",
+        "description": "",
+        "text_size": "text-sm",
+        "show_collection_description": false,
+        "collection": "best-sellers-all-products",
+        "limit": 12,
+        "columns": 4,
+        "column_gap": "extra-small",
+        "row_gap": "inherit",
+        "grid_layout": "standard",
+        "enable_slider": true,
+        "controls_position": "inside",
+        "pcard_image_ratio": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "show_all_button_on_top": true,
+        "button_label": "Shop all best sellers",
+        "button_style": "btn--secondary",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "show_section_divider": true,
+        "divider_width": "fixed",
+        "custom_class": ""
+      }
     }
   },
   "order": [
     "shop_by_room",
-    "featured_products",
-    "usp"
+    "collection_list_Bnh6QP",
+    "usp",
+    "collections_slider_7eXaL6",
+    "featured_products"
   ]
 }
