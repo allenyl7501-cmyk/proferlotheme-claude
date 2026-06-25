@@ -34,28 +34,28 @@
           "type": "link",
           "settings": {
             "label": "FAQs",
-            "link": ""
+            "link": "shopify://pages/frequently-asked-questions"
           }
         },
         "link_kVbDb3": {
           "type": "link",
           "settings": {
             "label": "Reviews",
-            "link": ""
+            "link": "shopify://pages/our-reviews"
           }
         },
         "link_fXKjb6": {
           "type": "link",
           "settings": {
             "label": "Contact Us",
-            "link": ""
+            "link": "shopify://pages/contact-us"
           }
         },
         "link_CtjEDg": {
           "type": "link",
           "settings": {
             "label": "Trade",
-            "link": ""
+            "link": "shopify://pages/trade"
           }
         }
       },
