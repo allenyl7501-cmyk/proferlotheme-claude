@@ -229,7 +229,8 @@
             "arrows_color": "#000000",
             "transition_speed": 5,
             "header_text": "What Our Customers Have To Say",
-            "show_average_rating": true
+            "show_average_rating": true,
+            "rating_display": "default"
           }
         }
       },
@@ -272,7 +273,7 @@
           "type": "button",
           "settings": {
             "button_label": "Learn more",
-            "button_link": "",
+            "button_link": "shopify://pages/sustainability",
             "button_style": "btn--underline"
           }
         }

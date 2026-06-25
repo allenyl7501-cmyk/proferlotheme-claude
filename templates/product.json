@@ -82,7 +82,7 @@
             "title_font": "body",
             "title_size": "text-base",
             "icon_1": "heart",
-            "heading_1": "<strong>14 day returns</strong>",
+            "heading_1": "<strong>14 Day returns</strong>",
             "icon_2": "truck",
             "heading_2": "<strong>Fast Nationwide Shipping</strong>",
             "icon_3": "seal-check",
@@ -317,6 +317,29 @@
         "custom_class": ""
       }
     },
+    "1779341331f959a4d0": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_YL73Mc": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "real_data",
+            "max_width": 1000,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_YL73Mc"
+      ],
+      "settings": {
+        "include_margins": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "custom_class": ""
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -340,29 +363,6 @@
         "padding_bottom": 100,
         "show_section_divider": false,
         "divider_width": "fixed",
-        "custom_class": ""
-      }
-    },
-    "1779341331f959a4d0": {
-      "type": "apps",
-      "blocks": {
-        "judge_me_reviews_review_widget_YL73Mc": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-            "review_data": "real_data",
-            "max_width": 1000,
-            "show_shop_reviews": false,
-            "empty_state": "empty_widget"
-          }
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_review_widget_YL73Mc"
-      ],
-      "settings": {
-        "include_margins": true,
-        "padding_top": 0,
-        "padding_bottom": 0,
         "custom_class": ""
       }
     }
