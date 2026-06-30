@@ -74,13 +74,27 @@
         "direction": "left",
         "pause_on_hover": true,
         "speed": 0.5,
-        "h_spacing": 160,
+        "h_spacing": 130,
         "v_spacing": 0,
         "padding_top": 0,
         "padding_bottom": 0,
         "show_divider": false,
         "divider_layout": "vertical",
         "custom_class": ""
+      }
+    },
+    "promo_band_iDhR6e": {
+      "type": "promo-band",
+      "name": "Promo Band",
+      "settings": {
+        "heading": "New Financial Year Sale",
+        "subheading": "Australia's Best Value Furniture",
+        "button_label": "Up to 40% off Storewide",
+        "button_link": "",
+        "caption": "Shipped Australia-wide",
+        "color_scheme": "scheme-67204ab8-6766-45d6-94c3-14bcba65935f",
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     },
     "collection_list_Pr36qH": {
@@ -219,7 +233,7 @@
         "text_size": "text-base",
         "item_alignment": "center",
         "icon_size": "extra-small",
-        "swipe_on_mobile": true,
+        "swipe_on_mobile": false,
         "padding_top": 30,
         "padding_bottom": 10,
         "show_section_divider": true,
@@ -732,25 +746,12 @@
         "divider_width": "fixed",
         "custom_class": ""
       }
-    },
-    "promo_band_iDhR6e": {
-      "type": "promo-band",
-      "name": "Promo Band",
-      "settings": {
-        "heading": "New Financial Year Sale",
-        "subheading": "Design-led furniture, straight from our factory.",
-        "button_label": "Shop the Sale",
-        "button_link": "",
-        "caption": "Shipped Australia-wide",
-        "color_scheme": "",
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
     }
   },
   "order": [
     "slideshow_WWriMK",
     "scrolling_promotion_VEp8X8",
+    "promo_band_iDhR6e",
     "collection_list_Pr36qH",
     "feature_list_iF63p8",
     "video_hero_AtQKVU",
@@ -761,7 +762,6 @@
     "rich_text_JMzwcB",
     "1781060174483db7d2",
     "collapsible_tabs_KNKLiF",
-    "layered_images_with_text_mCxbTm",
-    "promo_band_iDhR6e"
+    "layered_images_with_text_mCxbTm"
   ]
 }
