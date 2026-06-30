@@ -742,6 +742,50 @@
         "divider_width": "fixed",
         "custom_class": ""
       }
+    },
+    "rich_text_JaJxyR": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_PbtzPR": {
+          "type": "heading",
+          "settings": {
+            "heading": "Mid Season Sale",
+            "heading_size": "hd1",
+            "heading_tag": "h2",
+            "heading_highlight_style": "none"
+          }
+        },
+        "text_T6Ew64": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text_size": "text-base"
+          }
+        },
+        "button_trwEfz": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "btn--primary"
+          }
+        }
+      },
+      "block_order": [
+        "heading_PbtzPR",
+        "text_T6Ew64",
+        "button_trwEfz"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "color_scheme": "",
+        "content_alignment": "left",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "custom_class": ""
+      }
     }
   },
   "order": [
@@ -757,6 +801,7 @@
     "rich_text_JMzwcB",
     "1781060174483db7d2",
     "collapsible_tabs_KNKLiF",
-    "layered_images_with_text_mCxbTm"
+    "layered_images_with_text_mCxbTm",
+    "rich_text_JaJxyR"
   ]
 }
