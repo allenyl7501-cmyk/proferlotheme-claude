@@ -191,6 +191,7 @@
           "type": "image_card",
           "settings": {
             "color_scheme": "scheme-260dd0dc-3183-4ca0-acf7-4a216e4dcaf7",
+            "image": "shopify://shop_images/DSC_4544_2000x1600_f86922c2-9629-4cbe-bfc4-8672abdcd2e9.webp",
             "image_overlay_opacity": 20,
             "heading": "Arezzo",
             "heading_size": "hd3",
@@ -203,14 +204,15 @@
             "content_alignment": "left",
             "content_spacing": "small",
             "card_link": "",
-            "content_position_mobile": "top-center",
-            "content_alignment_mobile": "center"
+            "content_position_mobile": "bottom-center",
+            "content_alignment_mobile": "left"
           }
         },
         "image_card_tHQMWM": {
           "type": "image_card",
           "settings": {
             "color_scheme": "scheme-260dd0dc-3183-4ca0-acf7-4a216e4dcaf7",
+            "image": "shopify://shop_images/JBP3260_2000x1600_33cbc854-e504-4a08-ad30-c474cdc4f687.webp",
             "image_overlay_opacity": 20,
             "heading": "Platsa",
             "heading_size": "hd3",
@@ -223,7 +225,7 @@
             "content_alignment": "left",
             "content_spacing": "small",
             "card_link": "",
-            "content_position_mobile": "top-center",
+            "content_position_mobile": "bottom-center",
             "content_alignment_mobile": "center"
           }
         },
@@ -231,6 +233,7 @@
           "type": "image_card",
           "settings": {
             "color_scheme": "scheme-260dd0dc-3183-4ca0-acf7-4a216e4dcaf7",
+            "image": "shopify://shop_images/v2_awi-59e68163b0225308_2000x1600_3f77b614-4907-4855-bed4-9354e6f59e02.webp",
             "image_overlay_opacity": 20,
             "heading": "Legnano",
             "heading_size": "hd3",
@@ -243,7 +246,7 @@
             "content_alignment": "left",
             "content_spacing": "small",
             "card_link": "",
-            "content_position_mobile": "top-center",
+            "content_position_mobile": "bottom-center",
             "content_alignment_mobile": "center"
           }
         },
@@ -251,6 +254,7 @@
           "type": "image_card",
           "settings": {
             "color_scheme": "scheme-260dd0dc-3183-4ca0-acf7-4a216e4dcaf7",
+            "image": "shopify://shop_images/JBP2991_2000x1600_6416a393-8917-4480-ac76-37dbbf783038.webp",
             "image_overlay_opacity": 20,
             "heading": "Stoven",
             "heading_size": "hd3",
@@ -263,7 +267,7 @@
             "content_alignment": "left",
             "content_spacing": "small",
             "card_link": "",
-            "content_position_mobile": "top-center",
+            "content_position_mobile": "bottom-center",
             "content_alignment_mobile": "center"
           }
         },
@@ -271,6 +275,7 @@
           "type": "image_card",
           "settings": {
             "color_scheme": "scheme-260dd0dc-3183-4ca0-acf7-4a216e4dcaf7",
+            "image": "shopify://shop_images/CorsiStorageBedframe-4_2000x1600_7b59c3a2-a8cb-4ec5-be14-ad87d92e8eb6.webp",
             "image_overlay_opacity": 20,
             "heading": "Corsi",
             "heading_size": "hd3",
@@ -283,7 +288,7 @@
             "content_alignment": "left",
             "content_spacing": "small",
             "card_link": "",
-            "content_position_mobile": "top-center",
+            "content_position_mobile": "bottom-center",
             "content_alignment_mobile": "center"
           }
         }
@@ -299,13 +304,13 @@
       "settings": {
         "color_scheme": "",
         "subheading": "",
-        "heading": "Curated Series",
+        "heading": "Curated Furniture Series",
         "heading_size": "h3",
         "heading_tag": "h2",
         "heading_highlight_style": "none",
         "description": "",
         "description_size": "text-base",
-        "image_ratio": "adapt",
+        "image_ratio": "4/3",
         "enable_equal_height": false,
         "columns_desktop": 2,
         "column_gap": "extra-small",
