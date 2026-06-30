@@ -131,7 +131,7 @@
           "settings": {
             "calculator_background_color": "rgba(0,0,0,0)",
             "open_link_font_size": 16,
-            "open_link_bold": true,
+            "open_link_bold": false,
             "open_link_italic": false,
             "open_link_underline": true,
             "open_link_text_color": "#121212",
