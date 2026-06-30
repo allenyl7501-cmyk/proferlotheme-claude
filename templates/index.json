@@ -93,6 +93,7 @@
         "button_link": "",
         "caption": "Shipped Australia-wide",
         "color_scheme": "scheme-67204ab8-6766-45d6-94c3-14bcba65935f",
+        "band_background": "#f1f0ec",
         "padding_top": 20,
         "padding_bottom": 20
       }
@@ -723,6 +724,7 @@
         "image_hEXAE7",
         "image_KUfgbe"
       ],
+      "disabled": true,
       "custom_css": [
         ".cert-badge img {width: 150px !important; height: 150px !important; object-fit: contain !important;}",
         "@media (max-width: 749px) {.cert-badge img {width: 90px !important; height: 90px !important; }}"
@@ -746,6 +748,97 @@
         "divider_width": "fixed",
         "custom_class": ""
       }
+    },
+    "card_images_cznTwC": {
+      "type": "card-images",
+      "blocks": {
+        "image_card_dcXdjV": {
+          "type": "image_card",
+          "settings": {
+            "color_scheme": "",
+            "image_overlay_opacity": 0,
+            "heading": "Image card",
+            "heading_size": "hd2",
+            "subheading": "",
+            "description": "<p>Tell your brand's story through images</p>",
+            "description_size": "text-lg",
+            "button_label": "Button label",
+            "button_style": "btn--primary",
+            "content_position": "middle-left",
+            "content_alignment": "left",
+            "content_spacing": "large",
+            "card_link": "",
+            "content_position_mobile": "top-center",
+            "content_alignment_mobile": "center"
+          }
+        },
+        "image_card_gWYEcF": {
+          "type": "image_card",
+          "settings": {
+            "color_scheme": "",
+            "image_overlay_opacity": 0,
+            "heading": "Image card",
+            "heading_size": "hd2",
+            "subheading": "",
+            "description": "<p>Tell your brand's story through images</p>",
+            "description_size": "text-lg",
+            "button_label": "Button label",
+            "button_style": "btn--primary",
+            "content_position": "middle-left",
+            "content_alignment": "left",
+            "content_spacing": "large",
+            "card_link": "",
+            "content_position_mobile": "top-center",
+            "content_alignment_mobile": "center"
+          }
+        },
+        "image_card_c8fGMf": {
+          "type": "image_card",
+          "settings": {
+            "color_scheme": "",
+            "image_overlay_opacity": 0,
+            "heading": "Image card",
+            "heading_size": "hd2",
+            "subheading": "",
+            "description": "<p>Tell your brand's story through images</p>",
+            "description_size": "text-lg",
+            "button_label": "Button label",
+            "button_style": "btn--primary",
+            "content_position": "middle-left",
+            "content_alignment": "left",
+            "content_spacing": "large",
+            "card_link": "",
+            "content_position_mobile": "top-center",
+            "content_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_card_dcXdjV",
+        "image_card_gWYEcF",
+        "image_card_c8fGMf"
+      ],
+      "name": "t:sections.card-images.name",
+      "settings": {
+        "color_scheme": "",
+        "subheading": "",
+        "heading": "Card images",
+        "heading_size": "h1",
+        "heading_tag": "h2",
+        "heading_highlight_style": "none",
+        "description": "",
+        "description_size": "text-base",
+        "image_ratio": "adapt",
+        "enable_equal_height": false,
+        "columns_desktop": 2,
+        "column_gap": "extra-small",
+        "enable_slider": true,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "custom_class": ""
+      }
     }
   },
   "order": [
@@ -762,6 +855,7 @@
     "rich_text_JMzwcB",
     "1781060174483db7d2",
     "collapsible_tabs_KNKLiF",
-    "layered_images_with_text_mCxbTm"
+    "layered_images_with_text_mCxbTm",
+    "card_images_cznTwC"
   ]
 }
