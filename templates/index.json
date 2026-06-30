@@ -104,7 +104,7 @@
       ],
       "settings": {
         "color_scheme": "scheme-1",
-        "layout": "standard",
+        "layout": "split",
         "subheading": "Good design shouldn't need a markup",
         "heading": "Designer Quality. Factory-direct prices",
         "heading_size": "hd3",
@@ -137,7 +137,7 @@
         "heading_eiyPQT": {
           "type": "heading",
           "settings": {
-            "heading": "Solid ash bed frame. Assembles itself, almost.",
+            "heading": "Solid ash bed frame that assembles itself, almost.",
             "heading_size": "h5",
             "heading_tag": "h2",
             "heading_highlight_style": "none"
@@ -147,7 +147,7 @@
           "type": "button",
           "settings": {
             "button_label": "See the Aria Solid Wood Bed Base",
-            "button_link": "",
+            "button_link": "shopify://products/b1065-bed-base-new",
             "button_style": "btn--primary"
           }
         }
@@ -175,9 +175,65 @@
         "content_alignment": "center",
         "video_mobile_height": "auto",
         "padding_top": 30,
+        "padding_bottom": 0,
+        "show_section_divider": true,
+        "divider_width": "fixed",
+        "custom_class": ""
+      }
+    },
+    "feature_list_iF63p8": {
+      "type": "feature-list",
+      "blocks": {
+        "feature_item_EP6wjz": {
+          "type": "feature_item",
+          "settings": {
+            "color_scheme": "",
+            "icon": "check",
+            "icon_style": "btn--secondary",
+            "text": "Tool Free Assembly"
+          }
+        },
+        "feature_item_cjYCwf": {
+          "type": "feature_item",
+          "settings": {
+            "color_scheme": "",
+            "icon": "check",
+            "icon_style": "btn--secondary",
+            "text": "Prem"
+          }
+        },
+        "feature_item_wA6UAM": {
+          "type": "feature_item",
+          "settings": {
+            "color_scheme": "",
+            "icon": "check",
+            "icon_style": "btn--secondary",
+            "text": "Feature"
+          }
+        }
+      },
+      "block_order": [
+        "feature_item_EP6wjz",
+        "feature_item_cjYCwf",
+        "feature_item_wA6UAM"
+      ],
+      "name": "Feature list",
+      "settings": {
+        "color_scheme": "",
+        "subheading": "",
+        "heading": "",
+        "heading_size": "h2",
+        "heading_tag": "h2",
+        "heading_highlight_style": "none",
+        "description": "",
+        "text_size": "text-base",
+        "item_alignment": "center",
+        "icon_size": "extra-medium",
+        "swipe_on_mobile": true,
+        "padding_top": 0,
         "padding_bottom": 50,
         "show_section_divider": false,
-        "divider_width": "full",
+        "divider_width": "fixed",
         "custom_class": ""
       }
     },
@@ -223,7 +279,7 @@
         "button_label": "Shop Best Sellers",
         "button_link": "shopify://collections/best-sellers-all-products",
         "button_style": "btn--secondary",
-        "tabs_nav_style": "design-2",
+        "tabs_nav_style": "design-1",
         "padding_top": 50,
         "padding_bottom": 50,
         "show_section_divider": true,
@@ -231,66 +287,38 @@
         "custom_class": ""
       }
     },
-    "usp_strip_D9Vwiq": {
-      "type": "usp-strip",
-      "blocks": {
-        "usp_qwxX8M": {
-          "type": "usp",
-          "settings": {
-            "icon": "truck",
-            "title": "Australia-Wide Delivery",
-            "text": "Dispatched from our Brisbane warehouse",
-            "link": ""
-          }
-        },
-        "usp_FYywne": {
-          "type": "usp",
-          "settings": {
-            "icon": "leaf",
-            "title": "FSC & CARB2 Certified",
-            "text": "Responsibly sourced, low-emission materials",
-            "link": ""
-          }
-        },
-        "usp_9Aiz3H": {
-          "type": "usp",
-          "settings": {
-            "icon": "shield-check",
-            "title": "Warranty Included",
-            "text": "Every product backed by our factory warranty",
-            "link": ""
-          }
-        },
-        "usp_Y9AAXM": {
-          "type": "usp",
-          "settings": {
-            "icon": "factory",
-            "title": "Factory-Direct Value",
-            "text": "Quality and pricing without the middleman",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "usp_qwxX8M",
-        "usp_FYywne",
-        "usp_9Aiz3H",
-        "usp_Y9AAXM"
-      ],
-      "name": "USP Strip",
+    "featured_collection_RAMRLJ": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "color_scheme": "scheme-2",
-        "subheading": "",
-        "heading": "",
-        "heading_size": "h3",
-        "layout": "left",
-        "columns_mobile": "2",
-        "icon_size": 30,
-        "icon_color": "",
-        "title_size": 15,
-        "text_size": 13,
-        "padding_top": 36,
-        "padding_bottom": 36,
+        "color_scheme": "",
+        "header_layout": "standing-column",
+        "heading": "Storage Bedframes",
+        "heading_size": "h1",
+        "heading_tag": "h2",
+        "heading_highlight_style": "none",
+        "subheading": "Style Meets Storage",
+        "description": "<p>Storage bed frames with built-in storage, made factory-direct and delivered flat-packed across Australia. Room for spare linen and off-season clothes underneath — no extra dresser, just a calmer bedroom that feels bigger than it is.</p>",
+        "text_size": "text-sm",
+        "show_collection_description": false,
+        "collection": "storage-bed-frames",
+        "limit": 8,
+        "columns": 3,
+        "column_gap": "small",
+        "row_gap": "inherit",
+        "grid_layout": "standard",
+        "enable_slider": true,
+        "controls_position": "inside",
+        "pcard_image_ratio": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "show_all_button_on_top": false,
+        "button_label": "View All Storage Bedframes",
+        "button_style": "btn--underline",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "show_section_divider": true,
+        "divider_width": "fixed",
         "custom_class": ""
       }
     },
@@ -600,18 +628,55 @@
         "divider_width": "fixed",
         "custom_class": ""
       }
+    },
+    "featured_collection_wdxiPB": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "color_scheme": "",
+        "header_layout": "standing-column",
+        "heading": "Storage Bedframes",
+        "heading_size": "h1",
+        "heading_tag": "h2",
+        "heading_highlight_style": "none",
+        "subheading": "Style Meets Storage",
+        "description": "<p>Storage bed frames with built-in storage, made factory-direct and delivered flat-packed across Australia. Room for spare linen and off-season clothes underneath — no extra dresser, just a calmer bedroom that feels bigger than it is.</p>",
+        "text_size": "text-sm",
+        "show_collection_description": false,
+        "collection": "storage-bed-frames",
+        "limit": 8,
+        "columns": 3,
+        "column_gap": "small",
+        "row_gap": "inherit",
+        "grid_layout": "standard",
+        "enable_slider": true,
+        "controls_position": "inside",
+        "pcard_image_ratio": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "show_all_button_on_top": false,
+        "button_label": "View All Storage Bedframes",
+        "button_style": "btn--underline",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "custom_class": ""
+      }
     }
   },
   "order": [
     "slideshow_WWriMK",
     "collection_list_Pr36qH",
     "video_hero_AtQKVU",
+    "feature_list_iF63p8",
     "product_tabs_iJHLzK",
-    "usp_strip_D9Vwiq",
+    "featured_collection_RAMRLJ",
     "17787259545fe07a92",
     "rich_text_JMzwcB",
     "1781060174483db7d2",
     "collapsible_tabs_KNKLiF",
-    "layered_images_with_text_mCxbTm"
+    "layered_images_with_text_mCxbTm",
+    "featured_collection_wdxiPB"
   ]
 }
