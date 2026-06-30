@@ -60,6 +60,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "bedroom-furniture-shop-by-room",
+            "image": "shopify://shop_images/JBP3260_1080x600_82316786-eaf2-457a-8c65-0f14be4c44a1.jpg",
             "title": "Bedroom",
             "description": ""
           }
@@ -68,6 +69,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "living-room-furniture",
+            "image": "shopify://shop_images/DSC_4396_1080x600_4bac5c3a-a6d7-487d-8a24-a9a31dad8bf0.jpg",
             "title": "Living Room",
             "description": ""
           }
@@ -76,7 +78,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "dining-furniture-shop-by-room",
-            "image": "shopify://shop_images/v2_80646a7a-0f05-4b38-9b4f-c47f8300294e.jpg",
+            "image": "shopify://shop_images/v2_1080x600_d2db8713-d0a2-4edf-a4dd-e7d09b72aa08.jpg",
             "title": "Dining",
             "description": ""
           }
@@ -85,7 +87,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "storage-bed-frames",
-            "image": "shopify://shop_images/Proferlo_-41.jpg",
+            "image": "shopify://shop_images/Proferlo_-41_1080x600_7360f310-1e42-4759-93bf-a1a0863dadcf.jpg",
             "title": "Storage Beds",
             "description": ""
           }
@@ -114,85 +116,16 @@
         "show_product_count": false,
         "show_icon": false,
         "card_style": "style-2",
-        "card_image_ratio": "4/3",
+        "card_image_ratio": "adapt",
         "content_alignment": "left",
-        "columns_desktop": 4,
-        "column_gap": "small",
-        "row_gap": "inherit",
+        "columns_desktop": 2,
+        "column_gap": "extra-small",
+        "row_gap": "extra-small",
         "enable_slider": false,
-        "columns_mobile": "2",
+        "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 50,
         "padding_bottom": 50,
-        "show_section_divider": false,
-        "divider_width": "fixed",
-        "custom_class": ""
-      }
-    },
-    "feature_list_cW3d9c": {
-      "type": "feature-list",
-      "blocks": {
-        "feature_item_NzxQGa": {
-          "type": "feature_item",
-          "settings": {
-            "color_scheme": "",
-            "icon": "check",
-            "icon_style": "btn--secondary",
-            "text": "14-Day Satisfaction Promise"
-          }
-        },
-        "feature_item_gBgLft": {
-          "type": "feature_item",
-          "settings": {
-            "color_scheme": "",
-            "icon": "gear",
-            "icon_style": "btn--secondary",
-            "text": "Factory Direct Pricing"
-          }
-        },
-        "feature_item_R8A8eX": {
-          "type": "feature_item",
-          "settings": {
-            "color_scheme": "",
-            "icon": "truck",
-            "icon_style": "btn--secondary",
-            "text": "Nationwide Express Shipping"
-          }
-        },
-        "feature_item_yyNV9A": {
-          "type": "feature_item",
-          "settings": {
-            "color_scheme": "",
-            "icon": "globe",
-            "icon_style": "btn--secondary",
-            "text": "FSC & CARB2 Certifed"
-          }
-        }
-      },
-      "block_order": [
-        "feature_item_NzxQGa",
-        "feature_item_gBgLft",
-        "feature_item_R8A8eX",
-        "feature_item_yyNV9A"
-      ],
-      "disabled": true,
-      "custom_css": [
-        "@media (max-width: 767px) {.swipe-mobile .feature-item__text {text-wrap: nowrap; }}"
-      ],
-      "settings": {
-        "color_scheme": "scheme-1",
-        "subheading": "",
-        "heading": "",
-        "heading_size": "h2",
-        "heading_tag": "h2",
-        "heading_highlight_style": "none",
-        "description": "",
-        "text_size": "text-base",
-        "item_alignment": "center",
-        "icon_size": "large",
-        "swipe_on_mobile": true,
-        "padding_top": 16,
-        "padding_bottom": 16,
         "show_section_divider": false,
         "divider_width": "fixed",
         "custom_class": ""
@@ -270,6 +203,7 @@
         "tab_9cGBUe",
         "tab_Yz8Mnz"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "",
         "header_layout": "vertical",
@@ -671,7 +605,6 @@
   "order": [
     "slideshow_WWriMK",
     "collection_list_Pr36qH",
-    "feature_list_cW3d9c",
     "video_hero_AtQKVU",
     "product_tabs_iJHLzK",
     "usp_strip_D9Vwiq",
