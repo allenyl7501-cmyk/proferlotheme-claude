@@ -191,16 +191,15 @@
           "type": "image_card",
           "settings": {
             "color_scheme": "scheme-260dd0dc-3183-4ca0-acf7-4a216e4dcaf7",
-            "image": "shopify://shop_images/DSC_4544_2000x1600_f18eea33-df4f-465e-9532-229b9eaf4d31.webp",
             "image_overlay_opacity": 20,
-            "heading": "The Arezzo",
-            "heading_size": "hd2",
+            "heading": "Arezzo",
+            "heading_size": "hd3",
             "subheading": "",
             "description": "",
             "description_size": "text-base",
             "button_label": "",
             "button_style": "btn--primary",
-            "content_position": "middle-left",
+            "content_position": "bottom-left",
             "content_alignment": "left",
             "content_spacing": "small",
             "card_link": "",
@@ -208,81 +207,81 @@
             "content_alignment_mobile": "center"
           }
         },
-        "image_card_ttJdMM": {
+        "image_card_tHQMWM": {
           "type": "image_card",
           "settings": {
-            "color_scheme": "",
-            "image_overlay_opacity": 0,
-            "heading": "The Platsa",
-            "heading_size": "hd2",
+            "color_scheme": "scheme-260dd0dc-3183-4ca0-acf7-4a216e4dcaf7",
+            "image_overlay_opacity": 20,
+            "heading": "Platsa",
+            "heading_size": "hd3",
             "subheading": "",
-            "description": "<p>Tell your brand's story through images</p>",
-            "description_size": "text-lg",
-            "button_label": "Button label",
+            "description": "",
+            "description_size": "text-base",
+            "button_label": "",
             "button_style": "btn--primary",
-            "content_position": "middle-left",
+            "content_position": "bottom-left",
             "content_alignment": "left",
-            "content_spacing": "large",
+            "content_spacing": "small",
             "card_link": "",
             "content_position_mobile": "top-center",
             "content_alignment_mobile": "center"
           }
         },
-        "image_card_CaPqHt": {
+        "image_card_QNJAdp": {
           "type": "image_card",
           "settings": {
-            "color_scheme": "",
-            "image_overlay_opacity": 0,
-            "heading": "The Legnano",
-            "heading_size": "hd2",
+            "color_scheme": "scheme-260dd0dc-3183-4ca0-acf7-4a216e4dcaf7",
+            "image_overlay_opacity": 20,
+            "heading": "Legnano",
+            "heading_size": "hd3",
             "subheading": "",
-            "description": "<p>Tell your brand's story through images</p>",
-            "description_size": "text-lg",
-            "button_label": "Button label",
+            "description": "",
+            "description_size": "text-base",
+            "button_label": "",
             "button_style": "btn--primary",
-            "content_position": "middle-left",
+            "content_position": "bottom-left",
             "content_alignment": "left",
-            "content_spacing": "large",
+            "content_spacing": "small",
             "card_link": "",
             "content_position_mobile": "top-center",
             "content_alignment_mobile": "center"
           }
         },
-        "image_card_ayEEqX": {
+        "image_card_9gkwVG": {
           "type": "image_card",
           "settings": {
-            "color_scheme": "scheme-1",
-            "image_overlay_opacity": 0,
-            "heading": "The Stoven",
-            "heading_size": "hd2",
+            "color_scheme": "scheme-260dd0dc-3183-4ca0-acf7-4a216e4dcaf7",
+            "image_overlay_opacity": 20,
+            "heading": "Stoven",
+            "heading_size": "hd3",
             "subheading": "",
-            "description": "<p>Tell your brand's story through images</p>",
-            "description_size": "text-lg",
-            "button_label": "Button label",
+            "description": "",
+            "description_size": "text-base",
+            "button_label": "",
             "button_style": "btn--primary",
-            "content_position": "middle-left",
+            "content_position": "bottom-left",
             "content_alignment": "left",
-            "content_spacing": "large",
+            "content_spacing": "small",
             "card_link": "",
             "content_position_mobile": "top-center",
             "content_alignment_mobile": "center"
           }
         },
-        "image_card_pMXL3R": {
+        "image_card_nREQUC": {
           "type": "image_card",
           "settings": {
-            "color_scheme": "scheme-1",
-            "image_overlay_opacity": 0,
-            "heading": "The Corsi",
-            "heading_size": "hd2",
+            "color_scheme": "scheme-260dd0dc-3183-4ca0-acf7-4a216e4dcaf7",
+            "image_overlay_opacity": 20,
+            "heading": "Corsi",
+            "heading_size": "hd3",
             "subheading": "",
-            "description": "<p>Tell your brand's story through images</p>",
-            "description_size": "text-lg",
-            "button_label": "Button label",
+            "description": "",
+            "description_size": "text-base",
+            "button_label": "",
             "button_style": "btn--primary",
-            "content_position": "middle-left",
+            "content_position": "bottom-left",
             "content_alignment": "left",
-            "content_spacing": "large",
+            "content_spacing": "small",
             "card_link": "",
             "content_position_mobile": "top-center",
             "content_alignment_mobile": "center"
@@ -291,10 +290,10 @@
       },
       "block_order": [
         "image_card_XcJWAD",
-        "image_card_ttJdMM",
-        "image_card_CaPqHt",
-        "image_card_ayEEqX",
-        "image_card_pMXL3R"
+        "image_card_tHQMWM",
+        "image_card_QNJAdp",
+        "image_card_9gkwVG",
+        "image_card_nREQUC"
       ],
       "name": "t:sections.card-images.name",
       "settings": {
@@ -366,7 +365,7 @@
       ],
       "name": "USP Strip",
       "settings": {
-        "color_scheme": "scheme-11",
+        "color_scheme": "scheme-5de7a22f-f82c-4559-9dd6-af3a0a9713fe",
         "subheading": "",
         "heading": "",
         "heading_size": "h3",
@@ -388,7 +387,7 @@
         ".section__header-wrap .btn {margin-inline: auto;}"
       ],
       "settings": {
-        "color_scheme": "scheme-4",
+        "color_scheme": "scheme-1",
         "header_layout": "vertical",
         "heading": "Shop our best sellers",
         "heading_size": "h2",
@@ -411,11 +410,11 @@
         "swipe_on_mobile": true,
         "show_all_button_on_top": true,
         "button_label": "Shop all best sellers",
-        "button_style": "btn--secondary",
+        "button_style": "btn--primary",
         "padding_top": 50,
         "padding_bottom": 50,
-        "show_section_divider": true,
-        "divider_width": "fixed",
+        "show_section_divider": false,
+        "divider_width": "full",
         "custom_class": ""
       }
     }
