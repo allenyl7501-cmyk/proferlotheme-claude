@@ -38,7 +38,7 @@
         "@media (max-width: 767px) {.collection-hero__title {font-size: 3.5rem; } .collection-hero__description {display: none; }}"
       ],
       "settings": {
-        "color_scheme": "scheme-11",
+        "color_scheme": "scheme-5de7a22f-f82c-4559-9dd6-af3a0a9713fe",
         "text_alignment": "left",
         "show_collection_image": false,
         "image_overlay_opacity": 36,
