@@ -10,7 +10,10 @@
   style="--section-padding-top: {{ section.settings.padding_top }}px; --section-padding-bottom: {{ section.settings.padding_bottom }}px;"
 >
   <div class="page-width">
-    <div class="promo-band color-{{ section.settings.color_scheme }} blocks-radius">
+    <div
+      class="promo-band color-{{ section.settings.color_scheme }} blocks-radius"
+      {% if section.settings.band_background != blank %}style="background: {{ section.settings.band_background }};"{% endif %}
+    >
       {%- if heading != blank or subheading != blank -%}
         <div class="promo-band__text">
           {%- if heading != blank -%}
@@ -131,6 +134,12 @@
       "type": "color_scheme",
       "id": "color_scheme",
       "label": "Colour scheme"
+    },
+    {
+      "type": "color",
+      "id": "band_background",
+      "label": "Band background (overrides scheme background)",
+      "default": "#F1F0EC"
     },
     {
       "type": "header",
