@@ -20,7 +20,7 @@
             "background_mobile": "shopify://shop_images/DSC08665.jpg",
             "image_overlay_opacity": 20,
             "show_content_in_container": true,
-            "content_position": "middle-center",
+            "content_position": "middle-left",
             "content_position_mobile": "middle-center",
             "text_alignment": "left",
             "title": "Stylish, liveable furniture — shipped Australia-wide.",
