@@ -503,15 +503,115 @@
             "show_average_rating": true,
             "rating_display": "default"
           }
+        },
+        "moast_carousel_NWCJme": {
+          "type": "shopify://apps/moast/blocks/carousel/1ac7547b-5443-446c-868c-7fab4566ee16",
+          "settings": {
+            "dynamic": false,
+            "feed": "default",
+            "feed_usage": "back_up",
+            "header": "<h4>See How <strong>Real Homes</strong> Style Proferlo  - @proferlo_furniture</h4>",
+            "slide_type": "cards",
+            "product_cards": "none",
+            "autoplay_mode": "none",
+            "autoscroll_duration": 2,
+            "slide_size": "250",
+            "aspect_ratio": "vertical",
+            "border": 0,
+            "border_color": "linear-gradient(to right, #833ab4, #fd1d1d, #fcb045)",
+            "slide_rounding": "20",
+            "slide_spacing": 16,
+            "padding_top": 23,
+            "pagination": "below",
+            "alignment": "center",
+            "click_action": "fullscreen",
+            "float_location": "bottom_right",
+            "float_size": "medium",
+            "show_captions": true,
+            "custom_css": ""
+          }
         }
       },
       "block_order": [
-        "judge_me_reviews_cards_carousel_jQpJqQ"
+        "judge_me_reviews_cards_carousel_jQpJqQ",
+        "moast_carousel_NWCJme"
       ],
       "settings": {
         "include_margins": true,
         "padding_top": 0,
         "padding_bottom": 0,
+        "custom_class": ""
+      }
+    },
+    "card_images_KFwAGY": {
+      "type": "card-images",
+      "blocks": {
+        "image_card_WtBNwm": {
+          "type": "image_card",
+          "settings": {
+            "color_scheme": "scheme-260dd0dc-3183-4ca0-acf7-4a216e4dcaf7",
+            "image": "shopify://shop_images/Screenshot_2026-06-30_at_2.15.46_pm_1080x600_ecbcb907-ce26-4560-b56d-52c83af0b5df.jpg",
+            "image_overlay_opacity": 66,
+            "heading": "<strong>Our Story</strong>",
+            "heading_size": "h3",
+            "subheading": "",
+            "description": "<p>Proferlo is an Australian furniture brand that actually owns its factory, so good design reaches you without the middleman markup. Built for first homes, rentals and fresh starts — and shipped Australia-wide.</p>",
+            "description_size": "text-sm",
+            "button_label": "",
+            "button_style": "btn--underline",
+            "content_position": "bottom-left",
+            "content_alignment": "left",
+            "content_spacing": "medium",
+            "card_link": "",
+            "content_position_mobile": "top-center",
+            "content_alignment_mobile": "center"
+          }
+        },
+        "image_card_pVjLaT": {
+          "type": "image_card",
+          "settings": {
+            "color_scheme": "scheme-260dd0dc-3183-4ca0-acf7-4a216e4dcaf7",
+            "image": "shopify://shop_images/Gemini_Generated_Image_q5u8nwq5u8nwq5u8_1080x600_8256f362-0da7-4a9e-80a8-4175de14030f.jpg",
+            "image_overlay_opacity": 0,
+            "heading": "<strong>Sustainbility</strong>",
+            "heading_size": "h3",
+            "subheading": "",
+            "description": "<p>Proferlo timber is FSC-certified and our boards meet CARB Phase 2 standards for ultra-low formaldehyde. Because we own the factory, we stay close to how everything's made — good design and responsible making, no trade-off.</p>",
+            "description_size": "text-sm",
+            "button_label": "",
+            "button_style": "btn--underline",
+            "content_position": "bottom-left",
+            "content_alignment": "left",
+            "content_spacing": "medium",
+            "card_link": "",
+            "content_position_mobile": "top-center",
+            "content_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_card_WtBNwm",
+        "image_card_pVjLaT"
+      ],
+      "name": "t:sections.card-images.name",
+      "settings": {
+        "color_scheme": "",
+        "subheading": "",
+        "heading": "",
+        "heading_size": "h1",
+        "heading_tag": "h2",
+        "heading_highlight_style": "none",
+        "description": "",
+        "description_size": "text-base",
+        "image_ratio": "adapt",
+        "enable_equal_height": false,
+        "columns_desktop": 2,
+        "column_gap": "extra-small",
+        "enable_slider": true,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "show_section_divider": false,
+        "divider_width": "fixed",
         "custom_class": ""
       }
     },
@@ -708,117 +808,6 @@
         "divider_width": "fixed",
         "custom_class": ""
       }
-    },
-    "card_images_KFwAGY": {
-      "type": "card-images",
-      "blocks": {
-        "image_card_WtBNwm": {
-          "type": "image_card",
-          "settings": {
-            "color_scheme": "",
-            "image_overlay_opacity": 0,
-            "heading": "Our Story",
-            "heading_size": "h3",
-            "subheading": "",
-            "description": "<p>We're an Australian furniture brand that owns its own factory — so the pieces you love come straight to you, without the middleman markup. We design for real life: first homes, rentals, fresh starts. Furniture that looks good, holds up, and ships Australia-wide. That's the whole idea.</p>",
-            "description_size": "text-sm",
-            "button_label": "",
-            "button_style": "btn--underline",
-            "content_position": "bottom-left",
-            "content_alignment": "left",
-            "content_spacing": "medium",
-            "card_link": "",
-            "content_position_mobile": "top-center",
-            "content_alignment_mobile": "center"
-          }
-        },
-        "image_card_pVjLaT": {
-          "type": "image_card",
-          "settings": {
-            "color_scheme": "",
-            "image_overlay_opacity": 0,
-            "heading": "Sustainbility",
-            "heading_size": "h3",
-            "subheading": "",
-            "description": "<p>At Proferlo, our timber is FSC-certified, and our boards meet CARB Phase 2 standards for ultra-low formaldehyde — better for your home, and for the forests it came from. Because we own our factory, we can stay close to how things are made, not just what's made. Good design and responsible making aren't a trade-off.</p>",
-            "description_size": "text-sm",
-            "button_label": "",
-            "button_style": "btn--underline",
-            "content_position": "bottom-left",
-            "content_alignment": "left",
-            "content_spacing": "medium",
-            "card_link": "",
-            "content_position_mobile": "top-center",
-            "content_alignment_mobile": "center"
-          }
-        }
-      },
-      "block_order": [
-        "image_card_WtBNwm",
-        "image_card_pVjLaT"
-      ],
-      "name": "t:sections.card-images.name",
-      "settings": {
-        "color_scheme": "",
-        "subheading": "",
-        "heading": "",
-        "heading_size": "h1",
-        "heading_tag": "h2",
-        "heading_highlight_style": "none",
-        "description": "",
-        "description_size": "text-base",
-        "image_ratio": "adapt",
-        "enable_equal_height": false,
-        "columns_desktop": 2,
-        "column_gap": "extra-small",
-        "enable_slider": true,
-        "padding_top": 50,
-        "padding_bottom": 50,
-        "show_section_divider": false,
-        "divider_width": "fixed",
-        "custom_class": ""
-      }
-    },
-    "17787259545fe07a92": {
-      "type": "apps",
-      "blocks": {
-        "moast_carousel_HVWUVf": {
-          "type": "shopify://apps/moast/blocks/carousel/1ac7547b-5443-446c-868c-7fab4566ee16",
-          "settings": {
-            "dynamic": false,
-            "feed": "default",
-            "feed_usage": "back_up",
-            "header": "<h4>See How <strong>Real Homes</strong> Style Proferlo  - @proferlo_furniture</h4>",
-            "slide_type": "cards",
-            "product_cards": "none",
-            "autoplay_mode": "none",
-            "autoscroll_duration": 2,
-            "slide_size": "250",
-            "aspect_ratio": "vertical",
-            "border": 0,
-            "border_color": "linear-gradient(to right, #833ab4, #fd1d1d, #fcb045)",
-            "slide_rounding": "20",
-            "slide_spacing": 16,
-            "padding_top": 40,
-            "pagination": "below",
-            "alignment": "center",
-            "click_action": "fullscreen",
-            "float_location": "bottom_right",
-            "float_size": "medium",
-            "show_captions": true,
-            "custom_css": ""
-          }
-        }
-      },
-      "block_order": [
-        "moast_carousel_HVWUVf"
-      ],
-      "settings": {
-        "include_margins": true,
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "custom_class": ""
-      }
     }
   },
   "order": [
@@ -834,7 +823,6 @@
     "rich_text_JMzwcB",
     "1781060174483db7d2",
     "card_images_KFwAGY",
-    "17787259545fe07a92",
     "collapsible_tabs_KNKLiF",
     "layered_images_with_text_mCxbTm"
   ]
