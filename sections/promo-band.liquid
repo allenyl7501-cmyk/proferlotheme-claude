@@ -7,7 +7,7 @@
 -%}
 <div
   class="promo-band-section section section--padding"
-  style="--section-padding-top: {{ section.settings.padding_top }}px; --section-padding-bottom: {{ section.settings.padding_bottom }}px;"
+  style="--section-padding-top: {{ section.settings.padding_top }}px; --section-padding-bottom: {{ section.settings.padding_bottom }}px; --promo-heading-size: {{ section.settings.heading_size }}px;"
 >
   <div class="page-width">
     <div
@@ -57,7 +57,7 @@
 .promo-band__heading {
   font-family: var(--font-heading-family, Montserrat), sans-serif;
   font-weight: 700;
-  font-size: 2.8rem;
+  font-size: calc(var(--promo-heading-size, 36px) * 0.78);
   line-height: 1.1;
   margin: 0;
 }
@@ -72,6 +72,9 @@
   align-items: center;
   text-align: center;
   gap: 0.6rem;
+}
+.promo-band__btn.btn {
+  border-radius: 0.8rem;
 }
 .promo-band__caption {
   font-size: 1.3rem;
@@ -90,7 +93,7 @@
     align-items: flex-start;
   }
   .promo-band__heading {
-    font-size: 3.6rem;
+    font-size: var(--promo-heading-size, 36px);
   }
 }
 {% endstylesheet %}
@@ -106,6 +109,16 @@
       "id": "heading",
       "label": "Heading",
       "default": "New Financial Year Sale"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Heading size (desktop, mobile auto-scales)",
+      "min": 20,
+      "max": 72,
+      "step": 2,
+      "unit": "px",
+      "default": 36
     },
     {
       "type": "text",
