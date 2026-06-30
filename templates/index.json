@@ -191,7 +191,7 @@
         "icon_size": "extra-small",
         "swipe_on_mobile": true,
         "padding_top": 30,
-        "padding_bottom": 6,
+        "padding_bottom": 10,
         "show_section_divider": true,
         "divider_width": "full",
         "custom_class": ""
