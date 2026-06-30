@@ -705,6 +705,7 @@
         "collapsible_item_HynDyF",
         "collapsible_item_HURCdi"
       ],
+      "disabled": true,
       "custom_css": [
         ".card-media {background: transparent; border-radius: 0;}",
         ".hover-scale-up {--scale-x: 1; --scale-y: 1;}"
@@ -737,77 +738,6 @@
         "divider_width": "fixed",
         "custom_class": ""
       }
-    },
-    "layered_images_with_text_mCxbTm": {
-      "type": "layered-images-with-text",
-      "blocks": {
-        "image_rczzDX": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/FSC_certified.png",
-            "custom_classes": "cert-badge"
-          }
-        },
-        "image_7FnPKq": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/ISO9001.png",
-            "custom_classes": "cert-badge"
-          }
-        },
-        "image_nKGf3e": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/CARB_Phase_2.png",
-            "custom_classes": "cert-badge"
-          }
-        },
-        "image_hEXAE7": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/bsci.png",
-            "custom_classes": "cert-badge"
-          }
-        },
-        "image_KUfgbe": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Untitled_Design_-_1_-_Edited.png",
-            "custom_classes": "cert-badge"
-          }
-        }
-      },
-      "block_order": [
-        "image_rczzDX",
-        "image_7FnPKq",
-        "image_nKGf3e",
-        "image_hEXAE7",
-        "image_KUfgbe"
-      ],
-      "disabled": true,
-      "custom_css": [
-        ".cert-badge img {width: 150px !important; height: 150px !important; object-fit: contain !important;}",
-        "@media (max-width: 749px) {.cert-badge img {width: 90px !important; height: 90px !important; }}"
-      ],
-      "name": "t:sections.layered-images-with-text.name",
-      "settings": {
-        "color_scheme": "scheme-4",
-        "heading": "For a cosy home, and a healthy planet.",
-        "heading_size": "h1",
-        "heading_tag": "h3",
-        "heading_highlight_style": "none",
-        "subheading": "Why Proferlo?",
-        "description": "<p>Every Proferlo piece is FSC certified, CARB2 compliant, and manufactured to ISO 9001 and ISO 14001 standards — so you can furnish your home with confidence, knowing it's built responsibly.</p>",
-        "description_size": "text-sm",
-        "button_label": "Our Commitment",
-        "button_link": "shopify://pages/sustainability",
-        "button_style": "btn--primary",
-        "padding_top": 30,
-        "padding_bottom": 50,
-        "show_section_divider": false,
-        "divider_width": "fixed",
-        "custom_class": ""
-      }
     }
   },
   "order": [
@@ -823,7 +753,6 @@
     "rich_text_JMzwcB",
     "1781060174483db7d2",
     "card_images_KFwAGY",
-    "collapsible_tabs_KNKLiF",
-    "layered_images_with_text_mCxbTm"
+    "collapsible_tabs_KNKLiF"
   ]
 }
