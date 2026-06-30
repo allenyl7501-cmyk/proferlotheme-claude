@@ -155,7 +155,7 @@
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 50,
-        "padding_bottom": 80,
+        "padding_bottom": 100,
         "show_section_divider": false,
         "divider_width": "fixed",
         "custom_class": ""
@@ -230,15 +230,6 @@
     "video_hero_AtQKVU": {
       "type": "video-hero",
       "blocks": {
-        "heading_eiyPQT": {
-          "type": "heading",
-          "settings": {
-            "heading": "",
-            "heading_size": "h5",
-            "heading_tag": "h2",
-            "heading_highlight_style": "none"
-          }
-        },
         "button_pNLxKh": {
           "type": "button",
           "settings": {
@@ -249,7 +240,6 @@
         }
       },
       "block_order": [
-        "heading_eiyPQT",
         "button_pNLxKh"
       ],
       "custom_css": [
@@ -271,7 +261,7 @@
         "content_alignment": "center",
         "video_mobile_height": "auto",
         "padding_top": 0,
-        "padding_bottom": 30,
+        "padding_bottom": 60,
         "show_section_divider": false,
         "divider_width": "fixed",
         "custom_class": ""
@@ -742,6 +732,20 @@
         "divider_width": "fixed",
         "custom_class": ""
       }
+    },
+    "promo_band_iDhR6e": {
+      "type": "promo-band",
+      "name": "Promo Band",
+      "settings": {
+        "heading": "New Financial Year Sale",
+        "subheading": "Design-led furniture, straight from our factory.",
+        "button_label": "Shop the Sale",
+        "button_link": "",
+        "caption": "Shipped Australia-wide",
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
     }
   },
   "order": [
@@ -757,6 +761,7 @@
     "rich_text_JMzwcB",
     "1781060174483db7d2",
     "collapsible_tabs_KNKLiF",
-    "layered_images_with_text_mCxbTm"
+    "layered_images_with_text_mCxbTm",
+    "promo_band_iDhR6e"
   ]
 }
