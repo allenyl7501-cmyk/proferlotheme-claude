@@ -125,9 +125,75 @@
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 50,
-        "padding_bottom": 50,
+        "padding_bottom": 80,
         "show_section_divider": false,
         "divider_width": "fixed",
+        "custom_class": ""
+      }
+    },
+    "feature_list_iF63p8": {
+      "type": "feature-list",
+      "blocks": {
+        "feature_item_EP6wjz": {
+          "type": "feature_item",
+          "settings": {
+            "color_scheme": "scheme-4",
+            "icon": "star-four",
+            "icon_style": "btn--secondary",
+            "text": "Tool Free Assembly"
+          }
+        },
+        "feature_item_wA6UAM": {
+          "type": "feature_item",
+          "settings": {
+            "color_scheme": "scheme-4",
+            "icon": "certificate",
+            "icon_style": "btn--secondary",
+            "text": "5 Year Warranty"
+          }
+        },
+        "feature_item_cjYCwf": {
+          "type": "feature_item",
+          "settings": {
+            "color_scheme": "scheme-4",
+            "icon": "seal-check",
+            "icon_style": "btn--secondary",
+            "text": "Real Solid Hardwood"
+          }
+        },
+        "feature_item_cCMbXL": {
+          "type": "feature_item",
+          "settings": {
+            "color_scheme": "scheme-4",
+            "icon": "recycle",
+            "icon_style": "btn--secondary",
+            "text": "Breathable Cedar slats"
+          }
+        }
+      },
+      "block_order": [
+        "feature_item_EP6wjz",
+        "feature_item_wA6UAM",
+        "feature_item_cjYCwf",
+        "feature_item_cCMbXL"
+      ],
+      "name": "Feature list",
+      "settings": {
+        "color_scheme": "scheme-4",
+        "subheading": "Meet the Aria Bed base",
+        "heading": "A Solid ash bed frame that assembles itself, almost.",
+        "heading_size": "h4",
+        "heading_tag": "h2",
+        "heading_highlight_style": "none",
+        "description": "",
+        "text_size": "text-base",
+        "item_alignment": "center",
+        "icon_size": "extra-small",
+        "swipe_on_mobile": true,
+        "padding_top": 30,
+        "padding_bottom": 6,
+        "show_section_divider": true,
+        "divider_width": "full",
         "custom_class": ""
       }
     },
@@ -137,7 +203,7 @@
         "heading_eiyPQT": {
           "type": "heading",
           "settings": {
-            "heading": "Solid ash bed frame that assembles itself, almost.",
+            "heading": "",
             "heading_size": "h5",
             "heading_tag": "h2",
             "heading_highlight_style": "none"
@@ -148,7 +214,7 @@
           "settings": {
             "button_label": "See the Aria Solid Wood Bed Base",
             "button_link": "shopify://products/b1065-bed-base-new",
-            "button_style": "btn--primary"
+            "button_style": "btn--secondary"
           }
         }
       },
@@ -170,68 +236,12 @@
         "overlay_opacity": 0,
         "enable_parallax": false,
         "parallax_direction": "vertical",
-        "color_scheme": "",
+        "color_scheme": "scheme-260dd0dc-3183-4ca0-acf7-4a216e4dcaf7",
         "content_position": "bottom-center",
         "content_alignment": "center",
         "video_mobile_height": "auto",
-        "padding_top": 30,
-        "padding_bottom": 0,
-        "show_section_divider": true,
-        "divider_width": "fixed",
-        "custom_class": ""
-      }
-    },
-    "feature_list_iF63p8": {
-      "type": "feature-list",
-      "blocks": {
-        "feature_item_EP6wjz": {
-          "type": "feature_item",
-          "settings": {
-            "color_scheme": "",
-            "icon": "check",
-            "icon_style": "btn--secondary",
-            "text": "Tool Free Assembly"
-          }
-        },
-        "feature_item_cjYCwf": {
-          "type": "feature_item",
-          "settings": {
-            "color_scheme": "",
-            "icon": "check",
-            "icon_style": "btn--secondary",
-            "text": "Prem"
-          }
-        },
-        "feature_item_wA6UAM": {
-          "type": "feature_item",
-          "settings": {
-            "color_scheme": "",
-            "icon": "check",
-            "icon_style": "btn--secondary",
-            "text": "Feature"
-          }
-        }
-      },
-      "block_order": [
-        "feature_item_EP6wjz",
-        "feature_item_cjYCwf",
-        "feature_item_wA6UAM"
-      ],
-      "name": "Feature list",
-      "settings": {
-        "color_scheme": "",
-        "subheading": "",
-        "heading": "",
-        "heading_size": "h2",
-        "heading_tag": "h2",
-        "heading_highlight_style": "none",
-        "description": "",
-        "text_size": "text-base",
-        "item_alignment": "center",
-        "icon_size": "extra-medium",
-        "swipe_on_mobile": true,
         "padding_top": 0,
-        "padding_bottom": 50,
+        "padding_bottom": 30,
         "show_section_divider": false,
         "divider_width": "fixed",
         "custom_class": ""
@@ -262,13 +272,13 @@
       "disabled": true,
       "settings": {
         "color_scheme": "",
-        "header_layout": "vertical",
+        "header_layout": "horizontal",
         "heading": "Australia's best-selling online factory direct furniture - Delivered to your door",
         "heading_size": "h6",
         "heading_tag": "h2",
         "heading_highlight_style": "none",
         "limit": 8,
-        "columns": 4,
+        "columns": 3,
         "column_gap": "extra-small",
         "row_gap": "inherit",
         "grid_layout": "standard",
@@ -287,7 +297,7 @@
         "custom_class": ""
       }
     },
-    "featured_collection_RAMRLJ": {
+    "featured_collection_wdxiPB": {
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
@@ -317,8 +327,82 @@
         "button_style": "btn--underline",
         "padding_top": 50,
         "padding_bottom": 50,
-        "show_section_divider": true,
+        "show_section_divider": false,
         "divider_width": "fixed",
+        "custom_class": ""
+      }
+    },
+    "product_tabs_8RQTU4": {
+      "type": "product-tabs",
+      "blocks": {
+        "tab_WMKgBG": {
+          "type": "tab",
+          "settings": {
+            "title": "Bedframes",
+            "collection": "bed-frames"
+          }
+        },
+        "tab_JPcJbb": {
+          "type": "tab",
+          "settings": {
+            "title": "Bedside table",
+            "collection": "bedside-tables"
+          }
+        },
+        "tab_EFF39d": {
+          "type": "tab",
+          "settings": {
+            "title": "Dressers",
+            "collection": "tallboys-lowboys-dressers"
+          }
+        },
+        "tab_LKV9tH": {
+          "type": "tab",
+          "settings": {
+            "title": "Dining Table",
+            "collection": "dining-tables"
+          }
+        },
+        "tab_EPeN69": {
+          "type": "tab",
+          "settings": {
+            "title": "Dining Chair",
+            "collection": "dining-chairs"
+          }
+        }
+      },
+      "block_order": [
+        "tab_WMKgBG",
+        "tab_JPcJbb",
+        "tab_EFF39d",
+        "tab_LKV9tH",
+        "tab_EPeN69"
+      ],
+      "name": "t:sections.product-tabs.presets.name",
+      "settings": {
+        "color_scheme": "scheme-5de7a22f-f82c-4559-9dd6-af3a0a9713fe",
+        "header_layout": "vertical",
+        "heading": "",
+        "heading_size": "h1",
+        "heading_tag": "h2",
+        "heading_highlight_style": "none",
+        "limit": 4,
+        "columns": 4,
+        "column_gap": "extra-small",
+        "row_gap": "inherit",
+        "grid_layout": "standard",
+        "pcard_image_ratio": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "show_all_button_on_top": true,
+        "button_label": "See Best Sellers",
+        "button_link": "shopify://collections/best-sellers-all-products",
+        "button_style": "btn--primary",
+        "tabs_nav_style": "design-1",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "show_section_divider": true,
+        "divider_width": "full",
         "custom_class": ""
       }
     },
@@ -628,55 +712,20 @@
         "divider_width": "fixed",
         "custom_class": ""
       }
-    },
-    "featured_collection_wdxiPB": {
-      "type": "featured-collection",
-      "name": "t:sections.featured-collection.presets.name",
-      "settings": {
-        "color_scheme": "",
-        "header_layout": "standing-column",
-        "heading": "Storage Bedframes",
-        "heading_size": "h1",
-        "heading_tag": "h2",
-        "heading_highlight_style": "none",
-        "subheading": "Style Meets Storage",
-        "description": "<p>Storage bed frames with built-in storage, made factory-direct and delivered flat-packed across Australia. Room for spare linen and off-season clothes underneath — no extra dresser, just a calmer bedroom that feels bigger than it is.</p>",
-        "text_size": "text-sm",
-        "show_collection_description": false,
-        "collection": "storage-bed-frames",
-        "limit": 8,
-        "columns": 3,
-        "column_gap": "small",
-        "row_gap": "inherit",
-        "grid_layout": "standard",
-        "enable_slider": true,
-        "controls_position": "inside",
-        "pcard_image_ratio": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "show_all_button_on_top": false,
-        "button_label": "View All Storage Bedframes",
-        "button_style": "btn--underline",
-        "padding_top": 50,
-        "padding_bottom": 50,
-        "show_section_divider": false,
-        "divider_width": "fixed",
-        "custom_class": ""
-      }
     }
   },
   "order": [
     "slideshow_WWriMK",
     "collection_list_Pr36qH",
-    "video_hero_AtQKVU",
     "feature_list_iF63p8",
+    "video_hero_AtQKVU",
     "product_tabs_iJHLzK",
-    "featured_collection_RAMRLJ",
+    "featured_collection_wdxiPB",
+    "product_tabs_8RQTU4",
     "17787259545fe07a92",
     "rich_text_JMzwcB",
     "1781060174483db7d2",
     "collapsible_tabs_KNKLiF",
-    "layered_images_with_text_mCxbTm",
-    "featured_collection_wdxiPB"
+    "layered_images_with_text_mCxbTm"
   ]
 }
