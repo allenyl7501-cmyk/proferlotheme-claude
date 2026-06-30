@@ -1,0 +1,162 @@
+{%- liquid
+  assign heading = section.settings.heading
+  assign subheading = section.settings.subheading
+  assign button_label = section.settings.button_label
+  assign button_link = section.settings.button_link
+  assign caption = section.settings.caption
+-%}
+<div
+  class="promo-band-section section section--padding"
+  style="--section-padding-top: {{ section.settings.padding_top }}px; --section-padding-bottom: {{ section.settings.padding_bottom }}px;"
+>
+  <div class="page-width">
+    <div class="promo-band color-{{ section.settings.color_scheme }} blocks-radius">
+      {%- if heading != blank or subheading != blank -%}
+        <div class="promo-band__text">
+          {%- if heading != blank -%}
+            <p class="promo-band__heading">{{ heading }}</p>
+          {%- endif -%}
+          {%- if subheading != blank -%}
+            <p class="promo-band__sub">{{ subheading }}</p>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+      {%- if button_label != blank -%}
+        <div class="promo-band__cta">
+          <a
+            class="promo-band__btn btn btn--primary"
+            {% if button_link != blank %}href="{{ button_link }}"{% else %}role="link" aria-disabled="true"{% endif %}
+          >{{ button_label }}</a>
+          {%- if caption != blank -%}
+            <p class="promo-band__caption">{{ caption }}</p>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% stylesheet %}
+.promo-band {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  padding: 2.4rem;
+}
+.promo-band__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.promo-band__heading {
+  font-family: var(--font-heading-family, Montserrat), sans-serif;
+  font-weight: 700;
+  font-size: 2.8rem;
+  line-height: 1.1;
+  margin: 0;
+}
+.promo-band__sub {
+  font-size: 1.5rem;
+  margin: 0;
+  opacity: 0.85;
+}
+.promo-band__cta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+.promo-band__caption {
+  font-size: 1.3rem;
+  margin: 0;
+  opacity: 0.85;
+}
+@media (min-width: 768px) {
+  .promo-band {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3.2rem 4rem;
+  }
+  .promo-band__heading {
+    font-size: 3.6rem;
+  }
+  .promo-band__cta {
+    align-items: flex-end;
+    text-align: right;
+  }
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Promo Band",
+  "tag": "section",
+  "class": "section-promo-band",
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "New Financial Year Sale"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Supporting text",
+      "default": "Design-led furniture, straight from our factory."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Shop the Sale"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "text",
+      "id": "caption",
+      "label": "Caption (under button)",
+      "default": "Shipped Australia-wide"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Colour scheme"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 20
+    }
+  ],
+  "presets": [
+    {
+      "name": "Promo Band"
+    }
+  ]
+}
+{% endschema %}
