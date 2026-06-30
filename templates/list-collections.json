@@ -184,6 +184,140 @@
         "custom_class": ""
       }
     },
+    "card_images_hbXiJL": {
+      "type": "card-images",
+      "blocks": {
+        "image_card_XcJWAD": {
+          "type": "image_card",
+          "settings": {
+            "color_scheme": "scheme-260dd0dc-3183-4ca0-acf7-4a216e4dcaf7",
+            "image": "shopify://shop_images/DSC_4544_2000x1600_f18eea33-df4f-465e-9532-229b9eaf4d31.webp",
+            "image_overlay_opacity": 20,
+            "heading": "The Arezzo",
+            "heading_size": "hd2",
+            "subheading": "",
+            "description": "",
+            "description_size": "text-base",
+            "button_label": "",
+            "button_style": "btn--primary",
+            "content_position": "middle-left",
+            "content_alignment": "left",
+            "content_spacing": "small",
+            "card_link": "",
+            "content_position_mobile": "top-center",
+            "content_alignment_mobile": "center"
+          }
+        },
+        "image_card_ttJdMM": {
+          "type": "image_card",
+          "settings": {
+            "color_scheme": "",
+            "image_overlay_opacity": 0,
+            "heading": "The Platsa",
+            "heading_size": "hd2",
+            "subheading": "",
+            "description": "<p>Tell your brand's story through images</p>",
+            "description_size": "text-lg",
+            "button_label": "Button label",
+            "button_style": "btn--primary",
+            "content_position": "middle-left",
+            "content_alignment": "left",
+            "content_spacing": "large",
+            "card_link": "",
+            "content_position_mobile": "top-center",
+            "content_alignment_mobile": "center"
+          }
+        },
+        "image_card_CaPqHt": {
+          "type": "image_card",
+          "settings": {
+            "color_scheme": "",
+            "image_overlay_opacity": 0,
+            "heading": "The Legnano",
+            "heading_size": "hd2",
+            "subheading": "",
+            "description": "<p>Tell your brand's story through images</p>",
+            "description_size": "text-lg",
+            "button_label": "Button label",
+            "button_style": "btn--primary",
+            "content_position": "middle-left",
+            "content_alignment": "left",
+            "content_spacing": "large",
+            "card_link": "",
+            "content_position_mobile": "top-center",
+            "content_alignment_mobile": "center"
+          }
+        },
+        "image_card_ayEEqX": {
+          "type": "image_card",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "image_overlay_opacity": 0,
+            "heading": "The Stoven",
+            "heading_size": "hd2",
+            "subheading": "",
+            "description": "<p>Tell your brand's story through images</p>",
+            "description_size": "text-lg",
+            "button_label": "Button label",
+            "button_style": "btn--primary",
+            "content_position": "middle-left",
+            "content_alignment": "left",
+            "content_spacing": "large",
+            "card_link": "",
+            "content_position_mobile": "top-center",
+            "content_alignment_mobile": "center"
+          }
+        },
+        "image_card_pMXL3R": {
+          "type": "image_card",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "image_overlay_opacity": 0,
+            "heading": "The Corsi",
+            "heading_size": "hd2",
+            "subheading": "",
+            "description": "<p>Tell your brand's story through images</p>",
+            "description_size": "text-lg",
+            "button_label": "Button label",
+            "button_style": "btn--primary",
+            "content_position": "middle-left",
+            "content_alignment": "left",
+            "content_spacing": "large",
+            "card_link": "",
+            "content_position_mobile": "top-center",
+            "content_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_card_XcJWAD",
+        "image_card_ttJdMM",
+        "image_card_CaPqHt",
+        "image_card_ayEEqX",
+        "image_card_pMXL3R"
+      ],
+      "name": "t:sections.card-images.name",
+      "settings": {
+        "color_scheme": "",
+        "subheading": "",
+        "heading": "Curated Series",
+        "heading_size": "h3",
+        "heading_tag": "h2",
+        "heading_highlight_style": "none",
+        "description": "",
+        "description_size": "text-base",
+        "image_ratio": "adapt",
+        "enable_equal_height": false,
+        "columns_desktop": 2,
+        "column_gap": "extra-small",
+        "enable_slider": false,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "custom_class": ""
+      }
+    },
     "usp": {
       "type": "usp-strip",
       "blocks": {
@@ -247,63 +381,6 @@
         "custom_class": ""
       }
     },
-    "collections_slider_7eXaL6": {
-      "type": "collections-slider",
-      "blocks": {
-        "collection_j49UyD": {
-          "type": "collection",
-          "settings": {
-            "color_scheme": "",
-            "collection": "arezzo-series",
-            "image": "shopify://shop_images/34397afeaebaf1496795488508bead8b_9fa10395-8d29-480e-8ffe-205fc5d1d196.jpg",
-            "title": "",
-            "title_size": "h4",
-            "description": "",
-            "text_size": "text-base",
-            "button_label": "",
-            "button_style": "btn--underline",
-            "image_2": "shopify://shop_images/ChatGPT_Image_Oct_29_2025_12_13_49_PM.png"
-          }
-        },
-        "collection_bN7Q9L": {
-          "type": "collection",
-          "settings": {
-            "color_scheme": "",
-            "collection": "",
-            "title": "",
-            "title_size": "hd2",
-            "description": "",
-            "text_size": "text-base",
-            "button_label": "",
-            "button_style": "btn--underline"
-          }
-        }
-      },
-      "block_order": [
-        "collection_j49UyD",
-        "collection_bN7Q9L"
-      ],
-      "name": "t:sections.collections-slider.name",
-      "settings": {
-        "color_scheme": "scheme-4",
-        "use_color_scheme_in_container": false,
-        "show_product_count": false,
-        "heading": "Curated Collections",
-        "heading_size": "h3",
-        "heading_tag": "h2",
-        "heading_highlight_style": "none",
-        "subheading": "",
-        "image_ratio": "1/1",
-        "slider_position": "left",
-        "autoplay": false,
-        "autoplay_delay": 3,
-        "padding_top": 80,
-        "padding_bottom": 50,
-        "show_section_divider": false,
-        "divider_width": "fixed",
-        "custom_class": ""
-      }
-    },
     "featured_products": {
       "type": "featured-collection",
       "custom_css": [
@@ -346,8 +423,8 @@
   "order": [
     "shop_by_room",
     "collection_list_Bnh6QP",
+    "card_images_hbXiJL",
     "usp",
-    "collections_slider_7eXaL6",
     "featured_products"
   ]
 }
