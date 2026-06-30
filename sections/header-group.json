@@ -354,17 +354,15 @@
         "custom_card_7aMcGt": {
           "type": "custom_card",
           "settings": {
-            "menu_title": "sale",
+            "menu_title": "Help",
             "menu_columns": 2,
             "enable_on_mobile": true,
             "promotions_width": 100,
             "promotion_columns": 5,
-            "promo_image_1": "shopify://shop_images/icon3.png",
             "heading_1": "Clearance items",
             "heading_size_1": "h5",
             "description_1": "",
             "promotion_link_1": "",
-            "promo_image_2": "shopify://shop_images/BedframeHero_1_fd3e4701-9270-4adf-9299-0dfafa03790b.png",
             "heading_2": "Olympic Queen Bed + Mattress sets",
             "heading_size_2": "h5",
             "description_2": "",
