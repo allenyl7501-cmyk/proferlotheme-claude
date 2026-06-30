@@ -743,47 +743,14 @@
         "custom_class": ""
       }
     },
-    "rich_text_JaJxyR": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_PbtzPR": {
-          "type": "heading",
-          "settings": {
-            "heading": "Mid Season Sale",
-            "heading_size": "hd1",
-            "heading_tag": "h2",
-            "heading_highlight_style": "none"
-          }
-        },
-        "text_T6Ew64": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "text_size": "text-base"
-          }
-        },
-        "button_trwEfz": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style": "btn--primary"
-          }
-        }
-      },
-      "block_order": [
-        "heading_PbtzPR",
-        "text_T6Ew64",
-        "button_trwEfz"
-      ],
-      "name": "t:sections.rich-text.presets.name",
+    "custom_liquid_m88f66": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
       "settings": {
+        "custom_liquid": "<style>\n  .proferlo-promo{\n    display:flex;flex-direction:column;gap:1.6rem;\n    background:#DCD7C9;border-radius:1.2rem;\n    padding:2.4rem;margin:2rem auto;max-width:120rem;\n  }\n  .proferlo-promo__heading{\n    font-family:Montserrat,sans-serif;font-weight:700;\n    color:#2C3639;font-size:2.8rem;line-height:1.1;margin:0 0 .4rem;\n  }\n  .proferlo-promo__sub{\n    font-family:Nunito,sans-serif;color:#3F4E4F;font-size:1.5rem;margin:0;\n  }\n  .proferlo-promo__cta{display:flex;flex-direction:column;align-items:flex-start;gap:.4rem;}\n  .proferlo-promo__btn{\n    display:inline-block;background:#2C3639;color:#DCD7C9;\n    font-family:Montserrat,sans-serif;font-weight:600;font-size:1.6rem;\n    padding:1.2rem 2.4rem;border-radius:.8rem;text-decoration:none;\n    transition:background .2s ease;\n  }\n  .proferlo-promo__btn:hover{background:#3F4E4F;}\n  .proferlo-promo__caption{\n    font-family:Nunito,sans-serif;color:#3F4E4F;font-size:1.3rem;margin:0;\n  }\n  @media (min-width:768px){\n    .proferlo-promo{flex-direction:row;align-items:center;justify-content:space-between;padding:3.2rem 4rem;}\n    .proferlo-promo__heading{font-size:3.6rem;}\n    .proferlo-promo__cta{align-items:flex-end;text-align:right;}\n  }\n</style>\n\n<div class=\"proferlo-promo\">\n  <div class=\"proferlo-promo__text\">\n    <p class=\"proferlo-promo__heading\">New Financial Year Sale</p>\n    <p class=\"proferlo-promo__sub\">Design-led furniture, straight from our factory.</p>\n  </div>\n  <div class=\"proferlo-promo__cta\">\n    <a href=\"/collections/all\" class=\"proferlo-promo__btn\">20% Off Sitewide</a>\n    <p class=\"proferlo-promo__caption\">Plus free delivery Australia-wide</p>\n  </div>\n</div>",
         "color_scheme": "",
-        "content_alignment": "left",
         "padding_top": 50,
         "padding_bottom": 50,
-        "show_section_divider": false,
-        "divider_width": "fixed",
         "custom_class": ""
       }
     }
@@ -802,6 +769,6 @@
     "1781060174483db7d2",
     "collapsible_tabs_KNKLiF",
     "layered_images_with_text_mCxbTm",
-    "rich_text_JaJxyR"
+    "custom_liquid_m88f66"
   ]
 }
