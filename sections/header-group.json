@@ -233,7 +233,7 @@
           "name": "living room menu",
           "settings": {
             "menu_title": "Living",
-            "menu_columns": 3,
+            "menu_columns": 2,
             "enable_on_mobile": true,
             "promotions_width": 50,
             "promotion_columns": 2,
