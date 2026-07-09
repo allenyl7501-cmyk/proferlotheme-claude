@@ -29,334 +29,422 @@
         "cat_1": {
           "type": "category",
           "settings": {
-            "heading": "Delivery & pickup"
+            "heading": "Products & Stock"
           }
         },
         "qa_1": {
           "type": "qa",
           "settings": {
-            "question": "Where do you deliver and how much does shipping cost?",
-            "answer": "<p>We deliver Australia-wide through our courier partner Allied Express. Brisbane Metro orders ship free via express (2–4 business days), with same-day Brisbane Metro delivery available at extra cost on enquiry. Shipping to other regions is calculated at checkout, and free pickup is always available from our Acacia Ridge warehouse in Brisbane.</p>",
+            "question": "Does my purchase come with a warranty?",
+            "answer": "<p>Yes, all our products come with a 12-month quality guarantee warranty, which covers any defects in materials and workmanship. In addition to this, sofas, armchairs, and bed frames receive an extended 3-year structural warranty, which covers the internal structure and hard frames. More details <a href=\"/pages/returns-warranty\">here</a>.</p>",
             "open": true
           }
         },
         "qa_2": {
           "type": "qa",
           "settings": {
-            "question": "How long will my order take to arrive?",
-            "answer": "<p>Brisbane Metro deliveries arrive within 2–4 business days. Other metro areas such as Sydney and Melbourne take 2–5 business days, and regional postcodes take 3–7 business days. Pre-order items ship once incoming stock arrives and passes inspection — the expected date is shown on the product page.</p>",
+            "question": "What if there’s a manufacturer defect on the item?",
+            "answer": "<p>If you believe your product has an issue covered by our warranty, please follow these simple steps:</p><ol><li><strong>Contact Our Team:</strong> Get in touch with our customer service team via email. Please provide your <strong>order number</strong>, a clear <strong>description of the issue</strong>, and attach <strong>photos or a short video</strong> showing the fault.</li><li><strong>Assessment:</strong> Our team will carefully assess your claim based on the information provided. We may ask a few follow-up questions to ensure we have all the details.</li><li><strong>Resolution:</strong> Once your claim is approved, we will work with you to find the best solution, whether it's sending a replacement part, arranging a repair, or organising a full replacement.</li></ol>",
             "open": false
           }
         },
         "qa_3": {
           "type": "qa",
           "settings": {
-            "question": "Which orders qualify for free shipping?",
-            "answer": "<p>Free express shipping applies to eligible Brisbane Metro orders, and free pickup is always available from our Acacia Ridge warehouse. You can check free-shipping eligibility for any item on its product page under the “Delivery & Refund” tab. For same-day or custom delivery, please contact us directly.</p>",
+            "question": "I received the wrong product, what should I do?",
+            "answer": "<p>Please contact us within 48 hours of receiving your products and we can arrange re-delivery and return delivery.</p>",
             "open": false
           }
         },
         "qa_4": {
           "type": "qa",
           "settings": {
-            "question": "Can I pick up my order myself?",
-            "answer": "<p>Yes — free pickup is available from our Acacia Ridge 4110 QLD warehouse. Orders must be paid in full before collection, as we don’t accept payment (including cash) on site. Please wait for confirmation that your order is ready before coming in.</p>",
+            "question": "I received my order but there are missing parts, what do I do?",
+            "answer": "<p>Please contact us as soon as you can with photos and the number of the missing parts and we can arrange a solution for you.</p>",
             "open": false
           }
         },
         "qa_5": {
           "type": "qa",
           "settings": {
-            "question": "Will the couriers assemble my furniture or remove my old furniture?",
-            "answer": "<p>No. Our couriers deliver your order but do not assemble new furniture or dismantle and remove old furniture. If you need assembly, contact us and we may be able to arrange a custom solution independently of the courier, subject to approval.</p>",
+            "question": "If I have a warranty issue, will I have to pay for the return delivery fee?",
+            "answer": "<p>If your product has a defect covered by our <a href=\"/pages/returns-warranty\">Product Warranty</a>, we will arrange replacement parts. Where replacement parts are not appropriate given the nature of the item or the fault, we will instead arrange a replacement unit.</p><p>For all approved warranty claims within the applicable warranty period, Proferlo will cover any associated shipping and handling costs.</p>",
             "open": false
-          }
-        },
-        "cat_2": {
-          "type": "category",
-          "settings": {
-            "heading": "Products & stock"
           }
         },
         "qa_6": {
           "type": "qa",
           "settings": {
-            "question": "What's the difference between “Add to Cart”, “Pre-Order” and “Out of Stock”?",
-            "answer": "<p>Items marked “Add to Cart” are in stock and ready for fulfilment at the earliest date. “Pre-Order” items can be purchased while incoming stock is in transit and ship once they arrive and pass inspection. “Out of Stock” items aren’t currently available and can’t be pre-ordered until new stock is confirmed.</p>",
+            "question": "Do you assemble products for your customers?",
+            "answer": "<p>Prefer not to assemble your furniture yourself? We've partnered with <a href=\"https://obp.kitsetassemblyservices.com/s/proferlo/assembly-details/\" target=\"_blank\" title=\"KitSet Assembly Services - Proferlo Furniture\">KitSet Assembly Services</a> a professional assembly service, so you can have your items expertly put together without the hassle.</p><p>Assembly is entirely optional and booked directly with KitSet - separately from your Proferlo order. Simply visit their <a href=\"https://obp.kitsetassemblyservices.com/s/proferlo/assembly-details/\" target=\"_blank\" title=\"KitSet Assembly Services - Proferlo Furniture\">booking portal</a> to view pricing for your area, check delivery/assembly coverage, and schedule a time that suits you. Bookings, scheduling, and payment are all handled directly between you and KitSet's local team.</p><p>KitSet's franchise partners are fully insured (Public Liability up to $20 million, and Goods in Transit cover), and all technicians are Working With Children and Police Checked for your peace of mind.</p><p>If your area isn't listed as a standard coverage zone, KitSet can still provide a tailored quote on request.</p>",
             "open": false
           }
         },
         "qa_7": {
           "type": "qa",
           "settings": {
-            "question": "My order has both in-stock and pre-order items — when will it ship?",
-            "answer": "<p>Orders containing a pre-order item are held and shipped together once every item is available. If you’d prefer the in-stock items sent sooner as a partial shipment, email us at <a href=\"mailto:support@proferlofurniture.com.au\">support@proferlofurniture.com.au</a> and we’ll arrange it where possible.</p>",
+            "question": "I received my order, but the assembly guide is missing, what do I do?",
+            "answer": "<p>If the assembly guide is missing, please check the product page online under the <strong>\"Warranty & Assembly\"</strong> tab, as a digital copy of instructions are typically available there.</p><p>If you are unable to locate it, please contact us directly and we will be happy to send you a copy.</p>",
             "open": false
           }
         },
         "qa_8": {
           "type": "qa",
           "settings": {
-            "question": "Can you notify me when a product is back in stock?",
-            "answer": "<p>Yes — contact us to request a back-in-stock notification and we’ll let you know as soon as the item is confirmed for restock. We also recommend signing up for our email updates, as popular items can sell out quickly after restocking.</p>",
+            "question": "What if I made a mistake during assembly?",
+            "answer": "<p>We do our absolute best to ensure our furniture assembly process is as straightforward as possible; however, we understand that mistakes can happen - we’ve all been there. If you need assistance, please feel free to <a href=\"/pages/contact-us\" target=\"_blank\" title=\"contact us\">Contact Us</a> via email, and we’ll do our best to help you find a suitable solution.</p>",
             "open": false
           }
         },
         "qa_9": {
           "type": "qa",
           "settings": {
-            "question": "Do you have a showroom I can visit?",
-            "answer": "<p>We don’t have a Brisbane showroom — our only showroom is in Auckland, New Zealand. If you’d like to see a specific product in person before buying, contact us and we can request photos or a video of that item from our Auckland showroom.</p>",
+            "question": "Product Availability, Pre-Orders, and Out-of-Stock items.",
+            "answer": "<p>Items marked <strong>“Add to Cart”</strong> are in stock on-site and available for fulfilment at the earliest possible date.</p><p>Products listed as <strong>“Pre-Order”</strong> are available for purchase while incoming stock is in transit. These orders will be fulfilled once the items arrive on-site, pass inspection, and are prepared for dispatch on or after the specified date. If your order includes both in-stock and pre-order items, the entire order will be held until all items are ready. If you would prefer a partial shipment of available items sooner, please contact our team at <a href=\"mailto:support@proferlofurniture.com.au\"><strong>support@proferlofurniture.com.au</strong></a>.</p><p>Items marked <strong>“Out of Stock”</strong> are not currently available for dispatch and cannot be pre-ordered until incoming stock has been confirmed. Once confirmed, pre-orders will be opened. If you are interested in an out-of-stock item that is not yet available for pre-order, please contact us and we will be happy to assist.</p>",
             "open": false
           }
         },
         "qa_10": {
           "type": "qa",
           "settings": {
-            "question": "How do I know a piece will fit my space?",
-            "answer": "<p>Full dimensions (width, depth and height) are listed on every product page, so we recommend measuring your space — and your doorways, hallways and lifts — before ordering. For multi-carton items, carton sizes are available on request. If you’re unsure, contact us and we’ll help you check.</p>",
+            "question": "Will you notify me once a product becomes available?",
+            "answer": "<p>Please contact us to request a back-in-stock notification. Our team will do their best to notify you as soon as your requested item(s) are confirmed for restock.</p><p>We also recommend checking the website regularly or signing up for our email updates to avoid missing out, as high demand means restocked items can sell quickly.</p>",
             "open": false
-          }
-        },
-        "cat_3": {
-          "type": "category",
-          "settings": {
-            "heading": "Materials, certifications & care"
           }
         },
         "qa_11": {
           "type": "qa",
           "settings": {
-            "question": "What materials is your furniture made from?",
-            "answer": "<p>Our furniture is made from responsibly sourced timber and engineered wood, paired with quality fabrics and finishes selected for durability. We prioritise low- or zero-VOC and formaldehyde-free materials for a healthier home. The exact materials are listed on each product page.</p>",
+            "question": "Do you have a showroom?",
+            "answer": "<p>Unfortunately, no. Our only location with a showroom is in Auckland, NZ. If you would like to see \"In-Person\" photos or videos of certain items prior to purchase, please contact us.</p>",
             "open": false
           }
         },
         "qa_12": {
           "type": "qa",
           "settings": {
-            "question": "Is your furniture certified, safe and non-toxic?",
-            "answer": "<p>Yes. Our manufacturing meets leading international standards including FSC (responsibly sourced timber), CARB Phase 2 (ultra-low formaldehyde emissions), and ISO 9001, ISO 14001 and ISO 45001 for quality, environmental and safety management. We use low- or zero-VOC, formaldehyde-free finishes to support healthier indoor air. Read more on our <a href=\"/pages/sustainability\">Sustainability page</a>.</p>",
+            "question": "Will the couriers dismantle or remove my old furniture?",
+            "answer": "<p>The couriers will <strong>not</strong> dismantle or remove old furniture.</p>",
             "open": false
+          }
+        },
+        "cat_2": {
+          "type": "category",
+          "settings": {
+            "heading": "Returns & Refunds"
           }
         },
         "qa_13": {
           "type": "qa",
           "settings": {
-            "question": "Is your furniture eco-friendly and sustainably made?",
-            "answer": "<p>Sustainability is central to how we build. We source certified materials, run energy-efficient production, and ship in recycled cardboard packaging while working toward even greener alternatives. Our pieces are designed to last for years rather than end up in landfill.</p>",
+            "question": "How does the 14-day in-home trial work?",
+            "answer": "<p>The 14-day change-of-mind period is essentially a trial window where you can decide if you want to keep or return your purchase, provided it meets the conditions below.</p><p><strong>How it works:</strong> The 14 days begin on the day you receive your delivery. If there's no proof of delivery, it's assumed to begin 7 days after dispatch, unless you can reasonably demonstrate a later delivery date.</p><p>You can return most items within this period for any reason (\"change of mind\"), but certain products are excluded — clearance stock, items discounted by more than 30% off RRP, hygiene products such as mattresses, pillows, or other bedding items, ex-display stock, and made-to-order or special-order products.</p><p>You are responsible for return shipping costs, and the original delivery fee will also be deducted from your refund. This applies even to \"free shipping\" orders — for items returned under a free shipping promotion, the delivery cost both ways will be deducted from your refund. If the item is not returned in person to our warehouse, a return shipping fee will apply and the original shipping fee paid will not be included in your refund.</p><p>Items must be unused, undamaged, and returned in their original, unopened, and sealed packaging. Your refund won't be processed until the item has been returned to our warehouse and inspected — following inspection, our team will determine the applicable refund amount, including whether a restocking fee of up to 20% applies, based on the condition of the item and packaging on return.</p><p>You must submit a return request via email and receive approval before sending items back. Direct returns to our warehouse are allowed (with prior approval) and avoid return shipping fees.</p><p>This change-of-mind policy does not affect any right you may separately have under the Australian Consumer Law where an item is faulty, not fit for purpose, or does not match its description — those matters are handled under our warranty terms instead.</p>",
             "open": false
           }
         },
         "qa_14": {
           "type": "qa",
           "settings": {
-            "question": "How do I care for and clean my furniture?",
-            "answer": "<p>Wipe surfaces with a soft, dry or slightly damp cloth and avoid harsh chemicals, solvents and abrasive pads. Keep furniture out of prolonged direct sunlight and away from heat sources to protect the finish, and clean up spills promptly. Periodically check and tighten fixings, and use felt pads to prevent floor scratches.</p>",
+            "question": "What condition must the product be in to be returned?",
+            "answer": "<p><strong>Condition requirements:</strong> Items must be unused, undamaged, and returned in their original protective packaging. If the original packaging is missing or damaged, a 20% repackaging/restocking fee applies.</p>",
             "open": false
           }
         },
         "qa_15": {
           "type": "qa",
           "settings": {
-            "question": "Will the timber grain or colour vary between pieces?",
-            "answer": "<p>Yes — natural timber and timber-look finishes have unique grain and slight colour variation, so your piece may differ subtly from the photos or from another unit. This is a normal characteristic of natural materials, not a fault. Screens can also display colours differently, so contact us if you’d like additional photos.</p>",
+            "question": "Are any items excluded from the 14-day trial?",
+            "answer": "<p>You can return most items within this period for any reason (“change of mind”), but certain products are excluded — clearance stock, items discounted by more than 30% off RRP, products with hygiene concerns (mattresses), ex-display stock, and made-to-order or special-order products.</p>",
             "open": false
-          }
-        },
-        "cat_4": {
-          "type": "category",
-          "settings": {
-            "heading": "Assembly"
           }
         },
         "qa_16": {
           "type": "qa",
           "settings": {
-            "question": "Is assembly required, and is it difficult?",
-            "answer": "<p>Most of our furniture arrives flat-packed and requires assembly, but it’s designed to be straightforward with clear instructions included. Some larger items are multi-carton, so we recommend two people for heavier pieces. If you’d like a hand, see the questions below.</p>",
+            "question": "How do I start a return?",
+            "answer": "<p>You must <a href=\"/pages/contact-us\" target=\"_blank\" title=\"contact us\">Contact Us</a> to submit a return request via email and get approval before sending items back. Direct returns to the warehouse are allowed (with prior approval) and avoid return shipping fees.</p>",
             "open": false
           }
         },
         "qa_17": {
           "type": "qa",
           "settings": {
-            "question": "Where can I find the assembly instructions?",
-            "answer": "<p>A digital copy of the assembly guide is available on each product page under the “Warranty & Assembly” tab. If your printed copy is missing or you can’t locate the digital version, contact us and we’ll send you one.</p>",
+            "question": "Do I have to pay for return shipping?",
+            "answer": "<p>We will organise return shipping however, <strong>you are responsible for return shipping costs</strong>, and the original delivery fee will also be deducted from your refund.<br/><br/>“Free shipping” orders are <strong>not exempt</strong> and will have the delivery cost (both ways during free shipping promotions) deducted.</p>",
             "open": false
           }
         },
         "qa_18": {
           "type": "qa",
           "settings": {
-            "question": "Do you offer an assembly service?",
-            "answer": "<p>Our courier partners don’t provide assembly. For assembly enquiries, contact us to discuss a custom solution — we may be able to arrange this independently of our couriers, subject to approval and your location.</p>",
+            "question": "Does the item need to be in its original packaging?",
+            "answer": "<p>Yes, items must be unused, undamaged, and returned in their original protective packaging. If the original packaging is missing or damaged, a 20% repackaging/restocking fee applies.</p>",
             "open": false
           }
         },
         "qa_19": {
           "type": "qa",
           "settings": {
-            "question": "What if I make a mistake during assembly?",
-            "answer": "<p>Mistakes happen and we’re glad to help. Email us describing the issue (photos help) and we’ll do our best to find a solution, whether that’s guidance or a replacement part.</p>",
+            "question": "How long will the return process take?",
+            "answer": "<p>Once submitted we will review your return and process it typically within 24 hours, we may also ask you for additional information to organise return shipping if required.<br/><br/>Return funds are only <strong>transferred to you once we have received the returned products</strong> via drop off or return shipping, and after shipping costs are deducted from the return fund.</p>",
             "open": false
-          }
-        },
-        "cat_5": {
-          "type": "category",
-          "settings": {
-            "heading": "Warranty"
           }
         },
         "qa_20": {
           "type": "qa",
           "settings": {
-            "question": "Does my purchase come with a warranty?",
-            "answer": "<p>Yes. All products include a 12-month quality guarantee covering defects in materials and workmanship. Sofas, chairs and bedframes also receive an extended 3-year structural warranty covering the internal structure and hard frames. Full details are on our <a href=\"/pages/returns-warranty\">Returns & Warranty page</a>.</p>",
+            "question": "When will I receive my refund?",
+            "answer": "<p>Return funds are only <strong>transferred to you once we have received the returned products</strong> via drop off or return shipping, and after shipping costs are deducted from the return fund.</p><p>Once the refund has been processed on our end, you’ll receive a confirmation email. Please allow up to <strong>10 business days</strong> for the funds to be returned to your account.</p><p>If you haven’t received your refund within 10 business days of receiving your confirmation email, please contact us <a href=\"mailto:support@proferlofurniture.com.au\" target=\"_blank\" title=\"mailto:support@proferlofurniture.com.au\">Here</a> so we can investigate the cause of the delay.</p>",
             "open": false
           }
         },
         "qa_21": {
           "type": "qa",
           "settings": {
-            "question": "How do I make a warranty claim for a manufacturing defect?",
-            "answer": "<p>Email our team with your order number, a description of the issue, and photos or a short video of the fault. We’ll assess the claim, may ask a few follow-up questions, and once approved we’ll arrange the best solution — a replacement part, a repair, or a full replacement.</p>",
+            "question": "Will I be refunded the full amount?",
+            "answer": "<p>The 14-day change-of-mind period is essentially a trial window where you can decide if you want to keep or return your purchase, provided it meets the conditions below.</p><p><strong>How it works:</strong> The 14 days begin on the day you receive your delivery. If there's no proof of delivery, it's assumed to begin 7 days after dispatch, unless you can reasonably demonstrate a later delivery date.</p><p>You can return most items within this period for any reason (\"change of mind\"), but certain products are excluded — clearance stock, items discounted by more than 30% off RRP, hygiene products such as mattresses, pillows, or other bedding items, ex-display stock, and made-to-order or special-order products.</p><p>You are responsible for return shipping costs, and the original delivery fee will also be deducted from your refund. This applies even to \"free shipping\" orders — for items returned under a free shipping promotion, the delivery cost both ways will be deducted from your refund. If the item is not returned in person to our warehouse, a return shipping fee will apply and the original shipping fee paid will not be included in your refund.</p><p>Items must be unused, undamaged, and returned in their original, unopened, and sealed packaging. Your refund won't be processed until the item has been returned to our warehouse and inspected — following inspection, our team will determine the applicable refund amount, including whether a restocking fee of up to 20% applies, based on the condition of the item and packaging on return.</p><p>You must submit a return request via <a href=\"/pages/contact-us\" target=\"_blank\" title=\"contact us\">email</a> and receive approval before sending items back. Direct returns to our warehouse are allowed (with prior approval) and avoid return shipping fees.</p><p>This change-of-mind policy does not affect any right you may separately have under the Australian Consumer Law where an item is faulty, not fit for purpose, or does not match its description — those matters are handled under our warranty terms instead.</p>",
             "open": false
           }
         },
         "qa_22": {
           "type": "qa",
           "settings": {
-            "question": "I received the wrong item, or there are missing parts — what do I do?",
-            "answer": "<p>Contact us within 48 hours of delivery for a wrong item and we’ll arrange replacement and return delivery. For missing parts, send us photos and the part numbers as soon as you can and we’ll organise a solution.</p>",
+            "question": "Can I exchange my product for a different one?",
+            "answer": "<p>Yes, you may request to exchange your product any time within the 14-day trial period. You will only need to pay for the difference in product price (if any), plus the return shipping cost of the original item — this still applies to free shipping orders, where the original delivery cost will also be deducted.</p><p>The exchanged item must meet the same return condition requirements as a standard change-of-mind return (unused, undamaged, and in its original, unopened, and sealed packaging), and is subject to inspection on return.</p>",
             "open": false
+          }
+        },
+        "cat_3": {
+          "type": "category",
+          "settings": {
+            "heading": "Delivery & Pick Up"
           }
         },
         "qa_23": {
           "type": "qa",
           "settings": {
-            "question": "Will I pay return shipping on a warranty claim?",
-            "answer": "<p>No. For all approved warranty claims, Proferlo covers the associated shipping and handling costs to repair the item, send a replacement part, or replace the product at our discretion.</p>",
+            "question": "What are your delivery options and how long do they take?",
+            "answer": "<p>We offer express delivery with our trusted delivery partners on all orders.<br/><br/>QLD Metro: within 3-5 Business Days<br/>QLD Regional: within 3-8 Business Days<br/><br/><strong>Interstate & Custom Shipping:</strong> For interstate deliveries or custom shipping requirements, please contact us directly <a href=\"/pages/contact-us\" target=\"_blank\" title=\"contact us\">here</a>.</p><p>Full delivery information is available on our <a href=\"/pages/shipping-pick-up\" title=\"Shipping & Pick Up\">Delivery & Pickups page</a>.</p>",
             "open": false
-          }
-        },
-        "cat_6": {
-          "type": "category",
-          "settings": {
-            "heading": "Returns & refunds"
           }
         },
         "qa_24": {
           "type": "qa",
           "settings": {
-            "question": "What is your change-of-mind return policy?",
-            "answer": "<p>You have a 14-day change-of-mind trial that begins the day your order is delivered (or 7 days after dispatch if there’s no proof of delivery). Most items can be returned within this window provided they’re unused, undamaged and in their original protective packaging. You must request and receive return approval by email before sending anything back.</p>",
+            "question": "How much does delivery cost?",
+            "answer": "<p>We offer free express delivery within Brisbane Metro postcodes (eligibility can be checked on the product page).<br/><br/>For outside metro postcodes, a delivery surcharge based on rates from our couriers is automatically calculated at checkout.<br/><br/><strong>Pro tip:</strong> Our shipping charges are calculated by weight, therefore orders with multiple products enjoy much lower shipping fees than if the products were purchased individually in separate orders.</p>",
             "open": false
           }
         },
         "qa_25": {
           "type": "qa",
           "settings": {
-            "question": "Are any items excluded from change-of-mind returns?",
-            "answer": "<p>Yes. Clearance stock, items discounted more than 30% off RRP, ex-display stock, made-to-order or special-order products, and items with hygiene concerns (such as mattresses) are not eligible for change-of-mind returns. Items with a genuine fault are handled separately under our warranty policy.</p>",
+            "question": "How can I track my order?",
+            "answer": "<p>Active tracking information is provided with all our shipped orders.<br/><br/>This is provided by our couriers via a tracking link once the order is picked up and scanned by our couriers.<br/><br/>You will receive notifications via email/sms with the tracking link typically within 24 hours (outside of weekends).</p>",
             "open": false
           }
         },
         "qa_26": {
           "type": "qa",
           "settings": {
-            "question": "Do I have to pay for return shipping?",
-            "answer": "<p>For change-of-mind returns you’re responsible for return shipping, and the original delivery cost is deducted from your refund — including on “free shipping” orders, where both legs of delivery are calculated and deducted. If the item isn’t returned in its original packaging or condition, a 20% repackaging/restocking fee applies. Returning directly to our Acacia Ridge warehouse with prior approval avoids return shipping fees.</p>",
+            "question": "Can I request a delayed dispatch for my order?",
+            "answer": "<p>Yes! You can request to delay the dispatch of your order for up to 30 calendar days free of charge.<br/><br/>However, please note the following:<br/><strong>Exceeding 30 days:</strong> If your request exceeds 30 calendar days, storage fees may apply.<br/><br/><strong>Dispatched orders:</strong> Once your order has been dispatched, we are unable to accommodate delayed dispatch requests.<br/><br/>To make a delayed dispatch request, feel free to contact our team as soon as possible. We're here to help!</p>",
             "open": false
           }
         },
         "qa_27": {
           "type": "qa",
           "settings": {
-            "question": "When will I receive my refund?",
-            "answer": "<p>Refunds are processed once we receive the returned item and after any shipping costs are deducted. We typically review returns within 24 hours of receipt, and you’ll get a confirmation email once the refund is processed. Please allow up to 10 business days for funds to reach your account.</p>",
+            "question": "If I order several items, will they be delivered at the same time?",
+            "answer": "<p>It is a standard practice that we ensure all items ordered are dispatched at the same time if the product is available and comes from the same warehouse. We do not guarantee that it will all arrive at the same time due to special circumstances (courier operations, product availability, lost in transit etc.).</p><p>Orders with multiple items (10 cartons or more) may require special handling and we can offer a delivery option that will allow the courier to deliver all your items together at the same time. However, this service will incur an additional cost as a special arrangement will need to be made with our delivery partner before dispatch. Please note that bulk delivery is optional. We can still process your orders as normal, but your items will be posted with multiple consignment numbers and you can expect separate deliveries.</p><p>Should you wish to inquire about the bulk delivery, kindly contact us <a href=\"/pages/contact-us\" target=\"_blank\" title=\"contact us\">here</a> and our friendly customer care team will be ready to assist you.</p>",
             "open": false
           }
         },
         "qa_28": {
           "type": "qa",
           "settings": {
-            "question": "Can I exchange an item instead of returning it?",
-            "answer": "<p>Yes — you can request an exchange any time within the 14-day trial period. You’ll only pay the price difference (if any) plus the return cost of the original item, and this applies to free-shipping orders too.</p>",
+            "question": "What does the delivery service include / Can the courier deliver upstairs?",
+            "answer": "<p>Due to our contactless home delivery and to ensure the safety of our customers and delivery partners, all orders are delivered at the <strong>front door of the ground floor or building lobby</strong>. We recommend that you have someone else available to help you carry the items into your home.<br/><br/>However you can place <strong>additional delivery notes</strong> before check out. If in case you miss it, you may contact our dedicated customer service team <a href=\"/pages/contact-us\" target=\"_blank\" title=\"contact us\">here</a>.<br/><br/>Additional delivery instructions <strong>only</strong> cover the following: address instruction and authority to leave. Please note that “preferred delivery time” is not guaranteed as we do not have control over courier operations.</p>",
             "open": false
-          }
-        },
-        "cat_7": {
-          "type": "category",
-          "settings": {
-            "heading": "Payments & promotions"
           }
         },
         "qa_29": {
           "type": "qa",
           "settings": {
-            "question": "What payment methods do you accept?",
-            "answer": "<p>We accept Visa, Mastercard and American Express, Buy Now Pay Later via Afterpay and Zip Pay, and digital wallets including Apple Pay, Google Pay and PayPal. All payments are processed securely at checkout, and you’ll receive confirmation by SMS and/or email once payment completes.</p>",
+            "question": "Do I need to be home to receive my delivery?",
+            "answer": "<p>Yes someone will need to be home on day of delivery, the courier will contact you to organise a delivery date in advance.</p><p>Authority to Leave (ATL) is available if you'd prefer a \"No Signature\" delivery. This can be requested by contacting our support team <strong>prior to dispatch</strong> or with the couriers directly once your order is on-board for delivery.<br/><br/>In case you have not requested ATL and you receive a “sorry we missed you” card or missed a delivery, please contact the couriers directly to arrange re-delivery of your order. Please note that the courier gives a specific time frame to arrange the redelivery and applicable re-delivery fee will apply.</p>",
             "open": false
           }
         },
         "qa_30": {
           "type": "qa",
           "settings": {
-            "question": "Are my card details secure?",
-            "answer": "<p>Yes. Payments are processed through Shopify Payments, which is PCI DSS Level 1 compliant — the highest standard in the industry. Your card details are encrypted and handled by Shopify’s secure gateway; we never store or see your full card information.</p>",
+            "question": "What should I do if my order arrives damaged?",
+            "answer": "<ol><li><strong>Contact Our Team:</strong> Get in touch with our customer service team via email. Please provide your <strong>order number</strong>, a clear <strong>description of the issue</strong>, and attach <strong>photos or a short video</strong> showing the fault.</li><li><strong>Assessment:</strong> Our team will carefully assess the situation based on the information provided. We may ask a few follow-up questions to ensure we have all the details.</li><li><strong>Resolution:</strong> We will work with you to find the best solution, whether it's sending a replacement part, arranging a repair, or organising a full replacement.</li></ol>",
             "open": false
           }
         },
         "qa_31": {
           "type": "qa",
           "settings": {
-            "question": "Can I pay on delivery or at pickup?",
-            "answer": "<p>No. All balances must be paid in full before dispatch or collection, and we don’t accept payment (including cash) on site at pickup.</p>",
+            "question": "Can I change my delivery address after placing an order?",
+            "answer": "<p>We process and dispatch the orders within 24 hours. If you need to change or correct the delivery address, request must be received before 9am (AEST) prior to dispatch from the warehouse. If in case the order has already left the warehouse, we will charge a redirection fee and cost may vary depending on the new location. If you need to change your delivery information, please contact our team <a href=\"/pages/contact-us\" target=\"_blank\" title=\"contact us\">here</a>.</p>",
             "open": false
           }
         },
         "qa_32": {
           "type": "qa",
           "settings": {
-            "question": "The item I bought just went on sale — can I get the difference refunded?",
-            "answer": "<p>If the price of an identical item (same SKU, model, size and finish, still in stock) drops within 14 days of your purchase, we can refund the difference or issue store credit. Proof of purchase is required, and the policy excludes clearance items, products over 30% off RRP, ex-display and made-to-order items, and limited-time promotions. Requests must be made by email.</p>",
+            "question": "Do you offer a pickup option?",
+            "answer": "<p>Yes we offer a free pickup option at our Brisbane, Acacia Ridge 4116 warehouse.</p><p><strong>Please note:</strong> As our team are constantly out on deliveries, we require notice of your intended arrival day/time to ensure adequate staff are on-site to assist.<br/><br/>Please note this is a <strong>warehouse only</strong>.</p>",
             "open": false
           }
         },
         "qa_33": {
           "type": "qa",
           "settings": {
-            "question": "How do I use a promo code?",
-            "answer": "<p>Add your items to the cart, then enter your code in the “Discount code” box on the checkout page and click Apply — codes are case-sensitive. Your discount appears in the order summary before payment. Only one promo code can be used per order, and codes can’t be applied after a purchase is completed.</p>",
+            "question": "Do you offer same-day pickup?",
+            "answer": "<p>Yes, please contact us <a href=\"/pages/contact-us\" target=\"_blank\" title=\"contact us\">here</a> and let us know you require same-day pickup so we can get to your order first. (Typically ready in 2-3 hours after order is placed.)<br/><br/><strong>Limited to warehouse working hours only.</strong></p>",
             "open": false
-          }
-        },
-        "cat_8": {
-          "type": "category",
-          "settings": {
-            "heading": "Damaged, lost or stolen in transit"
           }
         },
         "qa_34": {
           "type": "qa",
           "settings": {
-            "question": "My order arrived damaged, or is lost or stolen — how do I make a claim?",
-            "answer": "<p>Email <a href=\"mailto:support@proferlofurniture.com.au\">support@proferlofurniture.com.au</a> with your order number, proof of purchase, clear photos of any damage and packaging, and a description of the issue. Claims must be lodged within 14 days of delivery for damage, or within 48 hours of the marked delivery date for lost or stolen items. We’ll investigate with the courier and aim to resolve most claims within 7–14 business days.</p>",
+            "question": "When will I know my order is ready for pickup?",
+            "answer": "<p>We will send you a <strong>\"Ready for Pick up\"</strong> notification via email/sms.<br/><br/>Please note <strong>this is separate</strong> from the <strong>order confirmation email</strong> which you will receive immediately after you place your order.<br/><br/>We cannot guarantee that an order will be ready for pickup in the case that a customer arrives at our warehouse without the \"Ready for Pick up\" notification.</p>",
             "open": false
-          }
-        },
-        "cat_9": {
-          "type": "category",
-          "settings": {
-            "heading": "Trade & bulk enquiries"
           }
         },
         "qa_35": {
           "type": "qa",
           "settings": {
-            "question": "Do you offer trade, bulk or commercial pricing?",
-            "answer": "<p>We welcome trade, project and bulk enquiries from interior designers, builders, property stylists and commercial buyers. Contact us with your requirements — including quantities and timeframe — and our team will prepare a tailored quote. <em>(Editable: add your trade terms or a trade application link here.)</em></p>",
+            "question": "What are your pickup hours?",
+            "answer": "<p>Warehouse working hours/pickup hours are linked <a href=\"/pages/contact-us\" target=\"_blank\" title=\"contact us\"><em>here</em></a>.</p>",
+            "open": false
+          }
+        },
+        "qa_36": {
+          "type": "qa",
+          "settings": {
+            "question": "What do I need to bring to collect my order?",
+            "answer": "<p>You must bring your <strong>order number + valid government ID</strong> which matches the name under the order placed.<br/><br/>Otherwise you may also request pick ups by someone else through contacting our support team.</p>",
+            "open": false
+          }
+        },
+        "qa_37": {
+          "type": "qa",
+          "settings": {
+            "question": "What should I consider before picking up my furniture?",
+            "answer": "<p>Please ensure you bring the information required to approve a pickup. These include your <strong>order number + valid government ID</strong> which matches the name under the order placed.<br/><br/>Our friendly warehouse staff will help you load the products into your vehicle on the day; however, it is the customer's responsibility to <strong>ensure product boxes fit within their vehicle</strong> (all dimensions of product box sizes are provided on the product pages under the <em>Material & Specification</em> tab).</p>",
+            "open": false
+          }
+        },
+        "cat_4": {
+          "type": "category",
+          "settings": {
+            "heading": "Payments & Promotions"
+          }
+        },
+        "qa_38": {
+          "type": "qa",
+          "settings": {
+            "question": "The product I purchased just went on sale, can I get a refund for the difference?",
+            "answer": "<p><strong>Price Adjustment Policy</strong><br/><br/>If the price of a product you purchased drops within 14 days of your purchase date, we can refund you the difference in store credit.</p><p><strong>Conditions:</strong></p><ul><li>The item must be identical in SKU, model, size, and finish, and must still be in stock at the lower price.</li><li>Excludes clearance items, products discounted by more than 30% off RRP, made-to-order/special-order products, and limited-time promotions.</li><li>Proof of purchase is required.</li><li>Refunds will be processed as store credit, applied to the account used for the original order.</li><li>Requests must be submitted via <a href=\"/pages/contact-us\" target=\"_blank\" title=\"contact us\">email</a>.</li></ul>",
+            "open": false
+          }
+        },
+        "qa_39": {
+          "type": "qa",
+          "settings": {
+            "question": "What payment methods do you accept?",
+            "answer": "<p>We offer a wide range of secure payment options at checkout for your convenience:</p><ul><li><strong>Credit & Debit Cards:</strong> Visa, Mastercard, American Express</li><li><strong>Buy Now, Pay Later:</strong> Afterpay, Zip Pay</li><li><strong>Digital Wallets:</strong> Apple Pay, Google Pay, PayPal</li></ul><p>All payments are processed securely online at checkout (including emailed invoices created by our team). You will receive an order confirmation once your payment has been successfully completed via SMS and/or email.</p><p>Please note for Click & Collects: our Acacia Ridge warehouse is strictly an order fulfilment location — we do not have a showroom, point-of-sale system, or the ability to accept cash, card, or any other form of payment on-site. Orders must be placed and paid for online in advance, and will only be ready for collection once marked as \"Ready for Pick-Up.\" Please do not attend the warehouse to place or pay for an order in person.</p>",
+            "open": false
+          }
+        },
+        "qa_40": {
+          "type": "qa",
+          "settings": {
+            "question": "Are my card details secured?",
+            "answer": "<p>Yes — all our checkout payments are processed securely through Shopify Payments, which is PCI DSS Level 1 compliant (the highest standard in the payment industry).<br/><br/>Encryption & Security: Your card details are encrypted and processed directly by Shopify’s secure payment gateway. We never store or have access to your full card information.<br/><br/>Fraud Protection: Shopify Payments includes advanced fraud detection and monitoring to help keep your transactions safe.<br/><br/>Trusted Provider: Shopify powers millions of secure transactions worldwide every day.<br/><br/>You can shop with confidence knowing your payment details are handled with the highest level of security.</p>",
+            "open": false
+          }
+        },
+        "qa_41": {
+          "type": "qa",
+          "settings": {
+            "question": "Can I pay for my order upon delivery?",
+            "answer": "<p>No — all outstanding balances must be paid in full prior to dispatch or collection. Payments, including cash, are not accepted on-site at the time of pickup.</p>",
+            "open": false
+          }
+        },
+        "qa_42": {
+          "type": "qa",
+          "settings": {
+            "question": "How do I use my promo code?",
+            "answer": "<p>You can apply your promo code at checkout:<br/><br/>Add your items to the cart.<br/><br/>On the checkout page, look for the “Discount code” or “Promo code” box.<br/><br/>Enter your code exactly as it appears (codes are case-sensitive) and click Apply.<br/><br/>Your discount will be shown in the order summary before you complete your payment.<br/><br/>Tip: <strong>Only one promo code can be used per order, and codes cannot be applied after your purchase is completed.</strong></p>",
+            "open": false
+          }
+        },
+        "qa_43": {
+          "type": "qa",
+          "settings": {
+            "question": "My promo code isn't working, what should I do?",
+            "answer": "<p>Please contact us directly if you have a valid promo code which is not working at checkout.</p>",
+            "open": false
+          }
+        },
+        "qa_44": {
+          "type": "qa",
+          "settings": {
+            "question": "What is your return policy for sale items?",
+            "answer": "<p>Sale items follow our standard return policy unless they fall under the following exclusions: clearance items and products discounted by more than 30% off RRP are not eligible for change-of-mind returns.</p><p>All other sale items (discounted 30% or less) can be returned within our 14-day change-of-mind period, provided they are unused, undamaged, and in their original, unopened, and sealed packaging. Return shipping costs will still apply, and your refund will be subject to inspection — following inspection, our team will determine whether a restocking fee of up to 20% applies, based on the condition of the item and packaging on return.</p><p>If you're unsure whether your sale item is eligible, please contact our Support Team before making a return request.</p>",
+            "open": false
+          }
+        },
+        "cat_5": {
+          "type": "category",
+          "settings": {
+            "heading": "Claims Process for Damaged, Lost, or Stolen Items during Transit"
+          }
+        },
+        "qa_45": {
+          "type": "qa",
+          "settings": {
+            "question": "Who can make a claim?",
+            "answer": "<p>Claims must be made by the original purchaser; we do not accept claims made on behalf of others.</p>",
+            "open": false
+          }
+        },
+        "qa_46": {
+          "type": "qa",
+          "settings": {
+            "question": "What will I need to provide to lodge a claim?",
+            "answer": "<p>To help us process your claim as quickly as possible, please provide the following:</p><ul><li>Your order number and valid proof of purchase</li><li>Clear photos and/or video of the item and packaging showing the damage (for damaged items)</li><li>Photos of the delivery label and any visible signs of tampering (if applicable)</li><li>A detailed description of the issue, including when you noticed it and any relevant delivery details</li><li>For lost or stolen items, any supporting evidence such as courier tracking information, a police report (if applicable), or confirmation from building management</li></ul><p>Please retain all original packaging until your claim has been assessed and resolved, as packaging condition may be used to help determine whether damage occurred during transit.</p><p>All claims must be submitted via email to <a href=\"mailto:support@proferlofurniture.com.au\">support@proferlofurniture.com.au</a> within 14 days of receiving your delivery (or the expected delivery date for lost or stolen items), so we can investigate with the courier promptly.</p>",
+            "open": false
+          }
+        },
+        "qa_47": {
+          "type": "qa",
+          "settings": {
+            "question": "In the event of lost/stolen:",
+            "answer": "<p>If your order is marked as delivered but you have not received it:</p><ul><li>Check with neighbours or household members to ensure it hasn't been accepted on your behalf.</li><li>Check where the item/s were left under Authority to Leave (ATL) in a location, such as a building lobby or side entrance.</li><li>Contact the courier directly using your tracking details to confirm the delivery status.</li><li>If still unresolved, lodge a claim with us within 48 hours of the marked delivery date via email.</li></ul><p>What we require:</p><ul><li>Your order number and proof of purchase.</li><li>Courier tracking information showing the delivery scan.</li><li>Any supporting evidence such as CCTV footage, building management confirmation, or a police report (may be required for stolen goods).</li></ul><p>We will work with the courier to investigate. Please note that replacements or refunds are subject to the courier's claim approval and our investigation outcome.</p>",
+            "open": false
+          }
+        },
+        "qa_48": {
+          "type": "qa",
+          "settings": {
+            "question": "How will my claim be resolved?",
+            "answer": "<p>Once we have received all required information and supporting evidence, we will investigate the claim with our delivery partner.</p><p><strong>If approved:</strong> Depending on the outcome, we will arrange one of the following:</p><ul><li>Replacement parts, or a full replacement unit where parts are not appropriate given the nature of the item or the fault (subject to stock availability)</li><li>A repair (for damaged items, where applicable)</li><li>A refund to your original payment method, if replacement parts or a replacement unit are unavailable on-site or under factory order.</li></ul><p><strong>If declined:</strong> We will provide the courier's investigation findings, along with the reason the claim was not approved.</p><p>Resolution timeframes vary depending on the courier's assessment process; however, we aim to finalise most claims within 7–14 business days of receiving all required details.</p>",
+            "open": false
+          }
+        },
+        "qa_49": {
+          "type": "qa",
+          "settings": {
+            "question": "How long will my claim take?",
+            "answer": "<p>Resolution times can vary depending on the courier’s processing time, but we aim to finalise most claims <strong>within 7–14 business days</strong> from receiving all required details.</p>",
             "open": false
           }
         }
@@ -368,50 +456,60 @@
         "qa_3",
         "qa_4",
         "qa_5",
-        "cat_2",
         "qa_6",
         "qa_7",
         "qa_8",
         "qa_9",
         "qa_10",
-        "cat_3",
         "qa_11",
         "qa_12",
+        "cat_2",
         "qa_13",
         "qa_14",
         "qa_15",
-        "cat_4",
         "qa_16",
         "qa_17",
         "qa_18",
         "qa_19",
-        "cat_5",
         "qa_20",
         "qa_21",
         "qa_22",
+        "cat_3",
         "qa_23",
-        "cat_6",
         "qa_24",
         "qa_25",
         "qa_26",
         "qa_27",
         "qa_28",
-        "cat_7",
         "qa_29",
         "qa_30",
         "qa_31",
         "qa_32",
         "qa_33",
-        "cat_8",
         "qa_34",
-        "cat_9",
-        "qa_35"
+        "qa_35",
+        "qa_36",
+        "qa_37",
+        "cat_4",
+        "qa_38",
+        "qa_39",
+        "qa_40",
+        "qa_41",
+        "qa_42",
+        "qa_43",
+        "qa_44",
+        "cat_5",
+        "qa_45",
+        "qa_46",
+        "qa_47",
+        "qa_48",
+        "qa_49"
       ],
       "settings": {
         "show_hero": true,
         "eyebrow": "Help centre",
         "heading": "Frequently asked questions",
-        "intro": "<p>Everything about delivery, returns, assembly, materials, certifications, payments and trade — answered. Can’t find what you need? Get in touch and our team will help.</p>",
+        "intro": "<p>Everything about products, delivery, pickup, returns, payments and transit claims — answered. Can’t find what you need? Get in touch and our team will help.</p>",
         "hero_button_label": "Get in touch",
         "hero_button_url": "/pages/contact-us",
         "show_jumpnav": true,
