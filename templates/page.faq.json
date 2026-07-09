@@ -470,14 +470,6 @@
             "open": false
           }
         },
-        "qa_61b_placeholder_removed": {
-          "type": "qa",
-          "settings": {
-            "question": "PLACEHOLDER",
-            "answer": "<p>PLACEHOLDER</p>",
-            "open": false
-          }
-        },
         "qa_40": {
           "type": "qa",
           "settings": {
