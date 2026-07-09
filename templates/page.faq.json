@@ -128,6 +128,114 @@
             "open": false
           }
         },
+        "qa_50": {
+          "type": "qa",
+          "settings": {
+            "question": "What's the difference between solid wood and engineered wood furniture?",
+            "answer": "<p>Solid timber is cut directly from hardwood or softwood; engineered wood (MDF, particle board, plywood) is manufactured from wood fibres or layers bonded under pressure. Engineered boards are more dimensionally stable — they resist warping, cracking and seasonal movement — and make quality furniture significantly more affordable. Most of our range uses quality E0-rated engineered boards with durable finishes, with materials listed per product under <strong>Material & Specification</strong>.</p>",
+            "open": false
+          }
+        },
+        "cat_6": {
+          "type": "category",
+          "settings": {
+            "heading": "Materials, Certifications & Care"
+          }
+        },
+        "qa_51": {
+          "type": "qa",
+          "settings": {
+            "question": "What materials is your furniture made from?",
+            "answer": "<p>Our furniture is made from responsibly sourced timber and quality engineered wood (such as E0-rated MDF and particle board), paired with durable fabrics, metals and finishes. We prioritise low-formaldehyde, low-VOC boards and finishes for a healthier home. The exact materials for each piece are listed on its product page under the <strong>Material & Specification</strong> tab.</p>",
+            "open": false
+          }
+        },
+        "qa_52": {
+          "type": "qa",
+          "settings": {
+            "question": "Is your furniture certified and non-toxic?",
+            "answer": "<p>Yes. Our timber products are made with <strong>FSC-certified</strong> responsibly sourced timber, and our boards are rated <strong>E0</strong> — one of the lowest formaldehyde-emission grades available, stricter than the E1 industry norm — and meet <strong>CARB Phase 2</strong>, one of the world's strictest emission standards. That means healthier indoor air for your home. Our manufacturing partner's facilities are additionally certified to ISO 9001, ISO 14001 and ISO 45001 for quality, environmental and safety management. Read more on our <a href=\"/pages/sustainability\">Sustainability & Certifications page</a>.</p>",
+            "open": false
+          }
+        },
+        "qa_53": {
+          "type": "qa",
+          "settings": {
+            "question": "Is engineered wood (MDF / particle board) furniture durable?",
+            "answer": "<p>Yes — when the board grade and construction are right. We use <strong>18mm E0-rated engineered boards</strong> — thicker than the typical flat-pack industry standard — with sealed edges and durable finishes that resist warping, moisture and everyday wear far better than the thin, low-grade boards used in cheap flat-pack furniture. E0 is also one of the strictest formaldehyde-emission grades, so our boards are as safe as they are sturdy. Engineered wood is more stable than solid timber in Australian conditions too, as it won't crack or move with humidity changes. Combined with our 12-month quality warranty (and 3-year structural warranty on sofas, armchairs and bed frames), our pieces are built for everyday family use.</p>",
+            "open": false
+          }
+        },
+        "qa_54": {
+          "type": "qa",
+          "settings": {
+            "question": "Is your furniture eco-friendly and sustainably made?",
+            "answer": "<p>Sustainability is built into how we source and ship. We use FSC-certified timber, E0-rated and CARB Phase 2 compliant low-emission boards, and recyclable cardboard packaging, and our pieces are designed to last years rather than end up in landfill. See our <a href=\"/pages/sustainability\">Sustainability & Certifications page</a> for the full picture — including what we're still working on.</p>",
+            "open": false
+          }
+        },
+        "qa_55": {
+          "type": "qa",
+          "settings": {
+            "question": "How do I care for and clean my furniture?",
+            "answer": "<p>Wipe surfaces with a soft, dry or slightly damp cloth and avoid harsh chemicals, solvents and abrasive pads. Keep furniture out of prolonged direct sunlight and away from heat sources to protect the finish, and clean up spills promptly. Periodically check and tighten fixings, and use felt pads under items on hard floors to prevent scratches.</p>",
+            "open": false
+          }
+        },
+        "qa_56": {
+          "type": "qa",
+          "settings": {
+            "question": "Will the timber grain or colour vary from the photos?",
+            "answer": "<p>Slightly, yes — natural timber and timber-look finishes have unique grain and subtle colour variation, so your piece may differ a little from the photos or from another unit. This is a normal characteristic of the materials, not a fault. Screens also display colours differently; if you'd like additional real photos of an item before ordering, <a href=\"/pages/contact-us\">contact us</a> and we'll arrange them.</p>",
+            "open": false
+          }
+        },
+        "cat_7": {
+          "type": "category",
+          "settings": {
+            "heading": "Buying with Confidence"
+          }
+        },
+        "qa_57": {
+          "type": "qa",
+          "settings": {
+            "question": "Is Proferlo an Australian furniture store?",
+            "answer": "<p>Yes — Proferlo Furniture is a Brisbane-based online furniture store. We're online-only, which is how we keep quality furniture honestly priced: no showroom overheads built into your price. We deliver Australia-wide, with orders dispatched from our Acacia Ridge warehouse in Brisbane (a dispatch and pickup location only — not a showroom), and our support team is available by phone and email during business hours.</p>",
+            "open": false
+          }
+        },
+        "qa_58": {
+          "type": "qa",
+          "settings": {
+            "question": "How do I know a piece will fit my space?",
+            "answer": "<p>Full assembled dimensions (width, depth and height) are listed on every product page, and carton dimensions are under the <strong>Material & Specification</strong> tab — useful for checking doorways, hallways, stairs and lifts, since our items arrive flat-packed in cartons. Measure your space and access route before ordering, and if you're unsure, <a href=\"/pages/contact-us\">contact us</a> and we'll help you check.</p>",
+            "open": false
+          }
+        },
+        "qa_59": {
+          "type": "qa",
+          "settings": {
+            "question": "Is assembly required, and is it difficult?",
+            "answer": "<p>Most of our furniture arrives flat-packed with clear step-by-step instructions, and is designed to be straightforward to assemble — we recommend two people for larger multi-carton pieces. A digital copy of every assembly guide is on the product page under the <strong>Warranty & Assembly</strong> tab. Prefer not to DIY? Our assembly partner <a href=\"https://obp.kitsetassemblyservices.com/s/proferlo/assembly-details/\" target=\"_blank\" title=\"KitSet Assembly Services - Proferlo Furniture\">KitSet Assembly Services</a> can put it together for you, booked directly through their portal.</p>",
+            "open": false
+          }
+        },
+        "qa_60": {
+          "type": "qa",
+          "settings": {
+            "question": "Do you offer trade, bulk or commercial pricing?",
+            "answer": "<p>Yes — Proferlo is factory-owned, so trade and bulk buyers order direct with no distributor or retailer markup between you and the source. Pricing is negotiated case-by-case on order volume, product mix and freight method — from a single project fit-out to container-volume orders. And unlike most furniture retailers, we don't lock you into one courier: bulk orders can ship palletised or by the freight method that works for your business. Interior designers, builders, developers, property stylists and commercial buyers can send their requirements via our <a href=\"/pages/trade\">Trade & Bulk Orders page</a> for a tailored quote.</p>",
+            "open": false
+          }
+        },
+        "qa_61": {
+          "type": "qa",
+          "settings": {
+            "question": "Can I buy furniture now and pay later?",
+            "answer": "<p>Yes — we offer <strong>Afterpay</strong> and <strong>Zip Pay</strong> at checkout, plus <strong>PayPal</strong>, letting you split your purchase into interest-free instalments and enjoy your furniture while you pay it off. Details, limits and how each option works are on our <a href=\"/pages/buy-now-pay-later\">Buy Now Pay Later page</a>.</p>",
+            "open": false
+          }
+        },
         "cat_2": {
           "type": "category",
           "settings": {
@@ -224,7 +332,7 @@
           "type": "qa",
           "settings": {
             "question": "What are your delivery options and how long do they take?",
-            "answer": "<p>We offer express delivery with our trusted delivery partners on all orders.<br/><br/>QLD Metro: within 3-5 Business Days<br/>QLD Regional: within 3-8 Business Days<br/><br/><strong>Interstate & Custom Shipping:</strong> For interstate deliveries or custom shipping requirements, please contact us directly <a href=\"/pages/contact-us\" target=\"_blank\" title=\"contact us\">here</a>.</p><p>Full delivery information is available on our <a href=\"/pages/shipping-pick-up\" title=\"Shipping & Pick Up\">Delivery & Pickups page</a>.</p>",
+            "answer": "<p>We offer express delivery Australia-wide with our trusted delivery partners.<br/><br/>Brisbane Metro: within 1-2 Business Days<br/>QLD (outside Brisbane Metro): within 3-5 Business Days<br/>QLD Regional: within 3-8 Business Days<br/><br/><strong>Interstate & Custom Shipping:</strong> For interstate deliveries or custom shipping requirements, please contact us directly <a href=\"/pages/contact-us\" target=\"_blank\" title=\"contact us\">here</a>.</p><p>Full delivery information is available on our <a href=\"/pages/shipping-pick-up\" title=\"Shipping & Pick Up\">Delivery & Pickups page</a>.</p>",
             "open": false
           }
         },
@@ -362,6 +470,14 @@
             "open": false
           }
         },
+        "qa_61b_placeholder_removed": {
+          "type": "qa",
+          "settings": {
+            "question": "PLACEHOLDER",
+            "answer": "<p>PLACEHOLDER</p>",
+            "open": false
+          }
+        },
         "qa_40": {
           "type": "qa",
           "settings": {
@@ -463,6 +579,19 @@
         "qa_10",
         "qa_11",
         "qa_12",
+        "qa_50",
+        "cat_6",
+        "qa_51",
+        "qa_52",
+        "qa_53",
+        "qa_54",
+        "qa_55",
+        "qa_56",
+        "cat_7",
+        "qa_57",
+        "qa_58",
+        "qa_59",
+        "qa_60",
         "cat_2",
         "qa_13",
         "qa_14",
@@ -493,6 +622,7 @@
         "cat_4",
         "qa_38",
         "qa_39",
+        "qa_61",
         "qa_40",
         "qa_41",
         "qa_42",
@@ -509,7 +639,7 @@
         "show_hero": true,
         "eyebrow": "Help centre",
         "heading": "Frequently asked questions",
-        "intro": "<p>Everything about products, delivery, pickup, returns, payments and transit claims — answered. Can’t find what you need? Get in touch and our team will help.</p>",
+        "intro": "<p>Everything about products, materials, delivery, returns, assembly, payments and trade — answered. Can’t find what you need? Get in touch and our team will help.</p>",
         "hero_button_label": "Get in touch",
         "hero_button_url": "/pages/contact-us",
         "show_jumpnav": true,
