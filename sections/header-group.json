@@ -107,7 +107,7 @@
           "type": "promotion_banner",
           "settings": {
             "menu_title": "Bed frames & Bases",
-            "menu_columns": 3,
+            "menu_columns": 2,
             "enable_on_mobile": true,
             "promotions_width": 50,
             "promotion_columns": 2,
