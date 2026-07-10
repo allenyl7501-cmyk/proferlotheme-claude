@@ -119,31 +119,11 @@
             "title_size": "h6",
             "icon_1": "truck",
             "image_1": "shopify://shop_images/green_truck.png",
-            "heading_1": "<strong>$100 off Express shipping</strong> on orders > $500 <em>(Applied at checkout)</em>",
-            "icon_2": "gift",
+            "heading_1": "<strong>Free Brisbane Metro Shipping </strong>",
+            "icon_2": "none",
             "heading_2": "",
             "icon_3": "package",
             "heading_3": ""
-          }
-        },
-        "shipping_rates_calc_calculator_Ndz8qX": {
-          "type": "shopify://apps/shipping-rates-calc/blocks/calculator/7c9e47cf-8b08-44b7-8b23-4584e9b2a043",
-          "settings": {
-            "calculator_background_color": "rgba(0,0,0,0)",
-            "open_link_font_size": 16,
-            "open_link_bold": false,
-            "open_link_italic": false,
-            "open_link_underline": true,
-            "open_link_text_color": "#121212",
-            "open_link_text_color_hover": "#121212",
-            "introduction_text_font_size": 14,
-            "introduction_text_color": "#054e4a",
-            "buttons_background_color": "#ffffff",
-            "buttons_background_color_hover": "#3f4e4f",
-            "buttons_font_size": 15,
-            "buttons_text_color": "#054e4a",
-            "buttons_text_color_hover": "#ffffff",
-            "buttons_additional_css_class": ""
           }
         },
         "custom_liquid_RHAaEw": {
@@ -277,7 +257,6 @@
         "complementary",
         "custom_liquid_ifW7Pr",
         "icon_with_text_HpYnWD",
-        "shipping_rates_calc_calculator_Ndz8qX",
         "custom_liquid_RHAaEw",
         "text_8bbD4d",
         "description",

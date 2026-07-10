@@ -139,13 +139,6 @@
         "disabled": false,
         "settings": {}
       },
-      "1513306175528008036": {
-        "type": "shopify://apps/shipping-rates-calc/blocks/app-embed-calculator-product/7c9e47cf-8b08-44b7-8b23-4584e9b2a043",
-        "disabled": false,
-        "settings": {
-          "buttons_additional_css_class": ""
-        }
-      },
       "6159598353363395418": {
         "type": "shopify://apps/google-youtube/blocks/store_widget/14ec7bd0-ac77-49a9-9417-90752398bdff",
         "disabled": true,
@@ -155,6 +148,13 @@
           "bottom_margin": 36,
           "mobile_side_margin": 16,
           "mobile_bottom_margin": 46
+        }
+      },
+      "1513306175528008036": {
+        "type": "shopify://apps/shipping-rates-calc/blocks/app-embed-calculator-product/7c9e47cf-8b08-44b7-8b23-4584e9b2a043",
+        "disabled": true,
+        "settings": {
+          "buttons_additional_css_class": ""
         }
       }
     },
@@ -466,9 +466,9 @@
       "scheme-67204ab8-6766-45d6-94c3-14bcba65935f": {
         "settings": {
           "primary_accent": "#3f4e4f",
-          "border": "#3F4E4F",
+          "border": "#3f4e4f",
           "text": "#798687",
-          "background": "#F1F0EC",
+          "background": "#f1f0ec",
           "secondary_background": "#f5f3ef",
           "button": "#3f4e4f",
           "button_label": "#ffffff",
