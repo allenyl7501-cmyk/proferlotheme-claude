@@ -344,6 +344,69 @@
         "divider_width": "fixed",
         "custom_class": ""
       }
+    },
+    "usp_strip_NdVnpn": {
+      "type": "usp-strip",
+      "blocks": {
+        "usp_AhVmHb": {
+          "type": "usp",
+          "settings": {
+            "icon": "truck",
+            "title": "Australia-Wide Express Delivery",
+            "text": "1-2 Day Dispatch for in stock products",
+            "link": ""
+          }
+        },
+        "usp_8aCGPY": {
+          "type": "usp",
+          "settings": {
+            "icon": "seal-check",
+            "title": "FSC & CARB2 Certified",
+            "text": "Responsibly sourced, low-emission materials",
+            "link": ""
+          }
+        },
+        "usp_AwaRgi": {
+          "type": "usp",
+          "settings": {
+            "icon": "shield-check",
+            "title": "Factory Warranty Included",
+            "text": "Real warranty from the people who made it",
+            "link": ""
+          }
+        },
+        "usp_feh9KP": {
+          "type": "usp",
+          "settings": {
+            "icon": "factory",
+            "title": "Factory-Direct Value",
+            "text": "Quality and pricing without the middleman",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "usp_AhVmHb",
+        "usp_8aCGPY",
+        "usp_AwaRgi",
+        "usp_feh9KP"
+      ],
+      "name": "USP Strip",
+      "settings": {
+        "color_scheme": "scheme-4",
+        "subheading": "",
+        "heading": "",
+        "heading_size": "h3",
+        "layout": "left",
+        "columns_mobile": "2",
+        "icon_size": 30,
+        "icon_color": "",
+        "title_size": 15,
+        "text_size": 13,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": ""
+      }
     }
   },
   "order": [
@@ -351,6 +414,7 @@
     "main",
     "custom_liquid_Cb37bw",
     "1779341331f959a4d0",
-    "related-products"
+    "related-products",
+    "usp_strip_NdVnpn"
   ]
 }
