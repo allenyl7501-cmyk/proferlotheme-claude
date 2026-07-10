@@ -622,11 +622,13 @@
                           >
                             <country-province
                               class="grid gap-4"
-                              {% if shop.customer_accounts_enabled and customer %}
+                              {% if shop.customer_accounts_enabled and customer and customer.default_address.country != blank %}
                                 data-country="{{ customer.default_address.country }}"
                                 {%- if customer.default_address.province != '' %}
                                   data-province="{{ customer.default_address.province }}"
                                 {%- endif -%}
+                              {% else %}
+                                data-country="Australia"
                               {% endif %}
                             >
                               <div class="form-field reset-spacing">
@@ -640,7 +642,7 @@
                                     autocomplete="country"
                                     id="ShippingCalculatorCountry-{{ section.id }}"
                                   >
-                                    <template>{{- all_country_option_tags -}}</template>
+                                    <template>{{- country_option_tags -}}</template>
                                   </select>
                                   {%- render 'icon-caret-down' -%}
                                 </div>
